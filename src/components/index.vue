@@ -124,9 +124,10 @@
         <!-- Daftar -->
         <div class="fs-4 d-flex flex-column">
           <div class="d-flex justify-content-between">
-            <!-- icon back -->
+            <!-- icon kembali -->
             <div class="align-self-start">
-              <iconify-icon icon="tableEdit24Filled" :inline="true" />!
+                icon
+                <iconify-icon icon="ltc" :inline="true" />!
             </div>
             <!-- logo -->
             <div class="fs-4 fw-bold align-self-end">
@@ -204,7 +205,7 @@
 }
 
 .container-fluid {
-  background-color: #EEEEEE;
+    background-color: #EEEEEE;
   /* background-image: url('assets/'); */
 }
 
