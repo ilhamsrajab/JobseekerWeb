@@ -222,8 +222,8 @@
           <!-- jenis kelamin -->
           <div class="mb-3">
             <label class="form-label fw-bold">Jenis Kelamin</label>
-            <div class="d-flex flex-row">
-              <div class="jenisKelamin align-items-center">
+            <div class="row g-2">
+              <div class="jenisKelamin col-md-2 align-items-center">
                 <input
                   class="form-check-input form-check-inline"
                   type="radio"
@@ -235,7 +235,7 @@
                 >
                 <span class="checkmark"></span>
               </div>
-              <div class="jenisKelamin align-items-center mx-5">
+              <div class="jenisKelamin col-md-2 align-items-center">
                 <input
                   class="form-check-input form-check-inline"
                   type="radio"
@@ -363,9 +363,7 @@
             </div>
             <!-- rt/rw -->
             <div class="mb-2">
-              <label for="RT" class="form-label"
-                >RT/RW</label
-              >
+              <label for="RT" class="form-label">RT/RW</label>
               <div class="d-flex flex-row">
                 <input
                   type="number"
@@ -373,7 +371,7 @@
                   id="RT"
                   maxlength="3"
                   placeholder="Masukan no. RT.."
-                  style="margin-right: 10px;"
+                  style="margin-right: 10px"
                 />
                 <input
                   type="number"
@@ -386,21 +384,98 @@
             </div>
             <!-- alamat rumah -->
             <div class="mb-2">
-              <label for="alamatRumah" class="form-label">Desa/Kelurahan</label>
-              <select
+              <label for="alamatRumah" class="form-label">Alamat Rumah</label>
+              <textarea
+                class="form-control w-100"
+                name="alamatRumah"
                 id="alamatRumah"
-                class="form-select"
-                aria-label="Pilih desa/kelurahan"
-              >
-                <option selected>Pilih desa/kelurahan</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+                placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
+                style="height: 100px; padding: 12px"
+              ></textarea>
+            </div>
+
+            <!-- kodepos -->
+            <div class="mb-2">
+              <label for="kodepos" class="form-label">Kodepos</label>
+              <input
+                type="number"
+                class="form-control"
+                id="kodepos"
+                maxlength="5"
+                placeholder="Masukan kode pos.."
+                disabled
+              />
             </div>
           </div>
 
-          <button type="submit" class="submit btn btn-primary w-100 fw-bold">
+          <!-- pendidikan terakhir -->
+          <div class="mb-3">
+            <label for="pendidikanTerakhir" class="form-label fw-bold"
+              >Pendidikan Terakhir</label
+            >
+            <select
+              id="pendidikanTerakhir"
+              class="form-select"
+              aria-label="Pilih pendidikan terakhir"
+            >
+              <option selected>Pilih pendidikan terakhir</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+
+          <!-- no hp -->
+          <div class="mb-3">
+            <label for="noHP" class="form-label fw-bold">No. HP</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nik"
+              maxlength="13"
+              placeholder="Masukan nomor hp..."
+            />
+          </div>
+
+          <!-- foto pribadi -->
+          <div class="mb-3">
+            <label for="fotoPribadi" class="form-label fw-bold"
+              >Foto Pribadi Formal</label
+            >
+            <input
+              class="form-control"
+              type="file"
+              accept="image/*"
+              id="fotoPribadi"
+            />
+          </div>
+
+          <!-- foto ktp -->
+          <div class="mb-5">
+            <label for="fotoKTP" class="form-label fw-bold">Foto E-KTP</label>
+            <input
+              class="form-control"
+              type="file"
+              accept="image/*"
+              id="fotoKTP"
+            />
+          </div>
+
+          <!-- persetujuan -->
+          <div class="mb-4 d-flex">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="persetujuan"
+              style="margin-right:10px"
+            />
+            <label class="form-check-label" for="persetujuan">
+              Saya menyatakan bahwa data di atas adalah benar data pribadi saya, jika ada kesalahan saya siap menganggung semua akibatnya.
+            </label>
+          </div>
+
+          <button type="submit" class="submit btn btn-primary w-100 fw-bold mb-5">
             Selanjutnya
           </button>
         </form>
@@ -420,7 +495,8 @@
 }
 
 .formDaftar input,
-.formDaftar select {
+.formDaftar select,
+.formDaftar textarea {
   background: #eeeeee;
   height: 50px;
   border-radius: 16px;
@@ -430,6 +506,17 @@
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+.formDaftar #persetujuan {
+  background: #eeeeee;
+  height: 18px;
+  width: 18px;
+  border-radius: 30%;
+}
+
+.formDaftar #persetujuan:checked {
+  background: #3a3379;
 }
 
 .formDaftar .jenisKelamin input {
