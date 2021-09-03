@@ -14,13 +14,13 @@
     <div class="bg d-flex flex-column align-self-center" style="width: 1000px">
       <!-- kotak header -->
       <div
-        class="text-white head p-5 align-self-center"
-        style="background: #3a3379; border-radius: 40px; width: 100%"
+        class="kotak text-white head p-5 align-self-center"
+        style=""
       >
         <!-- gambar -->
-        <div class="position-absolute" style="top: 50px; right: 400px">
+        <div class="position-absolute">
           <svg
-            width="700"
+            width="900"
             viewBox="0 0 792 495"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -184,11 +184,11 @@
         </div>
         <div class="fs-1 fw-bold mb-5 text-center">Lengkapi Data Diri</div>
         <ul class="steps">
-          <li class="active step step-neutral">Data Diri</li>
-          <li class="step step-neutral">Media Sosial</li>
-          <li class="step step-neutral">Berkas</li>
-          <li class="step step-neutral">Riwayat Pekerjaan</li>
-          <li class="step step-neutral">Selesai</li>
+          <li class="active">Data Diri</li>
+          <li>Media Sosial</li>
+          <li>Berkas</li>
+          <li>Riwayat Pekerjaan</li>
+          <li>Selesai</li>
         </ul>
       </div>
 
@@ -455,6 +455,7 @@
             <label for="fotoKTP" class="form-label fw-bold">Foto E-KTP</label>
             <input
               class="form-control"
+              dir="rtl"
               type="file"
               accept="image/*"
               id="fotoKTP"
@@ -492,6 +493,59 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+/* kotak */
+
+.kotak {
+  background: #3a3379; 
+  border-radius: 40px; 
+  width: 100%; 
+  z-index:1;
+}
+
+/* steps */
+.steps {
+}
+
+.steps li {
+  list-style-type: none;
+  float: left;
+  width: 20%;
+  position: relative;
+  text-align: center;
+}
+
+.steps li::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  z-index: 2;
+}
+
+.steps li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  top: 9px;
+  left: -50%;
+  z-index: -1;
+}
+
+.steps li:first-child::after {
+  content: none;
+}
+
+.steps li.active::before {
+  background-color: #FFBEB2;
+  z-index: 2;
 }
 
 .formDaftar input,
