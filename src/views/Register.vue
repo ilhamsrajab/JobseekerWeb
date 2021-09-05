@@ -18,7 +18,7 @@
         style=""
       >
         <!-- gambar -->
-        <div class="position-absolute">
+        <!-- <div class="position-absolute">
           <svg
             width="900"
             viewBox="0 0 792 495"
@@ -181,7 +181,7 @@
               />
             </g>
           </svg>
-        </div>
+        </div> -->
         <div class="fs-1 fw-bold mb-5 text-center">Lengkapi Data Diri</div>
         <ul class="steps">
           <li class="active">Data Diri</li>
@@ -496,7 +496,6 @@
 }
 
 /* kotak */
-
 .kotak {
   background: #3a3379; 
   border-radius: 40px; 
@@ -505,9 +504,6 @@
 }
 
 /* steps */
-.steps {
-}
-
 .steps li {
   list-style-type: none;
   float: left;
@@ -548,6 +544,7 @@
   z-index: 2;
 }
 
+/* form */
 .formDaftar input,
 .formDaftar select,
 .formDaftar textarea {
