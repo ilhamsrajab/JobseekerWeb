@@ -1,19 +1,19 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import index from "./views/Login.vue";
-// import register from './components/register.vue'
+import index from "./views/HalamanLogin.vue";
+import register from "./views/register.vue";
 </script>
 
 <template>
-  <index />
-  <!-- <register /> -->
-  <div id="nav">
-    <img src="./assets/logo.png" alt="" />
-    <!-- <router-link to="/">Login</router-link> | -->
-    <!-- <router-link to="/register">Register</router-link> | -->
-  </div>
-  <router-view />
+  <!-- <index /> -->
+  <register />
+  <!-- <div id="nav"> -->
+  <!-- <img src="./assets/logo.png" alt="" /> -->
+  <!-- <router-link to="/">Login</router-link> | -->
+  <!-- <router-link to="/register">Register</router-link> | -->
+  <!-- </div> -->
+  <!-- <router-view /> -->
 </template>
 
 <style>

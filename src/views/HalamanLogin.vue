@@ -7,7 +7,7 @@
       style="height: 600px; width: 1000px"
     >
       <!-- gambar -->
-      <!-- <div class="position-absolute">
+      <div class="absolute">
         <svg
           width="750"
           viewBox="0 0 792 495"
@@ -170,7 +170,8 @@
             />
           </g>
         </svg>
-      </div> -->
+      </div>
+
       <!-- bagian kiri -->
       <div
         class="
@@ -180,7 +181,7 @@
           flex flex-col
           justify-end
           items-center
-          w-3/5
+          w-7/12
         "
       >
         <div class="slide m-5">
@@ -213,7 +214,7 @@
           bagiankanan
           bg-white
           rounded-40
-          w-2/5
+          w-5/12
           p-8
           z-10
           shadow-bagianKanan
@@ -225,208 +226,25 @@
         "
       >
         <!-- Login -->
-        <div id="login" class="flex flex-col">
-          <!-- logo -->
-          <div class="text-2xl font-bold text-neutral self-end">BursaKerja</div>
-
-          <!-- login form -->
-          <div class="formLogin">
-            <p class="text-4xl font-bold text-neutral self-start pt-8">Login</p>
-            <div class="form-control">
-              <!-- username -->
-              <label class="label mt-4">
-                <span class="label-text font-semibold">Username</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Masukan username"
-                class="
-                  input input-primary
-                  border-0
-                  bg-gray-100
-                  h-12
-                  rounded-large
-                  focus:ring-2 focus:ring-primary-focus
-                "
-              />
-
-              <!-- password -->
-              <label class="label mt-3">
-                <span class="label-text font-semibold">Password</span>
-                <a href="#" class="label-text-alt">Lupa password?</a>
-              </label>
-              <input
-                type="text"
-                placeholder="Masukan password"
-                class="
-                  input input-primary
-                  border-0
-                  bg-gray-100
-                  h-12
-                  rounded-large
-                  focus:ring-2 focus:ring-primary-focus
-                "
-              />
-
-              <!-- btn login -->
-              <button
-                class="
-                  btn btn-primary
-                  my-6
-                  h-12
-                  rounded-large
-                  shadow-lg
-                  hover:shadow-xl
-                  transition-all
-                  duration-200
-                "
-              >
-                Login
-              </button>
-            </div>
-
-            <!-- login google -->
-            <div class="flex flex-col justify-center items-center">
-              <span class="mb-6 text-xs"> atau login dengan </span>
-              <a href="http://google.com">
-                <div
-                  class="
-                    btnGoogle
-                    bg-white
-                    rounded-full
-                    shadow-lg
-                    hover:shadow-xl
-                    transition-all
-                    duration-200
-                    h-10
-                    w-10
-                    flex
-                    justify-center
-                    items-center
-                  "
-                >
-                  <svg
-                    version="1.1"
-                    id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 512 512"
-                    xml:space="preserve"
-                    height="30px"
-                  >
-                    <path
-                      style="fill: #fbbb00"
-                      d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
-                    c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
-                    C103.821,274.792,107.225,292.797,113.47,309.408z"
-                    />
-                    <path
-                      style="fill: #518ef8"
-                      d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
-                    c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
-                    c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"
-                    />
-                    <path
-                      style="fill: #28b446"
-                      d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
-                    c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
-                    c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"
-                    />
-                    <path
-                      style="fill: #f14336"
-                      d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
-                    c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
-                    C318.115,0,375.068,22.126,419.404,58.936z"
-                    />
-                  </svg>
-                </div>
-              </a>
-
-              <!-- daftar -->
-              <span class="font-bold my-6 text-sm">
-                <a class="btnDaftar" href="#"> Daftar Sekarang > </a>
-              </span>
-            </div>
-          </div>
-        </div>
+        <!-- <login /> -->
 
         <!-- Daftar -->
-        <!-- <div id="daftar" class="fs-4 d-flex flex-column">
-          <div class="d-flex justify-content-between">
-            icon kembali
-            <div class="align-self-start">
-                icon
-                <iconify-icon icon="ltc" :inline="true" />!
-            </div>
-            logo
-            <div class="fs-4 fw-bold align-self-end">
-              Logotype
-            </div>
-          </div>
-
-          login form
-          <div class="formLogin">
-            <p class="fs-2 fw-bold align-self-start pt-4">
-              Daftar 
-            </p>
-            <form class="my-4">
-              <div class="mb-2">
-                <label for="emailDaftar" class="form-label fw-bold">Email</label>
-                <input type="email" class="form-control" id="emailDaftar" placeholder="Masukan email...">
-              </div>
-              <div class="mb-2">
-                <label for="usernameDaftar" class="form-label fw-bold">Username</label>
-                <input type="username" class="form-control" id="usernameDaftar" placeholder="Masukan username...">
-              </div>
-              <div class="mb-2">
-                <label for="passwordDaftar" class="form-label fw-bold">Password</label>
-                <input type="password" class="form-control" id="passwordDaftar" placeholder="Masukan password...">
-              </div>
-              <div class="mb-4">
-                <label for="passwordDaftarConfirm" class="form-label fw-bold">Konfirmasi Password</label>
-                <input type="password" class="form-control" id="passwordDaftarConfirm" placeholder="Masukan password kembali...">
-              </div>
-              <button type="submit" class="submit btn btn-primary w-100 fw-bold">Daftar</button>
-            </form>
-
-            daftar google
-            <div class="d-flex flex-wrap flex-column text-center justify-content-center align-items-center" >
-              <span class="mb-4" style="font-size:12px">
-                atau daftar dengan
-              </span>
-              <a href="http://google.com">
-                <div class="btnGoogle bg-white rounded-circle d-flex justify-content-center align-items-center">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 512 512" xml:space="preserve" height="30px" >
-                  <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
-                    c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
-                    C103.821,274.792,107.225,292.797,113.47,309.408z"/>
-                  <path style="fill:#518EF8;" d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
-                    c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
-                    c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"/>
-                  <path style="fill:#28B446;" d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
-                    c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
-                    c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"/>
-                  <path style="fill:#F14336;" d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
-                    c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
-                    C318.115,0,375.068,22.126,419.404,58.936z"/>
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div> -->
+        <daftar />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Login from "../components/Login.vue";
+import Daftar from "../components/Daftar.vue";
+
 export default {
   name: "Home",
-  components: {},
+  components: {
+    Login,
+    Daftar,
+  },
 };
 </script>
 

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
+    "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@tailwindcss/typography": "^0.4.1",
     "daisyui": "^1.14.0",
