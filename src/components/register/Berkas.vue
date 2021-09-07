@@ -167,9 +167,14 @@
 
 <script>
 export default {
-  name: "DataDiri",
+  name: "Berkas",
   components: {},
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+input[type="file"]::file-selector-button::after {
+  background: none;
+  content: url("https://api.iconify.design/fluent/cloud-add-16-filled.svg");
+}
+</style>

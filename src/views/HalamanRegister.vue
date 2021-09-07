@@ -205,7 +205,10 @@
       <!-- <MediaSosial /> -->
 
       <!-- form berkas -->
-      <Berkas />
+      <!-- <Berkas /> -->
+
+      <!-- form riwayat pekerjaan -->
+      <RiwayatPekerjaan />
     </div>
   </div>
 </template>
@@ -215,6 +218,7 @@ import { Icon } from "@iconify/vue";
 import DataDiri from "../components/register/DataDiri.vue";
 import MediaSosial from "../components/register/MediaSosial.vue";
 import Berkas from "../components/register/Berkas.vue";
+import RiwayatPekerjaan from "../components/register/RiwayatPekerjaan.vue";
 
 export default {
   name: "HalamanDaftar",
@@ -223,6 +227,7 @@ export default {
     DataDiri,
     MediaSosial,
     Berkas,
+    RiwayatPekerjaan,
   },
 };
 </script>
@@ -247,9 +252,5 @@ export default {
 
 .steps .step.step-accent::after {
   background: #ffbeb2;
-}
-
-input[type="file"]::file-selector-button {
-  background-image: url("https://api.iconify.design/fluent/cloud-add-16-filled.svg");
 }
 </style>

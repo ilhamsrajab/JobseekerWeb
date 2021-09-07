@@ -247,7 +247,7 @@
 import { Icon } from "@iconify/vue";
 
 export default {
-  name: "DataDiri",
+  name: "MediaSosial",
   components: {
     Icon,
   },
