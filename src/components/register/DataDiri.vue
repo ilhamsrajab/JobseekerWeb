@@ -407,7 +407,7 @@
 
       <!-- btn selanjutnya -->
       <div>
-        <button class="btn btn-primary">Selanjutnya</button>
+        <button class="btn btn-primary my-6">Selanjutnya</button>
       </div>
     </form>
   </div>

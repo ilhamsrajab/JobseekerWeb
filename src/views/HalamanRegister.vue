@@ -199,20 +199,25 @@
       </div>
 
       <!-- form data diri -->
-      <DataDiri />
+      <!-- <DataDiri /> -->
+
+      <!-- form Media Sosial -->
+      <MediaSosial />
     </div>
   </div>
 </template>
 
 <script>
 import { Icon } from "@iconify/vue";
-import DataDiri from "../components/DataDiri.vue";
+import DataDiri from "../components/register/DataDiri.vue";
+import MediaSosial from "../components/register/MediaSosial.vue";
 
 export default {
   name: "HalamanDaftar",
   components: {
     Icon,
     DataDiri,
+    MediaSosial,
   },
 };
 </script>

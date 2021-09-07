@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .btn-primary {
-  @apply border-0 my-6 h-14 w-full rounded-20 shadow-lg hover:shadow-xl hover:bg-secondary transition-all duration-200 normal-case;
+  @apply border-0 h-14 w-full rounded-20 shadow-lg hover:shadow-xl hover:bg-secondary transition-all duration-200 normal-case;
 }
 
 .input-primary {
