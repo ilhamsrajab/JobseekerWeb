@@ -220,16 +220,16 @@
           shadow-bagianKanan
           transform
           overflow-y-auto
-          hover:shadow-bagianKananHover
+          hover:scale-105 hover:shadow-bagianKananHover
           transition-all
           duration-200
         "
       >
         <!-- Login -->
-        <!-- <login /> -->
+        <login />
 
         <!-- Daftar -->
-        <daftar />
+        <!-- <daftar /> -->
       </div>
     </div>
   </div>
@@ -266,152 +266,4 @@ export default {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
-/* #daftar {
-  display: none;
-}
-
-.container-fluid {
-    background-color: #EEEEEE;
-} */
-
-/* .container-fluid .kotak {
-  background-color: #3a3379;
-  width: 1000px;
-  height: 580px;
-  border-radius: 40px;
-  box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.5);
-} */
-/*
-
-
-.container-fluid .bagianKiri {
-  border-radius: 35px; 
-  width: 60%;
-}
-
-.container-fluid .bagianKanan {
-  border-radius: 35px; 
-  width: 40%; 
-  z-index:99;
-  overflow-y:auto; 
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  
-  box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.2); 
-  -webkit-transition: 1s ease-out;
-  -moz-transition: 1s ease-out;
-  -o-transition: 1s ease-out;
-  transition: 1s ease-out;
-}
-
-.container-fluid .bagianKanan::-webkit-scrollbar {
-  display:none; 
-}
-
-.container-fluid .bagianKanan:hover {
-  box-shadow: -16px 0px 40px rgba(0, 0, 0, 0.3); 
-}
-
-.formLogin input {
-  background: #EEEEEE; 
-  height: 50px; 
-  border-radius: 20px; 
-  font-size: 12px; 
-  border:none;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-.formLogin label {
-  font-size: 12px;
-}
-
-.formLogin .lupaPass {
-  font-size:12px; 
-  text-decoration:none; 
-  color: #3A3379;
-  margin-top: 2px;
-  display: inline-block;
-}
-
-.formLogin .lupaPass::after {
-  content: '';
-  width: 0px;
-  height: 1px;
-  display: block;
-  background: #3A3379;
-  transition: 300ms;
-}
-
-.formLogin .lupaPass:hover::after {
-  width: 100%;
-}
-
-.formLogin .submit {
-  background: #3A3379; 
-  height: 50px; 
-  border-radius: 20px; 
-  font-size: 16px; 
-  border:none; 
-  box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.2);
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-.formLogin .submit:hover {
-  background: #2b2268; 
-  box-shadow: 0px 16px 40px rgba(58, 51, 121, 0.4);
-}
-
-.formLogin .btnGoogle {
-  height:40px; 
-  width:40px; 
-  box-shadow: 0px 5px 25px rgba(58, 51, 121, 0.2);
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-.formLogin .btnGoogle:hover {
-  box-shadow: 0px 5px 25px rgba(58, 51, 121, 0.4);
-}
-
-.formLogin .btnDaftar {
-  font-size:14px; 
-  color: #3A3379;
-  text-decoration:none; 
-}
-
-.formLogin .btnDaftar::after {
-  content: '';
-  width: 0px;
-  height: 2px;
-  display: block;
-  background: #3A3379;
-  transition: 300ms;
-}
-
-.formLogin .btnDaftar:hover::after {
-  width: 100%;
-}
-
-#textSlider .carousel-indicators {
-  position: relative;
-}
-
-#textSlider .carousel-indicators [data-bs-target] {
-  width:8px;
-  height: 8px;
-  border-radius: 100%;
-}
-
-
-@media only screen and (min-width: 1399px) {
-
-} */
 </style>

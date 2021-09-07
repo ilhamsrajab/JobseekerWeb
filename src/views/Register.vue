@@ -13,10 +13,7 @@
     <div class="fs-4 fw-bold align-self-end mb-3">Logotype</div>
     <div class="bg d-flex flex-column align-self-center" style="width: 1000px">
       <!-- kotak header -->
-      <div
-        class="kotak text-white head p-5 align-self-center"
-        style=""
-      >
+      <div class="kotak text-white head p-5 align-self-center" style="">
         <!-- gambar -->
         <!-- <div class="position-absolute">
           <svg
@@ -469,14 +466,18 @@
               type="checkbox"
               value=""
               id="persetujuan"
-              style="margin-right:10px"
+              style="margin-right: 10px"
             />
             <label class="form-check-label" for="persetujuan">
-              Saya menyatakan bahwa data di atas adalah benar data pribadi saya, jika ada kesalahan saya siap menganggung semua akibatnya.
+              Saya menyatakan bahwa data di atas adalah benar data pribadi saya,
+              jika ada kesalahan saya siap menganggung semua akibatnya.
             </label>
           </div>
 
-          <button type="submit" class="submit btn btn-primary w-100 fw-bold mb-5">
+          <button
+            type="submit"
+            class="submit btn btn-primary w-100 fw-bold mb-5"
+          >
             Selanjutnya
           </button>
         </form>
@@ -497,10 +498,10 @@
 
 /* kotak */
 .kotak {
-  background: #3a3379; 
-  border-radius: 40px; 
-  width: 100%; 
-  z-index:1;
+  background: #3a3379;
+  border-radius: 40px;
+  width: 100%;
+  z-index: 1;
 }
 
 /* steps */
@@ -513,7 +514,7 @@
 }
 
 .steps li::before {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   background: #fff;
@@ -525,7 +526,7 @@
 }
 
 .steps li::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 3px;
@@ -540,7 +541,7 @@
 }
 
 .steps li.active::before {
-  background-color: #FFBEB2;
+  background-color: #ffbeb2;
   z-index: 2;
 }
 
