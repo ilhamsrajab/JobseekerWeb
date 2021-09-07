@@ -202,7 +202,10 @@
       <!-- <DataDiri /> -->
 
       <!-- form Media Sosial -->
-      <MediaSosial />
+      <!-- <MediaSosial /> -->
+
+      <!-- form berkas -->
+      <Berkas />
     </div>
   </div>
 </template>
@@ -211,6 +214,7 @@
 import { Icon } from "@iconify/vue";
 import DataDiri from "../components/register/DataDiri.vue";
 import MediaSosial from "../components/register/MediaSosial.vue";
+import Berkas from "../components/register/Berkas.vue";
 
 export default {
   name: "HalamanDaftar",
@@ -218,6 +222,7 @@ export default {
     Icon,
     DataDiri,
     MediaSosial,
+    Berkas,
   },
 };
 </script>
@@ -245,7 +250,6 @@ export default {
 }
 
 input[type="file"]::file-selector-button {
-  content: url("https://api.iconify.design/fluent/cloud-add-16-filled.svg");
-  background: none;
+  background-image: url("https://api.iconify.design/fluent/cloud-add-16-filled.svg");
 }
 </style>

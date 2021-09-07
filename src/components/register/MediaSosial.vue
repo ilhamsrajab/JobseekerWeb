@@ -11,15 +11,15 @@
             class="
               inline-flex
               text-neutral
-              font-bold
+              font-medium
               items-center
               px-5
               rounded-l-20
               bg-accent
-              text-sm
+              text-lg
             "
           >
-            @
+            <Icon icon="fluent:mention-24-filled" />
           </span>
           <input
             id="instagram"
@@ -38,7 +38,7 @@
       </div>
 
       <!-- Twitter -->
-      <div class="mt-2">
+      <div class="mt-1">
         <label class="label font-semibold" for="Twitter">
           <span class="label-text">Twitter</span>
         </label>
@@ -47,16 +47,17 @@
             class="
               inline-flex
               text-neutral
-              font-bold
+              font-medium
               items-center
               px-5
               rounded-l-20
               bg-accent
-              text-sm
+              text-lg
             "
           >
-            @
+            <Icon icon="fluent:mention-24-filled" />
           </span>
+
           <input
             id="Twitter"
             title="Twitter"
@@ -74,7 +75,7 @@
       </div>
 
       <!-- facebook -->
-      <div class="mt-2">
+      <div class="mt-1">
         <label class="label font-semibold" for="facebook">
           <span class="label-text">Facebook</span>
         </label>
@@ -83,7 +84,7 @@
             class="
               inline-flex
               text-neutral
-              font-bold
+              font-medium
               items-center
               px-5
               rounded-l-20
@@ -110,7 +111,7 @@
       </div>
 
       <!-- LinkedIn -->
-      <div class="mt-2">
+      <div class="mt-1">
         <label class="label font-semibold" for="LinkedIn">
           <span class="label-text">LinkedIn</span>
         </label>
@@ -119,7 +120,7 @@
             class="
               inline-flex
               text-neutral
-              font-bold
+              font-medium
               items-center
               px-5
               rounded-l-20
@@ -146,7 +147,7 @@
       </div>
 
       <!-- youtube -->
-      <div class="mt-2">
+      <div class="mt-1">
         <label class="label font-semibold" for="YouTube">
           <span class="label-text">YouTube</span>
         </label>
@@ -155,7 +156,7 @@
             class="
               inline-flex
               text-neutral
-              font-bold
+              font-medium
               items-center
               px-5
               rounded-l-20
@@ -227,7 +228,10 @@
           w-full
           rounded-20
           shadow-lg
-          hover:shadow-xl hover:bg-primary hover:border-primary
+          hover:shadow-xl
+          hover:bg-accent
+          hover:border-transparent
+          hover:text-neutral
           transition-all
           duration-200
           normal-case
@@ -240,9 +244,13 @@
 </template>
 
 <script>
+import { Icon } from "@iconify/vue";
+
 export default {
   name: "DataDiri",
-  components: {},
+  components: {
+    Icon,
+  },
 };
 </script>
 

@@ -21,7 +21,7 @@
 }
 
 input[type=file]::file-selector-button {
-  @apply rounded-full border-0 shadow-none float-right text-neutral;
+  @apply rounded-full border-0 shadow-none float-right bg-none text-neutral;
 }
 
 input[type=file]::-webkit-file-upload-button {
