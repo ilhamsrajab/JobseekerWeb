@@ -181,10 +181,16 @@
           flex flex-col
           justify-end
           items-center
-          w-7/12
+          w-8/12
         "
       >
-        <div class="slide m-5">
+        <vue-carousel
+          :data="data"
+          :controls="false"
+          indicator-type="disc"
+          class="m-5"
+        ></vue-carousel>
+        <!-- <div class="slide m-5">
           <div class="w-full carousel text-center">
             <div id="item1" class="w-full pt-20 carousel-item">
               Cari kerja dengan mudah disini, karena terhubung dengan ratusan
@@ -205,7 +211,7 @@
             <a href="#item2" class="w-2 h-2 bg-white btn-circle"></a>
             <a href="#item3" class="w-2 h-2 bg-white btn-circle"></a>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- bagian kanan  -->
@@ -226,10 +232,10 @@
         "
       >
         <!-- Login -->
-        <login />
+        <!-- <login /> -->
 
         <!-- Daftar -->
-        <!-- <daftar /> -->
+        <daftar />
       </div>
     </div>
   </div>
@@ -238,12 +244,23 @@
 <script>
 import Login from "../components/Login.vue";
 import Daftar from "../components/Daftar.vue";
+import VueCarousel from "@chenfengyuan/vue-carousel";
 
 export default {
   name: "Home",
   components: {
     Login,
     Daftar,
+    VueCarousel,
+  },
+  data() {
+    return {
+      data: [
+        "<div class='text-center mb-10 font-medium'>Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.</div>",
+        "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.</div>",
+        "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>",
+      ],
+    };
   },
 };
 </script>
@@ -265,5 +282,15 @@ export default {
 .bagiankanan {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.example-slide {
+  align-items: center;
+  background-color: #666;
+  color: #999;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  min-height: 10rem;
 }
 </style>

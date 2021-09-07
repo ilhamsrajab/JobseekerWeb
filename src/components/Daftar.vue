@@ -34,18 +34,11 @@
           </label>
           <input
             id="email"
+            title="Masukan email"
             type="email"
             autocomplete="email"
             placeholder="contoh@bursakerja.com"
-            class="
-              input input-primary
-              border-0
-              bg-gray-100
-              h-14
-              w-full
-              rounded-20
-              focus:ring-2 focus:ring-primary-focus
-            "
+            class="input input-primary w-full"
             required
           />
         </div>
@@ -57,17 +50,10 @@
           </label>
           <input
             id="username"
+            title="Masukan username"
             type="text"
             placeholder="Masukan username"
-            class="
-              input input-primary
-              border-0
-              bg-gray-100
-              h-14
-              w-full
-              rounded-20
-              focus:ring-2 focus:ring-primary-focus
-            "
+            class="input input-primary w-full"
             required
           />
         </div>
@@ -79,61 +65,33 @@
           </label>
           <input
             id="password"
+            title="Masukan password"
             type="password"
             autocomplete="current-password"
             placeholder="Masukan password"
-            class="
-              input input-primary
-              border-0
-              bg-gray-100
-              h-14
-              w-full
-              rounded-20
-              focus:ring-2 focus:ring-primary-focus
-            "
+            class="input input-primary w-full"
             required
           />
         </div>
 
         <!-- konfirmasi password -->
         <div>
-          <label class="label mt-3">
+          <label class="label mt-3" for="konfirmasi">
             <span class="label-text font-semibold">Konfirmasi Password</span>
           </label>
           <input
+            id="konfirmasi"
+            title="Masukan konfirmasi passowrd"
             type="password"
             placeholder="Masukan kembali password"
-            class="
-              input input-primary
-              border-0
-              bg-gray-100
-              h-14
-              w-full
-              rounded-20
-              focus:ring-2 focus:ring-primary-focus
-            "
+            class="input input-primary w-full"
             required
           />
         </div>
 
         <!-- btn login -->
         <div>
-          <button
-            class="
-              btn btn-primary
-              border-0
-              my-6
-              h-14
-              w-full
-              rounded-20
-              shadow-lg
-              hover:shadow-xl hover:bg-secondary
-              transition-all
-              duration-200
-            "
-          >
-            Daftar
-          </button>
+          <button class="btn btn-primary my-6">Daftar</button>
         </div>
         <!-- daftar google -->
         <div class="flex flex-col justify-center items-center">

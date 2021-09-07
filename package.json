@@ -7,12 +7,14 @@
     "dev": "vite"
   },
   "dependencies": {
+    "@chenfengyuan/vue-carousel": "^2.0.0-beta",
     "@popperjs/core": "^2.9.3",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@tailwindcss/typography": "^0.4.1",
     "daisyui": "^1.14.0",
-    "vue": "^3.2.6",
+    "swiper": "^7.0.3",
+    "vue": "^3.2.9",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.5.2"
@@ -20,7 +22,7 @@
   "devDependencies": {
     "@iconify/vue": "^3.0.0",
     "@vitejs/plugin-vue": "^1.6.0",
-    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/compiler-sfc": "^3.2.9",
     "autoprefixer": "^10.3.4",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.9",

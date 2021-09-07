@@ -24,9 +24,9 @@
         "
       >
         <!-- gambar -->
-        <!-- <div class="absolute z-0">
+        <div class="absolute z-0">
           <svg
-            width="700"
+            width="1000"
             viewBox="0 0 792 495"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +187,7 @@
               />
             </g>
           </svg>
-        </div> -->
+        </div>
         <div class="text-3xl font-bold m-5 text-center">Lengkapi Data Diri</div>
         <ul class="w-full steps my-5">
           <li data-content="" class="step step-accent text-sm">Data Diri</li>

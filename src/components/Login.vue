@@ -18,15 +18,7 @@
             id="username"
             type="text"
             placeholder="Masukan username"
-            class="
-              input input-primary
-              border-0
-              bg-gray-100
-              h-14
-              w-full
-              rounded-20
-              focus:ring-2 focus:ring-primary-focus
-            "
+            class="input input-primary w-full"
             required
           />
         </div>
@@ -41,37 +33,14 @@
             type="password"
             autocomplete="current-password"
             placeholder="Masukan password"
-            class="
-              input input-primary
-              border-0
-              bg-gray-100
-              h-14
-              w-full
-              rounded-20
-              focus:ring-2 focus:ring-primary-focus
-            "
+            class="input input-primary w-full"
             required
           />
         </div>
 
         <!-- btn login -->
         <div>
-          <button
-            class="
-              btn btn-primary
-              border-0
-              my-6
-              h-14
-              w-full
-              rounded-20
-              shadow-lg
-              hover:shadow-xl hover:bg-secondary
-              transition-all
-              duration-200
-            "
-          >
-            Daftar
-          </button>
+          <button class="btn btn-primary my-6">Login</button>
         </div>
         <!-- daftar google -->
         <div class="flex flex-col justify-center items-center">
@@ -135,7 +104,7 @@
       </form>
 
       <!-- daftar -->
-      <span class="font-bold flex justify-center my-6 text-sm">
+      <span class="font-bold text-primary flex justify-center my-6 text-sm">
         <a class="btnDaftar" href="#"> Daftar Sekarang > </a>
       </span>
     </div>
