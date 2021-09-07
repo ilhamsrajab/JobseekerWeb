@@ -199,7 +199,7 @@
       </div>
 
       <!-- form data diri -->
-      <!-- <DataDiri /> -->
+      <DataDiri />
 
       <!-- form Media Sosial -->
       <!-- <MediaSosial /> -->
@@ -208,7 +208,10 @@
       <!-- <Berkas /> -->
 
       <!-- form riwayat pekerjaan -->
-      <RiwayatPekerjaan />
+      <!-- <RiwayatPekerjaan /> -->
+
+      <!--  sukses -->
+      <!-- <Sukses /> -->
     </div>
   </div>
 </template>
@@ -219,6 +222,7 @@ import DataDiri from "../components/register/DataDiri.vue";
 import MediaSosial from "../components/register/MediaSosial.vue";
 import Berkas from "../components/register/Berkas.vue";
 import RiwayatPekerjaan from "../components/register/RiwayatPekerjaan.vue";
+import Sukses from "../components/register/Sukses.vue";
 
 export default {
   name: "HalamanDaftar",
@@ -228,6 +232,7 @@ export default {
     MediaSosial,
     Berkas,
     RiwayatPekerjaan,
+    Sukses,
   },
 };
 </script>

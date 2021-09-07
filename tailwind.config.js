@@ -28,6 +28,7 @@ module.exports = {
       none: 'none',
       'primary': '0px 16px 40px rgba(58, 51, 121, 0.5)',
       'btn': '0px 16px 40px rgba(58, 51, 121, 0.2)',
+      'soft': '0px 16px 40px rgba(0, 0, 0, 0.2)',
       'btnhover': '0px 16px 40px rgba(58, 51, 121, 0.4)',
       'bagianKanan': '-16px 0px 40px rgba(0, 0, 0, 0.2)',
       'bagianKananHover': '-16px 0px 40px rgba(0, 0, 0, 0.3)',
