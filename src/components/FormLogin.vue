@@ -105,7 +105,9 @@
 
       <!-- daftar -->
       <span class="font-bold text-primary flex justify-center my-6 text-sm">
-        <a class="btnDaftar" href="#"> Daftar Sekarang > </a>
+        <router-link :to="{ name: 'FormDaftar' }" replace
+          >Daftar Sekarang ></router-link
+        >
       </span>
     </div>
   </div>

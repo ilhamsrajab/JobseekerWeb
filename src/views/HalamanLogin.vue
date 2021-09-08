@@ -232,25 +232,24 @@
         "
       >
         <!-- Login -->
-        <!-- <login /> -->
+        <signIn />
 
         <!-- Daftar -->
-        <daftar />
+        <signUp />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Login from "../components/Login.vue";
-import Daftar from "../components/Daftar.vue";
+import signIn from "../components/FormLogin.vue";
+import signUp from "../components/FormDaftar.vue";
 import VueCarousel from "@chenfengyuan/vue-carousel";
 
 export default {
-  name: "Home",
   components: {
-    Login,
-    Daftar,
+    signIn,
+    signUp,
     VueCarousel,
   },
   data() {
