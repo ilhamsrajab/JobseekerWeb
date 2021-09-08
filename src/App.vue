@@ -4,10 +4,10 @@
 </script>
 
 <template>
-  <router-link :to="{ name: 'HalamanLogin' }">Halaman Login</router-link>
+  <!-- <router-link :to="{ name: 'HalamanLogin' }">Halaman Login</router-link>
   |
-  <router-link :to="{ name: 'HalamanRegister' }">Halaman Daftar</router-link> |
-  <router-view></router-view>
+  <router-link :to="{ name: 'HalamanRegister' }">Halaman Daftar</router-link> | -->
+  <router-view />
 </template>
 
 <style>

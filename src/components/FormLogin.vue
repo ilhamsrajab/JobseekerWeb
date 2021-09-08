@@ -117,5 +117,19 @@
 <script>
 export default {
   name: "Login",
+  // data: {
+  //   signIn=;
+  //   signUp=;
+  // },
+  // methods: {
+  //   daftarSekarang() {
+  //     this.signIn = false;
+  //     this.signUp = true;
+  //   },
+  //   loginSekarang() {
+  //     this.signIn = true;
+  //     this.signUp = false;
+  //   },
+  // },
 };
 </script>

@@ -210,10 +210,10 @@
         "
       >
         <!-- Login -->
-        <signIn v-show="signIn" />
+        <signIn id="signIn" v-show="signIn" />
 
         <!-- Daftar -->
-        <signUp v-show="signUp" />
+        <signUp id="signUp" v-show="signUp" />
         <button v-on:Click="daftarSekarang">Daftar Sekarang ></button>
         <button v-on:Click="loginSekarang">Kembalu</button>
       </div>
@@ -252,7 +252,6 @@ export default {
       this.signIn = true;
       this.signUp = false;
     },
-    showHide() {},
   },
 };
 </script>
