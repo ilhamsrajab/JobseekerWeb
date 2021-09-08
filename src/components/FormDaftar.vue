@@ -6,7 +6,7 @@
         <!-- icon kembali -->
         <div class="align-self-start">
           <!-- icon -->
-          <a href="#">
+          <!-- <router-link :to="{ name: 'FormLogin' }" replace>
             <Icon
               icon="fluent:arrow-left-12-filled"
               class="
@@ -20,7 +20,22 @@
                 duration-200
               "
             />
-          </a>
+          </router-link> -->
+          <button v-on:Click="loginSekarang">
+            <Icon
+              icon="fluent:arrow-left-12-filled"
+              class="
+                text-2xl
+                rounded-full
+                h-10
+                w-10
+                p-2
+                hover:bg-accent
+                transition-all
+                duration-200
+              "
+            />
+          </button>
         </div>
         <!-- logo -->
         <div class="text-2xl font-bold text-neutral">BursaKerja</div>

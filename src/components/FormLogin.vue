@@ -105,9 +105,10 @@
 
       <!-- daftar -->
       <span class="font-bold text-primary flex justify-center my-6 text-sm">
-        <router-link :to="{ name: 'FormDaftar' }" replace
+        <!-- <router-link :to="{ name: 'FormDaftar' }" replace
           >Daftar Sekarang ></router-link
-        >
+        > -->
+        <button v-on:Click="daftarSekarang">Daftar Sekarang ></button>
       </span>
     </div>
   </div>

@@ -2,8 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HalamanLogin from '../views/HalamanLogin.vue'
 import HalamanRegister from '../views/HalamanRegister.vue'
 import HalamanNotFound from '../views/NotFound.vue'
-import Login from '../components/FormLogin.vue'
-import Daftar from '../components/FormDaftar.vue'
+import FormLogin from '../components/FormLogin.vue'
+import FormDaftar from '../components/FormDaftar.vue'
 
 const routes = [
   {
@@ -14,12 +14,12 @@ const routes = [
   {
     path: '/login',
     name: 'FormLogin',
-    component: Login
+    component: FormLogin
   },
   {
     path: '/login',
     name: 'FormDaftar',
-    component: Daftar
+    component: FormDaftar
   },
   {
     path: '/daftar',

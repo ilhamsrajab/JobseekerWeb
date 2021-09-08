@@ -190,28 +190,6 @@
           indicator-type="disc"
           class="m-5"
         ></vue-carousel>
-        <!-- <div class="slide m-5">
-          <div class="w-full carousel text-center">
-            <div id="item1" class="w-full pt-20 carousel-item">
-              Cari kerja dengan mudah disini, karena terhubung dengan ratusan
-              perusahaan yang tergabung.
-            </div>
-            <div id="item2" class="w-full pt-20 carousel-item">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-              quidem dolorem.
-            </div>
-            <div id="item3" class="w-full pt-20 carousel-item">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
-              illum quasi eaque, repudiandae quidem doloremque. Lorem ipsum
-              dolor sit amet. Lorem ipsum dolor sit amet.
-            </div>
-          </div>
-          <div class="flex justify-center w-full py-4 space-x-2">
-            <a href="#item1" class="w-2 h-2 bg-white btn-circle"></a>
-            <a href="#item2" class="w-2 h-2 bg-white btn-circle"></a>
-            <a href="#item3" class="w-2 h-2 bg-white btn-circle"></a>
-          </div>
-        </div> -->
       </div>
 
       <!-- bagian kanan  -->
@@ -232,10 +210,12 @@
         "
       >
         <!-- Login -->
-        <signIn />
+        <signIn v-show="signIn" />
 
         <!-- Daftar -->
-        <signUp />
+        <signUp v-show="signUp" />
+        <button v-on:Click="daftarSekarang">Daftar Sekarang ></button>
+        <button v-on:Click="loginSekarang">Kembalu</button>
       </div>
     </div>
   </div>
@@ -259,7 +239,20 @@ export default {
         "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.</div>",
         "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>",
       ],
+      signIn: true,
+      signUp: false,
     };
+  },
+  methods: {
+    daftarSekarang() {
+      this.signIn = false;
+      this.signUp = true;
+    },
+    loginSekarang() {
+      this.signIn = true;
+      this.signUp = false;
+    },
+    showHide() {},
   },
 };
 </script>
