@@ -33,6 +33,7 @@ module.exports = {
       'bagianKanan': '-16px 0px 40px rgba(0, 0, 0, 0.2)',
       'bagianKananHover': '-16px 0px 40px rgba(0, 0, 0, 0.3)',
       'glow': '0px 0px 40px rgba(255, 190, 178, 0.7)',
+      'glowUngu': '0px 0px 40px #3A3379;',
     }
   },
   variants: {

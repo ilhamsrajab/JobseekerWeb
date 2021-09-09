@@ -1,7 +1,17 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen dark:bg-gray-700">
     <!-- topbar -->
-    <div class="w-screen flex flex-row justify-between py-4 bg-primary fixed">
+    <div
+      class="
+        w-screen
+        flex flex-row
+        justify-between
+        py-4
+        bg-primary
+        fixed
+        dark:bg-gray-900
+      "
+    >
       <!-- header left -->
       <div class="w-64 pl-6 flex flex-none items-center text-white">
         <!-- Burger menu -->
@@ -33,6 +43,7 @@
             focus:shadow-soft
             transition-all
             duration-200
+            dark:focus:ring-primary dark:bg-gray-800 dark:text-gray-400
           "
           type="search"
           name="search"
@@ -40,7 +51,15 @@
         />
         <button
           type="submit"
-          class="absolute right-0 top-0 mt-3 mr-4 text-neutral"
+          class="
+            absolute
+            right-0
+            top-0
+            mt-3
+            mr-4
+            text-neutral
+            dark:text-gray-500 dark:focus:text-gray-400
+          "
         >
           <Icon icon="fluent:search-28-filled" :inline="true" />
         </button>
@@ -142,19 +161,31 @@
 
     <div class="flex flex-col sm:flex-row sm:justify-start">
       <!-- sidebar -->
-      <div class="w-64 h-screen bg-white border-r">
+      <div
+        class="
+          w-64
+          h-screen
+          bg-white
+          border-r
+          dark:border-gray-900 dark:bg-gray-800
+        "
+      >
         <nav class="mt-24">
           <!-- home -->
           <a
             class="
               flex
               items-center
-              mxgit-2
+              mx-2
               py-4
               px-4
               text-neutral
               rounded-large
               hover:bg-gray-100 hover:text-opacity-80
+              dark:text-white
+              dark:hover:text-opacity-100
+              dark:hover:bg-primary
+              dark:hover:shadow-glowUngu
               transition-all
               duration-200
             "
@@ -176,6 +207,7 @@
               text-neutral
               rounded-large
               hover:bg-gray-100 hover:text-opacity-80
+              dark:text-white dark:hover:text-opacity-100 dark:hover:bg-primary
               transition-all
               duration-200
             "
@@ -201,13 +233,14 @@
               text-neutral
               rounded-large
               hover:bg-gray-100 hover:text-opacity-80
+              dark:text-white dark:hover:text-opacity-100 dark:hover:bg-primary
               transition-all
               duration-200
             "
             href="#"
           >
             <Icon
-              icon="fluent:bookmark-24-regular"
+              icon="fluent:bookmark-24-filled"
               :inline="true"
               class="text-xl"
             />
@@ -222,23 +255,30 @@
             w-64
             absolute
             bottom-0
-            my-2
+            pb-2
             cursor-default
             dropdown dropdown-top
             border-r
+            dark:border-gray-900
             hover:bg-gray-50
+            dark:hover:bg-gray-900
+            transition-all
+            duration-200
           "
         >
-          <hr />
+          <hr class="dark:border-gray-900" />
           <div tabindex="0" class="flex items-center mt-2 py-4 px-6">
             <img
               alt="avatar"
               class="w-14 rounded-full select-disabled"
               src="../assets/images/avatar.png"
             />
-            <div class="leading-6 ml-4 select-disabled">
-              <h4 class="font-semibold">Jerome Bell</h4>
-              <h5 id="email" class="font-semibold text-gray-500 text-xs">
+            <div class="leading-6 ml-4 select-disabled bg-opacity-0">
+              <h4 class="font-semibold dark:text-white">Jerome Bell</h4>
+              <h5
+                id="email"
+                class="font-semibold text-gray-500 text-xs dark:text-gray-300"
+              >
                 jeromebell24@gmail.com
               </h5>
             </div>
@@ -256,9 +296,13 @@
               rounded-box
               w-56
               text-sm
+              dark:bg-gray-900
+              dark:bg-opacity-100
+              dark:border-gray-900
+              dark:text-white
             "
           >
-            <li>
+            <li class="">
               <a
                 ><Icon
                   icon="fluent:person-24-filled"
