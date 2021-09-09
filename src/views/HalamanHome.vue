@@ -1,52 +1,67 @@
 <template>
-  <div class="bg-gray-200 h-screen">
-    <div class="w-screen flex flex-row items-center p-1 bg-white shadow-btn">
-      <div class="ml-6 w-96 flex flex-row items-center">
+  <div class="bg-gray-200 min-h-screen">
+    <div class="min-w-screen flex flex-row py-4 bg-primary shadow-btn">
+      <!-- header left -->
+      <div class="w-72 pl-6 flex items-center text-white">
         <!-- Burger menu -->
-        <div class="bg-pink-100 text-2xl mr-3">
-          <button class="flex flex-row items-center">
+        <div class="text-2xl mr-3">
+          <button class="flex flex-row">
             <Icon icon="fluent:line-horizontal-3-20-filled" />
           </button>
         </div>
         <!-- logo -->
-        <div class="bg-green-50 text-2xl font-bold">BursaKerja</div>
+        <div class="text-xl font-bold">BursaKerja</div>
       </div>
 
-      <!-- search bar -->
-      <div class="relative flex flex-row justify-between">
-        <input
-          class="
-            h-10
-            px-5
-            pr-10
-            w-96
-            rounded-large
-            text-sm
-            focus:outline-none
-            border-0
-            bg-gray-100
-            focus:ring-2 focus:ring-primary-focus
-          "
-          type="search"
-          name="search"
-          placeholder="Cari perusahaan atau kategori"
-        />
-        <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
-          <Icon icon="fluent:search-28-filled" :inline="true" />
-        </button>
-      </div>
-      <div class="flex flex-row-reverse mr-4 ml-4 md:hidden">
-        <i class="fas fa-bars"></i>
-      </div>
-      <div class="flex flex-row-reverse mr-8 md:flex">
-        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
-          Button
+      <!-- header right -->
+      <div class="w-full flex items-center justify-between text-white">
+        <!-- search bar -->
+        <div class="ml-6 relative flex flex-row">
+          <input
+            class="
+              h-10
+              px-5
+              pr-10
+              w-96
+              rounded-large
+              text-sm
+              border-0
+              bg-gray-100
+              focus:ring-2 focus:ring-primary-focus
+            "
+            type="search"
+            name="search"
+            placeholder="Cari perusahaan atau kategori"
+          />
+          <button
+            type="submit"
+            class="absolute right-0 top-0 mt-3 mr-4 text-neutral"
+          >
+            <Icon icon="fluent:search-28-filled" :inline="true" />
+          </button>
         </div>
-        <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
-          Link
+        <!-- button user, notifikasi, dark mode -->
+        <div class="mr-6 flex flex-row gap-4">
+          <div class="bg-pink-100 flex items-center">
+            <button>
+              <Icon icon="fluent:weather-moon-24-filled" class="text-3xl" />
+            </button>
+          </div>
+          <div class="bg-pink-100 flex items-center">
+            <button>
+              <Icon icon="fluent:alert-24-filled" />
+            </button>
+          </div>
+          <div class="bg-pink-100 flex items-center">
+            <button>
+              <Icon icon="fluent:weather-moon-24-filled" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- sidebar -->
     <div class="flex flex-col sm:flex-row sm:justify-start">
       <div class="w-64 h-screen bg-pink-100">
         <nav class="mt-10">

@@ -199,13 +199,13 @@
       </div>
 
       <!-- form data diri -->
-      <DataDiri />
+      <!-- <DataDiri /> -->
 
       <!-- form Media Sosial -->
       <!-- <MediaSosial /> -->
 
       <!-- form berkas -->
-      <!-- <Berkas /> -->
+      <Berkas />
 
       <!-- form riwayat pekerjaan -->
       <!-- <RiwayatPekerjaan /> -->
