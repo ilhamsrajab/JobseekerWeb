@@ -102,7 +102,7 @@
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
-            * Upload dengan format PDF maksimal 2 MB. Jika tidak memiliki
+            * Upload dengan format PDF maksimal 7 MB. Jika tidak memiliki
             berkas, tidak perlu diisi.
           </p>
         </label>

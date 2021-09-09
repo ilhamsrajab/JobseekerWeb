@@ -350,7 +350,7 @@
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
-            * upload foto maksimal 2 MB
+            * upload foto maksimal 7 MB
           </p>
         </label>
       </div>
@@ -370,7 +370,7 @@
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
-            * upload foto maksimal 2 MB
+            * upload foto maksimal 7 MB
           </p>
         </label>
       </div>

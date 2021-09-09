@@ -215,7 +215,7 @@
         <!-- Daftar -->
         <signUp id="signUp" v-show="signUp" />
         <button v-on:Click="daftarSekarang">Daftar Sekarang ></button>
-        <button v-on:Click="loginSekarang">Kembalu</button>
+        <button v-on:Click="loginSekarang">Kembali</button>
       </div>
     </div>
   </div>

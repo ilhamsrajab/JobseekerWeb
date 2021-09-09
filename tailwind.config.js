@@ -1,7 +1,7 @@
 // tailwind.config.js
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {},
     borderRadius: {
@@ -32,6 +32,7 @@ module.exports = {
       'btnhover': '0px 16px 40px rgba(58, 51, 121, 0.4)',
       'bagianKanan': '-16px 0px 40px rgba(0, 0, 0, 0.2)',
       'bagianKananHover': '-16px 0px 40px rgba(0, 0, 0, 0.3)',
+      'glow': '0px 0px 40px rgba(255, 190, 178, 0.7)',
     }
   },
   variants: {

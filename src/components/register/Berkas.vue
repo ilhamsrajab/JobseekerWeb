@@ -15,7 +15,7 @@
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
-            * Upload dengan format PDF maksimal 2 MB. Jika tidak memiliki
+            * Upload dengan format PDF maksimal 7 MB. Jika tidak memiliki
             berkas, tidak perlu diisi.
           </p>
         </label>
@@ -35,7 +35,7 @@
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
-            * Upload dengan format PDF maksimal 2 MB. Jika tidak memiliki
+            * Upload dengan format PDF maksimal 7 MB. Jika tidak memiliki
             berkas, tidak perlu diisi.
           </p>
         </label>
@@ -56,7 +56,7 @@
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
-            * Upload dengan format PDF maksimal 2 MB. Bisa upload beberapa file.
+            * Upload dengan format PDF maksimal 7 MB. Bisa upload beberapa file.
             Jika tidak memiliki berkas, tidak perlu diisi.
           </p>
         </label>
@@ -77,7 +77,7 @@
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
-            * Upload dengan format PDF maksimal 2 MB. Bisa upload beberapa file.
+            * Upload dengan format PDF maksimal 7 MB. Bisa upload beberapa file.
             Jika tidak memiliki berkas, tidak perlu diisi.
           </p>
         </label>
@@ -99,7 +99,7 @@
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
             * Transkrip nilai pendidikan terakhir. Upload dengan format PDF
-            maksimal 2 MB. Jika tidak memiliki berkas, tidak perlu diisi.
+            maksimal 7 MB. Jika tidak memiliki berkas, tidak perlu diisi.
           </p>
         </label>
       </div>
