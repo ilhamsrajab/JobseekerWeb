@@ -1,8 +1,5 @@
 <template>
   <div id="login" class="flex flex-col">
-    <!-- logo -->
-    <div class="text-2xl font-bold text-neutral self-end">BursaKerja</div>
-
     <!-- login form -->
     <div class="formLogin">
       <p class="text-4xl font-bold text-neutral self-start pt-8">Login</p>
@@ -104,12 +101,12 @@
       </form>
 
       <!-- daftar -->
-      <span class="font-bold text-primary flex justify-center my-6 text-sm">
-        <!-- <router-link :to="{ name: 'FormDaftar' }" replace
+      <!-- <span class="font-bold text-primary flex justify-center my-6 text-sm"> -->
+      <!-- <router-link :to="{ name: 'FormDaftar' }" replace
           >Daftar Sekarang ></router-link
         > -->
-        <button v-on:Click="daftarSekarang">Daftar Sekarang ></button>
-      </span>
+      <!-- <button v-on:Click="daftarSekarang">Daftar Sekarang ></button> -->
+      <!-- </span> -->
     </div>
   </div>
 </template>

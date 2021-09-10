@@ -209,13 +209,42 @@
           duration-200
         "
       >
+        <!-- logo and back btn -->
+        <div class="flex justify-between items-center">
+          <!-- icon kembali -->
+          <div id="iconBack" class="flex self-center" v-show="signUp">
+            <!-- icon -->
+            <button v-on:Click="loginSekarang">
+              <Icon
+                icon="fluent:arrow-left-12-filled"
+                class="
+                  text-2xl
+                  rounded-full
+                  h-10
+                  w-10
+                  p-2
+                  hover:bg-accent
+                  transition-all
+                  duration-200
+                "
+              />
+            </button>
+          </div>
+          <!-- logo -->
+          <div class="text-2xl font-bold text-neutral">BursaKerja</div>
+        </div>
         <!-- Login -->
         <signIn id="signIn" v-show="signIn" />
+        <!-- daftar -->
 
         <!-- Daftar -->
         <signUp id="signUp" v-show="signUp" />
-        <button v-on:Click="daftarSekarang">Daftar Sekarang ></button>
-        <button v-on:Click="loginSekarang">Kembali</button>
+
+        <span class="font-bold text-primary flex justify-center my-6 text-sm">
+          <button class="font-bold" v-on:Click="daftarSekarang" v-show="signIn">
+            Daftar Sekarang >
+          </button>
+        </span>
       </div>
     </div>
   </div>
@@ -225,9 +254,11 @@
 import signIn from "../components/FormLogin.vue";
 import signUp from "../components/FormDaftar.vue";
 import VueCarousel from "@chenfengyuan/vue-carousel";
+import { Icon } from "@iconify/vue";
 
 export default {
   components: {
+    Icon,
     signIn,
     signUp,
     VueCarousel,

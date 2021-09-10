@@ -3,12 +3,13 @@
     <!-- topbar -->
     <div
       class="
+        fixed
+        z-20
         w-screen
         flex flex-row
         justify-between
         py-4
         bg-primary
-        fixed
         dark:bg-gray-900
       "
     >
@@ -66,10 +67,11 @@
       </div>
 
       <!-- bar button user, notifikasi, dark mode -->
-      <div class="w-64 mr-6 flex flex-row flex-none gap-4 justify-end">
+      <div class="w-64 mr-6 flex flex-row gap-4 justify-end">
         <!-- light mode -->
-        <div class="group flex items-center">
+        <div class="group flex items-center" v-show="modeCerah">
           <button
+            v-on:Click="lightMode"
             class="
               px-1
               py-1
@@ -87,8 +89,9 @@
         </div>
 
         <!-- dark mode -->
-        <div class="group flex items-center">
+        <div class="group flex items-center" v-show="modeGelap">
           <button
+            v-on:Click="darkMode"
             class="
               px-1
               py-1
@@ -106,8 +109,9 @@
         </div>
 
         <!-- notifikasi -->
-        <div class="group flex items-center">
+        <div class="group flex items-center dropdown">
           <button
+            tabindex="1"
             class="
               indicator
               px-1
@@ -136,6 +140,36 @@
               class="text-xl text-white group-hover:text-neutral"
             />
           </button>
+          <ul
+            tabindex="1"
+            class="
+              top-6
+              right-0
+              my-4
+              p-2
+              shadow-xl
+              menu
+              dropdown-content
+              bg-white
+              border
+              rounded-box
+              w-96
+              text-sm
+              dark:bg-gray-900 dark:border-gray-900 dark:text-white
+            "
+          >
+            <li id="notif" class="rounded-large px-5 py-3 hover:bg-gray-200">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+              necessitatibus nemo dolores.
+            </li>
+            <hr class="my-2" />
+
+            <li class="">
+              <a class="text-primary active:text-white rounded-large">
+                Lihat lainnya..
+              </a>
+            </li>
+          </ul>
         </div>
 
         <!-- profil -->
@@ -163,6 +197,8 @@
       <!-- sidebar -->
       <div
         class="
+          fixed
+          z-10
           w-64
           h-screen
           bg-white
@@ -267,7 +303,10 @@
           "
         >
           <hr class="dark:border-gray-900" />
-          <div tabindex="0" class="flex items-center mt-2 py-4 px-6">
+          <div
+            tabindex="0"
+            class="flex items-center mt-2 py-4 px-6 cursor-pointer"
+          >
             <img
               alt="avatar"
               class="w-14 rounded-full select-disabled"
@@ -324,28 +363,153 @@
               </a>
             </li>
           </ul>
-          <!-- <a
-            class="
-              flex
-              items-center
-              mt-2
-              py-4
-              px-6
-              bg-white
-              border-r-4 border-white
-              hover:bg-gray-100 hover:border-primary
-            "
-            href="#"
-          >
-            <Icon
-              icon="fluent:bookmark-24-regular"
-              :inline="true"
-              class="text-xl"
-            />
-
-            <span class="mx-4 font-medium">Favorit</span>
-          </a> -->
         </div>
+      </div>
+      <!-- main -->
+      <div class="my-24 mx-10 max-w-full bg-pink-200">
+        <div>asd</div>
+
+        <!-- <div
+          class="
+            bg-white
+            w-screen
+            overflow-auto
+            whitespace-no-wrap
+            py-3
+            px-4
+            text-center
+          "
+        >
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 1
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 2
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 3
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 4
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 5
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 6
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 7
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 8
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+              mr-4
+            "
+          >
+            Button 9
+          </button>
+          <button
+            class="
+              inline-block
+              border border-teal-500
+              text-teal-500
+              rounded-full
+              px-6
+              py-2
+            "
+          >
+            Button 10
+          </button>
+        </div> -->
       </div>
     </div>
   </div>
@@ -357,6 +521,22 @@ export default {
   components: {
     Icon,
   },
+  data() {
+    return {
+      modeCerah: true,
+      modeGelap: false,
+    };
+  },
+  methods: {
+    lightMode() {
+      this.modeCerah = false;
+      this.modeGelap = true;
+    },
+    darkMode() {
+      this.modeCerah = true;
+      this.modeGelap = false;
+    },
+  },
 };
 </script>
 
@@ -367,7 +547,14 @@ export default {
 
 #email {
   display: block;
-  width: 100px;
+  width: 9rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#notif {
+  display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

@@ -1,45 +1,7 @@
 <template>
   <div id="login" class="flex flex-col">
-    <!-- login form -->
+    <!-- daftar form -->
     <div class="formLogin">
-      <div class="flex justify-between items-center">
-        <!-- icon kembali -->
-        <div class="align-self-start">
-          <!-- icon -->
-          <!-- <router-link :to="{ name: 'FormLogin' }" replace>
-            <Icon
-              icon="fluent:arrow-left-12-filled"
-              class="
-                text-2xl
-                rounded-full
-                h-10
-                w-10
-                p-2
-                hover:bg-accent
-                transition-all
-                duration-200
-              "
-            />
-          </router-link> -->
-          <button v-on:Click="loginSekarang">
-            <Icon
-              icon="fluent:arrow-left-12-filled"
-              class="
-                text-2xl
-                rounded-full
-                h-10
-                w-10
-                p-2
-                hover:bg-accent
-                transition-all
-                duration-200
-              "
-            />
-          </button>
-        </div>
-        <!-- logo -->
-        <div class="text-2xl font-bold text-neutral">BursaKerja</div>
-      </div>
       <p class="text-4xl font-bold text-neutral self-start pt-8">Daftar</p>
       <form class="form-control" action="#" method="POST">
         <!-- email -->
