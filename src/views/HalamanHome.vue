@@ -63,9 +63,10 @@
                 rounded-large
                 bg-purple-100
                 hover:bg-gray-100 hover:text-opacity-80
+                dark:bg-primary
                 dark:text-white
+                dark:hover:bg-gray-100
                 dark:hover:text-opacity-100
-                dark:hover:bg-primary
                 dark:hover:shadow-glowUngu
                 transition-all
                 duration-200
@@ -205,14 +206,14 @@
               "
             >
               <li class="">
-                <a
-                  ><Icon
+                <router-link :to="{ name: 'HalamanProfil' }">
+                  <Icon
                     icon="fluent:person-24-filled"
                     :inline="true"
                     class="text-xl mr-3"
                   />
                   <span> Profil </span>
-                </a>
+                </router-link>
               </li>
               <li>
                 <a>
@@ -245,7 +246,7 @@
                 "
               >
                 <svg
-                  class="h-6 w-6"
+                  class="h-6 w-6 text-white"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -260,6 +261,18 @@
                 </svg>
               </button>
 
+              <!-- logo -->
+              <div
+                class="flex items-center lg:hidden"
+                @click="sidebarOpen = true"
+              >
+                <a href="/">
+                  <span
+                    class="dark:text-white text-white text-2xl font-bold mr-16"
+                    >BursaKerja</span
+                  >
+                </a>
+              </div>
               <!-- search bar -->
               <div class="relative flex flex-row">
                 <input
@@ -413,26 +426,14 @@
           <!-- main page -->
           <main class="flex-1 overflow-x-hidden overflow-y-auto">
             <div class="container mx-auto m-8">
-              <div
-                class="
-                  grid
-                  place-items-center
-                  h-96
-                  text-gray-500
-                  dark:text-gray-300
-                  text-xl
-                  border-4 border-gray-300 border-dashed
-                "
-                style="height: 1000px"
-              >
-                Content
+              <div class="grid">
+                <!-- Halaman Profil -->
+                <HalamanProfil />
+                <router-view />
               </div>
             </div>
-          </main>
-
-          <!-- footer -->
-          <footer>
-            <div class="w-full bg-primary text-white">
+            <!-- footer -->
+            <footer class="w-full bg-primary text-white">
               <div class="xl:px-40 pb-10 lg:px-20 md:px-10 sm:px-5 px-10">
                 <div
                   class="
@@ -486,8 +487,8 @@
                   <p>© 2021</p>
                 </div>
               </div>
-            </div>
-          </footer>
+            </footer>
+          </main>
         </div>
       </div>
     </div>
@@ -495,9 +496,12 @@
 </template>
 
 <script>
+import HalamanProfil from "../views/HalamanProfil.vue";
 import { Icon } from "@iconify/vue";
+
 export default {
   components: {
+    HalamanProfil,
     Icon,
   },
   data() {

@@ -199,10 +199,10 @@
       </div>
 
       <!-- form data diri -->
-      <DataDiri />
+      <!-- <DataDiri /> -->
 
       <!-- form Media Sosial -->
-      <!-- <MediaSosial /> -->
+      <MediaSosial />
 
       <!-- form berkas -->
       <!-- <Berkas /> -->
