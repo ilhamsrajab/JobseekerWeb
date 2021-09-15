@@ -212,9 +212,13 @@
         <!-- logo and back btn -->
         <div class="flex justify-between items-center">
           <!-- icon kembali -->
-          <div id="iconBack" class="flex self-center" v-show="signUp">
+          <div id="iconBack" class="flex self-center">
             <!-- icon -->
-            <button v-on:Click="loginSekarang">
+            <button
+              v-bind="SignUp"
+              :class="{ active: isActive }"
+              @click="isActive = !isActive"
+            >
               <Icon
                 icon="fluent:arrow-left-12-filled"
                 class="
@@ -231,7 +235,9 @@
             </button>
           </div>
           <!-- logo -->
-          <div class="text-2xl font-bold text-neutral">BursaKerja</div>
+          <div class="text-2xl font-bold text-neutral" v-show="isActive">
+            BursaKerja
+          </div>
         </div>
         <!-- Login -->
         <signIn id="signIn" v-show="signIn" />
@@ -272,6 +278,7 @@ export default {
       ],
       signIn: true,
       signUp: false,
+      isActive: false,
     };
   },
   methods: {
