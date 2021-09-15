@@ -70,17 +70,33 @@
       >
     </div>
 
+    <!-- Data Diri -->
     <DataDiri />
+
+    <!-- media sosial -->
+    <MediaSosial />
+
+    <!-- berkas -->
+    <Berkas />
+
+    <!-- Riwayat Pekerjaan -->
+    <RiwayatPekerjaan />
   </div>
 </template>
 
 <script>
 import DataDiri from "../components/profil/DataPribadi.vue";
+import MediaSosial from "../components/profil/MediaSosial.vue";
+import Berkas from "../components/profil/Berkas.vue";
+import RiwayatPekerjaan from "../components/profil/RiwayatPekerjaan.vue";
 import { Icon } from "@iconify/vue";
 
 export default {
   components: {
     DataDiri,
+    MediaSosial,
+    Berkas,
+    RiwayatPekerjaan,
     Icon,
   },
 };
