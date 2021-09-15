@@ -18,7 +18,7 @@
     </div>
 
     <!-- tab -->
-    <div class="bg-gray-50 py-4 rounded-large px-1 space-x-2 text-gray-400">
+    <div class="bg-white py-4 rounded-large px-1 space-x-2 text-gray-400">
       <a
         href="#"
         class="
@@ -69,8 +69,22 @@
         >Riwayat Pekerjaan</a
       >
     </div>
+
+    <DataDiri />
   </div>
 </template>
+
+<script>
+import DataDiri from "../components/profil/DataPribadi.vue";
+import { Icon } from "@iconify/vue";
+
+export default {
+  components: {
+    DataDiri,
+    Icon,
+  },
+};
+</script>
 
 <style scoped>
 * {

@@ -4,7 +4,7 @@
       x-data="{ sidebarOpen: false, darkMode: false }"
       :class="{ dark: darkMode }"
     >
-      <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
+      <div class="flex h-screen bg-gray-50 dark:bg-gray-800">
         <div
           :class="sidebarOpen ? 'block' : 'hidden'"
           @click="sidebarOpen = false"
