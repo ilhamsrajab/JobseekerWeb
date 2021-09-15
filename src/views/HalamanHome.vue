@@ -197,6 +197,7 @@
       <!-- sidebar -->
       <div
         class="
+          opacity-50
           fixed
           z-10
           w-64
@@ -212,11 +213,12 @@
             class="
               flex
               items-center
-              mx-2
+              m-2
               py-4
               px-4
               text-neutral
               rounded-large
+              bg-purple-100
               hover:bg-gray-100 hover:text-opacity-80
               dark:text-white
               dark:hover:text-opacity-100
@@ -237,7 +239,7 @@
             class="
               flex
               items-center
-              mx-2
+              m-2
               py-4
               px-4
               text-neutral
@@ -263,7 +265,7 @@
             class="
               flex
               items-center
-              mx-2
+              m-2
               py-4
               px-4
               text-neutral
