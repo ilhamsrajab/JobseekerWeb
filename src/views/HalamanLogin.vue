@@ -214,11 +214,7 @@
           <!-- icon kembali -->
           <div id="iconBack" class="flex self-center">
             <!-- icon -->
-            <button
-              v-bind="SignUp"
-              :class="{ active: isActive }"
-              @click="isActive = !isActive"
-            >
+            <button v-bind="SignUp">
               <Icon
                 icon="fluent:arrow-left-12-filled"
                 class="
@@ -235,9 +231,7 @@
             </button>
           </div>
           <!-- logo -->
-          <div class="text-2xl font-bold text-neutral" v-show="isActive">
-            BursaKerja
-          </div>
+          <div class="text-2xl font-bold text-neutral">BursaKerja</div>
         </div>
         <!-- Login -->
         <signIn id="signIn" v-show="signIn" />
