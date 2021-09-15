@@ -433,7 +433,7 @@
           <!-- footer -->
           <footer>
             <div class="w-full bg-primary text-white">
-              <div class="xl:px-40 pb-12 lg:px-20 md:px-10 sm:px-5 px-10">
+              <div class="xl:px-40 pb-10 lg:px-20 md:px-10 sm:px-5 px-10">
                 <div
                   class="
                     w-full
@@ -444,7 +444,7 @@
                     justify-start
                   "
                 >
-                  <div class="w-full sm:w-3/5 pr-6 flex flex-col space-y-4">
+                  <div class="w-full sm:w-4/5 flex flex-col space-y-4">
                     <!-- logo footer -->
                     <a href="/">
                       <span
@@ -458,11 +458,28 @@
                     </p>
                     <p class="opacity-60">(0262) 431000</p>
                   </div>
-                  <div class="w-full sm:w-2/5 flex flex-col space-y-4">
-                    <a class="opacity-60">About Us</a>
-                    <a class="opacity-60">Responsibilities</a>
-                    <a class="opacity-60">Out Services</a>
-                    <a class="opacity-60">Contact</a>
+                  <div class="w-full sm:w-1/5 flex flex-col space-y-4">
+                    <a class="opacity-60 flex flex-row items-center"
+                      ><Icon
+                        icon="akar-icons:facebook-fill"
+                        :inline="true"
+                        class="mr-2"
+                      />Facebook</a
+                    >
+                    <a class="opacity-60 flex flex-row items-center"
+                      ><Icon
+                        icon="akar-icons:twitter-fill"
+                        :inline="true"
+                        class="mr-2"
+                      />Twitter</a
+                    >
+                    <a class="opacity-60 flex flex-row items-center"
+                      ><Icon
+                        icon="akar-icons:instagram-fill"
+                        :inline="true"
+                        class="mr-2"
+                      />Instagram</a
+                    >
                   </div>
                 </div>
                 <div class="opacity-60 pt-2">

@@ -212,9 +212,9 @@
         <!-- logo and back btn -->
         <div class="flex justify-between items-center">
           <!-- icon kembali -->
-          <div id="iconBack" class="flex self-center">
+          <div id="iconBack" class="flex self-center" v-show="signUp">
             <!-- icon -->
-            <button v-bind="SignUp">
+            <button v-on:Click="loginSekarang" v-bind="SignUp">
               <Icon
                 icon="fluent:arrow-left-12-filled"
                 class="
