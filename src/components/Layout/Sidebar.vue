@@ -15,9 +15,7 @@
       bg-white
       dark:bg-gray-900
       overflow-y-auto
-      lg:translate-x-0
-      lg:static
-      lg:inset-0
+      lg:translate-x-0 lg:static lg:inset-0
     "
   >
     <!-- logo -->
@@ -35,7 +33,11 @@
     <nav class="flex flex-col mt-4 px-4 text-center">
       <!-- home -->
       <button-sidebar @click="setSelectedTab('home')" :mode="homeButtonMode">
-        <Icon icon="fluent:home-24-filled" :inline="true" class="text-xl" />
+        <Icon
+          icon="fluent:home-24-filled"
+          :inline="true"
+          class="text-xl mr-3"
+        />
 
         Home</button-sidebar
       >
@@ -44,14 +46,24 @@
       <button-sidebar
         @click="setSelectedTab('cari-kerja')"
         :mode="cariKerjaButtonMode"
-        >Cari Kerja</button-sidebar
+      >
+        <Icon
+          icon="fluent:search-24-filled"
+          :inline="true"
+          class="text-xl mr-3"
+        />Cari Kerja</button-sidebar
       >
 
       <!-- favorite -->
       <button-sidebar
         @click="setSelectedTab('favorite')"
         :mode="favoriteButtonMode"
-        >Favorite</button-sidebar
+      >
+        <Icon
+          icon="fluent:bookmark-24-filled"
+          :inline="true"
+          class="text-xl mr-3"
+        />Favorit</button-sidebar
       >
     </nav>
 
@@ -112,7 +124,8 @@
           rounded-box
           w-64
           text-sm
-          dark:bg-gray-900 dark:bg-opacity-100
+          dark:bg-gray-900
+          dark:bg-opacity-100
           dark:border-gray-900
           dark:text-white
         "

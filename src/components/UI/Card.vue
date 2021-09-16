@@ -1,8 +1,9 @@
 <template>
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
+  <div class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
     <div class="flex flex-col">
       <div class="bg-white shadow-lg rounded-large p-4">
         <div class="flex-none lg:flex bg-pink-100">
+          <!-- logo -->
           <div class="lg:h-24 lg:w-24 lg:mb-0 mb-3 bg-purple-100">
             <img
               src="https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"
@@ -16,15 +17,31 @@
               "
             />
           </div>
+          <!-- nama perusahaan -->
           <div class="flex-auto ml-3 justify-evenly py-2">
             <div class="flex flex-wrap">
-              <div class="w-full flex-none text-xs text-blue-700 font-medium">
-                Shop
+              <h2 class="flex-auto text-lg font-bold bg-green-100">
+                Nama Perusahaan
+              </h2>
+
+              <div
+                class="
+                  w-full
+                  flex-none
+                  text-xs text-gray-500
+                  font-medium
+                  mt-1
+                  bg-green-50
+                "
+              >
+                Kategori Pekerjaan
               </div>
-              <h2 class="flex-auto text-lg font-medium">Massive Dynamic</h2>
+            </div>
+            <div class="bg-green-100">
+              <Icon icon="fluent:bookmark-24-filled" :inline="true" />
             </div>
             <p class="mt-3"></p>
-            <div class="flex py-4 text-sm text-gray-500">
+            <div class="flex py-4 text-sm text-gray-500 bg-gray-100">
               <div class="flex-1 inline-flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -519,3 +536,13 @@
     </div>
   </div>
 </template>
+
+<script>
+import { Icon } from "@iconify/vue";
+
+export default {
+  components: {
+    Icon,
+  },
+};
+</script>
