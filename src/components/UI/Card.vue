@@ -37,7 +37,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div class="bg-green-100">
           <Icon
             icon="fluent:bookmark-24-filled"
             :inline="true"
