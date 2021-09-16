@@ -1,5 +1,11 @@
 <template>
-  <button class="tabDisable" @click="setSelectedTab('data-diri')">
-    Data Diri
+  <button :type="type" :class="mode">
+    <slot></slot>
   </button>
 </template>
+
+<script>
+export default {
+  props: ['type', 'mode']
+}
+</script>
