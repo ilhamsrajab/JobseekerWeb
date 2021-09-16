@@ -18,22 +18,11 @@
     </div>
 
     <!-- tab -->
-    <div class="bg-white py-4 rounded-large px-1 space-x-2 text-gray-400">
-      <a href="#" class="tabActive" @click="setSelectedTab('data-diri')"
-        >Data Diri</a
-      >
-      <a href="#" class="tabDisable" @click="setSelectedTab('media-sosial')"
-        >Media Sosial</a
-      >
-      <a href="#" class="tabDisable" @click="setSelectedTab('berkas')"
-        >Berkas</a
-      >
-      <a
-        href="#"
-        class="tabDisable"
-        @click="setSelectedTab('riwayat-pekerjaan')"
-        >Riwayat Pekerjaan</a
-      >
+    <div class="bg-white py-2 rounded-large px-2 space-x-2 text-gray-400">
+      <TabProfil />
+      <TabProfil />
+      <TabProfil />
+      <TabProfil />
     </div>
     <component :is="selectedTab"></component>
   </div>
@@ -44,6 +33,7 @@ import DataDiri from "../components/profil/DataPribadi.vue";
 import MediaSosial from "../components/profil/MediaSosial.vue";
 import Berkas from "../components/profil/Berkas.vue";
 import RiwayatPekerjaan from "../components/profil/RiwayatPekerjaan.vue";
+import TabProfil from "../components/BtnTab.vue";
 import { Icon } from "@iconify/vue";
 
 export default {
@@ -52,6 +42,7 @@ export default {
     MediaSosial,
     Berkas,
     RiwayatPekerjaan,
+    TabProfil,
     Icon,
   },
   data() {

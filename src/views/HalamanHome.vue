@@ -24,194 +24,7 @@
 
         <!-- header -->
         <div class="flex-1 flex flex-col overflow-hidden">
-          <header
-            class="flex justify-between items-center px-6 py-4 bg-primary"
-          >
-            <div class="flex items-center space-x-4 lg:space-x-0">
-              <!-- hamburger menu -->
-              <button
-                @click="sidebarOpen = true"
-                class="
-                  text-gray-500
-                  dark:text-gray-300
-                  focus:outline-none
-                  lg:hidden
-                "
-              >
-                <svg
-                  class="h-6 w-6 text-white"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 6H20M4 12H20M4 18H11"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-
-              <!-- logo -->
-              <div class="flex items-center lg:hidden">
-                <a href="/">
-                  <span
-                    class="dark:text-white text-white text-2xl font-bold mr-16"
-                    >BursaKerja</span
-                  >
-                </a>
-              </div>
-              <!-- search bar -->
-              <div class="relative flex flex-row">
-                <input
-                  class="
-                    searchbar
-                    h-10
-                    px-5
-                    pr-10
-                    w-96
-                    rounded-large
-                    text-sm
-                    border-0
-                    hover:shadow-soft
-                    focus:ring-secondary focus:ring-opacity-80 focus:shadow-soft
-                    transition-all
-                    duration-200
-                    dark:focus:ring-primary dark:bg-gray-800 dark:text-gray-400
-                  "
-                  type="search"
-                  name="search"
-                  placeholder="Cari perusahaan atau kategori"
-                />
-                <button
-                  type="submit"
-                  class="
-                    absolute
-                    right-0
-                    top-0
-                    mt-3
-                    mr-4
-                    text-neutral
-                    dark:text-gray-500 dark:focus:text-gray-400
-                  "
-                >
-                  <Icon icon="fluent:search-28-filled" :inline="true" />
-                </button>
-              </div>
-            </div>
-
-            <!-- button notifikasi dan dark mode -->
-            <div class="flex items-center space-x-4">
-              <!-- light mode -->
-              <div class="group flex items-center" v-show="modeCerah">
-                <button
-                  v-on:Click="lightMode"
-                  class="
-                    px-1
-                    py-1
-                    group-hover:bg-accent group-hover:shadow-glow
-                    rounded-full
-                    transition-all
-                    duration-200
-                  "
-                >
-                  <Icon
-                    icon="fluent:weather-sunny-24-filled"
-                    class="text-xl text-white group-hover:text-neutral"
-                  />
-                </button>
-              </div>
-
-              <!-- dark mode -->
-              <div class="group flex items-center" v-show="modeGelap">
-                <button
-                  v-on:Click="darkMode"
-                  class="
-                    px-1
-                    py-1
-                    group-hover:bg-accent group-hover:shadow-glow
-                    rounded-full
-                    transition-all
-                    duration-200
-                  "
-                >
-                  <Icon
-                    icon="fluent:weather-moon-24-filled"
-                    class="text-xl text-white group-hover:text-neutral"
-                  />
-                </button>
-              </div>
-
-              <!-- notifikasi -->
-              <div class="group flex items-center dropdown">
-                <button
-                  tabindex="1"
-                  class="
-                    indicator
-                    px-1
-                    py-1
-                    group-hover:bg-accent group-hover:shadow-glow
-                    rounded-full
-                    transition-all
-                    duration-200
-                  "
-                >
-                  <!-- indicator -->
-                  <span
-                    class="
-                      w-2
-                      h-2
-                      bg-accent
-                      absolute
-                      top-0
-                      right-0
-                      rounded-full
-                      shadow-lg
-                    "
-                  ></span>
-                  <Icon
-                    icon="fluent:alert-24-filled"
-                    class="text-xl text-white group-hover:text-neutral"
-                  />
-                </button>
-                <ul
-                  tabindex="1"
-                  class="
-                    top-6
-                    right-0
-                    my-4
-                    p-2
-                    shadow-xl
-                    menu
-                    dropdown-content
-                    bg-white
-                    border
-                    rounded-box
-                    w-96
-                    text-sm
-                    dark:bg-gray-900 dark:border-gray-900 dark:text-white
-                  "
-                >
-                  <li
-                    id="notif"
-                    class="rounded-large px-5 py-3 hover:bg-gray-200"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    necessitatibus nemo dolores.
-                  </li>
-                  <hr class="my-2" />
-
-                  <li class="">
-                    <a class="text-primary active:text-white rounded-large">
-                      Lihat lainnya..
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </header>
+          <Header />
 
           <!-- main page -->
           <main class="flex-1 overflow-x-hidden overflow-y-auto">
@@ -223,61 +36,7 @@
               </div>
             </div>
             <!-- footer -->
-            <footer class="w-full bg-primary text-white">
-              <div class="xl:px-40 pb-10 lg:px-20 md:px-10 sm:px-5 px-10">
-                <div
-                  class="
-                    w-full
-                    pt-12
-                    flex flex-col
-                    sm:flex-row
-                    space-y-2
-                    justify-start
-                  "
-                >
-                  <div class="w-full sm:w-4/5 flex flex-col space-y-4">
-                    <!-- logo footer -->
-                    <a href="/">
-                      <span
-                        class="dark:text-white text-white text-2xl font-bold"
-                        >BursaKerja</span
-                      >
-                    </a>
-                    <p class="opacity-60">
-                      Rancabang Estate, Jl. Rancabango, Perumahan, Kec. Tarogong
-                      Kaler, Kabupaten Garut, Jawa Barat 44151
-                    </p>
-                    <p class="opacity-60">(0262) 431000</p>
-                  </div>
-                  <div class="w-full sm:w-1/5 flex flex-col space-y-4">
-                    <a class="opacity-60 flex flex-row items-center"
-                      ><Icon
-                        icon="akar-icons:facebook-fill"
-                        :inline="true"
-                        class="mr-2"
-                      />Facebook</a
-                    >
-                    <a class="opacity-60 flex flex-row items-center"
-                      ><Icon
-                        icon="akar-icons:twitter-fill"
-                        :inline="true"
-                        class="mr-2"
-                      />Twitter</a
-                    >
-                    <a class="opacity-60 flex flex-row items-center"
-                      ><Icon
-                        icon="akar-icons:instagram-fill"
-                        :inline="true"
-                        class="mr-2"
-                      />Instagram</a
-                    >
-                  </div>
-                </div>
-                <div class="opacity-60 pt-2">
-                  <p>© 2021</p>
-                </div>
-              </div>
-            </footer>
+            <Footer />
           </main>
         </div>
       </div>
@@ -288,29 +47,17 @@
 <script>
 import HalamanProfil from "../views/HalamanProfil.vue";
 import Sidebar from "../components/Sidebar.vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 import { Icon } from "@iconify/vue";
 
 export default {
   components: {
     HalamanProfil,
     Sidebar,
+    Header,
+    Footer,
     Icon,
-  },
-  data() {
-    return {
-      modeCerah: true,
-      modeGelap: false,
-    };
-  },
-  methods: {
-    lightMode() {
-      this.modeCerah = false;
-      this.modeGelap = true;
-    },
-    darkMode() {
-      this.modeCerah = true;
-      this.modeGelap = false;
-    },
   },
 };
 </script>
