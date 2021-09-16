@@ -15,15 +15,16 @@
       bg-white
       dark:bg-gray-900
       overflow-y-auto
-      lg:translate-x-0 lg:static lg:inset-0
+      lg:translate-x-0
+      lg:static
+      lg:inset-0
     "
   >
     <!-- logo -->
     <div class="flex items-center justify-center py-5 bg-primary">
       <div class="flex items-center">
         <a href="/">
-          <span
-            class="dark:text-white text-white text-2xl font-bold select-none"
+          <span class="dark:text-white text-white text-2xl font-bold"
             >BursaKerja</span
           >
         </a>
@@ -33,13 +34,25 @@
     <!-- navigasi sidebar -->
     <nav class="flex flex-col mt-4 px-4 text-center">
       <!-- home -->
-      <ButtonSidebar />
+      <button-sidebar @click="setSelectedTab('home')" :mode="homeButtonMode">
+        <Icon icon="fluent:home-24-filled" :inline="true" class="text-xl" />
+
+        Home</button-sidebar
+      >
 
       <!-- cari kerja -->
-      <ButtonSidebar />
+      <button-sidebar
+        @click="setSelectedTab('cari-kerja')"
+        :mode="cariKerjaButtonMode"
+        >Cari Kerja</button-sidebar
+      >
 
-      <!-- favorit -->
-      <ButtonSidebar />
+      <!-- favorite -->
+      <button-sidebar
+        @click="setSelectedTab('favorite')"
+        :mode="favoriteButtonMode"
+        >Favorite</button-sidebar
+      >
     </nav>
 
     <!-- profil icon -->
@@ -99,8 +112,7 @@
           rounded-box
           w-64
           text-sm
-          dark:bg-gray-900
-          dark:bg-opacity-100
+          dark:bg-gray-900 dark:bg-opacity-100
           dark:border-gray-900
           dark:text-white
         "
@@ -139,6 +151,30 @@ export default {
   components: {
     Icon,
     ButtonSidebar,
+    // Home,
+    // CariKerja,
+    // Favorite,
+  },
+  data() {
+    return {
+      selectedTab: "home",
+    };
+  },
+  methods: {
+    setSelectedTab(tab) {
+      this.selectedTab = tab;
+    },
+  },
+  computed: {
+    homeButtonMode() {
+      return this.selectedTab === "home" ? null : "btnSidebarDisable";
+    },
+    cariKerjaButtonMode() {
+      return this.selectedTab === "cari-kerja" ? null : "btnSidebarDisable";
+    },
+    favoriteButtonMode() {
+      return this.selectedTab === "favorite" ? null : "btnSidebarDisable";
+    },
   },
 };
 </script>

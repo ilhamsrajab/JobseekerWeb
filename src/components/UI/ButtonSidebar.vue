@@ -1,8 +1,6 @@
 <template>
-  <button class="btnSidebarDisable" href="#">
-    <Icon icon="fluent:home-24-filled" :inline="true" class="text-xl" />
-
-    <span class="mx-4 font-medium">Home</span>
+  <button class="btnSidebarActive" :type="type" :class="mode">
+    <slot class="mx-4 font-medium"></slot>
   </button>
 </template>
 
@@ -10,6 +8,7 @@
 import { Icon } from "@iconify/vue";
 
 export default {
+  props: ['type', 'mode'],
   components: {
     Icon,
   },
