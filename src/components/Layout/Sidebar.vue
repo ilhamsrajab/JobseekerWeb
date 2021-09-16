@@ -22,7 +22,8 @@
     <div class="flex items-center justify-center py-5 bg-primary">
       <div class="flex items-center">
         <a href="/">
-          <span class="dark:text-white text-white text-2xl font-bold"
+          <span
+            class="dark:text-white text-white text-2xl font-bold select-none"
             >BursaKerja</span
           >
         </a>

@@ -31,8 +31,8 @@
             <div class="container mx-auto m-8">
               <div class="grid">
                 <!-- Halaman Profil -->
-                <HalamanProfil />
-                <router-view />
+                <!-- <HalamanProfil /> -->
+                <Card />
               </div>
             </div>
             <!-- footer -->
@@ -46,6 +46,7 @@
 
 <script>
 import HalamanProfil from "../views/HalamanProfil.vue";
+import Card from "../components/UI/Card.vue";
 import Sidebar from "../components/Layout/Sidebar.vue";
 import Header from "../components/Layout/Header.vue";
 import Footer from "../components/Layout/Footer.vue";
@@ -54,6 +55,7 @@ import { Icon } from "@iconify/vue";
 export default {
   components: {
     HalamanProfil,
+    Card,
     Sidebar,
     Header,
     Footer,

@@ -24,8 +24,9 @@
 
       <!-- logo -->
       <div class="flex items-center lg:hidden">
-        <a href="/">
-          <span class="dark:text-white text-white text-2xl font-bold mr-16"
+        <a href="/" class="mr-16">
+          <span
+            class="dark:text-white text-white text-2xl font-bold select-none"
             >BursaKerja</span
           >
         </a>
