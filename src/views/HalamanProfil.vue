@@ -19,56 +19,18 @@
 
     <!-- tab -->
     <div class="bg-white py-4 rounded-large px-1 space-x-2 text-gray-400">
-      <a
-        href="#"
-        class="
-          bg-primary
-          text-white
-          rounded-large
-          px-6
-          py-3
-          transition-all
-          duration-200
-        "
-        @click="setSelectedTab('data-diri')"
+      <a href="#" class="tabActive" @click="setSelectedTab('data-diri')"
         >Data Diri</a
       >
-      <a
-        href="#"
-        class="
-          hover:text-neutral
-          rounded-large
-          px-6
-          py-3
-          transition-all
-          duration-200
-        "
-        @click="setSelectedTab('media-sosial')"
+      <a href="#" class="tabDisable" @click="setSelectedTab('media-sosial')"
         >Media Sosial</a
       >
-      <a
-        href="#"
-        class="
-          hover:text-neutral
-          rounded-large
-          px-6
-          py-3
-          transition-all
-          duration-200
-        "
-        @click="setSelectedTab('berkas')"
+      <a href="#" class="tabDisable" @click="setSelectedTab('berkas')"
         >Berkas</a
       >
       <a
         href="#"
-        class="
-          hover:text-neutral
-          rounded-large
-          px-6
-          py-3
-          transition-all
-          duration-200
-        "
+        class="tabDisable"
         @click="setSelectedTab('riwayat-pekerjaan')"
         >Riwayat Pekerjaan</a
       >
