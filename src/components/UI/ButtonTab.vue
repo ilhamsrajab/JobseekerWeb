@@ -1,11 +1,11 @@
 <template>
-  <button
-    class="
-      tabDisable
-      dark:text-white dark:hover:text-opacity-100 dark:hover:bg-primary
-    "
-    @click="setSelectedTab('data-diri')"
-  >
-    Data Diri
+  <button :type="type" :class="mode">
+    <slot></slot>
   </button>
 </template>
+
+<script>
+export default {
+  props: ["type", "mode"],
+};
+</script>

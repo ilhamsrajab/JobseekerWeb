@@ -19,10 +19,25 @@
 
     <!-- tab -->
     <div class="bg-white py-2 rounded-large px-2 space-x-2 text-gray-400">
-      <ButtonTab />
-      <ButtonTab />
-      <ButtonTab />
-      <ButtonTab />
+      <button-tab
+        class="tabActive"
+        @click="setSelectedTab('data-diri')"
+        :mode="dataDiriButtonMode"
+        >Data Diri</button-tab
+      >
+      <button-tab
+        @click="setSelectedTab('media-sosial')"
+        :mode="mediaSosialButtonMode"
+        >Media Sosial</button-tab
+      >
+      <button-tab @click="setSelectedTab('berkas')" :mode="berkasButtonMode"
+        >Berkas</button-tab
+      >
+      <button-tab
+        @click="setSelectedTab('riwayat-pekerjaan')"
+        :mode="riwayatPekerjaanButtonMode"
+        >Riwayat Pekerjaan</button-tab
+      >
     </div>
     <component :is="selectedTab"></component>
   </div>
@@ -42,8 +57,8 @@ export default {
     MediaSosial,
     Berkas,
     RiwayatPekerjaan,
-    ButtonTab,
     Icon,
+    ButtonTab,
   },
   data() {
     return {
@@ -53,6 +68,20 @@ export default {
   methods: {
     setSelectedTab(tab) {
       this.selectedTab = tab;
+    },
+  },
+  computed: {
+    dataDiriButtonMode() {
+      return this.selectedTab === "data-diri" ? null : "tabDisable";
+    },
+    mediaSosialButtonMode() {
+      return this.selectedTab === "media-sosial" ? null : "tabDisable";
+    },
+    berkasButtonMode() {
+      return this.selectedTab === "berkas" ? null : "tabDisable";
+    },
+    RiwayatPekerjaanButtonMode() {
+      return this.selectedTab === "riwayat-pekerjaan" ? null : "tabDisable";
     },
   },
 };
