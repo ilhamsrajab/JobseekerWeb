@@ -30,6 +30,7 @@
           transition-all
           duration-200
         "
+        @click="setSelectedTab('data-diri')"
         >Data Diri</a
       >
       <a
@@ -42,6 +43,7 @@
           transition-all
           duration-200
         "
+        @click="setSelectedTab('media-sosial')"
         >Media Sosial</a
       >
       <a
@@ -54,8 +56,8 @@
           transition-all
           duration-200
         "
-        >Berkas</a
-      >
+        @click="setSelectedTab('berkas')"
+        >Berkas</a>
       <a
         href="#"
         class="
@@ -66,21 +68,12 @@
           transition-all
           duration-200
         "
+        @click="setSelectedTab('riwayat-pekerjaan')"
         >Riwayat Pekerjaan</a
+
       >
     </div>
-
-    <!-- Data Diri -->
-    <DataDiri />
-
-    <!-- media sosial -->
-    <MediaSosial />
-
-    <!-- berkas -->
-    <Berkas />
-
-    <!-- Riwayat Pekerjaan -->
-    <RiwayatPekerjaan />
+    <component :is="selectedTab"></component> 
   </div>
 </template>
 
@@ -98,6 +91,16 @@ export default {
     Berkas,
     RiwayatPekerjaan,
     Icon,
+  },
+  data() {
+    return {
+      selectedTab: "data-diri",
+    };
+  },
+  methods: {
+    setSelectedTab(tab) {
+      this.selectedTab = tab;
+    },
   },
 };
 </script>
