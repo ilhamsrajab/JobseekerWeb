@@ -251,8 +251,8 @@
 </template>
 
 <script>
-import signIn from "../components/FormLogin.vue";
-import signUp from "../components/FormDaftar.vue";
+import signIn from "../components/Form/FormLogin.vue";
+import signUp from "../components/Form/FormDaftar.vue";
 import VueCarousel from "@chenfengyuan/vue-carousel";
 import { Icon } from "@iconify/vue";
 

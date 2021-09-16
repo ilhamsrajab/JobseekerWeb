@@ -46,9 +46,9 @@
 
 <script>
 import HalamanProfil from "../views/HalamanProfil.vue";
-import Sidebar from "../components/Sidebar.vue";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import Sidebar from "../components/Layout/Sidebar.vue";
+import Header from "../components/Layout/Header.vue";
+import Footer from "../components/Layout/Footer.vue";
 import { Icon } from "@iconify/vue";
 
 export default {
