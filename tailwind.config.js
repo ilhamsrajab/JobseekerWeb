@@ -1,9 +1,38 @@
 // tailwind.config.js
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+
+      black: colors.black,
+      white: colors.white,
+      gray: colors.coolGray,
+      red: colors.red,
+      yellow: colors.amber,
+      green: colors.emerald,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      purple: colors.violet,
+      pink: colors.pink,
+
+      primary: '#3A3379',
+      accent: '#FFBEB2',
+      hijau: '#C2F784',
+      hijauDark: '#5E7840',
+      orange: '#FFBF86',
+      orangeDark: '#806043',
+      merah: '#F6A9A9',
+      merahDark: '#755151',
+      kuning: '#807A3F',
+      kuningDark: '#FFF47E',
+    },
+
     borderRadius: {
       '40': '40px',
       '20': '20px',
@@ -64,10 +93,10 @@ module.exports = {
           'base-200': '#f9fafb',
           'base-300': '#d1d5db',
           'base-content': '#1f2937',
-          'info': '#2094f3',
-          'success': '#009485',
-          'warning': '#ff9900',
-          'error': '#ff5724',
+          'info': '#FFF47E',
+          'success': '#C2F784',
+          'warning': '#FFBF86',
+          'error': '#F6A9A9',
           'white': '#ffffff',
         },
       },
