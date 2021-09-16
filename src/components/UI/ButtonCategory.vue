@@ -1,8 +1,12 @@
 <template>
   <button
     class="
-      tabDisable
-      dark:text-white dark:hover:text-opacity-100 dark:hover:bg-primary
+      hover:text-neutral
+      rounded-large
+      px-6
+      py-3
+      transition-all
+      duration-200
     "
     @click="setSelectedTab('data-diri')"
   >

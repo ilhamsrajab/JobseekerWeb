@@ -19,10 +19,10 @@
 
     <!-- tab -->
     <div class="bg-white py-2 rounded-large px-2 space-x-2 text-gray-400">
-      <TabProfil />
-      <TabProfil />
-      <TabProfil />
-      <TabProfil />
+      <ButtonTab />
+      <ButtonTab />
+      <ButtonTab />
+      <ButtonTab />
     </div>
     <component :is="selectedTab"></component>
   </div>
@@ -33,7 +33,7 @@ import DataDiri from "../components/profil/DataPribadi.vue";
 import MediaSosial from "../components/profil/MediaSosial.vue";
 import Berkas from "../components/profil/Berkas.vue";
 import RiwayatPekerjaan from "../components/profil/RiwayatPekerjaan.vue";
-import TabProfil from "../components/UI/ButtonTab.vue";
+import ButtonTab from "../components/UI/ButtonTab.vue";
 import { Icon } from "@iconify/vue";
 
 export default {
@@ -42,7 +42,7 @@ export default {
     MediaSosial,
     Berkas,
     RiwayatPekerjaan,
-    TabProfil,
+    ButtonTab,
     Icon,
   },
   data() {

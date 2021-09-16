@@ -31,34 +31,11 @@
 
     <!-- navigasi sidebar -->
     <nav class="flex flex-col mt-4 px-4 text-center">
-      <a
-        class="
-          flex
-          items-center
-          my-1
-          py-4
-          px-4
-          text-neutral
-          rounded-large
-          bg-purple-100
-          hover:bg-gray-100 hover:text-opacity-80
-          dark:bg-primary
-          dark:text-white
-          dark:hover:bg-gray-100
-          dark:hover:text-opacity-100
-          dark:hover:shadow-glowUngu
-          transition-all
-          duration-200
-        "
-        href="#"
-      >
-        <Icon icon="fluent:home-24-filled" :inline="true" class="text-xl" />
-
-        <span class="mx-4 font-medium">Home</span>
-      </a>
+      <!-- home -->
+      <ButtonSidebar />
 
       <!-- cari kerja -->
-      <a
+      <button
         class="
           flex
           items-center
@@ -77,10 +54,10 @@
         <Icon icon="fluent:search-24-regular" :inline="true" class="text-xl" />
 
         <span class="mx-4 font-medium">Cari Kerja</span>
-      </a>
+      </button>
 
       <!-- favorit -->
-      <a
+      <button
         class="
           flex
           items-center
@@ -103,7 +80,7 @@
         />
 
         <span class="mx-4 font-medium">Favorit</span>
-      </a>
+      </button>
     </nav>
 
     <!-- profil icon -->
@@ -136,7 +113,7 @@
             group-hover:rotate-3
             transform
           "
-          src="../assets/images/avatar.png"
+          src="../../assets/images/avatar.png"
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
           <h4 class="font-semibold dark:text-white">Jerome Bell</h4>
@@ -197,10 +174,12 @@
 
 <script>
 import { Icon } from "@iconify/vue";
+import ButtonSidebar from "../UI/ButtonSidebar.vue";
 
 export default {
   components: {
     Icon,
+    ButtonSidebar,
   },
 };
 </script>
