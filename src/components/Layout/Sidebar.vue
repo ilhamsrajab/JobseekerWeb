@@ -35,52 +35,10 @@
       <ButtonSidebar />
 
       <!-- cari kerja -->
-      <button
-        class="
-          flex
-          items-center
-          my-1
-          py-4
-          px-4
-          text-neutral
-          rounded-large
-          hover:bg-gray-100 hover:text-opacity-80
-          dark:text-white dark:hover:text-opacity-100 dark:hover:bg-primary
-          transition-all
-          duration-200
-        "
-        href="#"
-      >
-        <Icon icon="fluent:search-24-regular" :inline="true" class="text-xl" />
-
-        <span class="mx-4 font-medium">Cari Kerja</span>
-      </button>
+      <ButtonSidebar />
 
       <!-- favorit -->
-      <button
-        class="
-          flex
-          items-center
-          my-1
-          py-4
-          px-4
-          text-neutral
-          rounded-large
-          hover:bg-gray-100 hover:text-opacity-80
-          dark:text-white dark:hover:text-opacity-100 dark:hover:bg-primary
-          transition-all
-          duration-200
-        "
-        href="#"
-      >
-        <Icon
-          icon="fluent:bookmark-24-regular"
-          :inline="true"
-          class="text-xl"
-        />
-
-        <span class="mx-4 font-medium">Favorit</span>
-      </button>
+      <ButtonSidebar />
     </nav>
 
     <!-- profil icon -->
