@@ -214,7 +214,7 @@
           <!-- icon kembali -->
           <div id="iconBack" class="flex self-center" v-show="signUp">
             <!-- icon -->
-            <button v-on:Click="loginSekarang" v-bind="SignUp">
+            <button v-on:Click="loginSekarang">
               <Icon
                 icon="fluent:arrow-left-12-filled"
                 class="

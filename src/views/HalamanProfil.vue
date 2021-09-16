@@ -71,16 +71,16 @@
     </div>
 
     <!-- Data Diri -->
-    <DataDiri />
+    <DataDiri v-show="DataDiri" />
 
     <!-- media sosial -->
-    <MediaSosial />
+    <MediaSosial v-show="MediaSosial" />
 
     <!-- berkas -->
-    <Berkas />
+    <Berkas v-show="Berkas" />
 
     <!-- Riwayat Pekerjaan -->
-    <RiwayatPekerjaan />
+    <RiwayatPekerjaan v-show="RiwayatPekerjaan" />
   </div>
 </template>
 
