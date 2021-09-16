@@ -33,7 +33,7 @@ import DataDiri from "../components/profil/DataPribadi.vue";
 import MediaSosial from "../components/profil/MediaSosial.vue";
 import Berkas from "../components/profil/Berkas.vue";
 import RiwayatPekerjaan from "../components/profil/RiwayatPekerjaan.vue";
-import TabProfil from "../components/BtnTab.vue";
+import TabProfil from "../components/ButtonTab.vue";
 import { Icon } from "@iconify/vue";
 
 export default {
