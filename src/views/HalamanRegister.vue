@@ -35,7 +35,7 @@ import MediaSosial from "../components/register/MediaSosial.vue";
 import Berkas from "../components/register/Berkas.vue";
 import RiwayatPekerjaan from "../components/register/RiwayatPekerjaan.vue";
 import Sukses from "../components/register/Sukses.vue";
-import Step from "../components/UI/Step.vue";
+import Step from "../components/UI/StepHeader.vue";
 
 export default {
   name: "HalamanDaftar",
