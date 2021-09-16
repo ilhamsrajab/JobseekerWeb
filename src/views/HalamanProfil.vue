@@ -20,7 +20,6 @@
     <!-- tab -->
     <div class="bg-white py-2 rounded-large px-2 space-x-2 text-gray-400">
       <button-tab
-        class="tabActive"
         @click="setSelectedTab('data-diri')"
         :mode="dataDiriButtonMode"
         >Data Diri</button-tab
@@ -80,7 +79,7 @@ export default {
     berkasButtonMode() {
       return this.selectedTab === "berkas" ? null : "tabDisable";
     },
-    RiwayatPekerjaanButtonMode() {
+    riwayatPekerjaanButtonMode() {
       return this.selectedTab === "riwayat-pekerjaan" ? null : "tabDisable";
     },
   },

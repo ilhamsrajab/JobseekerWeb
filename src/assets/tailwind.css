@@ -24,8 +24,12 @@
   @apply bg-primary text-white rounded-large px-6 py-3 transition-all duration-200;
 }
 
+/* .tabActive:active {
+  @apply bg-primary; 
+} */
+
 .tabDisable {
-  @apply hover:text-neutral px-6 py-3 transition-all duration-200 text-gray-500 rounded-large hover:bg-gray-100 hover:text-opacity-80;
+  @apply hover:text-neutral px-6 py-3 transition-all duration-200 text-gray-500 rounded-large hover:bg-gray-100 hover:text-opacity-80 bg-opacity-0;
 }
 
 input[type=file]::file-selector-button {
