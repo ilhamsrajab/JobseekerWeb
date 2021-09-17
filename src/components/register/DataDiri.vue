@@ -11,7 +11,6 @@
       placeholder="Masukan nama lengkap"
       class="input input-primary w-full"
       required
-      v-model.trim="dataDiri.nama_lengkap"
     />
   </div>
 
@@ -29,7 +28,6 @@
       maxlength="16"
       max="9999999999999999"
       required
-      v-model.trim="dataDiri.nik"
     />
   </div>
 
@@ -55,7 +53,6 @@
             transition-all
             duration-200
           "
-          v-model.trim="dataDiri.jenis_kelamin"
         />
         <label
           for="push-lakilaki"
@@ -80,7 +77,6 @@
             transition-all
             duration-200
           "
-          v-model.trim="dataDiri.jenis_kelamin"
         />
         <label
           for="push-perempuan"
@@ -105,7 +101,6 @@
         placeholder="Masukan tempat lahir"
         class="input input-primary w-3/5"
         required
-        v-model.trim="dataDiri.tempat_lahir"
       />
       <input
         id="tanggalLahir"
@@ -113,7 +108,6 @@
         type="date"
         class="input input-primary w-2/5"
         required
-        v-model.trim="dataDiri.tanggal_lahir"
       />
     </div>
   </div>
@@ -126,7 +120,6 @@
     <select
       id="agama"
       class="select select-primary w-full font-normal"
-      v-model.trim="dataDiri.agama"
     >
       <option disabled="disabled" selected="selected">Pilih agama</option>
       <option>1</option>
@@ -143,7 +136,6 @@
     <select
       id="statusPerkawinan"
       class="select select-primary w-full font-normal"
-      v-model.trim="dataDiri.status_perkawinan"
     >
       <option disabled="disabled" selected="selected">
         Pilih status perkawinan
@@ -167,7 +159,6 @@
       <select
         id="alamatProvinsi"
         class="select select-primary w-full font-normal"
-        v-model.trim="dataDiri.provinsi"
       >
         <option disabled="disabled" selected="selected">Pilih provinsi</option>
         <option>1</option>
@@ -184,7 +175,6 @@
       <select
         id="alamatKota"
         class="select select-primary w-full font-normal"
-        v-model.trim="dataDiri.kota_kabupaten"
       >
         <option disabled="disabled" selected="selected">
           Pilih kota/kabupaten
@@ -203,7 +193,6 @@
       <select
         id="alamatKecamatan"
         class="select select-primary w-full font-normal"
-        v-model.trim="dataDiri.kecamatan"
       >
         <option disabled="disabled" selected="selected">Pilih kecamatan</option>
         <option>1</option>
@@ -220,7 +209,6 @@
       <select
         id="alamatDesa"
         class="select select-primary w-full font-normal"
-        v-model.trim="dataDiri.desa"
       >
         <option disabled="disabled" selected="selected">
           Pilih desa/kelurahan
@@ -245,7 +233,6 @@
           placeholder="Masukan no. RT"
           class="input input-primary w-1/2"
           required
-          v-model.trim="dataDiri.rt"
         />
         <input
           id="alamatRW"
@@ -255,7 +242,6 @@
           placeholder="Masukan no. RW"
           class="input input-primary w-1/2"
           required
-          v-model.trim="dataDiri.rw"
         />
       </div>
     </div>
@@ -273,7 +259,6 @@
           class="textarea"
           placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
           required
-          v-model.trim="dataDiri.alamat_rumah"
         />
       </div>
     </div>
@@ -290,7 +275,6 @@
         placeholder="Masukan no. kodepos"
         class="input input-primary w-full"
         disabled
-        v-model.trim="dataDiri.kode_pos"
       />
     </div>
   </div>
@@ -303,7 +287,6 @@
     <select
       id="pendidikan"
       class="select select-primary w-full font-normal"
-      v-model.trim="dataDiri.pendidikan"
     >
       <option disabled="disabled" selected="selected">
         Pilih pendidikan terakhir
@@ -345,7 +328,6 @@
         class="input input-primary w-full"
         style="border-radius: 0px 20px 20px 0px !important"
         required
-        v-model.trim="dataDiri.no_hp"
       />
     </div>
   </div>
@@ -409,7 +391,6 @@
           transition-all
           duration-200
         "
-        v-model.trim="dataDiri.confirmCheckbox"
       />
     </div>
     <div class="ml-3 text-sm">
