@@ -1,5 +1,10 @@
 <template>
   <!-- tambah riwayat pekerjaan -->
+  
+    <form-riwayat-pekerjaan v-for="item in items" :key="item.id">
+    </form-riwayat-pekerjaan>
+
+
   <div
     class="
       group
@@ -11,7 +16,8 @@
       pb-6
       rounded-20
       border-2 border-gray-300 border-dashed
-      hover:border-primary hover:bg-gray-100
+      hover:border-primary
+      hover:bg-gray-100
       transition-all
       duration-200
     "
@@ -29,7 +35,7 @@
           duration-200
         "
       >
-        <span>+ Tambah Riwayat Pekerjaan</span>
+        <span @click="addRiwayatPekerjaan"> + Tambah Riwayat Pekerjaan</span>
       </label>
     </div>
   </div>
@@ -71,9 +77,31 @@
 </template>
 
 <script>
+import FormRiwayatPekerjaan from "../Form/FormRiwayatPekerjaan.vue";
+
 export default {
   name: "RiwayatPekerjaan",
-  components: {},
+  components: {
+    FormRiwayatPekerjaan,
+  },
+  data() {
+    return {
+      items: [
+        {
+          id: 0,
+        },
+      ],
+      nextItemsId: 1
+    };
+  },
+  methods: {
+    addRiwayatPekerjaan() {
+      this.items.push({
+        id: this.items.nextItemsId++,
+      }),
+      console.log(this.items)
+    },
+  },
 };
 </script>
 
