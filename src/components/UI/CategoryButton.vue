@@ -1,15 +1,5 @@
 <template>
-  <div
-    class="
-      bg-white
-      w-screen
-      overflow-auto
-      whitespace-no-wrap
-      py-3
-      px-4
-      text-center
-    "
-  >
+  <div class="bg-white overflow-x-auto whitespace-no-wrap">
     <button
       class="
         inline-block
@@ -126,6 +116,66 @@
       "
     >
       Button 9
+    </button>
+    <button
+      class="
+        inline-block
+        border border-teal-500
+        text-teal-500
+        rounded-full
+        px-6
+        py-2
+      "
+    >
+      Button 10
+    </button>
+    <button
+      class="
+        inline-block
+        border border-teal-500
+        text-teal-500
+        rounded-full
+        px-6
+        py-2
+      "
+    >
+      Button 10
+    </button>
+    <button
+      class="
+        inline-block
+        border border-teal-500
+        text-teal-500
+        rounded-full
+        px-6
+        py-2
+      "
+    >
+      Button 10
+    </button>
+    <button
+      class="
+        inline-block
+        border border-teal-500
+        text-teal-500
+        rounded-full
+        px-6
+        py-2
+      "
+    >
+      Button 10
+    </button>
+    <button
+      class="
+        inline-block
+        border border-teal-500
+        text-teal-500
+        rounded-full
+        px-6
+        py-2
+      "
+    >
+      Button 10
     </button>
     <button
       class="

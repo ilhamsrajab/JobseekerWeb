@@ -4,7 +4,7 @@
     <label class="label font-semibold" for="instagram">
       <span class="label-text">Instagram</span>
     </label>
-    <div class="mt-1 flex rounded-md shadow-sm">
+    <div class="mt-1 flex">
       <span
         class="
           inline-flex
@@ -40,7 +40,7 @@
     <label class="label font-semibold" for="Twitter">
       <span class="label-text">Twitter</span>
     </label>
-    <div class="mt-1 flex rounded-md shadow-sm">
+    <div class="mt-1 flex">
       <span
         class="
           inline-flex
@@ -77,7 +77,7 @@
     <label class="label font-semibold" for="facebook">
       <span class="label-text">Facebook</span>
     </label>
-    <div class="mt-1 flex rounded-md shadow-sm">
+    <div class="mt-1 flex">
       <span
         class="
           inline-flex
@@ -113,7 +113,7 @@
     <label class="label font-semibold" for="LinkedIn">
       <span class="label-text">LinkedIn</span>
     </label>
-    <div class="mt-1 flex rounded-md shadow-sm">
+    <div class="mt-1 flex">
       <span
         class="
           inline-flex
@@ -149,7 +149,7 @@
     <label class="label font-semibold" for="YouTube">
       <span class="label-text">YouTube</span>
     </label>
-    <div class="mt-1 flex rounded-md shadow-sm">
+    <div class="mt-1 flex">
       <span
         class="
           inline-flex

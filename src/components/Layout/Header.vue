@@ -204,3 +204,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.searchbar:focus {
+  width: 30rem;
+}
+</style>

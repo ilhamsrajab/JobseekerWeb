@@ -4,7 +4,7 @@
       x-data="{ sidebarOpen: false, darkMode: false }"
       :class="{ dark: darkMode }"
     >
-      <div class="flex h-screen bg-gray-50 dark:bg-gray-800">
+      <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
         <div
           :class="sidebarOpen ? 'block' : 'hidden'"
           @click="sidebarOpen = false"
@@ -27,22 +27,23 @@
           <Header />
 
           <!-- main page -->
-          <main class="flex flex-col h-screen overflow-x-auto overflow-y-auto">
+          <main
+            class="flex flex-col h-screen overflow-x-hidden overflow-y-auto"
+          >
             <div class="container flex-grow mx-auto m-8">
+              <CategoryButton class="mb-10" />
               <div
                 class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10"
               >
                 <!-- Halaman Profil -->
                 <!-- <HalamanProfil /> -->
-                <!-- <CategoryButton /> -->
                 <Card />
-                <CardSkeleton />
                 <CardSkeleton />
                 <CardSkeleton />
               </div>
             </div>
             <!-- footer -->
-            <Footer class="flex-1" />
+            <Footer />
           </main>
         </div>
       </div>
@@ -75,10 +76,6 @@ export default {
 </script>
 
 <style scoped>
-.searchbar:focus {
-  width: 30rem;
-}
-
 #email {
   display: block;
   width: 11.5rem;
