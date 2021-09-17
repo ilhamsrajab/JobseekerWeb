@@ -46,22 +46,31 @@
           >
             Media Sosial
           </li>
-          <li data-content="" 
-          class="step text-sm"
-          :class="step3Classes"
-          @click="stepSelected(3)"
-          >Berkas</li>
-          <li data-content="" 
-          class="step text-sm"
-          :class="step4Classes"
-          @click="stepSelected(4)"
-          >Riwayat Pekerjaan</li>
+          <li
+            data-content=""
+            class="step text-sm"
+            :class="step3Classes"
+            @click="stepSelected(3)"
+          >
+            Berkas
+          </li>
+          <li
+            data-content=""
+            class="step text-sm"
+            :class="step4Classes"
+            @click="stepSelected(4)"
+          >
+            Riwayat Pekerjaan
+          </li>
 
-          <li data-content="" 
-          class="step text-sm"
-          :class="step5Classes"
-          @click="stepSelected(5)"
-          >Selesai</li>
+          <li
+            data-content=""
+            class="step text-sm"
+            :class="step5Classes"
+            @click="stepSelected(5)"
+          >
+            Selesai
+          </li>
         </ul>
       </div>
       <div class="mx-auto mt-4 z-10" style="width: 600px">
@@ -142,37 +151,37 @@ export default {
   },
   computed: {
     step1Classes() {
-      return { 'step-accent' : this.step1 };
+      return { "step-accent": this.step1 };
     },
     step2Classes() {
-      return { 'step-accent' : this.step2 };
+      return { "step-accent": this.step2 };
     },
     step3Classes() {
-      return { 'step-accent' : this.step3 };
+      return { "step-accent": this.step3 };
     },
     step4Classes() {
-      return { 'step-accent' : this.step4 };
+      return { "step-accent": this.step4 };
     },
     step5Classes() {
-      return { 'step-accent' : this.step5 };
+      return { "step-accent": this.step5 };
     },
   },
   methods: {
     stepSelected(step) {
-      if(step === 1) {
+      if (step === 1) {
         this.step1 = !this.step1;
-      } else if(step === 2) {
+      } else if (step === 2) {
         this.step2 = !this.step2;
-      } else if(step === 3) {
+      } else if (step === 3) {
         this.step3 = !this.step3;
-      } else if(step === 4) {
+      } else if (step === 4) {
         this.step4 = !this.step4;
-      } else if(step === 5) {
+      } else if (step === 5) {
         this.step5 = !this.step5;
       }
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
