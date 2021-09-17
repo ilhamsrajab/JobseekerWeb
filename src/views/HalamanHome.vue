@@ -31,9 +31,17 @@
             class="flex flex-col h-screen overflow-x-hidden overflow-y-auto"
           >
             <div class="container flex-grow mx-auto m-8">
-              <CategoryButton class="mb-10" />
+              <CategoryButton class="mb-10 mx-8 xl:mx-0" />
               <div
-                class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10"
+                class="
+                  grid
+                  xl:grid-cols-3
+                  md:grid-cols-2
+                  sm:grid-cols-1
+                  gap-10
+                  xl:m-0
+                  m-8
+                "
               >
                 <!-- Halaman Profil -->
                 <!-- <HalamanProfil /> -->
