@@ -29,11 +29,16 @@
           <!-- main page -->
           <main class="flex flex-col h-screen overflow-x-auto overflow-y-auto">
             <div class="container flex-grow mx-auto m-8">
-              <div class="grid">
+              <div
+                class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10"
+              >
                 <!-- Halaman Profil -->
                 <!-- <HalamanProfil /> -->
                 <!-- <CategoryButton /> -->
                 <Card />
+                <CardSkeleton />
+                <CardSkeleton />
+                <CardSkeleton />
               </div>
             </div>
             <!-- footer -->
@@ -49,6 +54,7 @@
 import HalamanProfil from "../views/HalamanProfil.vue";
 import CategoryButton from "../components/UI/CategoryButton.vue";
 import Card from "../components/UI/Card.vue";
+import CardSkeleton from "../components/UI/CardSkeleton.vue";
 import Sidebar from "../components/Layout/Sidebar.vue";
 import Header from "../components/Layout/Header.vue";
 import Footer from "../components/Layout/Footer.vue";
@@ -59,6 +65,7 @@ export default {
     HalamanProfil,
     CategoryButton,
     Card,
+    CardSkeleton,
     Sidebar,
     Header,
     Footer,
