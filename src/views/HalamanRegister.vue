@@ -34,7 +34,7 @@
             data-content=""
             class="step step-accent text-sm"
             :class="step1Classes"
-            @click="stepSelected(1)"
+            @click="stepSelected(currentStep)"
           >
             Data Diri
           </li>
@@ -42,7 +42,7 @@
             data-content=""
             class="step text-sm"
             :class="step2Classes"
-            @click="stepSelected(2)"
+            @click="stepSelected(currentStep)"
           >
             Media Sosial
           </li>
@@ -50,7 +50,7 @@
             data-content=""
             class="step text-sm"
             :class="step3Classes"
-            @click="stepSelected(3)"
+            @click="stepSelected(currentStep)"
           >
             Berkas
           </li>
@@ -58,7 +58,7 @@
             data-content=""
             class="step text-sm"
             :class="step4Classes"
-            @click="stepSelected(4)"
+            @click="stepSelected(currentStep)"
           >
             Riwayat Pekerjaan
           </li>
@@ -67,14 +67,14 @@
             data-content=""
             class="step text-sm"
             :class="step5Classes"
-            @click="stepSelected(5)"
+            @click="stepSelected(currentStep)"
           >
             Selesai
           </li>
         </ul>
       </div>
       <div class="mx-auto mt-4 z-10" style="width: 600px">
-        <form class="form-control" action="#" method="POST">
+        <form class="form-control" action="" method="POST">
           <!-- form data diri -->
           <!-- <DataDiri /> -->
 
@@ -91,32 +91,36 @@
           <Sukses />
           <!-- btn selanjutnya -->
           <div>
-            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
-          </div>
-          <!-- btn skip -->
-          <div>
-            <button
-              class="
-                btn btn-outline
-                border-2 border-primary
-                text-primary
-                h-14
-                w-full
-                rounded-20
-                shadow-lg
-                hover:shadow-xl
-                hover:bg-accent
-                hover:border-transparent
-                hover:text-neutral
-                transition-all
-                duration-200
-                normal-case
-              "
-            >
-              Lewati
+            <button class="btn btn-primary mt-6 mb-3" @click="next">
+              Selanjutnya
             </button>
           </div>
         </form>
+
+        <!-- btn skip -->
+        <div>
+          <button
+            class="
+              btn btn-outline
+              border-2 border-primary
+              text-primary
+              h-14
+              w-full
+              rounded-20
+              shadow-lg
+              hover:shadow-xl
+              hover:bg-accent
+              hover:border-transparent
+              hover:text-neutral
+              transition-all
+              duration-200
+              normal-case
+            "
+            @click="stepNext"
+          >
+            Lewati
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -147,6 +151,7 @@ export default {
       step3: false,
       step4: false,
       step5: false,
+      currentStep: 1,
     };
   },
   computed: {
@@ -167,18 +172,33 @@ export default {
     },
   },
   methods: {
-    stepSelected(step) {
-      if (step === 1) {
+    stepSelected(currentStep) {
+      if (currentStep === 1) {
         this.step1 = !this.step1;
-      } else if (step === 2) {
+      } else if (currentStep === 2) {
         this.step2 = !this.step2;
-      } else if (step === 3) {
+      } else if (currentStep === 3) {
         this.step3 = !this.step3;
-      } else if (step === 4) {
+      } else if (currentStep === 4) {
         this.step4 = !this.step4;
-      } else if (step === 5) {
+      } else if (currentStep === 5) {
         this.step5 = !this.step5;
       }
+    },
+    stepNext() {
+      this.currentStep++;
+      if (this.currentStep === 1) {
+        this.step1 = !this.step1;
+      } else if (this.currentStep === 2) {
+        this.step2 = !this.step2;
+      } else if (this.currentStep === 3) {
+        this.step3 = !this.step3;
+      } else if (this.currentStep === 4) {
+        this.step4 = !this.step4;
+      } else if (this.currentStep === 5) {
+        this.step5 = !this.step5;
+      }
+      console.log(this.currentStep);
     },
   },
 };
