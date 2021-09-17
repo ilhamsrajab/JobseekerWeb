@@ -27,13 +27,12 @@
           <Header />
 
           <!-- main page -->
-          <main
-            class="flex flex-col h-screen overflow-x-hidden overflow-y-auto"
-          >
+          <main class="flex flex-col h-screen overflow-x-auto overflow-y-auto">
             <div class="container flex-grow mx-auto m-8">
               <div class="grid">
                 <!-- Halaman Profil -->
                 <!-- <HalamanProfil /> -->
+                <!-- <CategoryButton /> -->
                 <Card />
               </div>
             </div>
@@ -48,6 +47,7 @@
 
 <script>
 import HalamanProfil from "../views/HalamanProfil.vue";
+import CategoryButton from "../components/UI/CategoryButton.vue";
 import Card from "../components/UI/Card.vue";
 import Sidebar from "../components/Layout/Sidebar.vue";
 import Header from "../components/Layout/Header.vue";
@@ -57,6 +57,7 @@ import { Icon } from "@iconify/vue";
 export default {
   components: {
     HalamanProfil,
+    CategoryButton,
     Card,
     Sidebar,
     Header,

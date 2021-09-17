@@ -19,10 +19,6 @@
       alt="hand"
       srcset=""
     />
-    <!-- btn selanjutnya -->
-    <div>
-      <button class="btn btn-primary mt-4 mb-3">Selesai</button>
-    </div>
   </div>
 </template>
 

@@ -73,13 +73,40 @@
           <!-- <MediaSosial /> -->
 
           <!-- form berkas -->
-          <Berkas />
+          <!-- <Berkas /> -->
 
           <!-- form riwayat pekerjaan -->
           <!-- <RiwayatPekerjaan /> -->
 
           <!--  sukses -->
-          <!-- <Sukses /> -->
+          <Sukses />
+          <!-- btn selanjutnya -->
+          <div>
+            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
+          </div>
+          <!-- btn skip -->
+          <div>
+            <button
+              class="
+                btn btn-outline
+                border-2 border-primary
+                text-primary
+                h-14
+                w-full
+                rounded-20
+                shadow-lg
+                hover:shadow-xl
+                hover:bg-accent
+                hover:border-transparent
+                hover:text-neutral
+                transition-all
+                duration-200
+                normal-case
+              "
+            >
+              Lewati
+            </button>
+          </div>
         </form>
       </div>
     </div>
