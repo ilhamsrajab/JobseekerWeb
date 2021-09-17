@@ -27,8 +27,10 @@
           <Header />
 
           <!-- main page -->
-          <main class="flex-1 overflow-x-hidden overflow-y-auto">
-            <div class="container mx-auto m-8">
+          <main
+            class="flex flex-col h-screen overflow-x-hidden overflow-y-auto"
+          >
+            <div class="container flex-grow mx-auto m-8">
               <div class="grid">
                 <!-- Halaman Profil -->
                 <!-- <HalamanProfil /> -->
@@ -36,7 +38,7 @@
               </div>
             </div>
             <!-- footer -->
-            <Footer />
+            <Footer class="flex-1" />
           </main>
         </div>
       </div>
