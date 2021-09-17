@@ -38,7 +38,7 @@
       "
     >
       Button 3
-    </button>
+  </button>
     <button
       class="
         inline-block
