@@ -76,26 +76,43 @@
       <div class="mx-auto mt-4 z-10" style="width: 600px">
         <form class="form-control" action="" method="POST">
           <!-- form data diri -->
-          <!-- <DataDiri /> -->
+          <data-diri v-if="currentStep === 1"></data-diri>
 
           <!-- form Media Sosial -->
-          <!-- <MediaSosial /> -->
+          <media-sosial v-if="currentStep === 2"></media-sosial>
 
           <!-- form berkas -->
-          <!-- <Berkas /> -->
+          <berkas v-if="currentStep === 3"></berkas>
 
           <!-- form riwayat pekerjaan -->
-          <!-- <RiwayatPekerjaan /> -->
+          <riwayat-pekerjaan v-if="currentStep === 4"></riwayat-pekerjaan>
 
           <!--  sukses -->
-          <Sukses />
-          <!-- btn selanjutnya -->
+          <sukses v-if="currentStep === 5"></sukses>
+
+          <!-- submit -->
           <div>
-            <button class="btn btn-primary mt-6 mb-3" @click="next">
-              Selanjutnya
+            <button
+              class="btn btn-primary mt-6 mb-3"
+              v-if="currentStep === 5"
+              type="submit"
+            >
+              Submit
             </button>
           </div>
+
         </form>
+
+        <!-- btn selanjutnya -->
+        <div>
+          <button
+            class="btn btn-primary mt-6 mb-3"
+            v-if="currentStep < 5"
+            @click="stepNext"
+          >
+            Selanjutnya
+          </button>
+        </div>
 
         <!-- btn skip -->
         <div>
@@ -116,6 +133,7 @@
               duration-200
               normal-case
             "
+            v-if="currentStep > 1 && currentStep < 5"
             @click="stepNext"
           >
             Lewati
