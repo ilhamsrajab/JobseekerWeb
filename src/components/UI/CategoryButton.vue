@@ -2,8 +2,9 @@
   <div class="space-x-4 inline-flex rounded-full">
     <button
       class="
-        bg-accent
-        text-neutral
+        bg-neutral
+        hover:bg-accent hover:text-neutral
+        text-white
         p-2
         rounded-large
         w-36

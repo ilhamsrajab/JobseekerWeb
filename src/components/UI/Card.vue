@@ -51,7 +51,7 @@
             <Icon
               icon="fluent:bookmark-add-24-filled"
               :inline="true"
-              class="text-3xl hover:text-secondary"
+              class="text-3xl hover:text-merah"
             />
           </button>
         </div>
