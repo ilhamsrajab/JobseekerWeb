@@ -1,6 +1,6 @@
 <template>
   <!-- container -->
-  <div class="min-h-screen bg-gray-200 flex justify-center items-center">
+  <div class="min-h-screen bg-gray-100 flex justify-center items-center">
     <!-- kotak -->
     <div
       class="bg-primary shadow-primary rounded-40 flex flex-row p-2"

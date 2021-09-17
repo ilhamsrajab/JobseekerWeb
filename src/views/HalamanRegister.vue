@@ -79,7 +79,7 @@
           <!-- <DataDiri /> -->
 
           <!-- form Media Sosial -->
-          <!-- <MediaSosial /> -->
+          <MediaSosial />
 
           <!-- form berkas -->
           <!-- <Berkas /> -->
@@ -88,7 +88,7 @@
           <!-- <RiwayatPekerjaan /> -->
 
           <!--  sukses -->
-          <Sukses />
+          <!-- <Sukses /> -->
           <!-- btn selanjutnya -->
           <div>
             <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
