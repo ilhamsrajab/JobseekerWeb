@@ -1,6 +1,4 @@
 <template>
-
-
   <!-- card -->
   <div
     class="
@@ -39,7 +37,7 @@
               <h2 class="flex-auto text-lg font-bold">Nama Perusahaan</h2>
 
               <div
-                class="w-full flex-none text-sm text-gray-500 font-normal mt-1"
+                class="w-full flex-none text-sm text-gray-400 font-normal mt-1"
               >
                 Kategori Pekerjaan
               </div>
@@ -64,7 +62,7 @@
         <div class="flex flex-row items-center">
           <div class="flex-auto">
             <div class="font-semibold">Posisi Kerja</div>
-            <div class="text-gray-500 mt-1 text-sm">
+            <div class="text-gray-400 mt-1 text-sm">
               Rp. 1.000.000 - Rp. 4.000.000
             </div>
           </div>
@@ -92,7 +90,7 @@
       </div>
     </div>
 
-    <div class="flex flex-row justify-between items-center mt-6 text-gray-500">
+    <div class="flex flex-row justify-between items-center mt-6 text-gray-400">
       <span class="inline-flex items-center align-top space-x-1">
         <Icon icon="fluent:location-24-filled" :inline="true" />
         <p class="text-sm">Lokasi</p>

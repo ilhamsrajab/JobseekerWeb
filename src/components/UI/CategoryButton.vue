@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white overflow-x-auto whitespace-no-wrap">
+  <div class="bg-white overflow-x-auto whitespace-no-wrap w-96">
     <button
       class="
         inline-block
