@@ -1,160 +1,134 @@
 <template>
-  <div class="bg-white">
+  <div class="space-x-4 inline-flex rounded-full">
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 1
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 2
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 3
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 4
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 5
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 6
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 1
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 2
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 3
+      Kategori 1
     </button>
     <button
       class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
+        bg-accent
+        text-neutral
+        p-2
+        rounded-large
+        w-36
+        text-center
+        font-semibold
       "
     >
-      Button 4
-    </button>
-    <button
-      class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
-      "
-    >
-      Button 5
-    </button>
-    <button
-      class="
-        inline-block
-        border border-teal-500
-        text-teal-500
-        rounded-full
-        px-6
-        py-2
-        mr-4
-      "
-    >
-      Button 6
+      Kategori 1
     </button>
   </div>
 </template>

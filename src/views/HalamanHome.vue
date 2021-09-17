@@ -1,59 +1,65 @@
 <template>
-  <div>
-    <div
-      x-data="{ sidebarOpen: false, darkMode: false }"
-      :class="{ dark: darkMode }"
-    >
-      <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
-        <div
-          :class="sidebarOpen ? 'block' : 'hidden'"
-          @click="sidebarOpen = false"
-          class="
-            fixed
-            z-20
-            inset-0
-            bg-black
-            opacity-50
-            transition-opacity
-            lg:hidden
-          "
-        ></div>
+  <div
+    x-data="{ sidebarOpen: false, darkMode: false }"
+    :class="{ dark: darkMode }"
+  >
+    <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
+      <div
+        :class="sidebarOpen ? 'block' : 'hidden'"
+        @click="sidebarOpen = false"
+        class="
+          fixed
+          z-20
+          inset-0
+          bg-black
+          opacity-50
+          transition-opacity
+          lg:hidden
+        "
+      ></div>
 
-        <!-- sidebar -->
-        <Sidebar />
+      <!-- sidebar -->
+      <Sidebar />
 
-        <!-- header -->
-        <div class="flex-1 flex flex-col overflow-hidden">
-          <Header />
+      <!-- header -->
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <Header />
 
-          <!-- main page -->
-          <main
-            class="flex flex-col h-screen overflow-x-hidden overflow-y-auto"
-          >
-            <div class="container flex-grow mx-auto m-8">
-              <CategoryButton class="mb-10 mx-8 xl:mx-0" />
-              <div
-                class="
-                  grid
-                  xl:grid-cols-3
-                  md:grid-cols-2
-                  sm:grid-cols-1
-                  gap-10
-                  xl:m-0
-                  m-8
-                "
-              >
-                <!-- Halaman Profil -->
-                <!-- <HalamanProfil /> -->
-                <Card />
-                <CardSkeleton />
-                <CardSkeleton />
-              </div>
+        <!-- main page -->
+        <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
+          <div class="container flex-grow mx-auto m-8">
+            <div
+              class="overflow-x-auto mb-10 mx-8 xl:mx-0 no-scrollbar rounded-lg"
+            >
+              <CategoryButton class="" />
             </div>
-            <!-- footer -->
-            <Footer />
-          </main>
-        </div>
+
+            <div
+              class="
+                grid
+                xl:grid-cols-3
+                md:grid-cols-2
+                sm:grid-cols-1
+                gap-10
+                xl:m-0
+                m-8
+              "
+            >
+              <!-- Halaman Profil -->
+              <!-- <HalamanProfil /> -->
+
+              <!-- card -->
+              <Card />
+              <Card />
+              <Card />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+            </div>
+          </div>
+          <!-- footer -->
+          <Footer />
+        </main>
       </div>
     </div>
   </div>
@@ -84,6 +90,17 @@ export default {
 </script>
 
 <style scoped>
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 #email {
   display: block;
   width: 11.5rem;

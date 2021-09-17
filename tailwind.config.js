@@ -29,8 +29,8 @@ module.exports = {
       orangeDark: '#806043',
       merah: '#F6A9A9',
       merahDark: '#755151',
-      kuning: '#807A3F',
-      kuningDark: '#FFF47E',
+      kuning: '#FFF47E',
+      kuningDark: '#807A3F',
     },
 
     borderRadius: {
