@@ -74,6 +74,7 @@
     <div class="flex items-center space-x-4">
       <!-- light mode -->
       <div class="group flex items-center" v-show="modeCerah">
+        <span class="text-xs text-white mr-2 display">Light Mode</span>
         <button
           v-on:Click="lightMode"
           class="

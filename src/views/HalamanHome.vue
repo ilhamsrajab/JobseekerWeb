@@ -28,10 +28,30 @@
         <!-- main page -->
         <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
           <div class="container flex-grow mx-auto m-8">
+            <!-- kategori -->
             <div
               class="overflow-x-auto mb-10 mx-8 xl:mx-0 no-scrollbar rounded-lg"
             >
-              <CategoryButton class="" />
+              <div class="space-x-4 inline-flex">
+                <CategoryButton />
+                <CategoryButton />
+                <CategoryButton />
+                <CategoryButton />
+                <CategoryButton />
+                <CategoryButton />
+                <CategoryButton />
+                <CategoryButton />
+                <CategoryButton />
+                <CategoryButton />
+              </div>
+            </div>
+
+            <!-- filter button -->
+            <div class="mb-5 flex justify-between">
+              <span class="font-semibold">Cari Kerja</span>
+              <button>
+                <Icon icon="fluent:filter-16-filled" class="text-2xl" />
+              </button>
             </div>
 
             <div
@@ -41,7 +61,7 @@
                 md:grid-cols-2
                 sm:grid-cols-1
                 gap-10
-                xl:m-0
+                2xl:m-0
                 m-8
               "
             >
@@ -52,6 +72,9 @@
               <Card />
               <Card />
               <Card />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
               <CardSkeleton />
               <CardSkeleton />
               <CardSkeleton />

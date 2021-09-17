@@ -1,135 +1,16 @@
 <template>
-  <div class="space-x-4 inline-flex rounded-full">
-    <button
-      class="
-        bg-neutral
-        hover:bg-accent hover:text-neutral
-        text-white
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-    <button
-      class="
-        bg-accent
-        text-neutral
-        p-2
-        rounded-large
-        w-36
-        text-center
-        font-semibold
-      "
-    >
-      Kategori 1
-    </button>
-  </div>
+  <button
+    class="
+      bg-neutral
+      hover:bg-accent hover:text-neutral
+      text-white
+      p-2
+      rounded-large
+      w-36
+      text-center
+      font-semibold
+    "
+  >
+    Kategori
+  </button>
 </template>
