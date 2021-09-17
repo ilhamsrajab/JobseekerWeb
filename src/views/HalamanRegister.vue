@@ -97,7 +97,7 @@
               v-if="currentStep === 5"
               type="submit"
             >
-              Submit
+              Selesai
             </button>
           </div>
 
