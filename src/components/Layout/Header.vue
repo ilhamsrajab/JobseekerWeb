@@ -149,6 +149,19 @@
               right-0
               rounded-full
               shadow-lg
+              animate-ping
+            "
+          ></span>
+          <span
+            class="
+              w-2
+              h-2
+              bg-accent
+              absolute
+              top-0
+              right-0
+              rounded-full
+              shadow-lg
             "
           ></span>
           <Icon

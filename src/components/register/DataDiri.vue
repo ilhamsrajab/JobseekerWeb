@@ -44,7 +44,7 @@
           type="radio"
           class="
             focus:ring-primary-focus focus:bg-accent
-            bg-gray-100
+            bg-white
             h-5
             w-5
             text-primary
@@ -68,7 +68,7 @@
           type="radio"
           class="
             focus:ring-primary-focus focus:bg-accent
-            bg-gray-100
+            bg-white
             h-5
             w-5
             text-primary
@@ -373,7 +373,7 @@
           h-5
           w-5
           text-primary
-          bg-gray-100
+          bg-white
           border-1 border-gray-300
           rounded
           transition-all
