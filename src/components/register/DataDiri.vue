@@ -117,8 +117,16 @@
     <label class="label" for="agama">
       <span class="label-text font-semibold">Agama</span>
     </label>
+<<<<<<< HEAD
     <select id="agama" class="select select-primary w-full font-normal">
       <option disabled="disabled" selected="selected">Pilih agama</option>
+=======
+    <select
+      id="agama"
+      class="select select-primary w-full font-normal"
+    >
+      <option disabled="disabled" selected="selected">Pilih Agama</option>
+>>>>>>> 768fd943b78b7ca0dbaee6b74a0e443d1a0de66f
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -135,7 +143,7 @@
       class="select select-primary w-full font-normal"
     >
       <option disabled="disabled" selected="selected">
-        Pilih status perkawinan
+        Pilih Status Perkawinan
       </option>
       <option>1</option>
       <option>2</option>
@@ -157,7 +165,7 @@
         id="alamatProvinsi"
         class="select select-primary w-full font-normal"
       >
-        <option disabled="disabled" selected="selected">Pilih provinsi</option>
+        <option disabled="disabled" selected="selected">Pilih Provinsi</option>
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -171,7 +179,7 @@
       </label>
       <select id="alamatKota" class="select select-primary w-full font-normal">
         <option disabled="disabled" selected="selected">
-          Pilih kota/kabupaten
+          Pilih Kota/Kabupaten
         </option>
         <option>1</option>
         <option>2</option>
@@ -188,7 +196,7 @@
         id="alamatKecamatan"
         class="select select-primary w-full font-normal"
       >
-        <option disabled="disabled" selected="selected">Pilih kecamatan</option>
+        <option disabled="disabled" selected="selected">Pilih Kecamatan</option>
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -202,7 +210,7 @@
       </label>
       <select id="alamatDesa" class="select select-primary w-full font-normal">
         <option disabled="disabled" selected="selected">
-          Pilih desa/kelurahan
+          Pilih Desa/Kelurahan
         </option>
         <option>1</option>
         <option>2</option>
@@ -277,7 +285,7 @@
     </label>
     <select id="pendidikan" class="select select-primary w-full font-normal">
       <option disabled="disabled" selected="selected">
-        Pilih pendidikan terakhir
+        Pilih Pendidikan Terakhir
       </option>
       <option>1</option>
       <option>2</option>
