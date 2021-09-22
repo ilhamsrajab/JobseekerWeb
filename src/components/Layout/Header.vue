@@ -73,10 +73,15 @@
     <!-- button notifikasi dan dark mode -->
     <div class="flex items-center space-x-4">
       <!-- light mode -->
-      <div class="group flex items-center" v-show="modeCerah">
-        <span class="text-xs text-white mr-2 display">Light Mode</span>
+      <div
+        class="group flex items-center"
+        v-show="modeCerah"
+        v-on:Click="lightMode"
+      >
+        <span class="text-xs text-white mr-2 display cursor-pointer"
+          >Light Mode</span
+        >
         <button
-          v-on:Click="lightMode"
           class="
             px-1
             py-1
@@ -94,9 +99,15 @@
       </div>
 
       <!-- dark mode -->
-      <div class="group flex items-center" v-show="modeGelap">
+      <div
+        class="group flex items-center"
+        v-show="modeGelap"
+        v-on:Click="darkMode"
+      >
+        <span class="text-xs text-white mr-2 display cursor-pointer"
+          >Dark Mode</span
+        >
         <button
-          v-on:Click="darkMode"
           class="
             px-1
             py-1

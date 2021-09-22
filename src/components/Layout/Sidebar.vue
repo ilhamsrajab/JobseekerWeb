@@ -32,20 +32,23 @@
     <!-- navigasi sidebar -->
     <nav class="flex flex-col mt-4 px-4 text-center">
       <!-- home -->
-      <button-sidebar @click="setSelectedTab('home')" :mode="homeButtonMode">
+      <button-sidebar
+        @click="setSelectedTab('home')"
+        :mode="homeButtonMode"
+        :to="{ name: 'HalamanHome' }"
+      >
         <Icon
           icon="fluent:home-24-filled"
           :inline="true"
           class="text-xl mr-3"
-        />
-
-        Home</button-sidebar
-      >
+        />Home
+      </button-sidebar>
 
       <!-- cari kerja -->
       <button-sidebar
         @click="setSelectedTab('cari-kerja')"
         :mode="cariKerjaButtonMode"
+        :to="{ name: 'HalamanCariKerja' }"
       >
         <Icon
           icon="fluent:search-24-filled"

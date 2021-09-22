@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HalamanHome from '../views/HalamanHome.vue'
+import HalamanCariKerja from '../views/HalamanCariKerja.vue'
 import HalamanLogin from '../views/HalamanLogin.vue'
 import HalamanRegister from '../views/HalamanRegister.vue'
 import HalamanProfil from '../views/HalamanProfil.vue'
@@ -12,6 +13,11 @@ const routes = [
     path: '/',
     name: 'HalamanHome',
     component: HalamanHome
+  },
+  {
+    path: '/carikerja',
+    name: 'HalamanCariKerja',
+    component: HalamanCariKerja
   },
   {
     path: '/login',
