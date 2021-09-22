@@ -117,16 +117,8 @@
     <label class="label" for="agama">
       <span class="label-text font-semibold">Agama</span>
     </label>
-<<<<<<< HEAD
     <select id="agama" class="select select-primary w-full font-normal">
-      <option disabled="disabled" selected="selected">Pilih agama</option>
-=======
-    <select
-      id="agama"
-      class="select select-primary w-full font-normal"
-    >
       <option disabled="disabled" selected="selected">Pilih Agama</option>
->>>>>>> 768fd943b78b7ca0dbaee6b74a0e443d1a0de66f
       <option>1</option>
       <option>2</option>
       <option>3</option>
