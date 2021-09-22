@@ -127,12 +127,10 @@
       <label for="comments" class="font-normal text-neutral"
         >Saya menyatakan bahwa data di atas adalah
         <strong>benar data pribadi saya</strong>, jika ada kesalahan saya siap
-        menganggung semua akibatnya.</label
+        menanggung semua akibatnya.</label
       >
     </div>
   </div>
-
-
 </template>
 
 <script>

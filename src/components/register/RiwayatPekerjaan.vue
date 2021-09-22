@@ -1,9 +1,8 @@
 <template>
   <!-- tambah riwayat pekerjaan -->
-  
-    <form-riwayat-pekerjaan v-for="item in items" :key="item.id">
-    </form-riwayat-pekerjaan>
 
+  <form-riwayat-pekerjaan v-for="item in items" :key="item.id">
+  </form-riwayat-pekerjaan>
 
   <div
     class="
@@ -16,8 +15,7 @@
       pb-6
       rounded-20
       border-2 border-gray-300 border-dashed
-      hover:border-primary
-      hover:bg-gray-100
+      hover:border-primary hover:bg-gray-100
       transition-all
       duration-200
     "
@@ -70,7 +68,7 @@
       <label for="comments" class="font-normal text-neutral"
         >Saya menyatakan bahwa data di atas adalah
         <strong>benar data pribadi saya</strong>, jika ada kesalahan saya siap
-        menganggung semua akibatnya.</label
+        menanggung semua akibatnya.</label
       >
     </div>
   </div>
@@ -91,7 +89,7 @@ export default {
           id: 0,
         },
       ],
-      nextItemsId: 1
+      nextItemsId: 1,
     };
   },
   methods: {
@@ -99,7 +97,7 @@ export default {
       this.items.push({
         id: this.items.nextItemsId++,
       }),
-      console.log(this.items)
+        console.log(this.items);
     },
   },
 };

@@ -117,10 +117,7 @@
     <label class="label" for="agama">
       <span class="label-text font-semibold">Agama</span>
     </label>
-    <select
-      id="agama"
-      class="select select-primary w-full font-normal"
-    >
+    <select id="agama" class="select select-primary w-full font-normal">
       <option disabled="disabled" selected="selected">Pilih agama</option>
       <option>1</option>
       <option>2</option>
@@ -172,10 +169,7 @@
       <label class="label" for="alamatKota">
         <span class="label-text">Kota/Kabupaten</span>
       </label>
-      <select
-        id="alamatKota"
-        class="select select-primary w-full font-normal"
-      >
+      <select id="alamatKota" class="select select-primary w-full font-normal">
         <option disabled="disabled" selected="selected">
           Pilih kota/kabupaten
         </option>
@@ -206,10 +200,7 @@
       <label class="label" for="alamatDesa">
         <span class="label-text">Desa/Kelurahan</span>
       </label>
-      <select
-        id="alamatDesa"
-        class="select select-primary w-full font-normal"
-      >
+      <select id="alamatDesa" class="select select-primary w-full font-normal">
         <option disabled="disabled" selected="selected">
           Pilih desa/kelurahan
         </option>
@@ -284,10 +275,7 @@
     <label class="label" for="pendidikan">
       <span class="label-text font-semibold">Pendidikan Terakhir</span>
     </label>
-    <select
-      id="pendidikan"
-      class="select select-primary w-full font-normal"
-    >
+    <select id="pendidikan" class="select select-primary w-full font-normal">
       <option disabled="disabled" selected="selected">
         Pilih pendidikan terakhir
       </option>
@@ -397,7 +385,7 @@
       <label for="comments" class="font-normal text-neutral"
         >Saya menyatakan bahwa data di atas adalah
         <strong>benar data pribadi saya</strong>, jika ada kesalahan saya siap
-        menganggung semua akibatnya.</label
+        menanggung semua akibatnya.</label
       >
     </div>
   </div>
