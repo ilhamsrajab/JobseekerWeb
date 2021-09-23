@@ -1,0 +1,19 @@
+<template>
+  <div
+    class="
+      h-96
+      bg-tech
+      rounded-40
+      p-8
+      bg-cover
+      flex
+      items-end
+      cursor-pointer
+      hover:shadow-lg
+      transition-all
+      duration-200
+    "
+  >
+    <span class="font-semibold text-lg text-white"> Teknologi </span>
+  </div>
+</template>
