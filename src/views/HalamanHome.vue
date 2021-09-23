@@ -28,19 +28,23 @@
         <!-- main page -->
         <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
           <!-- hero -->
-          <div class="hero py-16">
+          <div class="hero my-8">
             <!-- container -->
-            <div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto">
+            <div class="mx-8">
               <!-- hero wrapper -->
               <div
                 class="
                   hero-wrapper
                   grid grid-cols-1
                   md:grid-cols-12
-                  gap-8
+                  xl:gap-8
+                  md:gap-0
                   items-center
-                  bg-blue-200
-                  px-20
+                  bg-gradient-to-br
+                  from-blue-200
+                  to-blue-300
+                  md:px-10 md:py-5
+                  xl:px-20
                   rounded-40
                 "
               >
@@ -59,7 +63,14 @@
                     Cari kerja dengan mudah disini.
                   </h1>
                   <div
-                    class="w-56 h-2 bg-primary bg-opacity-80 rounded-full mt-10"
+                    class="
+                      xl:w-56
+                      md:w-32
+                      h-2
+                      bg-primary bg-opacity-80
+                      rounded-full
+                      mt-10
+                    "
                   ></div>
                   <p class="text-base leading-relaxed mt-10 font-semibold">
                     Terhubung dengan berbagai jenis pekerjaan.
@@ -75,11 +86,12 @@
                       px-10
                       py-4
                       rounded-20
-                      hover:shadow-xl
+                      hover:shadow-xl hover:-translate-y-1
                       flex
                       items-center
-                      space-x-4
+                      space-x-4q
                       md:text-5xl md:mb-12
+                      transform
                       transition-all
                       duration-200
                     "
@@ -135,49 +147,109 @@
           </div>
           <!-- end hero -->
 
-          <div class="flex-grow">
-            <div
-              class="
-                h-96
-                bg-blue-200
-                px-auto
-                m-8
-                flex
-                justify-between
-                rounded-40
-              "
-            >
-              <div class="flex-1">
-                <div
-                  class="
-                    text-neutral
-                    font-bold
-                    text-3xl
-                    w-1/2
-                    leading-12
-                    mx-10
-                    mt-10
-                    bg-pink-300
-                  "
-                >
-                  Cari kerja dengan mudah disini, karena terhubung dengan
-                  ratusan perusahaan yang tergabung.
-                </div>
-                <div class="text-neutral mx-10 mt-8 font-semibold bg-pink-300">
-                  Populer :
-                </div>
+          <!-- kategori pekerjaan -->
+          <div class="m-8">
+            <span class="text-xl font-semibold"> Kategori pekerjaan </span>
+            <button class="ml-3 badge h-6">Lihat lainnya</button>
+            <div class="grid grid-cols-5 gap-8 mt-5">
+              <div
+                class="
+                  h-96
+                  rounded-40
+                  p-8
+                  bg-cover
+                  flex
+                  items-end
+                  cursor-pointer
+                  bg-tech
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white">
+                  Teknologi
+                </span>
               </div>
-              <div class="text-white">
-                <img
-                  src="../assets/images/avatar.png"
-                  alt=""
-                  srcset=""
-                  class="h-full rounded-full"
-                />
+              <div
+                class="
+                  h-96
+                  rounded-40
+                  p-8
+                  bg-cover
+                  flex
+                  items-end
+                  cursor-pointer
+                  bg-tech
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white">
+                  Teknologi
+                </span>
+              </div>
+              <div
+                class="
+                  h-96
+                  rounded-40
+                  p-8
+                  bg-cover
+                  flex
+                  items-end
+                  cursor-pointer
+                  bg-tech
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white">
+                  Teknologi
+                </span>
+              </div>
+              <div
+                class="
+                  h-96
+                  rounded-40
+                  p-8
+                  bg-cover
+                  flex
+                  items-end
+                  cursor-pointer
+                  bg-tech
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white">
+                  Teknologi
+                </span>
+              </div>
+              <div
+                class="
+                  h-96
+                  rounded-40
+                  p-8
+                  bg-cover
+                  flex
+                  items-end
+                  cursor-pointer
+                  bg-tech
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white">
+                  Teknologi
+                </span>
               </div>
             </div>
-            <div class="mx-auto p-8">Isi Home</div>
           </div>
+
           <!-- footer -->
           <Footer />
         </main>
