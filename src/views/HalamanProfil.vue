@@ -81,7 +81,9 @@
                   >Riwayat Pekerjaan</button-tab
                 >
               </div>
-              <component :is="selectedTab"></component>
+              <div class="py-8 bg-white rounded-40 px-16 text-gray-500 mt-8">
+                <component :is="selectedTab"></component>
+              </div>
             </div>
           </div>
           <!-- footer -->

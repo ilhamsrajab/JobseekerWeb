@@ -56,17 +56,18 @@
               </div>
 
               <!-- tab -->
-              <div class="rounded-large space-x-2 w-full flex flex-col">
+              <div class="w-full flex flex-col">
                 <!-- waktu -->
                 <span
                   class="
                     inline-flex
                     items-center
                     align-top
-                    space-x-1
+                    space-x-2
                     justify-end
-                    w-2/3
-                    self-center
+                    xl:w-2/3
+                    md:w-full
+                    mx-auto
                     mb-3
                     text-gray-500
                   "
@@ -86,9 +87,10 @@
                     bg-white
                     rounded-large
                     px-10
-                    w-2/3
+                    xl:w-2/3
+                    md:w-full
                     text-gray-500
-                    self-center
+                    mx-auto
                   "
                 >
                   <span class="inline-flex items-center space-x-2 w-56">
@@ -126,27 +128,56 @@
               <div
                 class="
                   py-8
-                  grid grid-flow-row
-                  auto-cols-max
-                  grid-cols-3
-                  gap-y-5 gap-x-10
-                  justify-items-center
                   bg-white
                   rounded-large
                   px-10
-                  w-2/3
+                  xl:w-2/3
+                  md:w-full
                   text-gray-500
-                  self-center
-                  mt-10
+                  mt-8
                 "
               >
-                test
+                <!-- isi Deskripsi -->
+                <div class="leading-7 space-y-4">
+                  <h2 class="font-bold text-xl mb-3">Deskripsi Pekerjaan</h2>
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Sunt quae omnis illum. Asperiores magni libero, veritatis
+                    quia in dolorum error cum nam excepturi eos delectus sed
+                    deserunt provident adipisci magnam. Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Nulla excepturi, eveniet
+                    eum aliquid exercitationem officiis aliquam veniam quibusdam
+                    corrupti explicabo at nostrum repudiandae vel eaque culpa ab
+                    nobis rerum ipsa.
+                  </span>
+
+                  <h2 class="font-bold text-lg mb-3">Responsibilities :</h2>
+                  <ul class="list-disc list-inside">
+                    <li>Designing and implementing Java-based applications.</li>
+                    <li>
+                      Analyzing user requirements to inform application design.
+                    </li>
+                    <li>Defining application objectives and functionality.</li>
+                    <li>Aligning application design with business goals.</li>
+                    <li>Developing and testing software.</li>
+                    <li>
+                      Debugging and resolving technical problems that arise.
+                    </li>
+                    <li>Producing detailed design documentation.</li>
+                    <li>
+                      Recommending changes to existing Java infrastructure.
+                    </li>
+                    <li>Developing documentation to assist users</li>
+                    <li>Ensuring continuous professional self-development.</li>
+                  </ul>
+                </div>
               </div>
               <!-- end of descrition -->
             </div>
           </div>
           <!-- footer -->
           <Footer />
+          <!-- end of footer -->
         </main>
       </div>
     </div>
