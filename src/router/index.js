@@ -4,6 +4,7 @@ import HalamanCariKerja from '../views/HalamanCariKerja.vue'
 import HalamanLogin from '../views/HalamanLogin.vue'
 import HalamanRegister from '../views/HalamanRegister.vue'
 import HalamanProfil from '../views/HalamanProfil.vue'
+import HalamanJobDescription from '../views/HalamanJobDescription.vue'
 import HalamanNotFound from '../views/NotFound.vue'
 import FormLogin from '../components/Form/FormLogin.vue'
 import FormDaftar from '../components/Form/FormDaftar.vue'
@@ -18,6 +19,11 @@ const routes = [
     path: '/carikerja',
     name: 'HalamanCariKerja',
     component: HalamanCariKerja
+  },
+  {
+    path: '/deskripsi',
+    name: 'HalamanJobDescription',
+    component: HalamanJobDescription
   },
   {
     path: '/login',

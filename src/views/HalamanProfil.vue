@@ -50,7 +50,7 @@
                 <h4 class="font-bold dark:text-white text-2xl">Jerome Bell</h4>
                 <h5
                   id="email"
-                  class="font-medium text-gray-500 dark:text-gray-300"
+                  class="font-medium text-gray-500 dark:text-gray-300 mt-2"
                 >
                   jeromebell24@gmail.com
                 </h5>
