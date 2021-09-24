@@ -5,7 +5,32 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'tech': "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },
+      animation: {
+        fade: 'fadeOut 5s ease-in-out',
+        bounce5: 'bounce5 1s infinite',
+      },
+      keyframes: theme => ({
+        fadeOut: {
+          '0%': { backgroundColor: theme('colors.red.300') },
+          '100%': { backgroundColor: theme('colors.transparent') },
+        },
+        bounce5: {
+          '0%, 100%': {
+            transform: 'translateY(-5%)',
+            animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
+          },
+          '50%': {
+            transform: 'none',
+            animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+          },
+        },
+      }),
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -83,7 +108,7 @@ module.exports = {
       12: '3rem',
       13: '3.25rem',
       14: '3.5rem',
-    }
+    },
   },
   variants: {
     extend: {},

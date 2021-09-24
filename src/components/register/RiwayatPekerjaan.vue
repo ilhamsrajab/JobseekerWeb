@@ -56,7 +56,7 @@
           h-5
           w-5
           text-primary
-          bg-gray-100
+          bg-white
           border-1 border-gray-300
           rounded
           transition-all
