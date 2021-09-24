@@ -3,7 +3,12 @@
     <!-- daftar form -->
     <div class="formLogin">
       <p class="text-4xl font-bold text-neutral self-start pt-8">Daftar</p>
-      <form class="form-control" action="#" method="POST" @submit.prevent="submitForm">
+      <form
+        class="form-control"
+        action="#"
+        method="POST"
+        @submit.prevent="submit"
+      >
         <!-- email -->
         <div>
           <label class="label mt-4" for="email">
@@ -17,7 +22,7 @@
             placeholder="contoh@bursakerja.com"
             class="input input-primary w-full"
             required
-            v-model="user.email"
+            v-model.trim="form.email"
           />
         </div>
 
@@ -33,7 +38,7 @@
             placeholder="Masukan username"
             class="input input-primary w-full"
             required
-            v-model="user.username"
+            v-model.trim="form.username"
           />
         </div>
 
@@ -42,6 +47,9 @@
           <label class="label mt-3" for="password">
             <span class="label-text font-semibold">Password</span>
           </label>
+          <p v-if="!formIsValid">
+            Tolong isikan email yang valid dan password minimal 8 huruf
+          </p>
           <input
             id="password"
             title="Masukan password"
@@ -50,7 +58,7 @@
             placeholder="Masukan password"
             class="input input-primary w-full"
             required
-            v-model="user.password"
+            v-model.trim="form.password"
           />
         </div>
 
@@ -61,12 +69,12 @@
           </label>
           <input
             id="konfirmasi"
-            title="Masukan konfirmasi passowrd"
+            title="Masukan konfirmasi password"
             type="password"
             placeholder="Masukan kembali password"
             class="input input-primary w-full"
             required
-            v-model="user.confirmPassword"
+            v-model.trim="form.password_confirmation"
           />
         </div>
 
@@ -141,42 +149,99 @@
 
 <script>
 import { Icon } from "@iconify/vue";
-import { reactive } from "vue";
+// import { reactive } from "vue";
 import axios from "axios";
+import { mapActions } from "vuex";
 
 export default {
   name: "Login",
   components: {
     Icon,
   },
-  setup() {
-    const user = reactive({
-      roles:"jobseeker",
-      email:"",
-      username:"",
-      password:"",
-      confirmPassword:""
-    });
-
-    function submitForm() {
-      axios.post("http://127.0.0.1:8000/api/register", {
-          roles: "jobseeker",
-          email: user.email,
-          username: user.username,
-          password: user.password,
-          password_confirmation: user.confirmPassword,
-        })
-        .then(function (response) {
-          console.log(response);
-        });
-
-      user.email = "";
-      user.username = "";
-      user.password = "";
-      user.confirmPassword = "";
-    }
-
-    return { user: user, submitForm: submitForm };
+  data() {
+    return {
+      form: {
+        email: "",
+        username: "",
+        password: "",
+        password_confirmation: "",
+        role: "admin",
+        // formIsValid: true,
+        // mode: "",
+      },
+    };
   },
+  methods: {
+    ...mapActions({
+      login: 'auth/login'
+    }),
+
+    submit() {
+      this.register(this.form)
+    }
+    // submitForm() {
+    //   this.formIsValid = true;
+    //   if (
+    //     this.email === "" ||
+    //     !this.email.includes("@") ||
+    //     this.password.length < 8
+    //   ) {
+    //     this.formIsValid = false;
+    //     return;
+    //   }
+
+    //   this.$store.dispatch("signup", {
+    //     email: this.email,
+    //     username: this.username,
+    //     password: this.password,
+    //     password_confirmation: this.password,
+    //     role: this.role,
+    //   });
+    // },
+  },
+
+  // login() {
+  //   this.$store.dispatch("login", {
+  //     username: this.username,
+  //     password: this.password
+  //   })
+  //   .then(success => {
+  //     this.$router.push("/")
+  //   })
+  //   // .catch(error => {
+
+  //   // })
+  // }
+  // },
+
+  // setup() {
+  //   const user = reactive({
+  //     roles:"jobseeker",
+  //     email:"",
+  //     username:"",
+  //     password:"",
+  //     confirmPassword:""
+  //   });
+
+  //   function submitForm() {
+  //     axios.post("http://127.0.0.1:8000/api/register", {
+  //         roles: "jobseeker",
+  //         email: user.email,
+  //         username: user.username,
+  //         password: user.password,
+  //         password_confirmation: user.confirmPassword,
+  //       })
+  //       .then(function (response) {
+  //         console.log(response);
+  //       });
+
+  //     user.email = "";
+  //     user.username = "";
+  //     user.password = "";
+  //     user.confirmPassword = "";
+  //   }
+
+  //   return { user: user, submitForm: submitForm };
+  // },
 };
 </script>
