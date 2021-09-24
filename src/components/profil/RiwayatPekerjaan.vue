@@ -4,7 +4,9 @@
       <!-- nama perusahaan -->
       <div class="mt-4">
         <label class="label" for="namaPerusahaan">
-          <span class="label-text font-semibold">Nama Perusahaan</span>
+          <span class="label-text text-neutral font-semibold"
+            >Nama Perusahaan</span
+          >
         </label>
         <input
           id="namaPerusahaan"
@@ -18,7 +20,7 @@
       <!-- Tahun masuk -->
       <div class="mt-4">
         <label class="label" for="tahunMasuk">
-          <span class="label-text font-semibold">Tahun Masuk</span>
+          <span class="label-text text-neutral font-semibold">Tahun Masuk</span>
         </label>
         <input
           id="tahunMasuk"
@@ -31,7 +33,9 @@
       <!-- Tahun Keluar -->
       <div class="mt-4">
         <label class="label" for="tahunKeluar">
-          <span class="label-text font-semibold">Tahun Keluar</span>
+          <span class="label-text text-neutral font-semibold"
+            >Tahun Keluar</span
+          >
         </label>
         <input
           id="tahunKeluar"
@@ -44,7 +48,9 @@
       <!-- posisi kerja -->
       <div class="mt-4">
         <label class="label" for="posisi">
-          <span class="label-text font-semibold">Posisi Kerja</span>
+          <span class="label-text text-neutral font-semibold"
+            >Posisi Kerja</span
+          >
         </label>
         <input
           id="posisi"
@@ -58,7 +64,9 @@
       <!-- deskripsi pekerjaan -->
       <div class="mt-4">
         <label class="label" for="deskripsiPekerjaan">
-          <span class="label-text font-semibold">Deskripsi Pekerjaan</span>
+          <span class="label-text text-neutral font-semibold"
+            >Deskripsi Pekerjaan</span
+          >
         </label>
         <div class="mt-1">
           <textarea
@@ -74,7 +82,9 @@
       <!-- alasan resign -->
       <div class="mt-4">
         <label class="label" for="alasanResign">
-          <span class="label-text font-semibold">Alasan Resign</span>
+          <span class="label-text text-neutral font-semibold"
+            >Alasan Resign</span
+          >
         </label>
         <input
           id="alasanResign"
@@ -88,7 +98,7 @@
       <!-- dokumen Pendukung -->
       <div class="mt-4">
         <label class="label font-semibold" for="dokumenPendukung">
-          <span class="label-text">Dokumen Pendukung</span>
+          <span class="label-text text-neutral">Dokumen Pendukung</span>
         </label>
         <input
           id="dokumenPendukung"
@@ -118,7 +128,7 @@
           pb-6
           rounded-20
           border-2 border-gray-300 border-dashed
-          hover:border-primary hover:bg-gray-100
+          hover:border-primary hover:bg-gray-50
           transition-all
           duration-200
         "

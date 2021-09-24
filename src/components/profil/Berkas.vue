@@ -4,7 +4,7 @@
       <!-- curriculumVitae -->
       <div class="mt-4">
         <label class="label font-semibold" for="curriculumVitae">
-          <span class="label-text">Curriculum Vitae</span>
+          <span class="label-text text-neutral">Curriculum Vitae</span>
         </label>
         <input
           id="curriculumVitae"
@@ -24,7 +24,7 @@
       <!-- ijazah -->
       <div class="mt-4">
         <label class="label font-semibold" for="ijazah">
-          <span class="label-text">Ijazah</span>
+          <span class="label-text text-neutral">Ijazah</span>
         </label>
         <input
           id="ijazah"
@@ -44,7 +44,7 @@
       <!-- portofolio -->
       <div class="mt-4">
         <label class="label font-semibold" for="portofolio">
-          <span class="label-text">Portofolio</span>
+          <span class="label-text text-neutral">Portofolio</span>
         </label>
         <input
           id="portofolio"
@@ -65,7 +65,7 @@
       <!-- sertifikat -->
       <div class="mt-4">
         <label class="label font-semibold" for="sertifikat">
-          <span class="label-text">Sertifikat</span>
+          <span class="label-text text-neutral">Sertifikat</span>
         </label>
         <input
           id="sertifikat"
@@ -86,7 +86,7 @@
       <!-- transkripNilai -->
       <div class="mt-4">
         <label class="label font-semibold" for="transkripNilai">
-          <span class="label-text">Transkrip Nilai</span>
+          <span class="label-text text-neutral">Transkrip Nilai</span>
         </label>
         <input
           id="transkripNilai"

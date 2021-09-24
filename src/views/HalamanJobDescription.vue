@@ -46,7 +46,7 @@
               </div>
 
               <!-- nama -->
-              <div class="leading-6 mt-4 mb-10 text-center">
+              <div class="leading-6 mt-4 mb-5 text-center">
                 <h4 class="font-bold dark:text-white text-2xl">
                   Nama Perusahaan
                 </h4>

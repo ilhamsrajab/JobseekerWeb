@@ -4,7 +4,7 @@
       <!-- instagram -->
       <div class="mt-4">
         <label class="label font-semibold" for="instagram">
-          <span class="label-text">Instagram</span>
+          <span class="label-text text-neutral">Instagram</span>
         </label>
         <div class="mt-1 flex rounded-md shadow-sm">
           <span
@@ -40,7 +40,7 @@
       <!-- Twitter -->
       <div class="mt-1">
         <label class="label font-semibold" for="Twitter">
-          <span class="label-text">Twitter</span>
+          <span class="label-text text-neutral">Twitter</span>
         </label>
         <div class="mt-1 flex rounded-md shadow-sm">
           <span
@@ -77,7 +77,7 @@
       <!-- facebook -->
       <div class="mt-1">
         <label class="label font-semibold" for="facebook">
-          <span class="label-text">Facebook</span>
+          <span class="label-text text-neutral">Facebook</span>
         </label>
         <div class="mt-1 flex rounded-md shadow-sm">
           <span
@@ -113,7 +113,7 @@
       <!-- LinkedIn -->
       <div class="mt-1">
         <label class="label font-semibold" for="LinkedIn">
-          <span class="label-text">LinkedIn</span>
+          <span class="label-text text-neutral">LinkedIn</span>
         </label>
         <div class="mt-1 flex rounded-md shadow-sm">
           <span
@@ -149,7 +149,7 @@
       <!-- youtube -->
       <div class="mt-1">
         <label class="label font-semibold" for="YouTube">
-          <span class="label-text">YouTube</span>
+          <span class="label-text text-neutral">YouTube</span>
         </label>
         <div class="mt-1 flex rounded-md shadow-sm">
           <span

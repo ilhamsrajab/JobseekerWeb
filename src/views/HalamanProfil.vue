@@ -58,7 +58,18 @@
 
               <!-- tab -->
               <div
-                class="bg-white py-2 rounded-large px-2 space-x-2 text-gray-400"
+                class="
+                  flex
+                  bg-white
+                  py-2
+                  rounded-20
+                  px-2
+                  space-x-2
+                  shadow-lg
+                  hover:shadow-xl
+                  transition-all
+                  duration-200
+                "
               >
                 <button-tab
                   @click="setSelectedTab('data-diri')"
@@ -81,7 +92,21 @@
                   >Riwayat Pekerjaan</button-tab
                 >
               </div>
-              <div class="py-8 bg-white rounded-40 px-16 text-gray-500 mt-8">
+              <div
+                class="
+                  py-8
+                  bg-white
+                  rounded-40
+                  px-16
+                  text-gray-500
+                  mt-8
+                  w-3/5
+                  shadow-lg
+                  hover:shadow-xl
+                  transition-all
+                  duration-200
+                "
+              >
                 <component :is="selectedTab"></component>
               </div>
             </div>
