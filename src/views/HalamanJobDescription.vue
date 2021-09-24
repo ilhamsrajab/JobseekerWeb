@@ -57,6 +57,7 @@
 
               <!-- tab -->
               <div class="rounded-large space-x-2 w-full flex flex-col">
+                <!-- waktu -->
                 <span
                   class="
                     inline-flex
@@ -64,99 +65,84 @@
                     align-top
                     space-x-1
                     justify-end
+                    w-2/3
+                    self-center
+                    mb-3
+                    text-gray-500
                   "
                 >
                   <Icon icon="fluent:clock-24-filled" :inline="true" />
                   <p class="text-sm">Waktu</p>
                 </span>
-                <hr class="bg-pink-700 h-1" />
                 <!-- informasi singkat -->
                 <div
                   class="
                     py-8
-                    grid grid-cols-3
-                    gap-y-5 gap-x-2
-                    bg-pink-200
-                    w-3/4
+                    grid grid-flow-row
+                    auto-cols-max
+                    grid-cols-3
+                    gap-y-5 gap-x-10
+                    justify-items-center
+                    bg-white
+                    rounded-large
+                    px-10
+                    w-2/3
+                    text-gray-500
                     self-center
                   "
                 >
-                  <span
-                    class="
-                      inline-flex
-                      items-center
-                      space-x-1
-                      bg-blue-200
-                      justify-center
-                    "
-                  >
+                  <span class="inline-flex items-center space-x-2 w-56">
                     <Icon icon="fluent:location-24-filled" :inline="true" />
                     <p class="text-sm">Lokasi</p>
                   </span>
-                  <span
-                    class="
-                      inline-flex
-                      items-center
-                      space-x-
-                      bg-blue-200
-                      justify-center
-                    "
-                  >
-                    <Icon icon="fluent:location-24-filled" :inline="true" />
+                  <span class="inline-flex items-center space-x-2 w-56">
+                    <Icon icon="fluent:money-24-filled" :inline="true" />
                     <p class="text-sm">Rp. 1.000.000 - Rp. 4.000.000</p>
                   </span>
-                  <span
-                    class="
-                      inline-flex
-                      items-center
-                      space-x-1
-                      bg-blue-200
-                      justify-center
-                    "
-                  >
-                    <Icon icon="fluent:location-24-filled" :inline="true" />
+                  <span class="inline-flex items-center space-x-2 w-56">
+                    <Icon
+                      icon="fluent:person-accounts-24-filled"
+                      :inline="true"
+                    />
                     <p class="text-sm">Jumlah Pendaftar</p>
                   </span>
-                  <span
-                    class="
-                      inline-flex
-                      items-center
-                      space-x-1
-                      bg-blue-200
-                      justify-center
-                    "
-                  >
-                    <Icon icon="fluent:location-24-filled" :inline="true" />
+                  <span class="inline-flex items-center space-x-2 w-56">
+                    <Icon icon="fluent:clock-24-filled" :inline="true" />
                     <p class="text-sm">Batas Pendaftaran</p>
                   </span>
-                  <span
-                    class="
-                      inline-flex
-                      items-center
-                      space-x-1
-                      bg-blue-200
-                      justify-center
-                    "
-                  >
-                    <Icon icon="fluent:location-24-filled" :inline="true" />
+                  <span class="inline-flex items-center space-x-2 w-56">
+                    <Icon icon="fluent:clock-24-filled" :inline="true" />
                     <p class="text-sm">Full-Time</p>
                   </span>
-                  <span
-                    class="
-                      inline-flex
-                      items-center
-                      space-x-1
-                      bg-blue-200
-                      justify-center
-                    "
-                  >
-                    <Icon icon="fluent:location-24-filled" :inline="true" />
+                  <span class="inline-flex items-center space-x-2 w-56">
+                    <Icon icon="fluent:people-team-24-filled" :inline="true" />
                     <p class="text-sm">Kuota</p>
                   </span>
                 </div>
-                <hr class="bg-pink-700 h-1" />
               </div>
-              <component :is="selectedTab"></component>
+              <!-- end of tab -->
+
+              <!-- descrition -->
+              <div
+                class="
+                  py-8
+                  grid grid-flow-row
+                  auto-cols-max
+                  grid-cols-3
+                  gap-y-5 gap-x-10
+                  justify-items-center
+                  bg-white
+                  rounded-large
+                  px-10
+                  w-2/3
+                  text-gray-500
+                  self-center
+                  mt-10
+                "
+              >
+                test
+              </div>
+              <!-- end of descrition -->
             </div>
           </div>
           <!-- footer -->
