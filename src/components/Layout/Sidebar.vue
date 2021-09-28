@@ -184,7 +184,6 @@ export default {
     };
   },
   methods: {
-    
     setSelectedTab(tab) {
       this.selectedTab = tab;
     },
