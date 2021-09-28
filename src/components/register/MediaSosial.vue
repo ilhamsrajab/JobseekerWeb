@@ -24,7 +24,7 @@
         title="Instagram"
         type="text"
         placeholder="username"
-        class="input input-primary w-full"
+        class="input input-primary w-full bg-gray-100"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
@@ -61,7 +61,7 @@
         title="Twitter"
         type="text"
         placeholder="username"
-        class="input input-primary w-full"
+        class="input input-primary w-full bg-gray-100"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
@@ -97,7 +97,7 @@
         title="Facebook"
         type="text"
         placeholder="username"
-        class="input input-primary w-full"
+        class="input input-primary w-full bg-gray-100"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
@@ -133,7 +133,7 @@
         title="LinkedIn"
         type="text"
         placeholder="username"
-        class="input input-primary w-full"
+        class="input input-primary w-full bg-gray-100"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
@@ -169,7 +169,7 @@
         title="YouTube"
         type="text"
         placeholder="username"
-        class="input input-primary w-full"
+        class="input input-primary w-full bg-gray-100"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
@@ -193,7 +193,7 @@
           h-5
           w-5
           text-primary
-          bg-white
+          bg-gray-100
           border-1 border-gray-300
           rounded
           transition-all

@@ -5,7 +5,6 @@
     <div
       class="
         bg-primary
-        shadow-primary
         rounded-40
         flex
         lg:flex-row
@@ -189,6 +188,8 @@
         class="
           bagianKiri
           text-white
+          shadow-2xl
+          hover:shadow-3xl
           px-5
           flex flex-col
           justify-end
@@ -215,17 +216,16 @@
         class="
           bagiankanan
           bg-white
+          shadow-2xl
           rounded-40
           xl:w-6/12
           lg:w-10/12
           sm:w-full
           p-8
           z-10
-          shadow-bagianKanan
           transform
           overflow-y-auto
           lg:hover:scale-105
-          hover:shadow-bagianKananHover
           transition-all
           duration-200
           lg:order-2

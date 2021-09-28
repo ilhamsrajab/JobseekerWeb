@@ -10,6 +10,7 @@
       mt-4
       flex
       justify-center
+      items-center
       px-6
       pt-5
       pb-6
@@ -56,7 +57,7 @@
           h-5
           w-5
           text-primary
-          bg-white
+          bg-gray-100
           border-1 border-gray-300
           rounded
           transition-all

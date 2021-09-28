@@ -9,7 +9,7 @@
       title="Nama Lengkap"
       type="text"
       placeholder="Masukan nama lengkap"
-      class="input input-primary w-full"
+      class="input input-primary w-full bg-gray-100"
       required
     />
   </div>
@@ -24,7 +24,7 @@
       title="Nomor Induk Kependudukan"
       type="number"
       placeholder="Masukan nomor induk kependudukan"
-      class="input input-primary w-full"
+      class="input input-primary w-full bg-gray-100"
       maxlength="16"
       max="9999999999999999"
       required
@@ -44,7 +44,7 @@
           type="radio"
           class="
             focus:ring-primary-focus focus:bg-accent
-            bg-white
+            bg-gray-100
             h-5
             w-5
             text-primary
@@ -68,7 +68,7 @@
           type="radio"
           class="
             focus:ring-primary-focus focus:bg-accent
-            bg-white
+            bg-gray-100
             h-5
             w-5
             text-primary
@@ -99,14 +99,14 @@
         title="Tempat Lahir"
         type="text"
         placeholder="Masukan tempat lahir"
-        class="input input-primary w-3/5"
+        class="input input-primary w-3/5 bg-gray-100"
         required
       />
       <input
         id="tanggalLahir"
         title="Tanggal Lahir"
         type="date"
-        class="input input-primary w-2/5"
+        class="input input-primary w-2/5 bg-gray-100"
         required
       />
     </div>
@@ -117,7 +117,10 @@
     <label class="label" for="agama">
       <span class="label-text font-semibold">Agama</span>
     </label>
-    <select id="agama" class="select select-primary w-full font-normal">
+    <select
+      id="agama"
+      class="select select-primary w-full font-normal bg-gray-100"
+    >
       <option disabled="disabled" selected="selected">Pilih Agama</option>
       <option>1</option>
       <option>2</option>
@@ -132,7 +135,7 @@
     </label>
     <select
       id="statusPerkawinan"
-      class="select select-primary w-full font-normal"
+      class="select select-primary w-full font-normal bg-gray-100"
     >
       <option disabled="disabled" selected="selected">
         Pilih Status Perkawinan
@@ -155,7 +158,7 @@
       </label>
       <select
         id="alamatProvinsi"
-        class="select select-primary w-full font-normal"
+        class="select select-primary w-full font-normal bg-gray-100"
       >
         <option disabled="disabled" selected="selected">Pilih Provinsi</option>
         <option>1</option>
@@ -169,7 +172,10 @@
       <label class="label" for="alamatKota">
         <span class="label-text">Kota/Kabupaten</span>
       </label>
-      <select id="alamatKota" class="select select-primary w-full font-normal">
+      <select
+        id="alamatKota"
+        class="select select-primary w-full font-normal bg-gray-100"
+      >
         <option disabled="disabled" selected="selected">
           Pilih Kota/Kabupaten
         </option>
@@ -186,7 +192,7 @@
       </label>
       <select
         id="alamatKecamatan"
-        class="select select-primary w-full font-normal"
+        class="select select-primary w-full font-normal bg-gray-100"
       >
         <option disabled="disabled" selected="selected">Pilih Kecamatan</option>
         <option>1</option>
@@ -200,7 +206,10 @@
       <label class="label" for="alamatDesa">
         <span class="label-text">Desa/Kelurahan</span>
       </label>
-      <select id="alamatDesa" class="select select-primary w-full font-normal">
+      <select
+        id="alamatDesa"
+        class="select select-primary w-full font-normal bg-gray-100"
+      >
         <option disabled="disabled" selected="selected">
           Pilih Desa/Kelurahan
         </option>
@@ -222,7 +231,7 @@
           type="number"
           maxlength="3"
           placeholder="Masukan no. RT"
-          class="input input-primary w-1/2"
+          class="input input-primary w-1/2 bg-gray-100"
           required
         />
         <input
@@ -231,7 +240,7 @@
           type="number"
           maxlength="3"
           placeholder="Masukan no. RW"
-          class="input input-primary w-1/2"
+          class="input input-primary w-1/2 bg-gray-100"
           required
         />
       </div>
@@ -247,7 +256,7 @@
           id="alamatRumah"
           title="Alamat Rumah"
           rows="3"
-          class="textarea"
+          class="textarea bg-gray-100"
           placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
           required
         />
@@ -264,7 +273,7 @@
         type="number"
         maxlength="5"
         placeholder="Masukan no. kodepos"
-        class="input input-primary w-full"
+        class="input input-primary w-full bg-gray-100"
         disabled
       />
     </div>
@@ -275,7 +284,10 @@
     <label class="label" for="pendidikan">
       <span class="label-text font-semibold">Pendidikan Terakhir</span>
     </label>
-    <select id="pendidikan" class="select select-primary w-full font-normal">
+    <select
+      id="pendidikan"
+      class="select select-primary w-full font-normal bg-gray-100"
+    >
       <option disabled="disabled" selected="selected">
         Pilih Pendidikan Terakhir
       </option>
@@ -313,7 +325,7 @@
         minlength="11"
         maxlength="13"
         pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-        class="input input-primary w-full"
+        class="input input-primary w-full bg-gray-100"
         style="border-radius: 0px 20px 20px 0px !important"
         required
       />
@@ -330,7 +342,7 @@
       type="file"
       accept="image/*"
       title="Pilih foto pribadi"
-      class="input input-primary w-full py-3.5 px-4"
+      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
       required
     />
     <label class="label">
@@ -350,7 +362,7 @@
       type="file"
       accept="image/*"
       title="Pilih foto E-KTP"
-      class="input input-primary w-full py-3.5 px-4"
+      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
       required
     />
     <label class="label">
@@ -373,7 +385,7 @@
           h-5
           w-5
           text-primary
-          bg-white
+          bg-gray-100
           border-1 border-gray-300
           rounded
           transition-all

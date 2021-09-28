@@ -6,7 +6,7 @@
       BursaKerja
     </div>
     <!-- <div class="fs-4 fw-bold align-self-end mb-3">Logotype</div> -->
-    <div class="flex flex-col self-center" style="width: 1000px">
+    <div class="flex flex-col self-center md:m-8 sm:m-4">
       <!-- kotak header -->
       <div
         class="
@@ -17,7 +17,8 @@
           w-full
           rounded-40
           shadow-btn
-          h-56
+          xl:h-56
+          md:h-60
           flex flex-col
           justify-between
           z-0
@@ -73,7 +74,21 @@
           </li>
         </ul>
       </div>
-      <div class="mx-auto mt-4 z-10" style="width: 600px">
+      <div
+        class="
+          mx-auto
+          z-10
+          bg-white
+          rounded-20
+          md:py-8 md:px-16
+          px-8
+          py-4
+          text-gray-500
+          mt-8
+          md:w-full
+          xl:w-4/5
+        "
+      >
         <form class="form-control" action="" method="POST">
           <!-- form data diri -->
           <data-diri v-if="currentStep === 1"></data-diri>
