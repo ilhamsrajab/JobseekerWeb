@@ -35,6 +35,7 @@
                 <img
                   alt="logo perusahaan"
                   class="
+                    mt-2
                     w-40
                     h-40
                     rounded-full
@@ -68,7 +69,8 @@
                     justify-end
                     2xl:w-3/5
                     lg:w-4/5
-                    md:w-full
+                    md:w-11/12
+                    sm:w-11/12
                     mx-auto
                     mb-3
                     text-gray-500
@@ -84,15 +86,19 @@
                     grid grid-flow-row
                     auto-cols-max
                     xl:grid-cols-3
-                    grid-cols-2
+                    sm:grid-cols-2
+                    xs:grid-cols-1
                     gap-y-5 gap-x-10
-                    justify-items-center
+                    sm:justify-items-center
                     bg-white
                     rounded-20
-                    px-10
+                    sm:px-10
+                    xs:px-6
                     2xl:w-3/5
                     lg:w-4/5
-                    md:w-full
+                    md:w-11/12
+                    sm:w-11/12
+                    xs:w-full
                     mx-auto
                     text-gray-500
                   "
@@ -151,12 +157,17 @@
                 class="
                   bg-white
                   rounded-20
-                  p-14
+                  lg:p-14
+                  md:p-10
+                  sm:p-8
+                  xs:p-6
                   text-neutral
                   mt-8
-                  md:w-full
                   2xl:w-3/5
                   lg:w-4/5
+                  md:w-11/12
+                  sm:w-11/12
+                  xs:w-full
                 "
               >
                 <!-- isi Deskripsi -->
@@ -231,10 +242,13 @@
                     justify-items-center
                     bg-white
                     rounded-20
-                    px-10
+                    lg:px-10
+                    md:px-6
+                    xs:px-2
                     2xl:w-3/5
                     lg:w-4/5 lg:mx-auto
-                    md:mx-4
+                    md:mx-8
+                    sm:mx-6
                   "
                 >
                   <span class="font-bold text-lg px-4"
@@ -247,7 +261,8 @@
                       grid grid-flow-row
                       auto-cols-max
                       xl:grid-cols-3
-                      grid-cols-2
+                      sm:grid-cols-2
+                      xs:grid-cols-1
                       gap-y-5 gap-x-10
                     "
                   >
@@ -308,16 +323,18 @@
               <div
                 class="
                   mt-8
-                  py-8
+                  sm:py-8 sm:px-10
+                  xs:py-4 xs:px-5
                   flex flex-row
                   gap-x-2
                   justify-items-center
                   bg-white
                   rounded-20
-                  px-10
                   2xl:w-3/5
                   lg:w-4/5 lg:mx-auto
-                  md:mx-4 md:w-full
+                  md:w-11/12
+                  sm:w-11/12
+                  xs:w-full
                 "
               >
                 <button class="btn btn-primary flex-auto">Daftar</button>
