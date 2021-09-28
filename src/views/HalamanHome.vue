@@ -32,20 +32,23 @@
           <!-- end hero -->
 
           <!-- kategori pekerjaan -->
-          <div class="mx-8 my-10">
-            <span class="text-xl font-semibold"> Kategori pekerjaan </span>
+          <div class="sm:mx-8 xs:mx-4 sm:my-10 xs:my-5">
+            <span class="sm:text-xl xs:text-lg font-semibold">
+              Kategori pekerjaan
+            </span>
             <button class="ml-3 badge h-6 px-3">Lihat lainnya</button>
             <div
               class="
                 grid grid-cols-1
-                md:grid-cols-3
+                md:grid-cols-2
+                lg:grid-cols-3
                 xl:grid-cols-5 xl:gap-8
                 lg:gap-6
-                md:gap-4
+                xs:gap-4
                 mt-5
               "
             >
-              <CardCategory />
+              <CardCategory class="md:col-span-2 lg:col-span-2 xl:col-span-1" />
               <CardCategory />
               <CardCategory />
               <CardCategory />
