@@ -7,11 +7,14 @@
         bg-primary
         shadow-primary
         rounded-40
-        flex flex-row
+        flex
+        lg:flex-row
+        sm:flex-col
         p-2
-        m-8
+        md:m-8
         2xl:w-7/12
-        md:w-11/12
+        lg:w-9/12
+        sm:w-11/12
       "
       style="height: 650px"
     >
@@ -190,15 +193,20 @@
           flex flex-col
           justify-end
           items-center
-          2xl:w-11/12
-          md:w-11/12
+          xl:w-11/12
+          lg:w-10/12
+          sm:w-8/12
+          lg:inline-flex
+          sm:hidden
+          lg:order-1
+          sm:order-2
         "
       >
         <vue-carousel
           :data="data"
           :controls="false"
           indicator-type="disc"
-          class="m-5"
+          class="m-5 items-end"
         ></vue-carousel>
       </div>
 
@@ -208,16 +216,20 @@
           bagiankanan
           bg-white
           rounded-40
-          2xl:w-6/12
-          md:w-8/12
+          xl:w-6/12
+          lg:w-10/12
+          sm:w-full
           p-8
           z-10
           shadow-bagianKanan
           transform
           overflow-y-auto
-          hover:scale-105 hover:shadow-bagianKananHover
+          lg:hover:scale-105
+          hover:shadow-bagianKananHover
           transition-all
           duration-200
+          lg:order-2
+          sm:order-1
         "
       >
         <!-- logo and back btn -->
