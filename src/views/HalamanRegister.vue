@@ -1,6 +1,6 @@
 <template>
   <!-- container -->
-  <div class="container-fluid flex flex-col justify-center p-5 bg-gray-100">
+  <div class="container-fluid flex flex-col min-h-screen p-5 bg-gray-100">
     <!-- logo -->
     <div class="text-2xl font-bold text-neutral flex justify-end mb-5">
       BursaKerja
