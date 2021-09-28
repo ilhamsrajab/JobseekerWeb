@@ -27,12 +27,20 @@
 
         <!-- main page -->
         <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
-          <div class="container flex-grow mx-auto m-8">
+          <div class="container flex-grow mx-auto sm:m-8 xs:m-4">
             <!-- kategori -->
             <div
-              class="overflow-x-auto mb-10 mx-8 xl:mx-0 no-scrollbar rounded-lg"
+              class="
+                overflow-x-auto
+                sm:mb-10
+                xs:mb-6
+                sm:mx-8
+                xl:mx-0
+                no-scrollbar
+                rounded-lg
+              "
             >
-              <div class="space-x-4 inline-flex">
+              <div class="space-x-2 inline-flex">
                 <CategoryButton />
                 <CategoryButton />
                 <CategoryButton />
@@ -47,7 +55,7 @@
             </div>
 
             <!-- filter button -->
-            <div class="mb-5 flex justify-between">
+            <div class="mb-5 sm:m-8 xs:m-1 xl:mx-0 flex justify-between">
               <span class="font-semibold">Cari Kerja</span>
               <button>
                 <Icon icon="fluent:filter-16-filled" class="text-2xl" />
@@ -59,15 +67,15 @@
                 grid
                 xl:grid-cols-3
                 md:grid-cols-2
-                sm:grid-cols-1
-                gap-10
+                xs:grid-cols-1 xs:gap-6
+                md:gap-6
+                lg:gap-8
+                xl:gap-10
                 2xl:m-0
-                m-8
+                sm:m-8
+                xs:mx-1 xs:mt-6
               "
             >
-              <!-- Halaman Profil -->
-              <!-- <HalamanProfil /> -->
-
               <!-- card -->
               <Card />
               <Card />
