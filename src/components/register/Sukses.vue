@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-center font-bold text-2xl mt-10 text-neutral">
+  <h2 class="text-center font-bold xs:text-lg sm:text-2xl mt-10 text-neutral">
     Data Anda telah tersimpan dengan aman, kami akan memverifikasi akun Anda.
   </h2>
   <img

@@ -23,7 +23,7 @@
       </button>
 
       <!-- logo -->
-      <div class="flex items-center sm:hidden lg:inline-flex xl:hidden">
+      <div class="flex items-center xs:hidden lg:inline-flex xl:hidden">
         <a href="/" class="lg:mr-4 xl:mr-16">
           <span
             class="dark:text-white text-white text-2xl font-bold select-none"
@@ -37,10 +37,11 @@
           class="
             searchbar
             h-10
-            px-5
-            pr-10
+            sm:px-5 sm:pr-10
+            xs:px-5 xs:pr-7
             md:w-96
             sm:w-80
+            xs:w-0
             rounded-large
             text-sm
             border-0
@@ -264,6 +265,12 @@ export default {
 @media only screen and (max-width: 767px) {
   .searchbar:focus {
     width: 22rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .searchbar:focus {
+    width: 11rem;
   }
 }
 </style>

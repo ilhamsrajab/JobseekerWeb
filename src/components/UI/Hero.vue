@@ -1,7 +1,7 @@
 <template>
-  <div class="hero my-8">
+  <div class="hero sm:my-8 xs:my-4">
     <!-- container -->
-    <div class="mx-8">
+    <div class="sm:mx-8 xs:mx-4">
       <!-- hero wrapper -->
       <div
         class="
@@ -9,23 +9,30 @@
           grid grid-cols-1
           md:grid-cols-12
           xl:gap-8
-          md:gap-0
+          md:gap-8
           items-center
           bg-gradient-to-br
           from-blue-200
           to-blue-300
-          md:px-10 md:py-5
+          sm:px-10 sm:py-5
+          xs:px-6 xs:py-6
           xl:px-20
           rounded-40
         "
       >
         <!-- hero text -->
-        <div class="hero-text col-span-6 ml-10">
+        <div
+          class="hero-text col-span-6 lg:ml-10 xs:ml-0 xs:order-2 md:order-1"
+        >
           <h1
             class="
               font-bold
-              text-4xl
-              md:text-5xl md:mt-12
+              lg:text-5xl
+              md:text-4xl
+              sm:text-3xl
+              xs:text-2xl
+              md:mt-12
+              sm:mt-0
               max-w-xl
               text-neutral
               leading-14
@@ -36,8 +43,9 @@
           <div
             class="
               xl:w-56
-              md:w-32
-              h-2
+              lg:w-44
+              xs:w-32
+              h-1.5
               bg-primary bg-opacity-80
               rounded-full
               mt-10
@@ -54,14 +62,17 @@
               mt-10
               bg-white
               shadow-lg
-              px-10
-              py-4
+              sm:px-10 sm:py-4
+              xs:px-5 xs:py-2
               rounded-20
               hover:shadow-xl hover:-translate-y-1
               flex
               items-center
               space-x-4q
-              md:text-5xl md:mb-12
+              md:text-5xl
+              sm:mb-12
+              xs:mx-auto
+              md:mx-0
               transform
               transition-all
               duration-200
@@ -103,11 +114,20 @@
         </div>
 
         <!-- hero image -->
-        <div class="hero-image col-span-6">
+        <div class="hero-image col-span-6 xs:order-1 md:order-2">
           <img
             src="../../assets/images/heroimage.png"
             alt="hero_image"
-            class="mb-5 animate-bounce5 transform rotate-180"
+            class="
+              md:mb-5
+              sm:mb-0
+              animate-bounce5
+              transform
+              rotate-180
+              mx-auto
+              sm:w-96
+              md:w-full
+            "
             draggable="false"
           />
         </div>

@@ -4,6 +4,7 @@
     <!-- kotak -->
     <div
       class="
+        kotak
         bg-primary
         rounded-40
         flex
@@ -14,8 +15,8 @@
         2xl:w-7/12
         lg:w-9/12
         sm:w-11/12
+        xs:w-screen xs:h-screen
       "
-      style="height: 650px"
     >
       <!-- gambar -->
       <div class="absolute">
@@ -196,11 +197,11 @@
           items-center
           xl:w-11/12
           lg:w-10/12
-          sm:w-8/12
+          xs:w-8/12
           lg:inline-flex
-          sm:hidden
+          xs:hidden
           lg:order-1
-          sm:order-2
+          xs:order-2
         "
       >
         <vue-carousel
@@ -220,8 +221,9 @@
           rounded-40
           xl:w-6/12
           lg:w-10/12
-          sm:w-full
-          p-8
+          xs:w-full
+          md:p-8
+          xs:p-4
           z-10
           transform
           overflow-y-auto
@@ -229,7 +231,7 @@
           transition-all
           duration-200
           lg:order-2
-          sm:order-1
+          xs:order-1
         "
       >
         <!-- logo and back btn -->
@@ -322,6 +324,10 @@ export default {
   user-select: none;
 }
 
+.kotak {
+  height: 650px;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .bagiankanan::-webkit-scrollbar {
   display: none;
@@ -341,5 +347,11 @@ export default {
   font-size: 1.5rem;
   justify-content: center;
   min-height: 10rem;
+}
+
+@media only screen and (max-width: 339px) {
+  .kotak {
+    height: 100%;
+  }
 }
 </style>
