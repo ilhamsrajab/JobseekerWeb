@@ -1,10 +1,10 @@
 <template>
   <header class="flex justify-between items-center px-6 py-4 bg-primary">
-    <div class="flex items-center space-x-4 lg:space-x-0">
+    <div class="flex items-center space-x-4 xl:space-x-0">
       <!-- hamburger menu -->
       <button
         @click="sidebarOpen = true"
-        class="text-gray-500 dark:text-gray-300 focus:outline-none lg:hidden"
+        class="text-gray-500 dark:text-gray-300 focus:outline-none xl:hidden"
       >
         <svg
           class="h-6 w-6 text-white"
@@ -23,8 +23,8 @@
       </button>
 
       <!-- logo -->
-      <div class="flex items-center lg:hidden">
-        <a href="/" class="mr-16">
+      <div class="flex items-center sm:hidden lg:inline-flex xl:hidden">
+        <a href="/" class="lg:mr-4 xl:mr-16">
           <span
             class="dark:text-white text-white text-2xl font-bold select-none"
             >BursaKerja</span
@@ -39,7 +39,8 @@
             h-10
             px-5
             pr-10
-            w-96
+            md:w-96
+            sm:w-80
             rounded-large
             text-sm
             border-0
@@ -78,7 +79,16 @@
         v-show="modeCerah"
         v-on:Click="lightMode"
       >
-        <span class="text-xs text-white mr-2 display cursor-pointer"
+        <span
+          class="
+            text-xs text-white
+            mr-2
+            opacity-0
+            md:group-hover:opacity-100
+            cursor-pointer
+            transition-all
+            duration-200
+          "
           >Light Mode</span
         >
         <button
@@ -104,7 +114,16 @@
         v-show="modeGelap"
         v-on:Click="darkMode"
       >
-        <span class="text-xs text-white mr-2 display cursor-pointer"
+        <span
+          class="
+            text-xs text-white
+            mr-2
+            opacity-0
+            md:group-hover:opacity-100
+            cursor-pointer
+            transition-all
+            duration-200
+          "
           >Dark Mode</span
         >
         <button
@@ -240,5 +259,11 @@ export default {
 
 .searchbar:focus {
   width: 30rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .searchbar:focus {
+    width: 22rem;
+  }
 }
 </style>

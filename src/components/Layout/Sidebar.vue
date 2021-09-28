@@ -15,7 +15,7 @@
       bg-white
       dark:bg-gray-900
       overflow-y-auto
-      lg:translate-x-0 lg:static lg:inset-0
+      xl:translate-x-0 xl:static xl:inset-0
     "
   >
     <!-- logo -->

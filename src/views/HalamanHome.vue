@@ -14,7 +14,7 @@
           bg-black
           opacity-50
           transition-opacity
-          lg:hidden
+          xl:hidden
         "
       ></div>
 
