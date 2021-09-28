@@ -2,8 +2,8 @@
   <!-- container -->
   <div class="container-fluid flex flex-col min-h-screen p-5 bg-gray-100">
     <!-- logo -->
-    <div class="text-2xl font-bold text-neutral flex justify-end mb-5">
-      BursaKerja
+    <div class="flex justify-end xs:mb-5 sm:mb-0">
+      <img src="../assets/images/logo/BursaKerjaLogo.svg" alt="" class="w-40" />
     </div>
     <div class="flex flex-col self-center md:m-8 sm:m-4">
       <!-- kotak header -->
@@ -82,7 +82,9 @@
           z-10
           bg-white
           rounded-20
-          md:py-8 md:px-16
+          lg:py-6
+          md:py-4
+          lg:px-12
           sm:px-8
           xs:px-4
           sm:py-4
@@ -90,7 +92,7 @@
           text-gray-500
           sm:mt-8
           xs:mt-4
-          md:w-full
+          md:w-10/12
           xl:w-4/5
         "
       >

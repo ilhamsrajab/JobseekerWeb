@@ -36,7 +36,14 @@
             <span class="text-xl font-semibold"> Kategori pekerjaan </span>
             <button class="ml-3 badge h-6 px-3">Lihat lainnya</button>
             <div
-              class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8 mt-5"
+              class="
+                grid grid-cols-1
+                md:grid-cols-3
+                xl:grid-cols-5 xl:gap-8
+                lg:gap-6
+                md:gap-4
+                mt-5
+              "
             >
               <CardCategory />
               <CardCategory />
@@ -48,7 +55,7 @@
           <!-- end kategori pekerjaan -->
 
           <!-- iklan -->
-          <div class="mt-10 -mb-20 px-8 py-16 bg-gray-50 font-bold text-xl">
+          <!-- <div class="mt-10 -mb-20 px-8 py-16 bg-gray-50 font-bold text-xl">
             <div class="text-center">Perusahaan</div>
             <div
               class="
@@ -120,7 +127,7 @@
                 "
               />
             </div>
-          </div>
+          </div> -->
 
           <!-- footer -->
           <Footer />

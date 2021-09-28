@@ -256,7 +256,13 @@
           </div>
           <div></div>
           <!-- logo -->
-          <div class="text-2xl font-bold text-neutral">BursaKerja</div>
+          <div>
+            <img
+              src="../assets/images/logo/BursaKerjaLogo.svg"
+              alt=""
+              class="w-40"
+            />
+          </div>
         </div>
         <!-- Login -->
         <signIn id="signIn" v-show="signIn" />

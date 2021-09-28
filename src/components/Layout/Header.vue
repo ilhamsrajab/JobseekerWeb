@@ -23,12 +23,24 @@
       </button>
 
       <!-- logo -->
+      <!-- logotype -->
       <div class="flex items-center xs:hidden lg:inline-flex xl:hidden">
         <a href="/" class="lg:mr-4 xl:mr-16">
-          <span
-            class="dark:text-white text-white text-2xl font-bold select-none"
-            >BursaKerja</span
-          >
+          <img
+            src="../../assets/images/logo/BursaKerjaLogotype_Black.svg"
+            alt=""
+            class="h-8"
+          />
+        </a>
+      </div>
+      <!-- logomark -->
+      <div class="flex items-center sm:inline-flex lg:hidden xl:hidden">
+        <a href="/" class="lg:mr-4 xl:mr-16">
+          <img
+            src="../../assets/images/logo/BursaKerjaLogomark_Black.svg"
+            alt=""
+            class="xs:h-6 sm:h-8"
+          />
         </a>
       </div>
       <!-- search bar -->

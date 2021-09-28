@@ -22,9 +22,11 @@
     <div class="flex items-center justify-center py-5 bg-primary">
       <div class="flex items-center">
         <a href="/">
-          <span class="dark:text-white text-white text-2xl font-bold"
-            >BursaKerja</span
-          >
+          <img
+            src="../../assets/images/logo/BursaKerjaLogotype_Black.svg"
+            alt=""
+            class="h-8"
+          />
         </a>
       </div>
     </div>
