@@ -35,13 +35,15 @@
                 <img
                   alt="logo perusahaan"
                   class="
+                    mt-2
                     w-40
+                    h-40
                     rounded-full
                     select-disabled
                     group-hover:rotate-3
                     transform
                   "
-                  src="../assets/images/default-avatar.svg"
+                  src="https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"
                 />
               </div>
 
@@ -65,8 +67,10 @@
                     align-top
                     space-x-2
                     justify-end
-                    xl:w-2/3
-                    md:w-full
+                    2xl:w-3/5
+                    lg:w-4/5
+                    md:w-11/12
+                    sm:w-11/12
                     mx-auto
                     mb-3
                     text-gray-500
@@ -81,42 +85,66 @@
                     py-8
                     grid grid-flow-row
                     auto-cols-max
-                    grid-cols-3
+                    xl:grid-cols-3
+                    sm:grid-cols-2
+                    xs:grid-cols-1
                     gap-y-5 gap-x-10
-                    justify-items-center
+                    sm:justify-items-center
                     bg-white
-                    rounded-large
-                    px-10
-                    xl:w-2/3
-                    md:w-full
-                    text-gray-500
+                    rounded-20
+                    sm:px-10
+                    xs:px-6
+                    2xl:w-3/5
+                    lg:w-4/5
+                    md:w-11/12
+                    sm:w-11/12
+                    xs:w-full
                     mx-auto
+                    text-gray-500
                   "
                 >
-                  <span class="inline-flex items-center space-x-2 w-56">
+                  <span
+                    class="inline-flex items-center space-x-2 w-56"
+                    title="Lokasi penempatan kerja"
+                  >
                     <Icon icon="fluent:location-24-filled" :inline="true" />
                     <p class="text-sm">Lokasi</p>
                   </span>
-                  <span class="inline-flex items-center space-x-2 w-56">
+                  <span
+                    class="inline-flex items-center space-x-2 w-56"
+                    title="Kisaran gaji"
+                  >
                     <Icon icon="fluent:money-24-filled" :inline="true" />
                     <p class="text-sm">Rp. 1.000.000 - Rp. 4.000.000</p>
                   </span>
-                  <span class="inline-flex items-center space-x-2 w-56">
+                  <span
+                    class="inline-flex items-center space-x-2 w-56"
+                    title="Jumlah pelamar pada lamaran ini"
+                  >
                     <Icon
                       icon="fluent:person-accounts-24-filled"
                       :inline="true"
                     />
                     <p class="text-sm">Jumlah Pendaftar</p>
                   </span>
-                  <span class="inline-flex items-center space-x-2 w-56">
+                  <span
+                    class="inline-flex items-center space-x-2 w-56"
+                    title="Batas pendaftaran lamaran"
+                  >
                     <Icon icon="fluent:clock-24-filled" :inline="true" />
                     <p class="text-sm">Batas Pendaftaran</p>
                   </span>
-                  <span class="inline-flex items-center space-x-2 w-56">
+                  <span
+                    class="inline-flex items-center space-x-2 w-56"
+                    title="Jenis pekerjaan"
+                  >
                     <Icon icon="fluent:clock-24-filled" :inline="true" />
                     <p class="text-sm">Full-Time</p>
                   </span>
-                  <span class="inline-flex items-center space-x-2 w-56">
+                  <span
+                    class="inline-flex items-center space-x-2 w-56"
+                    title="Kuota yang dibutuhkan"
+                  >
                     <Icon icon="fluent:people-team-24-filled" :inline="true" />
                     <p class="text-sm">Kuota</p>
                   </span>
@@ -127,14 +155,19 @@
               <!-- descrition -->
               <div
                 class="
-                  py-8
                   bg-white
-                  rounded-large
-                  px-10
-                  xl:w-2/3
-                  md:w-full
-                  text-gray-500
+                  rounded-20
+                  lg:p-14
+                  md:p-10
+                  sm:p-8
+                  xs:p-6
+                  text-neutral
                   mt-8
+                  2xl:w-3/5
+                  lg:w-4/5
+                  md:w-11/12
+                  sm:w-11/12
+                  xs:w-full
                 "
               >
                 <!-- isi Deskripsi -->
@@ -170,9 +203,164 @@
                     <li>Developing documentation to assist users</li>
                     <li>Ensuring continuous professional self-development.</li>
                   </ul>
+
+                  <h2 class="font-bold text-lg mb-3">Requirements :</h2>
+                  <ul class="list-disc list-inside">
+                    <li>
+                      Bachelor’s Degree or more 3 ~ 5 years web programming
+                      experience.
+                    </li>
+                    <li>Degree in Computer Science or related field.</li>
+                    <li>
+                      Experience with user interface design, database structures
+                      and statistical analyses.
+                    </li>
+                    <li>Analytical mindset and good problem-solving skills.</li>
+                    <li>Excellent written and verbal communication.</li>
+                    <li>
+                      Good organizational skills Ability to work as part of a
+                      team Effective written and verbal communication in English
+                    </li>
+                    <li>
+                      Ability to understand transportation business and system.
+                    </li>
+                    <li>
+                      Strong working knowledge of Microsoft Office applications
+                      such as Excel, Word and PowerPoint
+                    </li>
+                  </ul>
                 </div>
+                <!-- end of isi description -->
               </div>
               <!-- end of descrition -->
+
+              <!-- berkas -->
+              <div class="w-full flex flex-col mt-8">
+                <div
+                  class="
+                    py-8
+                    justify-items-center
+                    bg-white
+                    rounded-20
+                    lg:px-10
+                    md:px-6
+                    xs:px-2
+                    2xl:w-3/5
+                    lg:w-4/5 lg:mx-auto
+                    md:mx-8
+                    sm:mx-6
+                  "
+                >
+                  <span class="font-bold text-lg px-4"
+                    >Berkas yang dibutuhkan :</span
+                  >
+                  <div
+                    class="
+                      mx-4
+                      mt-6
+                      grid grid-flow-row
+                      auto-cols-max
+                      xl:grid-cols-3
+                      sm:grid-cols-2
+                      xs:grid-cols-1
+                      gap-y-5 gap-x-10
+                    "
+                  >
+                    <span class="inline-flex items-center space-x-2 w-56">
+                      <Icon
+                        icon="fluent:checkmark-circle-24-filled"
+                        :inline="true"
+                        class="text-hijauDark"
+                      />
+                      <p class="text-sm">Ijazah</p>
+                    </span>
+                    <span class="inline-flex items-center space-x-2 w-56">
+                      <Icon
+                        icon="fluent:checkmark-circle-24-filled"
+                        class="text-hijauDark"
+                        :inline="true"
+                      />
+                      <p class="text-sm">Curriculum Vitae (CV)</p>
+                    </span>
+                    <span class="inline-flex items-center space-x-2 w-56">
+                      <Icon
+                        icon="fluent:checkmark-circle-24-filled"
+                        class="text-hijauDark"
+                        :inline="true"
+                      />
+                      <p class="text-sm">Portofolio</p>
+                    </span>
+                    <span class="inline-flex items-center space-x-2 w-56">
+                      <Icon
+                        icon="fluent:checkmark-circle-24-filled"
+                        class="text-hijauDark"
+                        :inline="true"
+                      />
+                      <p class="text-sm">Sertifikat</p>
+                    </span>
+                    <span class="inline-flex items-center space-x-2 w-56">
+                      <Icon
+                        icon="fluent:checkmark-circle-24-filled"
+                        class="text-hijauDark"
+                        :inline="true"
+                      />
+                      <p class="text-sm">Transkrip Nilai</p>
+                    </span>
+                    <span class="inline-flex items-center space-x-2 w-56">
+                      <Icon
+                        icon="fluent:checkmark-circle-24-filled"
+                        class="text-hijauDark"
+                        :inline="true"
+                      />
+                      <p class="text-sm">SIM C</p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- end of berkas -->
+
+              <!-- button -->
+              <div
+                class="
+                  mt-8
+                  sm:py-8 sm:px-10
+                  xs:py-4 xs:px-5
+                  flex flex-row
+                  gap-x-2
+                  justify-items-center
+                  bg-white
+                  rounded-20
+                  2xl:w-3/5
+                  lg:w-4/5 lg:mx-auto
+                  md:w-11/12
+                  sm:w-11/12
+                  xs:w-full
+                "
+              >
+                <button class="btn btn-primary flex-auto">Daftar</button>
+                <button
+                  class="btn btn-accent text-xl flex-1 text-neutral"
+                  title="Buka di tab baru"
+                >
+                  <Icon
+                    icon="fluent:full-screen-maximize-24-filled"
+                    :inline="true"
+                  />
+                </button>
+                <button
+                  class="btn btn-accent text-xl flex-1 text-neutral"
+                  title="Tambah ke favorit"
+                >
+                  <Icon icon="fluent:bookmark-add-24-filled" :inline="true" />
+                </button>
+                <button
+                  class="btn btn-accent text-xl flex-1 text-neutral"
+                  title="Bagikan"
+                >
+                  <Icon icon="fluent:share-android-24-filled" :inline="true" />
+                </button>
+              </div>
+              <!-- end of button -->
             </div>
           </div>
           <!-- footer -->
@@ -234,11 +422,4 @@ export default {
 };
 </script>
 
-<style scoped>
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-</style>
+<style scoped></style>

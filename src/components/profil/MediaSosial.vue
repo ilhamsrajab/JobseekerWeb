@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto mt-4 z-10" style="width: 800px">
+  <div class="mx-auto mt-4 z-10">
     <form class="form-control" action="#" method="POST">
       <!-- instagram -->
       <div class="mt-4">
@@ -26,7 +26,7 @@
             title="Instagram"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-50 w-full"
+            class="input input-primary bg-gray-100 w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
@@ -63,7 +63,7 @@
             title="Twitter"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-50 w-full"
+            class="input input-primary bg-gray-100 w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
@@ -99,7 +99,7 @@
             title="Facebook"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-50 w-full"
+            class="input input-primary bg-gray-100 w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
@@ -135,7 +135,7 @@
             title="LinkedIn"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-50 w-full"
+            class="input input-primary bg-gray-100 w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
@@ -171,7 +171,7 @@
             title="YouTube"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-50 w-full"
+            class="input input-primary bg-gray-100 w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
@@ -184,7 +184,7 @@
 
       <!-- btn selanjutnya -->
       <div>
-        <button class="btn btn-primary mt-6 mb-3">Perbaharui</button>
+        <button class="btn btn-primary my-6">Perbaharui</button>
       </div>
     </form>
   </div>

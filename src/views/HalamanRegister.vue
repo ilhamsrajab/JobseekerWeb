@@ -1,12 +1,11 @@
 <template>
   <!-- container -->
-  <div class="container-fluid flex flex-col justify-center p-5 bg-gray-100">
+  <div class="container-fluid flex flex-col min-h-screen p-5 bg-gray-100">
     <!-- logo -->
-    <div class="text-2xl font-bold text-neutral flex justify-end mb-5">
-      BursaKerja
+    <div class="flex justify-end xs:mb-5 sm:mb-0">
+      <img src="../assets/images/logo/BursaKerjaLogo.svg" alt="" class="w-40" />
     </div>
-    <!-- <div class="fs-4 fw-bold align-self-end mb-3">Logotype</div> -->
-    <div class="flex flex-col self-center" style="width: 1000px">
+    <div class="flex flex-col self-center md:m-8 sm:m-4">
       <!-- kotak header -->
       <div
         class="
@@ -15,9 +14,11 @@
           bg-primary
           mx-auto
           w-full
-          rounded-40
+          sm:rounded-40
+          xs:rounded-20
           shadow-btn
-          h-56
+          xl:h-56
+          md:h-60
           flex flex-col
           justify-between
           z-0
@@ -27,12 +28,14 @@
         <div class="absolute z-0">
           <img src="../assets/images/header.svg" alt="" srcset="" />
         </div>
-        <div class="text-3xl font-bold m-5 text-center">Lengkapi Data Diri</div>
+        <div class="xs:text-xl sm:text-3xl font-bold m-5 text-center">
+          Lengkapi Data Diri
+        </div>
         <!-- step progress bar -->
-        <ul class="w-full steps my-5">
+        <ul class="w-full steps xs:my-0 sm:my-5">
           <li
             data-content=""
-            class="step step-accent text-sm"
+            class="step step-accent sm:text-sm xs:text-2xs"
             :class="step1Classes"
             @click="stepSelected(currentStep)"
           >
@@ -40,7 +43,7 @@
           </li>
           <li
             data-content=""
-            class="step text-sm"
+            class="step sm:text-sm xs:text-2xs"
             :class="step2Classes"
             @click="stepSelected(currentStep)"
           >
@@ -48,7 +51,7 @@
           </li>
           <li
             data-content=""
-            class="step text-sm"
+            class="step sm:text-sm xs:text-2xs"
             :class="step3Classes"
             @click="stepSelected(currentStep)"
           >
@@ -56,7 +59,7 @@
           </li>
           <li
             data-content=""
-            class="step text-sm"
+            class="step sm:text-sm xs:text-2xs"
             :class="step4Classes"
             @click="stepSelected(currentStep)"
           >
@@ -65,7 +68,7 @@
 
           <li
             data-content=""
-            class="step text-sm"
+            class="step sm:text-sm xs:text-2xs"
             :class="step5Classes"
             @click="stepSelected(currentStep)"
           >
@@ -73,7 +76,26 @@
           </li>
         </ul>
       </div>
-      <div class="mx-auto mt-4 z-10" style="width: 600px">
+      <div
+        class="
+          mx-auto
+          z-10
+          bg-white
+          rounded-20
+          lg:py-6
+          md:py-4
+          lg:px-12
+          sm:px-8
+          xs:px-4
+          sm:py-4
+          xs:py-2
+          text-gray-500
+          sm:mt-8
+          xs:mt-4
+          md:w-10/12
+          xl:w-4/5
+        "
+      >
         <form class="form-control" action="" method="POST">
           <!-- form data diri -->
           <data-diri v-if="currentStep === 1"></data-diri>
@@ -93,7 +115,7 @@
           <!-- submit -->
           <div>
             <button
-              class="btn btn-primary mt-6 mb-3"
+              class="btn btn-primary mt-6 sm:mb-3 xs:mb-5"
               v-if="currentStep === 5"
               type="submit"
             >
@@ -241,5 +263,21 @@ export default {
 
 .steps .step.step-accent::after {
   background: #ffbeb2;
+}
+
+@media only screen and (max-width: 480px) {
+  .steps .step::before {
+    height: 0.3rem;
+    background: white;
+  }
+  .steps .step::after {
+    background: white;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .steps .step.step-accent::after {
+    background: #ffbeb2;
+  }
 }
 </style>

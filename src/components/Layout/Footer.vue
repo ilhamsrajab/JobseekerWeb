@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full mt-20 bg-primary text-white">
+  <footer class="w-full mt-14 bg-primary text-white">
     <div class="xl:px-40 pb-10 lg:px-20 md:px-10 sm:px-5 px-10">
       <div
         class="w-full pt-12 flex flex-col sm:flex-row space-y-2 justify-start"
@@ -7,9 +7,11 @@
         <div class="w-full sm:w-4/5 flex flex-col space-y-4">
           <!-- logo footer -->
           <a href="/">
-            <span class="dark:text-white text-white text-2xl font-bold"
-              >BursaKerja</span
-            >
+            <img
+              src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
+              alt=""
+              class="h-8"
+            />
           </a>
           <p class="opacity-60">
             Rancabang Estate, Jl. Rancabango, Perumahan, Kec. Tarogong Kaler,

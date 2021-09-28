@@ -9,7 +9,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file cv"
-      class="input input-primary w-full py-3.5 px-4"
+      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
     />
     <label class="label">
       <p href="#" class="label-text-alt text-gray-500">
@@ -29,7 +29,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file ijazah"
-      class="input input-primary w-full py-3.5 px-4"
+      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
     />
     <label class="label">
       <p href="#" class="label-text-alt text-gray-500">
@@ -49,7 +49,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file portofolio"
-      class="input input-primary w-full py-3.5 px-4"
+      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
       multiple
     />
     <label class="label">
@@ -70,7 +70,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file sertifikat"
-      class="input input-primary w-full py-3.5 px-4"
+      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
       multiple
     />
     <label class="label">
@@ -91,7 +91,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file transkrip nilai"
-      class="input input-primary w-full py-3.5 px-4"
+      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
       multiple
     />
     <label class="label">
@@ -115,7 +115,7 @@
           h-5
           w-5
           text-primary
-          bg-white
+          bg-gray-100
           border-1 border-gray-300
           rounded
           transition-all

@@ -7,12 +7,8 @@
       group
       bg-white
       rounded-large
-      shadow-lg
-      hover:shadow-xl
       cursor-default
       p-5
-      transition-all
-      duration-200
       animate-pulse
     "
   >

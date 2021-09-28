@@ -20,7 +20,7 @@
             type="email"
             autocomplete="email"
             placeholder="contoh@bursakerja.com"
-            class="input input-primary w-full"
+            class="input input-primary w-full bg-gray-100"
             required
             v-model.trim="email"
           />
@@ -36,7 +36,7 @@
             title="Masukan username"
             type="text"
             placeholder="Masukan username"
-            class="input input-primary w-full"
+            class="input input-primary w-full bg-gray-100"
             required
             v-model.trim="username"
           />
@@ -47,19 +47,22 @@
           <label class="label mt-3" for="password">
             <span class="label-text font-semibold">Password</span>
           </label>
-          <p v-if="!formIsValid">
-            Tolong isikan email yang valid dan password minimal 8 huruf
-          </p>
+
           <input
             id="password"
             title="Masukan password"
             type="password"
             autocomplete="current-password"
             placeholder="Masukan password"
-            class="input input-primary w-full"
+            class="input input-primary w-full bg-gray-100"
             required
             v-model.trim="password"
           />
+          <label class="label" v-if="!formIsValid">
+            <p href="#" class="label-text-alt text-red-500">
+              * Tolong isikan email yang valid dan password minimal 8 huruf
+            </p>
+          </label>
         </div>
 
         <!-- konfirmasi password -->
@@ -72,13 +75,13 @@
             title="Masukan konfirmasi password"
             type="password"
             placeholder="Masukan kembali password"
-            class="input input-primary w-full"
+            class="input input-primary w-full bg-gray-100"
             required
             v-model.trim="password_confirmation"
           />
         </div>
 
-        <!-- btn login -->
+        <!-- btn daftar -->
         <div>
           <button class="btn btn-primary my-6">Daftar</button>
         </div>
@@ -165,6 +168,7 @@ export default {
     };
   },
   methods: {
+<<<<<<< HEAD
     submitForm() {
       this.$store.dispatch("register", {
         username: this.username,
@@ -174,6 +178,34 @@ export default {
         role: this.role,
       });
     },
+=======
+    ...mapActions({
+      login: "auth/login",
+    }),
+
+    submit() {
+      this.register(this.form);
+    },
+    // submitForm() {
+    //   this.formIsValid = true;
+    //   if (
+    //     this.email === "" ||
+    //     !this.email.includes("@") ||
+    //     this.password.length < 8
+    //   ) {
+    //     this.formIsValid = false;
+    //     return;
+    //   }
+
+    //   this.$store.dispatch("signup", {
+    //     email: this.email,
+    //     username: this.username,
+    //     password: this.password,
+    //     password_confirmation: this.password,
+    //     role: this.role,
+    //   });
+    // },
+>>>>>>> 706b1d2e097946958d8c3a4236eaa7a231afc36c
   },
 };
 </script>

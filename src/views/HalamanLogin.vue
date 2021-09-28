@@ -3,8 +3,20 @@
   <div class="min-h-screen bg-gray-100 flex justify-center items-center">
     <!-- kotak -->
     <div
-      class="bg-primary shadow-primary rounded-40 flex flex-row p-2"
-      style="height: 600px; width: 1000px"
+      class="
+        kotak
+        bg-primary
+        rounded-40
+        flex
+        lg:flex-row
+        sm:flex-col
+        p-2
+        md:m-8
+        2xl:w-7/12
+        lg:w-9/12
+        sm:w-11/12
+        xs:w-screen xs:h-screen
+      "
     >
       <!-- gambar -->
       <div class="absolute">
@@ -177,18 +189,26 @@
         class="
           bagianKiri
           text-white
+          shadow-2xl
+          hover:shadow-3xl
           px-5
           flex flex-col
           justify-end
           items-center
-          w-8/12
+          xl:w-11/12
+          lg:w-10/12
+          xs:w-8/12
+          lg:inline-flex
+          xs:hidden
+          lg:order-1
+          xs:order-2
         "
       >
         <vue-carousel
           :data="data"
           :controls="false"
           indicator-type="disc"
-          class="m-5"
+          class="m-5 items-end"
         ></vue-carousel>
       </div>
 
@@ -197,32 +217,36 @@
         class="
           bagiankanan
           bg-white
+          shadow-2xl
           rounded-40
-          w-5/12
-          p-8
+          xl:w-6/12
+          lg:w-10/12
+          xs:w-full
+          md:p-8
+          xs:p-4
           z-10
-          shadow-bagianKanan
           transform
           overflow-y-auto
-          hover:scale-105 hover:shadow-bagianKananHover
+          lg:hover:scale-105
           transition-all
           duration-200
+          lg:order-2
+          xs:order-1
         "
       >
         <!-- logo and back btn -->
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between">
           <!-- icon kembali -->
-          <div id="iconBack" class="flex self-center" v-show="signUp">
+          <div id="iconBack" class="flex self-start" v-show="signUp">
             <!-- icon -->
             <button v-on:Click="loginSekarang">
               <Icon
                 icon="fluent:arrow-left-12-filled"
                 class="
-                  text-2xl
                   rounded-full
-                  h-10
-                  w-10
-                  p-2
+                  h-8
+                  w-8
+                  p-1.5
                   hover:bg-accent
                   transition-all
                   duration-200
@@ -230,8 +254,15 @@
               />
             </button>
           </div>
+          <div></div>
           <!-- logo -->
-          <div class="text-2xl font-bold text-neutral">BursaKerja</div>
+          <div>
+            <img
+              src="../assets/images/logo/BursaKerjaLogo.svg"
+              alt=""
+              class="w-40"
+            />
+          </div>
         </div>
         <!-- Login -->
         <signIn id="signIn" v-show="signIn" />
@@ -240,8 +271,11 @@
         <!-- Daftar -->
         <signUp id="signUp" v-show="signUp" />
 
-        <span class="font-bold text-primary flex justify-center my-6 text-sm">
-          <button class="font-bold" v-on:Click="daftarSekarang" v-show="signIn">
+        <span
+          class="font-bold text-primary flex justify-center my-6 text-sm"
+          v-show="signIn"
+        >
+          <button class="font-bold" v-on:Click="daftarSekarang">
             Daftar Sekarang >
           </button>
         </span>
@@ -296,6 +330,10 @@ export default {
   user-select: none;
 }
 
+.kotak {
+  height: 650px;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .bagiankanan::-webkit-scrollbar {
   display: none;
@@ -315,5 +353,11 @@ export default {
   font-size: 1.5rem;
   justify-content: center;
   min-height: 10rem;
+}
+
+@media only screen and (max-width: 339px) {
+  .kotak {
+    height: 100%;
+  }
 }
 </style>

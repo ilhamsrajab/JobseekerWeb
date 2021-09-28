@@ -15,18 +15,24 @@
       bg-white
       dark:bg-gray-900
       overflow-y-auto
+<<<<<<< HEAD
       lg:translate-x-0
       lg:static
       lg:inset-0
+=======
+      xl:translate-x-0 xl:static xl:inset-0
+>>>>>>> 706b1d2e097946958d8c3a4236eaa7a231afc36c
     "
   >
     <!-- logo -->
     <div class="flex items-center justify-center py-5 bg-primary">
       <div class="flex items-center">
         <a href="/">
-          <span class="dark:text-white text-white text-2xl font-bold"
-            >BursaKerja</span
-          >
+          <img
+            src="../../assets/images/logo/BursaKerjaLogotype_Black.svg"
+            alt=""
+            class="h-8"
+          />
         </a>
       </div>
     </div>
@@ -178,6 +184,7 @@ export default {
     };
   },
   methods: {
+    
     setSelectedTab(tab) {
       this.selectedTab = tab;
     },

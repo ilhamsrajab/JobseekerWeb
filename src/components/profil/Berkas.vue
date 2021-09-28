@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto mt-4 z-10" style="width: 800px">
+  <div class="mx-auto mt-4 z-10">
     <form class="form-control" action="#" method="POST">
       <!-- curriculumVitae -->
       <div class="mt-4">
@@ -11,7 +11,7 @@
           type="file"
           accept=".pdf"
           title="Pilih file cv"
-          class="input input-primary bg-gray-50 w-full py-3.5 px-4"
+          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
@@ -31,7 +31,7 @@
           type="file"
           accept=".pdf"
           title="Pilih file ijazah"
-          class="input input-primary bg-gray-50 w-full py-3.5 px-4"
+          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
@@ -51,7 +51,7 @@
           type="file"
           accept=".pdf"
           title="Pilih file portofolio"
-          class="input input-primary bg-gray-50 w-full py-3.5 px-4"
+          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
           multiple
         />
         <label class="label">
@@ -72,7 +72,7 @@
           type="file"
           accept=".pdf"
           title="Pilih file sertifikat"
-          class="input input-primary bg-gray-50 w-full py-3.5 px-4"
+          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
           multiple
         />
         <label class="label">
@@ -93,7 +93,7 @@
           type="file"
           accept=".pdf"
           title="Pilih file transkrip nilai"
-          class="input input-primary bg-gray-50 w-full py-3.5 px-4"
+          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
           multiple
         />
         <label class="label">
@@ -106,7 +106,7 @@
 
       <!-- btn selanjutnya -->
       <div>
-        <button class="btn btn-primary mt-6 mb-3">Perbaharui</button>
+        <button class="btn btn-primary my-6">Perbaharui</button>
       </div>
     </form>
   </div>

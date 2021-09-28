@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto mt-4 z-10" style="width: 800px">
+  <div class="mx-auto mt-4 z-10">
     <form class="form-control" action="#" method="POST">
       <!-- nama perusahaan -->
       <div class="mt-4">
@@ -13,7 +13,7 @@
           title="Nama Perusahaan"
           type="text"
           placeholder="Masukan nama perusahaan"
-          class="input input-primary bg-gray-50 w-full"
+          class="input input-primary bg-gray-100 w-full"
         />
       </div>
 
@@ -26,7 +26,7 @@
           id="tahunMasuk"
           title="Tahun masuk"
           type="month"
-          class="input input-primary bg-gray-50 w-full"
+          class="input input-primary bg-gray-100 w-full"
         />
       </div>
 
@@ -41,7 +41,7 @@
           id="tahunKeluar"
           title="Tahun Keluar"
           type="month"
-          class="input input-primary bg-gray-50 w-full"
+          class="input input-primary bg-gray-100 w-full"
         />
       </div>
 
@@ -57,7 +57,7 @@
           title="Posisi Kerja"
           type="text"
           placeholder="Masukan Posisi Kerja"
-          class="input input-primary bg-gray-50 w-full"
+          class="input input-primary bg-gray-100 w-full"
         />
       </div>
 
@@ -73,7 +73,7 @@
             id="deskripsiPekerjaan"
             title="Deskripsi pekerjaan"
             rows="3"
-            class="textarea bg-gray-50"
+            class="textarea bg-gray-100"
             placeholder="Tuliskan deskripsi pekerjaan dengan singkat"
           />
         </div>
@@ -91,7 +91,7 @@
           title="Alasan Resign"
           type="text"
           placeholder="Masukan Alasan Resign"
-          class="input input-primary bg-gray-50 w-full"
+          class="input input-primary bg-gray-100 w-full"
         />
       </div>
 
@@ -105,7 +105,7 @@
           type="file"
           accept=".pdf"
           title="Pilih file dokumen pendukung"
-          class="input input-primary bg-gray-50 w-full py-3.5 px-4"
+          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
@@ -128,7 +128,7 @@
           pb-6
           rounded-20
           border-2 border-gray-300 border-dashed
-          hover:border-primary hover:bg-gray-50
+          hover:border-primary hover:bg-gray-100
           transition-all
           duration-200
         "
@@ -158,7 +158,7 @@
 
       <!-- btn selanjutnya -->
       <div>
-        <button class="btn btn-primary mt-6 mb-3">Perbaharui</button>
+        <button class="btn btn-primary my-6">Perbaharui</button>
       </div>
     </form>
   </div>
