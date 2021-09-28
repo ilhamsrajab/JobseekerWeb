@@ -7,7 +7,7 @@
         class="form-control"
         action="#"
         method="POST"
-        @submit.prevent="submit"
+        @submit.prevent="submitForm"
       >
         <!-- email -->
         <div>
@@ -22,7 +22,7 @@
             placeholder="contoh@bursakerja.com"
             class="input input-primary w-full"
             required
-            v-model.trim="form.email"
+            v-model.trim="email"
           />
         </div>
 
@@ -38,7 +38,7 @@
             placeholder="Masukan username"
             class="input input-primary w-full"
             required
-            v-model.trim="form.username"
+            v-model.trim="username"
           />
         </div>
 
@@ -58,7 +58,7 @@
             placeholder="Masukan password"
             class="input input-primary w-full"
             required
-            v-model.trim="form.password"
+            v-model.trim="password"
           />
         </div>
 
@@ -74,7 +74,7 @@
             placeholder="Masukan kembali password"
             class="input input-primary w-full"
             required
-            v-model.trim="form.password_confirmation"
+            v-model.trim="password_confirmation"
           />
         </div>
 
@@ -149,9 +149,6 @@
 
 <script>
 import { Icon } from "@iconify/vue";
-// import { reactive } from "vue";
-import axios from "axios";
-import { mapActions } from "vuex";
 
 export default {
   name: "Login",
@@ -160,88 +157,23 @@ export default {
   },
   data() {
     return {
-      form: {
-        email: "",
-        username: "",
-        password: "",
-        password_confirmation: "",
-        role: "admin",
-        // formIsValid: true,
-        // mode: "",
-      },
+      username: "",
+      email: "",
+      password: "",
+      password_confirmation: "",
+      role: "jobseeker",
     };
   },
   methods: {
-    ...mapActions({
-      login: 'auth/login'
-    }),
-
-    submit() {
-      this.register(this.form)
-    }
-    // submitForm() {
-    //   this.formIsValid = true;
-    //   if (
-    //     this.email === "" ||
-    //     !this.email.includes("@") ||
-    //     this.password.length < 8
-    //   ) {
-    //     this.formIsValid = false;
-    //     return;
-    //   }
-
-    //   this.$store.dispatch("signup", {
-    //     email: this.email,
-    //     username: this.username,
-    //     password: this.password,
-    //     password_confirmation: this.password,
-    //     role: this.role,
-    //   });
-    // },
+    submitForm() {
+      this.$store.dispatch("register", {
+        username: this.username,
+        email: this.email,
+        password: this.password,
+        password_confirmation: this.password_confirmation,
+        role: this.role,
+      });
+    },
   },
-
-  // login() {
-  //   this.$store.dispatch("login", {
-  //     username: this.username,
-  //     password: this.password
-  //   })
-  //   .then(success => {
-  //     this.$router.push("/")
-  //   })
-  //   // .catch(error => {
-
-  //   // })
-  // }
-  // },
-
-  // setup() {
-  //   const user = reactive({
-  //     roles:"jobseeker",
-  //     email:"",
-  //     username:"",
-  //     password:"",
-  //     confirmPassword:""
-  //   });
-
-  //   function submitForm() {
-  //     axios.post("http://127.0.0.1:8000/api/register", {
-  //         roles: "jobseeker",
-  //         email: user.email,
-  //         username: user.username,
-  //         password: user.password,
-  //         password_confirmation: user.confirmPassword,
-  //       })
-  //       .then(function (response) {
-  //         console.log(response);
-  //       });
-
-  //     user.email = "";
-  //     user.username = "";
-  //     user.password = "";
-  //     user.confirmPassword = "";
-  //   }
-
-  //   return { user: user, submitForm: submitForm };
-  // },
 };
 </script>

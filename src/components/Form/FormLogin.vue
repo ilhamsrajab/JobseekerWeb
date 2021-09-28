@@ -5,7 +5,12 @@
       <p class="text-4xl font-bold text-neutral self-start pt-8">Login</p>
 
       <!-- form -->
-      <form class="form-control" action="#" method="POST">
+      <form
+        class="form-control"
+        action="#"
+        method="POST"
+        @submit.prevent="submitForm"
+      >
         <!-- username -->
         <div>
           <label class="label mt-4" for="username">
@@ -16,6 +21,7 @@
             type="text"
             placeholder="Masukan username"
             class="input input-primary w-full"
+            v-model.trim="email"
             required
           />
         </div>
@@ -31,6 +37,7 @@
             autocomplete="current-password"
             placeholder="Masukan password"
             class="input input-primary w-full"
+            v-model.trim="password"
             required
           />
         </div>
@@ -114,19 +121,20 @@
 <script>
 export default {
   name: "Login",
-  // data: {
-  //   signIn=;
-  //   signUp=;
-  // },
-  // methods: {
-  //   daftarSekarang() {
-  //     this.signIn = false;
-  //     this.signUp = true;
-  //   },
-  //   loginSekarang() {
-  //     this.signIn = true;
-  //     this.signUp = false;
-  //   },
-  // },
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    submitForm() {
+      this.$store.dispatch("login", {
+        email: this.email,
+        password: this.password,
+      });
+      this.$router.replace("/");
+    },
+  },
 };
 </script>

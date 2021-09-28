@@ -15,7 +15,9 @@
       bg-white
       dark:bg-gray-900
       overflow-y-auto
-      lg:translate-x-0 lg:static lg:inset-0
+      lg:translate-x-0
+      lg:static
+      lg:inset-0
     "
   >
     <!-- logo -->
@@ -127,8 +129,7 @@
           rounded-box
           w-64
           text-sm
-          dark:bg-gray-900
-          dark:bg-opacity-100
+          dark:bg-gray-900 dark:bg-opacity-100
           dark:border-gray-900
           dark:text-white
         "
@@ -151,7 +152,7 @@
               class="text-xl mr-3"
             />
 
-            <span> Log Out </span>
+            <span @click="logout"> Log Out </span>
           </a>
         </li>
       </ul>
@@ -179,6 +180,10 @@ export default {
   methods: {
     setSelectedTab(tab) {
       this.selectedTab = tab;
+    },
+    logout() {
+      this.$store.dispatch("logout");
+      this.$router.replace("/login");
     },
   },
   computed: {
