@@ -35,6 +35,7 @@
                 <img
                   alt="avatar"
                   class="
+                    mt-2
                     w-40
                     rounded-full
                     select-disabled
@@ -46,7 +47,7 @@
               </div>
 
               <!-- nama -->
-              <div class="leading-6 mt-4 mb-10 text-center">
+              <div class="leading-6 mt-4 xs:mb-4 sm:mb-8 text-center">
                 <h4 class="font-bold dark:text-white text-2xl">Jerome Bell</h4>
                 <h5
                   id="email"
@@ -57,7 +58,20 @@
               </div>
 
               <!-- tab -->
-              <div class="flex bg-white py-2 rounded-20 px-2 space-x-2">
+              <div
+                class="
+                  flex flex-row
+                  bg-white
+                  p-2
+                  rounded-20
+                  xs:space-x-1
+                  sm:space-x-2
+                  xs:mx-10
+                  sm:mx-10
+                  xs:text-2xs
+                  md:text-base
+                "
+              >
                 <button-tab
                   @click="setSelectedTab('data-diri')"
                   :mode="dataDiriButtonMode"
@@ -81,13 +95,18 @@
               </div>
               <div
                 class="
-                  py-8
                   bg-white
                   rounded-20
-                  px-16
+                  xl:py-8 xl:px-16
+                  lg:py-4 lg:px-12
+                  md:py-2 md:px-10
+                  sm:py-0 sm:px-8
+                  xs:py-0 xs:px-4
                   text-gray-500
-                  mt-8
-                  md:w-full
+                  sm:mt-8
+                  xs:mt-4 xs:w-full
+                  sm:w-10/12
+                  md:w-4/5
                   xl:w-3/5
                 "
               >

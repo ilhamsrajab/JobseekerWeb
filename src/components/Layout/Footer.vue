@@ -7,9 +7,11 @@
         <div class="w-full sm:w-4/5 flex flex-col space-y-4">
           <!-- logo footer -->
           <a href="/">
-            <span class="dark:text-white text-white text-2xl font-bold"
-              >BursaKerja</span
-            >
+            <img
+              src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
+              alt=""
+              class="h-8"
+            />
           </a>
           <p class="opacity-60">
             Rancabang Estate, Jl. Rancabango, Perumahan, Kec. Tarogong Kaler,

@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto mt-4 z-10" style="width: 800px">
+  <div class="mx-auto mt-4 z-10">
     <form class="form-control" action="#" method="POST">
       <!-- nama lengkap -->
       <div class="mt-4 w-full">
@@ -13,7 +13,7 @@
           title="Nama Lengkap"
           type="text"
           placeholder="Masukan nama lengkap"
-          class="input input-primary bg-gray-50 w-full"
+          class="input input-primary bg-gray-100 w-full"
           required
         />
       </div>
@@ -30,7 +30,7 @@
           title="Nomor Induk Kependudukan"
           type="number"
           placeholder="Masukan nomor induk kependudukan"
-          class="input input-primary bg-gray-50 w-full"
+          class="input input-primary bg-gray-100 w-full"
           maxlength="16"
           max="9999999999999999"
           required
@@ -52,7 +52,7 @@
               type="radio"
               class="
                 focus:ring-primary-focus focus:bg-accent
-                bg-gray-50
+                bg-gray-100
                 h-5
                 w-5
                 text-primary
@@ -76,7 +76,7 @@
               type="radio"
               class="
                 focus:ring-primary-focus focus:bg-accent
-                bg-gray-50
+                bg-gray-100
                 h-5
                 w-5
                 text-primary
@@ -109,14 +109,14 @@
             title="Tempat Lahir"
             type="text"
             placeholder="Masukan tempat lahir"
-            class="input input-primary bg-gray-50 w-3/5"
+            class="input input-primary bg-gray-100 w-3/5"
             required
           />
           <input
             id="tanggalLahir"
             title="Tanggal Lahir"
             type="date"
-            class="input input-primary bg-gray-50 w-2/5"
+            class="input input-primary bg-gray-100 w-2/5"
             required
           />
         </div>
@@ -129,7 +129,7 @@
         </label>
         <select
           id="agama"
-          class="select select-primary bg-gray-50 w-full font-normal"
+          class="select select-primary bg-gray-100 w-full font-normal"
         >
           <option disabled="disabled" selected="selected">Pilih Agama</option>
           <option>1</option>
@@ -147,7 +147,7 @@
         </label>
         <select
           id="statusPerkawinan"
-          class="select select-primary bg-gray-50 w-full font-normal"
+          class="select select-primary bg-gray-100 w-full font-normal"
         >
           <option disabled="disabled" selected="selected">
             Pilih Status Perkawinan
@@ -170,7 +170,7 @@
           </label>
           <select
             id="alamatProvinsi"
-            class="select select-primary bg-gray-50 w-full font-normal"
+            class="select select-primary bg-gray-100 w-full font-normal"
           >
             <option disabled="disabled" selected="selected">
               Pilih Provinsi
@@ -188,7 +188,7 @@
           </label>
           <select
             id="alamatKota"
-            class="select select-primary bg-gray-50 w-full font-normal"
+            class="select select-primary bg-gray-100 w-full font-normal"
           >
             <option disabled="disabled" selected="selected">
               Pilih Kota/Kabupaten
@@ -206,7 +206,7 @@
           </label>
           <select
             id="alamatKecamatan"
-            class="select select-primary bg-gray-50 w-full font-normal"
+            class="select select-primary bg-gray-100 w-full font-normal"
           >
             <option disabled="disabled" selected="selected">
               Pilih Kecamatan
@@ -224,7 +224,7 @@
           </label>
           <select
             id="alamatDesa"
-            class="select select-primary bg-gray-50 w-full font-normal"
+            class="select select-primary bg-gray-100 w-full font-normal"
           >
             <option disabled="disabled" selected="selected">
               Pilih Desa/Kelurahan
@@ -247,7 +247,7 @@
               type="number"
               maxlength="3"
               placeholder="Masukan no. RT"
-              class="input input-primary bg-gray-50 w-1/2"
+              class="input input-primary bg-gray-100 w-1/2"
               required
             />
             <input
@@ -256,7 +256,7 @@
               type="number"
               maxlength="3"
               placeholder="Masukan no. RW"
-              class="input input-primary bg-gray-50 w-1/2"
+              class="input input-primary bg-gray-100 w-1/2"
               required
             />
           </div>
@@ -272,7 +272,7 @@
               id="alamatRumah"
               title="Alamat Rumah"
               rows="3"
-              class="textarea bg-gray-50"
+              class="textarea bg-gray-100"
               placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
               required
             />
@@ -289,7 +289,7 @@
             type="number"
             maxlength="5"
             placeholder="Masukan no. kodepos"
-            class="input input-primary bg-gray-50 w-full"
+            class="input input-primary bg-gray-100 w-full"
             disabled
           />
         </div>
@@ -304,7 +304,7 @@
         </label>
         <select
           id="pendidikan"
-          class="select select-primary bg-gray-50 w-full font-normal"
+          class="select select-primary bg-gray-100 w-full font-normal"
         >
           <option disabled="disabled" selected="selected">
             Pilih Pendidikan Terakhir
@@ -343,7 +343,7 @@
             minlength="11"
             maxlength="13"
             pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-            class="input input-primary bg-gray-50 w-full"
+            class="input input-primary bg-gray-100 w-full"
             style="border-radius: 0px 20px 20px 0px !important"
             required
           />
@@ -360,7 +360,7 @@
           type="file"
           accept="image/*"
           title="Pilih foto pribadi"
-          class="input input-primary bg-gray-50 w-full py-3.5 px-4"
+          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
           required
         />
         <label class="label">
@@ -380,7 +380,7 @@
           type="file"
           accept="image/*"
           title="Pilih foto E-KTP"
-          class="input input-primary bg-gray-50 w-full py-3.5 px-4"
+          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
           required
         />
         <label class="label">
