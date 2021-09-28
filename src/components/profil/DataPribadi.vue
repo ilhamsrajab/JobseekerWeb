@@ -2,7 +2,7 @@
   <div class="mx-auto mt-4 z-10" style="width: 800px">
     <form class="form-control" action="#" method="POST">
       <!-- nama lengkap -->
-      <div class="mt-4">
+      <div class="mt-4 w-full">
         <label class="label" for="namaLengkap">
           <span class="label-text text-neutral font-semibold"
             >Nama Lengkap</span

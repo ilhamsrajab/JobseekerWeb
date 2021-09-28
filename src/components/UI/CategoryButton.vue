@@ -9,6 +9,8 @@
       w-36
       text-center
       font-semibold
+      transition-all
+      duration-200
     "
   >
     Kategori

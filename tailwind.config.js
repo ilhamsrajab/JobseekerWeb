@@ -48,6 +48,7 @@ module.exports = {
 
       primary: '#3A3379',
       accent: '#FFBEB2',
+      accentDark: '#FFA999',
       hijau: '#C2F784',
       hijauDark: '#5E7840',
       orange: '#FFBF86',
@@ -80,7 +81,7 @@ module.exports = {
       '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
-      'primary': '0px 16px 40px rgba(58, 51, 121, 0.5)',
+      'primary': '0px 24px 40px rgba(58, 51, 121, 0.5)',
       'btn': '0px 16px 40px rgba(58, 51, 121, 0.2)',
       'soft': '0px 16px 40px rgba(0, 0, 0, 0.2)',
       'btnhover': '0px 16px 40px rgba(58, 51, 121, 0.4)',

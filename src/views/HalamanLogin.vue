@@ -210,15 +210,14 @@
         "
       >
         <!-- logo and back btn -->
-        <div class="flex justify-between items-center">
+        <div class="flex items-center justify-end bg-pink-300">
           <!-- icon kembali -->
-          <div id="iconBack" class="flex self-center" v-show="signUp">
+          <div id="iconBack" class="flex self-end" v-show="signUp">
             <!-- icon -->
             <button v-on:Click="loginSekarang">
               <Icon
                 icon="fluent:arrow-left-12-filled"
                 class="
-                  text-2xl
                   rounded-full
                   h-10
                   w-10
@@ -240,8 +239,11 @@
         <!-- Daftar -->
         <signUp id="signUp" v-show="signUp" />
 
-        <span class="font-bold text-primary flex justify-center my-6 text-sm">
-          <button class="font-bold" v-on:Click="daftarSekarang" v-show="signIn">
+        <span
+          class="font-bold text-primary flex justify-center my-6 text-sm"
+          v-show="signIn"
+        >
+          <button class="font-bold" v-on:Click="daftarSekarang">
             Daftar Sekarang >
           </button>
         </span>

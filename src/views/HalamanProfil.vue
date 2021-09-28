@@ -57,20 +57,7 @@
               </div>
 
               <!-- tab -->
-              <div
-                class="
-                  flex
-                  bg-white
-                  py-2
-                  rounded-20
-                  px-2
-                  space-x-2
-                  shadow-lg
-                  hover:shadow-xl
-                  transition-all
-                  duration-200
-                "
-              >
+              <div class="flex bg-white py-2 rounded-20 px-2 space-x-2">
                 <button-tab
                   @click="setSelectedTab('data-diri')"
                   :mode="dataDiriButtonMode"
@@ -96,15 +83,12 @@
                 class="
                   py-8
                   bg-white
-                  rounded-40
+                  rounded-20
                   px-16
                   text-gray-500
                   mt-8
-                  w-3/5
-                  shadow-lg
-                  hover:shadow-xl
-                  transition-all
-                  duration-200
+                  md:w-full
+                  xl:w-3/5
                 "
               >
                 <component :is="selectedTab"></component>
