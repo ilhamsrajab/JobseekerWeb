@@ -3,8 +3,17 @@
   <div class="min-h-screen bg-gray-100 flex justify-center items-center">
     <!-- kotak -->
     <div
-      class="bg-primary shadow-primary rounded-40 flex flex-row p-2"
-      style="height: 600px; width: 1000px"
+      class="
+        bg-primary
+        shadow-primary
+        rounded-40
+        flex flex-row
+        p-2
+        m-8
+        2xl:w-7/12
+        md:w-11/12
+      "
+      style="height: 650px"
     >
       <!-- gambar -->
       <div class="absolute">
@@ -181,7 +190,8 @@
           flex flex-col
           justify-end
           items-center
-          w-8/12
+          2xl:w-11/12
+          md:w-11/12
         "
       >
         <vue-carousel
@@ -198,7 +208,8 @@
           bagiankanan
           bg-white
           rounded-40
-          w-5/12
+          2xl:w-6/12
+          md:w-8/12
           p-8
           z-10
           shadow-bagianKanan
@@ -210,18 +221,18 @@
         "
       >
         <!-- logo and back btn -->
-        <div class="flex items-center justify-end bg-pink-300">
+        <div class="flex justify-between">
           <!-- icon kembali -->
-          <div id="iconBack" class="flex self-end" v-show="signUp">
+          <div id="iconBack" class="flex self-start" v-show="signUp">
             <!-- icon -->
             <button v-on:Click="loginSekarang">
               <Icon
                 icon="fluent:arrow-left-12-filled"
                 class="
                   rounded-full
-                  h-10
-                  w-10
-                  p-2
+                  h-8
+                  w-8
+                  p-1.5
                   hover:bg-accent
                   transition-all
                   duration-200
@@ -229,6 +240,7 @@
               />
             </button>
           </div>
+          <div></div>
           <!-- logo -->
           <div class="text-2xl font-bold text-neutral">BursaKerja</div>
         </div>
