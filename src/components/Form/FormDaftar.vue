@@ -168,7 +168,6 @@ export default {
     };
   },
   methods: {
-<<<<<<< HEAD
     submitForm() {
       this.$store.dispatch("register", {
         username: this.username,
@@ -178,34 +177,6 @@ export default {
         role: this.role,
       });
     },
-=======
-    ...mapActions({
-      login: "auth/login",
-    }),
-
-    submit() {
-      this.register(this.form);
-    },
-    // submitForm() {
-    //   this.formIsValid = true;
-    //   if (
-    //     this.email === "" ||
-    //     !this.email.includes("@") ||
-    //     this.password.length < 8
-    //   ) {
-    //     this.formIsValid = false;
-    //     return;
-    //   }
-
-    //   this.$store.dispatch("signup", {
-    //     email: this.email,
-    //     username: this.username,
-    //     password: this.password,
-    //     password_confirmation: this.password,
-    //     role: this.role,
-    //   });
-    // },
->>>>>>> 706b1d2e097946958d8c3a4236eaa7a231afc36c
   },
 };
 </script>
