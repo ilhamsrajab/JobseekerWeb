@@ -331,7 +331,7 @@ export default {
 }
 
 .kotak {
-  height: 600px;
+  height: 650px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -358,6 +358,12 @@ export default {
 @media only screen and (max-width: 339px) {
   .kotak {
     height: 100%;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+  .kotak {
+    height: 550px;
   }
 }
 </style>
