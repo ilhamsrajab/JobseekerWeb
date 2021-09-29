@@ -1,11 +1,22 @@
 <template>
   <!-- container -->
-  <div class="min-h-screen bg-gray-100 flex justify-center items-center">
+  <div
+    class="
+      min-h-screen
+      bg-gray-100
+      dark:bg-gray-800
+      flex
+      justify-center
+      items-center
+    "
+  >
     <!-- kotak -->
     <div
       class="
         kotak
         bg-primary
+        shadow-2xl
+        hover:shadow-3xl
         rounded-40
         flex
         lg:flex-row
@@ -189,8 +200,6 @@
         class="
           bagianKiri
           text-white
-          shadow-2xl
-          hover:shadow-3xl
           px-5
           flex flex-col
           justify-end
@@ -217,6 +226,7 @@
         class="
           bagiankanan
           bg-white
+          dark:bg-gray-800
           shadow-2xl
           rounded-40
           xl:w-6/12
@@ -247,6 +257,7 @@
                   h-8
                   w-8
                   p-1.5
+                  dark:text-white dark:hover:text-neutral
                   hover:bg-accent
                   transition-all
                   duration-200
@@ -258,7 +269,7 @@
           <!-- logo -->
           <div>
             <img
-              src="../assets/images/logo/BursaKerjaLogo.svg"
+              src="../assets/images/logo/BursaKerjaLogo_Black.svg"
               alt=""
               class="w-40"
             />
@@ -272,7 +283,15 @@
         <signUp id="signUp" v-show="signUp" />
 
         <span
-          class="font-bold text-primary flex justify-center my-6 text-sm"
+          class="
+            font-bold
+            text-primary
+            dark:text-accent
+            flex
+            justify-center
+            my-6
+            text-sm
+          "
           v-show="signIn"
         >
           <button class="font-bold" v-on:Click="daftarSekarang">
@@ -343,16 +362,6 @@ export default {
 .bagiankanan {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-}
-
-.example-slide {
-  align-items: center;
-  background-color: #666;
-  color: #999;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  min-height: 10rem;
 }
 
 @media only screen and (max-width: 339px) {

@@ -2,7 +2,11 @@
   <div id="login" class="flex flex-col">
     <!-- daftar form -->
     <div class="formLogin">
-      <p class="text-4xl font-bold text-neutral self-start pt-8">Daftar</p>
+      <p
+        class="text-4xl font-bold text-neutral self-start pt-8 dark:text-white"
+      >
+        Daftar
+      </p>
       <form
         class="form-control"
         action="#"
@@ -12,7 +16,9 @@
         <!-- email -->
         <div>
           <label class="label mt-4" for="email">
-            <span class="label-text font-semibold">Email</span>
+            <span class="label-text font-semibold dark:text-gray-400"
+              >Email</span
+            >
           </label>
           <input
             id="email"
@@ -20,7 +26,7 @@
             type="email"
             autocomplete="email"
             placeholder="contoh@bursakerja.com"
-            class="input input-primary w-full bg-gray-100"
+            class="input input-primary w-full bg-gray-100 dark:bg-gray-700"
             required
             v-model.trim="email"
           />
@@ -29,14 +35,16 @@
         <!-- username -->
         <div>
           <label class="label mt-4" for="username">
-            <span class="label-text font-semibold">Username</span>
+            <span class="label-text font-semibold dark:text-gray-400"
+              >Username</span
+            >
           </label>
           <input
             id="username"
             title="Masukan username"
             type="text"
             placeholder="Masukan username"
-            class="input input-primary w-full bg-gray-100"
+            class="input input-primary w-full bg-gray-100 dark:bg-gray-700"
             required
             v-model.trim="username"
           />
@@ -45,7 +53,9 @@
         <!-- password -->
         <div>
           <label class="label mt-3" for="password">
-            <span class="label-text font-semibold">Password</span>
+            <span class="label-text font-semibold dark:text-gray-400"
+              >Password</span
+            >
           </label>
 
           <input
@@ -54,7 +64,7 @@
             type="password"
             autocomplete="current-password"
             placeholder="Masukan password"
-            class="input input-primary w-full bg-gray-100"
+            class="input input-primary w-full bg-gray-100 dark:bg-gray-700"
             required
             v-model.trim="password"
           />
@@ -68,14 +78,16 @@
         <!-- konfirmasi password -->
         <div>
           <label class="label mt-3" for="konfirmasi">
-            <span class="label-text font-semibold">Konfirmasi Password</span>
+            <span class="label-text font-semibold dark:text-gray-400"
+              >Konfirmasi Password</span
+            >
           </label>
           <input
             id="konfirmasi"
             title="Masukan konfirmasi password"
             type="password"
             placeholder="Masukan kembali password"
-            class="input input-primary w-full bg-gray-100"
+            class="input input-primary w-full bg-gray-100 dark:bg-gray-700"
             required
             v-model.trim="password_confirmation"
           />
@@ -87,7 +99,7 @@
         </div>
         <!-- daftar google -->
         <div class="flex flex-col justify-center items-center">
-          <span class="mb-6 text-xs"> atau daftar dengan </span>
+          <span class="mb-6 text-xs dark:text-white"> atau daftar dengan </span>
           <a href="http://google.com">
             <div
               class="

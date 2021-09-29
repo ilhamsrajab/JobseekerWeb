@@ -1,14 +1,27 @@
 <template>
   <div id="login" class="flex flex-col">
-    <div :show="!!error" @close="handleError">
-      <p>{{ error }}</p>
+    <div
+      class="bg-merah text-merahDark px-6 py-4 rounded-large mt-4 -mb-4"
+      :show="!!error"
+      :hidden="!error"
+      @close="handleError"
+    >
+      <p class="flex items-center">
+        <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
+          error
+        }}
+      </p>
     </div>
     <!-- <div :show="isLoading" fixed>
       <p>Authenticating...</p>
     </div> -->
     <!-- login form -->
     <div class="formLogin">
-      <p class="text-4xl font-bold text-neutral self-start pt-8">Login</p>
+      <p
+        class="text-4xl font-bold text-neutral self-start mt-8 dark:text-white"
+      >
+        Login
+      </p>
 
       <!-- form -->
       <form
@@ -20,13 +33,20 @@
         <!-- username -->
         <div>
           <label class="label mt-4" for="username">
-            <span class="label-text font-semibold">Username</span>
+            <span class="label-text font-semibold dark:text-gray-400"
+              >Username</span
+            >
           </label>
           <input
             id="username"
             type="text"
             placeholder="Masukan username"
-            class="input input-primary w-full bg-gray-100"
+            class="
+              input input-primary
+              w-full
+              bg-gray-100
+              dark:bg-gray-700 dark:text-white
+            "
             v-model.trim="email"
             required
           />
@@ -35,14 +55,21 @@
         <!-- password -->
         <div>
           <label class="label mt-3" for="password">
-            <span class="label-text font-semibold">Password</span>
+            <span class="label-text font-semibold dark:text-gray-400"
+              >Password</span
+            >
           </label>
           <input
             id="password"
             type="password"
             autocomplete="current-password"
             placeholder="Masukan password"
-            class="input input-primary w-full bg-gray-100"
+            class="
+              input input-primary
+              w-full
+              bg-gray-100
+              dark:bg-gray-700 dark:text-white
+            "
             v-model.trim="password"
             required
           />
@@ -54,7 +81,7 @@
         </div>
         <!-- daftar google -->
         <div class="flex flex-col justify-center items-center">
-          <span class="mb-6 text-xs"> atau daftar dengan </span>
+          <span class="mb-6 text-xs dark:text-white"> atau daftar dengan </span>
           <a href="http://google.com">
             <div
               class="
@@ -125,8 +152,13 @@
 </template>
 
 <script>
+import { Icon } from "@iconify/vue";
+
 export default {
   name: "Login",
+  components: {
+    Icon,
+  },
   data() {
     return {
       email: "",

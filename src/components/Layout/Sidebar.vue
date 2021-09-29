@@ -15,13 +15,7 @@
       bg-white
       dark:bg-gray-900
       overflow-y-auto
-<<<<<<< HEAD
-      lg:translate-x-0
-      lg:static
-      lg:inset-0
-=======
       xl:translate-x-0 xl:static xl:inset-0
->>>>>>> 706b1d2e097946958d8c3a4236eaa7a231afc36c
     "
   >
     <!-- logo -->
@@ -135,7 +129,8 @@
           rounded-box
           w-64
           text-sm
-          dark:bg-gray-900 dark:bg-opacity-100
+          dark:bg-gray-900
+          dark:bg-opacity-100
           dark:border-gray-900
           dark:text-white
         "
