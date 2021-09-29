@@ -216,14 +216,37 @@
             rounded-box
             w-96
             text-sm
-            dark:bg-gray-900 dark:border-gray-900 dark:text-white
+            dark:bg-gray-800 dark:border-gray-900 dark:text-white
           "
         >
-          <li id="notif" class="rounded-large px-5 py-3 hover:bg-gray-200">
+          <li
+            id="notif"
+            class="
+              rounded-lg
+              px-5
+              py-3
+              hover:bg-gray-200
+              dark:hover:bg-gray-700
+            "
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
             necessitatibus nemo dolores.
           </li>
-          <hr class="my-2" />
+          <div class="my-2 dark:bg-gray-700 h-0.5" />
+          <li
+            id="notif"
+            class="
+              rounded-lg
+              px-5
+              py-3
+              hover:bg-gray-200
+              dark:hover:bg-gray-700
+            "
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            necessitatibus nemo dolores.
+          </li>
+          <div class="my-2 dark:bg-gray-700 h-0.5" />
 
           <li class="">
             <a class="text-primary active:text-white rounded-large">
