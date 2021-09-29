@@ -8,6 +8,7 @@ import HalamanJobDescription from '../views/HalamanJobDescription.vue'
 import HalamanNotFound from '../views/NotFound.vue'
 import FormLogin from '../components/Form/FormLogin.vue'
 import FormDaftar from '../components/Form/FormDaftar.vue'
+import store from '../store/index.js';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,12 +16,14 @@ const router = createRouter({
     {
       path: '/',
       name: 'HalamanHome',
-      component: HalamanHome
+      component: HalamanHome,
+      // meta: { requiredAuth: true }
     },
     {
       path: '/carikerja',
       name: 'HalamanCariKerja',
-      component: HalamanCariKerja
+      component: HalamanCariKerja,
+      // meta: { requiredAuth: true }
     },
     {
       path: '/deskripsi',
@@ -60,8 +63,14 @@ const router = createRouter({
   ]
 });
 
-router.beforeEach(function(to, from, next) {
-
-}); 
+// router.beforeEach(function(to, _, next) {
+//   if (to.meta.requiredAuth && !store.getters.isAuthenticated) {
+//     next('/login');
+//   } else if (to.meta.requiredUnauth && store.getters.isAuthenticated) {
+//     next('/');
+//   } else {
+//     next();
+//   }
+// }); 
 
 export default router

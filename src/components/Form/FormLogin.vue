@@ -1,5 +1,11 @@
 <template>
   <div id="login" class="flex flex-col">
+    <div :show="!!error" @close="handleError">
+      <p>{{ error }}</p>
+    </div>
+    <!-- <div :show="isLoading" fixed>
+      <p>Authenticating...</p>
+    </div> -->
     <!-- login form -->
     <div class="formLogin">
       <p class="text-4xl font-bold text-neutral self-start pt-8">Login</p>
@@ -125,15 +131,28 @@ export default {
     return {
       email: "",
       password: "",
+      isLoading: false,
+      error: null,
     };
   },
   methods: {
-    submitForm() {
-      this.$store.dispatch("login", {
-        email: this.email,
-        password: this.password,
-      });
-      this.$router.replace("/");
+    async submitForm() {
+      this.isLoading = true;
+
+      try {
+        await this.$store.dispatch("login", {
+          email: this.email,
+          password: this.password,
+        });
+        this.$router.replace("/");
+      } catch (err) {
+        this.error = err.message || "Failed tp authenticated, try later.";
+      }
+
+      this.isLoading = false;
+    },
+    handleError() {
+      this.error = null;
     },
   },
 };
