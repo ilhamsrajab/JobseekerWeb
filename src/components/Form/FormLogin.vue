@@ -26,7 +26,7 @@
             id="username"
             type="text"
             placeholder="Masukan username"
-            class="input input-primary w-full"
+            class="input input-primary w-full bg-gray-100"
             v-model.trim="email"
             required
           />
@@ -42,7 +42,7 @@
             type="password"
             autocomplete="current-password"
             placeholder="Masukan password"
-            class="input input-primary w-full"
+            class="input input-primary w-full bg-gray-100"
             v-model.trim="password"
             required
           />

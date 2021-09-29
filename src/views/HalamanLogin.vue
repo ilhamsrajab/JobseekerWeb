@@ -331,7 +331,7 @@ export default {
 }
 
 .kotak {
-  height: 650px;
+  height: 600px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
