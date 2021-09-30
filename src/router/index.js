@@ -6,6 +6,7 @@ import HalamanRegister from '../views/HalamanRegister.vue'
 import HalamanProfil from '../views/HalamanProfil.vue'
 import HalamanJobDescription from '../views/HalamanJobDescription.vue'
 import HalamanNotFound from '../views/NotFound.vue'
+import Loading from '../views/Loading.vue'
 import FormLogin from '../components/Form/FormLogin.vue'
 import FormDaftar from '../components/Form/FormDaftar.vue'
 import store from '../store/index.js';
@@ -54,6 +55,11 @@ const router = createRouter({
       path: '/daftar',
       name: 'HalamanRegister',
       component: HalamanRegister
+    },
+    {
+      path: '/loading',
+      name: 'Loading',
+      component: Loading
     },
     {
       path: '/:catchAll(.*)',

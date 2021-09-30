@@ -85,7 +85,7 @@
         cursor-default
         border-t
         dropdown dropdown-top
-        dark:border-gray-900
+        dark:border-gray-800
         hover:bg-gray-50
         dark:hover:bg-gray-900
         transition-all
@@ -108,7 +108,7 @@
           <h4 class="font-semibold dark:text-white">Jerome Bell</h4>
           <h5
             id="email"
-            class="font-semibold text-gray-500 text-xs dark:text-gray-300"
+            class="font-semibold text-gray-500 text-xs dark:text-gray-400"
           >
             jeromebell24@gmail.com
           </h5>
@@ -129,9 +129,9 @@
           rounded-box
           w-64
           text-sm
-          dark:bg-gray-900
+          dark:bg-gray-800
           dark:bg-opacity-100
-          dark:border-gray-900
+          dark:border-gray-800
           dark:text-white
         "
       >

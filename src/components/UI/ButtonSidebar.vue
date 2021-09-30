@@ -8,7 +8,7 @@
 import { Icon } from "@iconify/vue";
 
 export default {
-  props: ['type', 'mode'],
+  props: ["type", "mode"],
   components: {
     Icon,
   },

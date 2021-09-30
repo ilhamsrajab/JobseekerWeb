@@ -32,11 +32,11 @@
 }
 
 .btnSidebarActive {
-  @apply flex items-center my-1 py-4 px-4 text-neutral rounded-large bg-purple-100 hover:bg-gray-100 hover:text-opacity-80 transition-all duration-200;
+  @apply flex items-center my-1 py-4 px-4 text-neutral rounded-large bg-purple-100 dark:bg-primary dark:text-white dark:hover:bg-opacity-20 hover:bg-gray-100 hover:text-opacity-80 transition-all duration-200;
 }
 
 .btnSidebarDisable {
-  @apply flex items-center my-1 py-4 px-4 text-neutral rounded-large bg-opacity-0 hover:bg-gray-100 hover:text-opacity-80 transition-all duration-200;
+  @apply flex items-center my-1 py-4 px-4 text-neutral rounded-large bg-opacity-0  dark:text-white dark:hover:bg-opacity-20 hover:bg-gray-100 hover:text-opacity-80 transition-all duration-200;
 }
 
 input[type=file]::file-selector-button {
