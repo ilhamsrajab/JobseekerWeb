@@ -1,9 +1,22 @@
 <template>
   <!-- container -->
-  <div class="container-fluid flex flex-col min-h-screen p-5 bg-gray-100">
+  <div
+    class="
+      container-fluid
+      flex flex-col
+      min-h-screen
+      p-5
+      bg-gray-100
+      dark:bg-gray-800
+    "
+  >
     <!-- logo -->
     <div class="flex justify-end xs:mb-5 sm:mb-0">
-      <img src="../assets/images/logo/BursaKerjaLogo.svg" alt="" class="w-40" />
+      <img
+        src="../assets/images/logo/BursaKerjaLogo.svg"
+        alt="logo_bursa_kerja"
+        class="w-40"
+      />
     </div>
     <div class="flex flex-col self-center md:m-8 sm:m-4">
       <!-- kotak header -->
@@ -81,6 +94,7 @@
           mx-auto
           z-10
           bg-white
+          dark:bg-gray-900
           rounded-20
           lg:py-6
           md:py-4
@@ -138,22 +152,7 @@
         <!-- btn skip -->
         <div>
           <button
-            class="
-              btn btn-outline
-              border-2 border-primary
-              text-primary
-              h-14
-              w-full
-              rounded-20
-              shadow-lg
-              hover:shadow-xl
-              hover:bg-accent
-              hover:border-transparent
-              hover:text-neutral
-              transition-all
-              duration-200
-              normal-case
-            "
+            class="btn btn-outline w-full mb-4"
             v-if="currentStep > 1 && currentStep < 5"
             @click="stepNext"
           >

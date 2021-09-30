@@ -160,7 +160,7 @@
       </div>
 
       <!-- notifikasi -->
-      <div class="group flex items-center dropdown dropdown-open">
+      <div class="group flex items-center dropdown">
         <button
           tabindex="1"
           class="
