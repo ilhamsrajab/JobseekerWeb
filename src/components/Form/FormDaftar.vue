@@ -3,7 +3,7 @@
     <!-- daftar form -->
     <div class="formLogin">
       <p
-        class="text-4xl font-bold text-neutral self-start pt-8 dark:text-white"
+        class="text-4xl font-bold text-neutral self-start mt-8 dark:text-white"
       >
         Daftar
       </p>
@@ -15,10 +15,8 @@
       >
         <!-- email -->
         <div>
-          <label class="label mt-4" for="email">
-            <span class="label-text font-semibold dark:text-gray-400"
-              >Email</span
-            >
+          <label class="label mt-6" for="email">
+            <span class="label-text">Email</span>
           </label>
           <input
             id="email"
@@ -26,7 +24,7 @@
             type="email"
             autocomplete="email"
             placeholder="contoh@bursakerja.com"
-            class="input input-primary w-full bg-gray-100 dark:bg-gray-700"
+            class="input input-primary w-full"
             required
             v-model.trim="email"
           />
@@ -35,16 +33,14 @@
         <!-- username -->
         <div>
           <label class="label mt-4" for="username">
-            <span class="label-text font-semibold dark:text-gray-400"
-              >Username</span
-            >
+            <span class="label-text">Username</span>
           </label>
           <input
             id="username"
             title="Masukan username"
             type="text"
             placeholder="Masukan username"
-            class="input input-primary w-full bg-gray-100 dark:bg-gray-700"
+            class="input input-primary w-full"
             required
             v-model.trim="username"
           />
@@ -52,10 +48,8 @@
 
         <!-- password -->
         <div>
-          <label class="label mt-3" for="password">
-            <span class="label-text font-semibold dark:text-gray-400"
-              >Password</span
-            >
+          <label class="label mt-4" for="password">
+            <span class="label-text">Password</span>
           </label>
 
           <input
@@ -64,12 +58,12 @@
             type="password"
             autocomplete="current-password"
             placeholder="Masukan password"
-            class="input input-primary w-full bg-gray-100 dark:bg-gray-700"
+            class="input input-primary w-full"
             required
             v-model.trim="password"
           />
           <label class="label" v-if="!formIsValid">
-            <p href="#" class="label-text-alt text-red-500">
+            <p href="#" class="label-text-alt text-red-500 dark:text-red-400">
               * Tolong isikan email yang valid dan password minimal 8 huruf
             </p>
           </label>
@@ -77,8 +71,13 @@
 
         <!-- konfirmasi password -->
         <div>
-          <label class="label mt-3" for="konfirmasi">
-            <span class="label-text font-semibold dark:text-gray-400"
+          <label class="label mt-4" for="konfirmasi">
+            <span
+              class="
+                label-text
+                font-semibold
+                dark:text-white dark:text-opacity-80
+              "
               >Konfirmasi Password</span
             >
           </label>
@@ -87,7 +86,12 @@
             title="Masukan konfirmasi password"
             type="password"
             placeholder="Masukan kembali password"
-            class="input input-primary w-full bg-gray-100 dark:bg-gray-700"
+            class="
+              input input-primary
+              w-full
+              bg-gray-100
+              dark:bg-gray-700 dark:text-white dark:text-opacity-60
+            "
             required
             v-model.trim="password_confirmation"
           />

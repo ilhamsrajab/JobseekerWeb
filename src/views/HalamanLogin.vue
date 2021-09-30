@@ -257,7 +257,7 @@
                   h-8
                   w-8
                   p-1.5
-                  dark:text-white dark:hover:text-neutral
+                  dark:text-white dark:hover:text-merahDark
                   hover:bg-accent
                   transition-all
                   duration-200

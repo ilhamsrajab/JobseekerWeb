@@ -61,7 +61,10 @@
             focus:ring-secondary focus:ring-opacity-80 focus:shadow-soft
             transition-all
             duration-200
-            dark:focus:ring-primary dark:bg-gray-800 dark:text-gray-400
+            dark:focus:ring-primary
+            dark:bg-gray-800
+            dark:text-white
+            dark:text-opacity-60
           "
           type="search"
           name="search"
@@ -157,7 +160,7 @@
       </div>
 
       <!-- notifikasi -->
-      <div class="group flex items-center dropdown">
+      <div class="group flex items-center dropdown dropdown-open">
         <button
           tabindex="1"
           class="
@@ -201,6 +204,8 @@
             class="text-xl text-white group-hover:text-neutral"
           />
         </button>
+
+        <!-- dropdown -->
         <ul
           tabindex="1"
           class="
@@ -222,11 +227,13 @@
           <li
             id="notif"
             class="
-              rounded-lg
               px-5
               py-3
-              hover:bg-gray-200
-              dark:hover:bg-gray-700
+              rounded-large
+              dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
+              hover:bg-gray-100 hover:text-opacity-80
+              transition-all
+              duration-200
             "
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
@@ -236,11 +243,13 @@
           <li
             id="notif"
             class="
-              rounded-lg
               px-5
               py-3
-              hover:bg-gray-200
-              dark:hover:bg-gray-700
+              rounded-large
+              dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
+              hover:bg-gray-100 hover:text-opacity-80
+              transition-all
+              duration-200
             "
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
@@ -248,9 +257,22 @@
           </li>
           <div class="my-2 dark:bg-gray-700 h-0.5" />
 
-          <li class="">
-            <a class="text-primary active:text-white rounded-large">
-              Lihat lainnya..
+          <li
+            class="
+              rounded-large
+              py-1
+              dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
+              hover:bg-gray-100 hover:text-opacity-80
+              transition-all
+              duration-200
+            "
+          >
+            <a>
+              <span
+                class="text-primary dark:text-purple-400 dark:text-opacity-80"
+              >
+                Lihat lainnya..
+              </span>
             </a>
           </li>
         </ul>

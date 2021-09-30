@@ -1,7 +1,7 @@
 <template>
   <div id="login" class="flex flex-col">
     <div
-      class="bg-merah text-merahDark px-6 py-4 rounded-large mt-4 -mb-4"
+      class="bg-merah text-merahDark px-6 py-4 rounded-large mt-4 -mb-4 text-sm"
       :show="!!error"
       :hidden="!error"
       @close="handleError"
@@ -32,20 +32,18 @@
       >
         <!-- username -->
         <div>
-          <label class="label mt-4" for="username">
-            <span class="label-text font-semibold dark:text-gray-400"
-              >Username</span
-            >
+          <label class="label mt-6" for="email">
+            <span class="label-text">Email</span>
           </label>
           <input
-            id="username"
+            id="email"
             type="text"
-            placeholder="Masukan username"
+            placeholder="Masukan alamat email"
             class="
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700 dark:text-white
+              dark:bg-gray-700 dark:text-white dark:text-opacity-60
             "
             v-model.trim="email"
             required
@@ -54,10 +52,8 @@
 
         <!-- password -->
         <div>
-          <label class="label mt-3" for="password">
-            <span class="label-text font-semibold dark:text-gray-400"
-              >Password</span
-            >
+          <label class="label mt-4" for="password">
+            <span class="label-text">Password</span>
           </label>
           <input
             id="password"
@@ -68,7 +64,7 @@
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700 dark:text-white
+              dark:bg-gray-700 dark:text-white dark:text-opacity-60
             "
             v-model.trim="password"
             required

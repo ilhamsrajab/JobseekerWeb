@@ -167,5 +167,6 @@ module.exports = {
       },
       'dark',
     ],
+    styled: false,
   },
 }

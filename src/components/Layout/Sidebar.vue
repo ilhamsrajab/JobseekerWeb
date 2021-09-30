@@ -84,7 +84,7 @@
         pb-2
         cursor-default
         border-t
-        dropdown dropdown-top
+        dropdown dropdown-top dropdown-open
         dark:border-gray-800
         hover:bg-gray-50
         dark:hover:bg-gray-900
@@ -105,10 +105,12 @@
           src="../../assets/images/avatar.png"
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
-          <h4 class="font-semibold dark:text-white">Jerome Bell</h4>
+          <h4 class="font-semibold dark:text-white dark:text-opacity-80">
+            Jerome Bell
+          </h4>
           <h5
             id="email"
-            class="font-semibold text-gray-500 text-xs dark:text-gray-400"
+            class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
             jeromebell24@gmail.com
           </h5>
@@ -119,6 +121,7 @@
       <ul
         tabindex="0"
         class="
+          bg-white
           my-4
           p-2
           shadow-xl
@@ -129,13 +132,21 @@
           rounded-box
           w-64
           text-sm
-          dark:bg-gray-800
-          dark:bg-opacity-100
-          dark:border-gray-800
-          dark:text-white
+          space-y-1
+          hover:dark:bg-white
+          dark:bg-gray-800 dark:border-gray-900 dark:text-white
         "
       >
-        <li class="">
+        <li
+          class="
+            rounded-large
+            py-1
+            dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
+            hover:bg-gray-100 hover:text-opacity-80
+            transition-all
+            duration-200
+          "
+        >
           <router-link :to="{ name: 'HalamanProfil' }">
             <Icon
               icon="fluent:person-24-filled"
@@ -145,15 +156,26 @@
             <span> Profil </span>
           </router-link>
         </li>
-        <li>
+        <li
+          class="
+            rounded-large
+            py-1
+            dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
+            hover:bg-gray-100 hover:text-opacity-80
+            transition-all
+            duration-200
+          "
+        >
           <a>
             <Icon
               icon="fluent:sign-out-24-filled"
               :inline="true"
-              class="text-xl mr-3"
+              class="text-xl mr-3 text-red-500 dark:text-red-400"
             />
 
-            <span @click="logout"> Log Out </span>
+            <span @click="logout" class="text-red-500 dark:text-red-400">
+              Log Out
+            </span>
           </a>
         </li>
       </ul>
