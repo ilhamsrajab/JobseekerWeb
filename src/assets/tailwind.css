@@ -51,7 +51,7 @@ input[type=file] {
 }
 
 input[type=file]::file-selector-button {
-  @apply rounded-full border-0 shadow-none float-right bg-gray-500 dark:bg-white dark:bg-opacity-60 dark:hover:bg-opacity-80 text-neutral px-3 cursor-pointer duration-200 transition-all;
+  @apply rounded-full border-0 shadow-none float-right bg-gray-200 hover:bg-opacity-80 dark:bg-white dark:bg-opacity-60 dark:hover:bg-opacity-80 text-neutral px-3 cursor-pointer duration-200 transition-all;
 }
 
 input[type=file]::-webkit-file-upload-button {

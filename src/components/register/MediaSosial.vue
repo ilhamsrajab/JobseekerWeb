@@ -24,19 +24,19 @@
         title="Instagram"
         type="text"
         placeholder="username"
-        class="input input-primary w-full bg-gray-100"
+        class="input input-primary w-full"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
     <label class="label">
-      <p href="#" class="label-text-alt text-gray-500">
+      <p href="#" class="label-text-alt">
         * Jika tidak memiliki akun, tidak perlu diisi
       </p>
     </label>
   </div>
 
   <!-- Twitter -->
-  <div class="mt-1">
+  <div class="mt-4">
     <label class="label font-semibold" for="Twitter">
       <span class="label-text">Twitter</span>
     </label>
@@ -61,19 +61,19 @@
         title="Twitter"
         type="text"
         placeholder="username"
-        class="input input-primary w-full bg-gray-100"
+        class="input input-primary w-full"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
     <label class="label">
-      <p href="#" class="label-text-alt text-gray-500">
+      <p href="#" class="label-text-alt">
         * Jika tidak memiliki akun, tidak perlu diisi
       </p>
     </label>
   </div>
 
   <!-- facebook -->
-  <div class="mt-1">
+  <div class="mt-4">
     <label class="label font-semibold" for="facebook">
       <span class="label-text">Facebook</span>
     </label>
@@ -97,19 +97,19 @@
         title="Facebook"
         type="text"
         placeholder="username"
-        class="input input-primary w-full bg-gray-100"
+        class="input input-primary w-full"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
     <label class="label">
-      <p href="#" class="label-text-alt text-gray-500">
+      <p href="#" class="label-text-alt">
         * Jika tidak memiliki akun, tidak perlu diisi
       </p>
     </label>
   </div>
 
   <!-- LinkedIn -->
-  <div class="mt-1">
+  <div class="mt-4">
     <label class="label font-semibold" for="LinkedIn">
       <span class="label-text">LinkedIn</span>
     </label>
@@ -133,19 +133,19 @@
         title="LinkedIn"
         type="text"
         placeholder="username"
-        class="input input-primary w-full bg-gray-100"
+        class="input input-primary w-full"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
     <label class="label">
-      <p href="#" class="label-text-alt text-gray-500">
+      <p href="#" class="label-text-alt">
         * Jika tidak memiliki akun, tidak perlu diisi
       </p>
     </label>
   </div>
 
   <!-- youtube -->
-  <div class="mt-1">
+  <div class="mt-4">
     <label class="label font-semibold" for="YouTube">
       <span class="label-text">YouTube</span>
     </label>
@@ -169,12 +169,12 @@
         title="YouTube"
         type="text"
         placeholder="username"
-        class="input input-primary w-full bg-gray-100"
+        class="input input-primary w-full"
         style="border-radius: 0px 20px 20px 0px !important"
       />
     </div>
     <label class="label">
-      <p href="#" class="label-text-alt text-gray-500">
+      <p href="#" class="label-text-alt">
         * Jika tidak memiliki akun, tidak perlu diisi
       </p>
     </label>
@@ -183,26 +183,12 @@
   <!-- persetujuan -->
   <div class="flex items-start mt-8">
     <div class="flex items-center h-5">
-      <input
-        id="comments"
-        name="comments"
-        type="checkbox"
-        class="
-          checkbox checkbox-primary
-          focus:ring-2 focus:ring-primary-focus
-          h-5
-          w-5
-          text-primary
-          bg-gray-100
-          border-1 border-gray-300
-          rounded
-          transition-all
-          duration-200
-        "
-      />
+      <input id="comments" name="comments" type="checkbox" class="checkbox" />
     </div>
     <div class="ml-3 text-sm">
-      <label for="comments" class="font-normal text-neutral"
+      <label
+        for="comments"
+        class="font-normal text-neutral dark:text-white dark:text-opacity-60"
         >Saya menyatakan bahwa data di atas adalah
         <strong>benar data pribadi saya</strong>, jika ada kesalahan saya siap
         menanggung semua akibatnya.</label

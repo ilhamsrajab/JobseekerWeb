@@ -149,15 +149,34 @@
           </button>
         </div>
 
-        <!-- btn skip -->
+        <!-- btn kembali -->
         <div>
           <button
-            class="btn btn-outline w-full mb-4"
+            class="btn btn-outline w-full mb-3"
             v-if="currentStep > 1 && currentStep < 5"
-            @click="stepNext"
+            @click="stepBack"
           >
-            Lewati
+            Kembali
           </button>
+
+          <!-- btn skip -->
+          <div>
+            <button
+              class="
+                btn
+                w-full
+                mb-6
+                dark:text-white dark:text-opacity-60
+                hover:text-opacity-80
+                transition-all
+                duration-200
+              "
+              v-if="currentStep > 1 && currentStep < 5"
+              @click="stepNext"
+            >
+              Lewati >
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -233,6 +252,27 @@ export default {
         this.step3 = !this.step3;
       } else if (this.currentStep === 4) {
         this.step4 = !this.step4;
+      } else if (this.currentStep === 5) {
+        this.step5 = !this.step5;
+      }
+      console.log(this.currentStep);
+    },
+    stepBack() {
+      this.currentStep--;
+      if (this.currentStep === 1) {
+        this.step2 = false;
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = false;
+      } else if (this.currentStep === 2) {
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = false;
+      } else if (this.currentStep === 3) {
+        this.step4 = false;
+        this.step5 = false;
+      } else if (this.currentStep === 4) {
+        this.step5 = false;
       } else if (this.currentStep === 5) {
         this.step5 = !this.step5;
       }
