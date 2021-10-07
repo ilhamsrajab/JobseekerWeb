@@ -9,7 +9,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file cv"
-      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
+      class="input input-primary w-full py-3.5 px-4"
     />
     <label class="label">
       <p href="#" class="label-text-alt text-gray-500">
@@ -29,7 +29,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file ijazah"
-      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
+      class="input input-primary w-full py-3.5 px-4"
     />
     <label class="label">
       <p href="#" class="label-text-alt text-gray-500">
@@ -49,7 +49,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file portofolio"
-      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
+      class="input input-primary w-full py-3.5 px-4"
       multiple
     />
     <label class="label">
@@ -70,7 +70,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file sertifikat"
-      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
+      class="input input-primary w-full py-3.5 px-4"
       multiple
     />
     <label class="label">
@@ -91,7 +91,7 @@
       type="file"
       accept=".pdf"
       title="Pilih file transkrip nilai"
-      class="input input-primary w-full py-3.5 px-4 bg-gray-100"
+      class="input input-primary w-full py-3.5 px-4"
       multiple
     />
     <label class="label">
@@ -124,7 +124,9 @@
       />
     </div>
     <div class="ml-3 text-sm">
-      <label for="comments" class="font-normal text-neutral"
+      <label
+        for="comments"
+        class="font-normal text-neutral dark:text-white dark:text-opacity-60"
         >Saya menyatakan bahwa data di atas adalah
         <strong>benar data pribadi saya</strong>, jika ada kesalahan saya siap
         menanggung semua akibatnya.</label

@@ -1,23 +1,39 @@
 <template>
-  <h2 class="text-center font-bold xs:text-lg sm:text-2xl mt-10 text-neutral">
+  <h2
+    class="
+      text-center
+      font-bold
+      xs:text-lg
+      sm:text-2xl
+      mt-10
+      text-neutral
+      dark:text-white dark:text-opacity-80
+    "
+  >
     Data Anda telah tersimpan dengan aman, kami akan memverifikasi akun Anda.
   </h2>
-  <img
-    src="../../assets/images/hand-s.svg"
+  <div
     class="
-      w-1/2
-      mx-auto
-      bg-accent bg-opacity-50
+      flex
       mask mask-circle
-      transform
+      bg-accent
+      m-6
+      w-1/2
+      justify-center
+      items-center
+      mx-auto
       transition-all
       duration-200
-      hover:bg-opacity-40
     "
-    draggable="false"
-    alt="hand"
-    srcset=""
-  />
+  >
+    <img
+      src="../../assets/images/hand-s.svg"
+      class="animate-bounce5 w-full"
+      draggable="false"
+      alt="hand"
+      srcset=""
+    />
+  </div>
 </template>
 
 <script>

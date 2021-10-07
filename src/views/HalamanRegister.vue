@@ -12,11 +12,14 @@
   >
     <!-- logo -->
     <div class="flex justify-end xs:mb-5 sm:mb-0">
-      <img
-        src="../assets/images/logo/BursaKerjaLogo.svg"
-        alt="logo_bursa_kerja"
-        class="w-40"
-      />
+      <!-- logo dark mode -->
+      <!-- <img
+              src="../assets/images/logo/BursaKerjaLogo_Black.svg"
+              alt=""
+              class="w-40"
+            /> -->
+      <!-- logo light mode -->
+      <img src="../assets/images/logo/BursaKerjaLogo.svg" alt="" class="w-40" />
     </div>
     <div class="flex flex-col self-center md:m-8 sm:m-4">
       <!-- kotak header -->

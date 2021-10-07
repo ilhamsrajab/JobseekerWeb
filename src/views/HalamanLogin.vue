@@ -268,8 +268,15 @@
           <div></div>
           <!-- logo -->
           <div>
-            <img
+            <!-- logo dark mode -->
+            <!-- <img
               src="../assets/images/logo/BursaKerjaLogo_Black.svg"
+              alt=""
+              class="w-40"
+            /> -->
+            <!-- logo light mode -->
+            <img
+              src="../assets/images/logo/BursaKerjaLogo.svg"
               alt=""
               class="w-40"
             />

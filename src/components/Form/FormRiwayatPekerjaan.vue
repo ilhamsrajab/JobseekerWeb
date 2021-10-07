@@ -9,7 +9,7 @@
       title="Nama Perusahaan"
       type="text"
       placeholder="Masukan nama perusahaan"
-      class="input input-primary w-full bg-gray-100"
+      class="input input-primary w-full"
     />
   </div>
 
@@ -22,7 +22,7 @@
       id="tahunMasuk"
       title="Tahun masuk"
       type="month"
-      class="input input-primary w-full bg-gray-100"
+      class="input input-primary w-full"
     />
   </div>
 
@@ -35,7 +35,7 @@
       id="tahunKeluar"
       title="Tahun Keluar"
       type="month"
-      class="input input-primary w-full bg-gray-100"
+      class="input input-primary w-full"
     />
   </div>
 
@@ -49,7 +49,7 @@
       title="Posisi Kerja"
       type="text"
       placeholder="Masukan Posisi Kerja"
-      class="input input-primary w-full bg-gray-100"
+      class="input input-primary w-full"
     />
   </div>
 
@@ -63,7 +63,7 @@
         id="deskripsiPekerjaan"
         title="Deskripsi pekerjaan"
         rows="3"
-        class="textarea bg-gray-100"
+        class="textarea"
         placeholder="Tuliskan deskripsi pekerjaan dengan singkat"
       />
     </div>
@@ -79,7 +79,7 @@
       title="Alasan Resign"
       type="text"
       placeholder="Masukan Alasan Resign"
-      class="input input-primary w-full bg-gray-100"
+      class="input input-primary w-full"
     />
   </div>
 
@@ -93,14 +93,14 @@
       type="file"
       accept=".pdf"
       title="Pilih file dokumen pendukung"
-      class="input input-primary w-full bg-gray-100 py-3.5 px-4"
+      class="input input-primary w-full py-3.5 px-4"
     />
     <label class="label">
-      <p href="#" class="label-text-alt text-gray-500">
+      <p href="#" class="label-text-alt">
         * Upload dengan format PDF maksimal 7 MB. Jika tidak memiliki berkas,
         tidak perlu diisi.
       </p>
     </label>
   </div>
-  <hr class="my-5" />
+  <div class="my-5 h-0.5 bg-gray-200 dark:bg-white dark:bg-opacity-20" />
 </template>

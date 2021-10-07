@@ -84,7 +84,7 @@
         pb-2
         cursor-default
         border-t
-        dropdown dropdown-top dropdown-open
+        dropdown dropdown-top
         dark:border-gray-800
         hover:bg-gray-50
         dark:hover:bg-gray-900
@@ -135,12 +135,14 @@
           space-y-1
           hover:dark:bg-white
           dark:bg-gray-800 dark:border-gray-900 dark:text-white
+          dropdown-content
         "
       >
         <li
           class="
+            px-5
+            py-3
             rounded-large
-            py-1
             dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
             hover:bg-gray-100 hover:text-opacity-80
             transition-all
@@ -159,23 +161,22 @@
         <li
           class="
             rounded-large
-            py-1
+            px-5
+            py-3
             dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
-            hover:bg-gray-100 hover:text-opacity-80
+            hover:bg-red-100 hover:text-opacity-80
             transition-all
             duration-200
           "
         >
-          <a>
+          <a class="text-red-500 dark:text-red-400">
             <Icon
               icon="fluent:sign-out-24-filled"
               :inline="true"
-              class="text-xl mr-3 text-red-500 dark:text-red-400"
+              class="text-xl mr-3"
             />
 
-            <span @click="logout" class="text-red-500 dark:text-red-400">
-              Log Out
-            </span>
+            <span @click="logout"> Log Out </span>
           </a>
         </li>
       </ul>

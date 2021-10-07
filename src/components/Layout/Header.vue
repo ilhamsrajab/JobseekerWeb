@@ -215,9 +215,9 @@
             p-2
             shadow-xl
             menu
+            border
             dropdown-content
             bg-white
-            border
             rounded-box
             w-96
             text-sm
@@ -239,7 +239,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
             necessitatibus nemo dolores.
           </li>
-          <div class="my-2 dark:bg-gray-700 h-0.5" />
+          <div class="my-2 bg-gray-100 dark:bg-gray-700 h-0.5" />
           <li
             id="notif"
             class="
@@ -255,12 +255,13 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
             necessitatibus nemo dolores.
           </li>
-          <div class="my-2 dark:bg-gray-700 h-0.5" />
+          <div class="my-2 bg-gray-100 dark:bg-gray-700 h-0.5" />
 
           <li
             class="
+              px-5
+              py-3
               rounded-large
-              py-1
               dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
               hover:bg-gray-100 hover:text-opacity-80
               transition-all
