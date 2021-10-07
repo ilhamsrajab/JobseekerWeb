@@ -33,10 +33,12 @@
 
           <!-- kategori pekerjaan -->
           <div class="sm:mx-8 xs:mx-4 sm:my-10 xs:my-5">
-            <span class="sm:text-xl xs:text-lg font-semibold">
-              Kategori pekerjaan
-            </span>
-            <button class="ml-3 badge h-6 px-3">Lihat lainnya</button>
+            <div class="flex justify-between">
+              <span class="sm:text-xl xs:text-lg font-semibold">
+                Kategori pekerjaan
+              </span>
+              <button class="badge">Lihat lainnya</button>
+            </div>
             <div
               class="
                 grid grid-cols-1
@@ -48,11 +50,122 @@
                 mt-5
               "
             >
-              <CardCategory class="md:col-span-2 lg:col-span-2 xl:col-span-1" />
-              <CardCategory />
-              <CardCategory />
-              <CardCategory />
-              <CardCategory />
+              <!-- <CardCategory class="md:col-span-2 lg:col-span-2 xl:col-span-1" /> -->
+              <div
+                class="
+                  rounded-40
+                  bg-teknologi bg-cover
+                  md:col-span-2
+                  lg:col-span-2
+                  xl:col-span-1
+                "
+              >
+                <div
+                  class="
+                    h-96
+                    bg-black bg-opacity-0
+                    hover:bg-opacity-40
+                    rounded-40
+                    p-8
+                    flex
+                    items-end
+                    cursor-pointer
+                    hover:shadow-lg
+                    transition-all
+                    duration-200
+                  "
+                >
+                  <span class="font-semibold text-lg text-white">
+                    Teknologi
+                  </span>
+                </div>
+              </div>
+
+              <!-- <CardCategory /> -->
+              <div class="rounded-40 bg-koki bg-cover">
+                <div
+                  class="
+                    h-96
+                    bg-black bg-opacity-0
+                    hover:bg-opacity-40
+                    rounded-40
+                    p-8
+                    flex
+                    items-end
+                    cursor-pointer
+                    hover:shadow-lg
+                    transition-all
+                    duration-200
+                  "
+                >
+                  <span class="font-semibold text-lg text-white"> Chef </span>
+                </div>
+              </div>
+
+              <!-- <CardCategory /> -->
+              <div class="rounded-40 bg-pendidikan bg-cover">
+                <div
+                  class="
+                    h-96
+                    bg-black bg-opacity-0
+                    hover:bg-opacity-40
+                    rounded-40
+                    p-8
+                    flex
+                    items-end
+                    cursor-pointer
+                    hover:shadow-lg
+                    transition-all
+                    duration-200
+                  "
+                >
+                  <span class="font-semibold text-lg text-white">
+                    Pendidikan
+                  </span>
+                </div>
+              </div>
+
+              <!-- <CardCategory /> -->
+              <div class="rounded-40 bg-supir bg-cover">
+                <div
+                  class="
+                    h-96
+                    bg-black bg-opacity-0
+                    hover:bg-opacity-40
+                    rounded-40
+                    p-8
+                    flex
+                    items-end
+                    cursor-pointer
+                    hover:shadow-lg
+                    transition-all
+                    duration-200
+                  "
+                >
+                  <span class="font-semibold text-lg text-white"> Driver </span>
+                </div>
+              </div>
+
+              <!-- <CardCategory /> -->
+              <div class="rounded-40 bg-jasa bg-cover">
+                <div
+                  class="
+                    h-96
+                    bg-black bg-opacity-0
+                    hover:bg-opacity-40
+                    rounded-40
+                    p-8
+                    flex
+                    items-end
+                    cursor-pointer
+                    hover:shadow-lg
+                    transition-all
+                    duration-200
+                  "
+                >
+                  <span class="font-semibold text-lg text-white"> Jasa </span>
+                </div>
+              </div>
             </div>
           </div>
           <!-- end kategori pekerjaan -->
