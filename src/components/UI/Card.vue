@@ -6,6 +6,7 @@
       place-content-between
       group
       bg-white
+      dark:bg-gray-700
       rounded-large
       cursor-pointer
       hover:shadow-xl
@@ -38,7 +39,16 @@
           />
           <div>
             <div class="flex flex-wrap">
-              <h2 class="flex-auto text-lg font-bold">Nama Perusahaan</h2>
+              <h2
+                class="
+                  flex-auto
+                  text-lg
+                  font-bold
+                  dark:text-white dark:text-opacity-80
+                "
+              >
+                Nama Perusahaan
+              </h2>
 
               <div
                 class="w-full flex-none text-sm text-gray-400 font-normal mt-1"
@@ -55,7 +65,13 @@
             <Icon
               icon="fluent:bookmark-add-24-filled"
               :inline="true"
-              class="text-3xl hover:text-merah"
+              class="
+                text-3xl
+                hover:text-merah
+                dark:hover:text-merah dark:text-white dark:text-opacity-80
+                transition-all
+                duration-200
+              "
             />
           </button>
         </div>
@@ -65,7 +81,9 @@
       <div class="mt-6">
         <div class="flex flex-row items-center">
           <div class="flex-auto">
-            <div class="font-semibold">Posisi Kerja</div>
+            <div class="font-semibold dark:text-white dark:text-opacity-80">
+              Posisi Kerja
+            </div>
             <div class="text-gray-400 mt-1 text-sm">
               Rp. 1.000.000 - Rp. 4.000.000
             </div>
@@ -86,7 +104,14 @@
           </div>
         </div>
 
-        <div class="mt-4 text-sm text-gray-600 leading-6">
+        <div
+          class="
+            mt-4
+            text-sm text-gray-600
+            leading-6
+            dark:text-white dark:text-opacity-80
+          "
+        >
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non nemo
           suscipit nostrum optio in temporibus officiis libero culpa esse,
           excepturi?

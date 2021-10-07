@@ -2,6 +2,7 @@
   <button
     class="
       bg-neutral
+      dark:bg-gray-700 dark:hover:bg-accent
       hover:bg-accent hover:text-neutral
       text-white
       p-2

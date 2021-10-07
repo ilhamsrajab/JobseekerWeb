@@ -11,7 +11,7 @@
 
 /* badge */
 .badge {
-  @apply bg-neutral border border-neutral text-neutral-content rounded-badge h-6 hover:bg-gray-800 transition-all duration-200;
+  @apply bg-neutral border border-neutral text-neutral-content rounded-badge h-6 hover:bg-gray-800 dark:text-neutral dark:bg-accent dark:hover:bg-accentDark transition-all duration-200;
 }
 
 /* label */

@@ -61,6 +61,7 @@
             class="
               mt-10
               bg-white
+              dark:bg-gray-800
               shadow-lg
               sm:px-10 sm:py-4
               xs:px-5 xs:py-2
@@ -78,7 +79,7 @@
               duration-200
             "
           >
-            <div class="image">
+            <div class="image mr-6">
               <svg
                 class="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -107,8 +108,24 @@
               </svg>
             </div>
             <div class="text">
-              <p class="text-xs text-gray-600">Download it from</p>
-              <p class="text-base font-semibold text-gray-900">Google Play</p>
+              <p
+                class="
+                  text-xs text-gray-600
+                  dark:text-white dark:text-opacity-60
+                "
+              >
+                Download it from
+              </p>
+              <p
+                class="
+                  text-base
+                  font-semibold
+                  text-gray-900
+                  dark:text-white dark:text-opacity-80
+                "
+              >
+                Google Play
+              </p>
             </div>
           </button>
         </div>

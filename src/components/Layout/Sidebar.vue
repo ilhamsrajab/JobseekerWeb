@@ -166,6 +166,7 @@
             py-3
             dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
             hover:bg-red-100 hover:text-opacity-80
+            dark:hover:bg-red-400
             transition-all
             duration-200
           "

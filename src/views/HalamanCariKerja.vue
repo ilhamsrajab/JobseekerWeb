@@ -61,9 +61,14 @@
 
             <!-- filter button -->
             <div class="mb-5 sm:m-8 xs:m-1 xl:mx-0 flex justify-between">
-              <span class="font-semibold">Cari Kerja</span>
+              <span class="font-semibold dark:text-white dark:text-opacity-80"
+                >Cari Kerja</span
+              >
               <button>
-                <Icon icon="fluent:filter-16-filled" class="text-2xl" />
+                <Icon
+                  icon="fluent:filter-16-filled"
+                  class="text-2xl dark:text-white dark:text-opacity-80"
+                />
               </button>
             </div>
 

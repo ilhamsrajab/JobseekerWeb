@@ -34,10 +34,24 @@
           <!-- kategori pekerjaan -->
           <div class="sm:mx-8 xs:mx-4 sm:my-10 xs:my-5">
             <div class="flex justify-between">
-              <span class="sm:text-xl xs:text-lg font-semibold">
+              <span
+                class="
+                  sm:text-xl
+                  xs:text-lg
+                  font-semibold
+                  dark:text-white dark:text-opacity-80
+                "
+              >
                 Kategori pekerjaan
               </span>
-              <button class="badge">Lihat lainnya</button>
+              <button
+                class="
+                  badge
+
+                "
+              >
+                Lihat lainnya
+              </button>
             </div>
             <div
               class="
