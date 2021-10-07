@@ -9,6 +9,7 @@
       w-36
       text-center
       font-semibold
+      hover:shadow-xl
       transition-all
       duration-200
     "

@@ -1,5 +1,5 @@
 <template>
-  <button class="btnSidebarActive" :type="type" :class="mode">
+  <button class="btnSidebarActive w-full" :type="type" :class="mode">
     <slot class="mx-4 font-medium"></slot>
   </button>
 </template>

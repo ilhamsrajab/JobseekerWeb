@@ -61,7 +61,7 @@
 
             <!-- filter button -->
             <div class="mb-5 sm:m-8 xs:m-1 xl:mx-0 flex justify-between">
-              <span class="font-semibold">Cari Kerja</span>
+              <span class="font-semibold">Favorit</span>
               <button>
                 <Icon icon="fluent:filter-16-filled" class="text-2xl" />
               </button>
@@ -82,22 +82,16 @@
               "
             >
               <!-- card -->
-              <router-link :to="{ name: 'HalamanJobDescription' }">
-                <Card />
-              </router-link>
-              <router-link :to="{ name: 'HalamanJobDescription' }">
-                <Card />
-              </router-link>
-              <router-link :to="{ name: 'HalamanJobDescription' }">
-                <Card />
-              </router-link>
 
-              <CardSkeleton />
-              <CardSkeleton />
-              <CardSkeleton />
-              <CardSkeleton />
-              <CardSkeleton />
-              <CardSkeleton />
+              <router-link :to="{ name: 'HalamanJobDescription' }">
+                <Card />
+              </router-link>
+              <router-link :to="{ name: 'HalamanJobDescription' }">
+                <Card />
+              </router-link>
+              <router-link :to="{ name: 'HalamanJobDescription' }">
+                <Card />
+              </router-link>
             </div>
           </div>
           <!-- footer -->

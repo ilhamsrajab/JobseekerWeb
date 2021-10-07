@@ -34,42 +34,43 @@
     <!-- navigasi sidebar -->
     <nav class="flex flex-col mt-4 px-4 text-center">
       <!-- home -->
-      <button-sidebar
-        @click="setSelectedTab('home')"
-        :mode="homeButtonMode"
-        :to="{ name: 'HalamanHome' }"
-      >
-        <Icon
-          icon="fluent:home-24-filled"
-          :inline="true"
-          class="text-xl mr-3"
-        />Home
-      </button-sidebar>
+      <router-link :to="{ name: 'HalamanHome' }">
+        <button-sidebar @click="setSelectedTab('home')" :mode="homeButtonMode">
+          <Icon
+            icon="fluent:home-24-filled"
+            :inline="true"
+            class="text-xl mr-3"
+          />Home
+        </button-sidebar>
+      </router-link>
 
       <!-- cari kerja -->
-      <button-sidebar
-        @click="setSelectedTab('cari-kerja')"
-        :mode="cariKerjaButtonMode"
-        :to="{ name: 'HalamanCariKerja' }"
-      >
-        <Icon
-          icon="fluent:search-24-filled"
-          :inline="true"
-          class="text-xl mr-3"
-        />Cari Kerja</button-sidebar
-      >
+      <router-link :to="{ name: 'HalamanCariKerja' }">
+        <button-sidebar
+          @click="setSelectedTab('cari-kerja')"
+          :mode="cariKerjaButtonMode"
+        >
+          <Icon
+            icon="fluent:search-24-filled"
+            :inline="true"
+            class="text-xl mr-3"
+          />Cari Kerja
+        </button-sidebar>
+      </router-link>
 
       <!-- favorite -->
-      <button-sidebar
-        @click="setSelectedTab('favorite')"
-        :mode="favoriteButtonMode"
-      >
-        <Icon
-          icon="fluent:bookmark-24-filled"
-          :inline="true"
-          class="text-xl mr-3"
-        />Favorit</button-sidebar
-      >
+      <router-link :to="{ name: 'HalamanFavorit' }">
+        <button-sidebar
+          @click="setSelectedTab('favorite')"
+          :mode="favoriteButtonMode"
+        >
+          <Icon
+            icon="fluent:bookmark-24-filled"
+            :inline="true"
+            class="text-xl mr-3"
+          />Favorit</button-sidebar
+        >
+      </router-link>
     </nav>
 
     <!-- profil icon -->

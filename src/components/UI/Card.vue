@@ -8,6 +8,9 @@
       bg-white
       rounded-large
       cursor-pointer
+      hover:shadow-xl
+      duration-200
+      transition-all
       p-5
     "
   >

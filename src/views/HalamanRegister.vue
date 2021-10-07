@@ -168,6 +168,7 @@
               class="
                 btn
                 w-full
+                mt-3
                 mb-6
                 dark:text-white dark:text-opacity-60
                 hover:text-opacity-80

@@ -291,8 +291,8 @@ export default {
   },
   data() {
     return {
-      modeCerah: true,
-      modeGelap: false,
+      modeCerah: false,
+      modeGelap: true,
     };
   },
   methods: {

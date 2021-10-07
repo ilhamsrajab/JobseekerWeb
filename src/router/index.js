@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HalamanHome from '../views/HalamanHome.vue'
 import HalamanCariKerja from '../views/HalamanCariKerja.vue'
+import HalamanFavorit from '../views/HalamanFavorit.vue'
 import HalamanLogin from '../views/HalamanLogin.vue'
 import HalamanRegister from '../views/HalamanRegister.vue'
 import HalamanProfil from '../views/HalamanProfil.vue'
@@ -30,6 +31,12 @@ const router = createRouter({
       path: '/deskripsi',
       name: 'HalamanJobDescription',
       component: HalamanJobDescription
+    },
+    {
+      path: '/favorit',
+      name: 'HalamanFavorit',
+      component: HalamanFavorit,
+      // meta: { requiredAuth: true }
     },
     {
       path: '/login',
