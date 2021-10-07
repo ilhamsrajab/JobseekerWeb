@@ -48,7 +48,15 @@
 
               <!-- nama -->
               <div class="leading-6 mt-4 xs:mb-4 sm:mb-8 text-center">
-                <h4 class="font-bold dark:text-white text-2xl">Jerome Bell</h4>
+                <h4
+                  class="
+                    font-bold
+                    dark:text-white dark:text-opacity-80
+                    text-2xl
+                  "
+                >
+                  Jerome Bell
+                </h4>
                 <h5
                   id="email"
                   class="font-medium text-gray-500 dark:text-gray-300 mt-2"
@@ -62,6 +70,7 @@
                 class="
                   flex flex-row
                   bg-white
+                  dark:bg-gray-900
                   p-2
                   rounded-20
                   xs:space-x-1
@@ -96,6 +105,7 @@
               <div
                 class="
                   bg-white
+                  dark:bg-gray-900
                   rounded-20
                   xl:py-8 xl:px-16
                   lg:py-4 lg:px-12

@@ -6,7 +6,7 @@
       place-content-between
       group
       bg-white
-      dark:bg-gray-700
+      dark:bg-gray-900
       rounded-large
       cursor-default
       p-5
@@ -23,7 +23,7 @@
               object-cover
               rounded-large
               bg-gray-200
-              dark:bg-gray-600
+              dark:bg-gray-800
               mr-4
             "
           ></div>
@@ -33,7 +33,7 @@
                 class="
                   flex-auto
                   bg-gray-200
-                  dark:bg-gray-600
+                  dark:bg-gray-800
                   animate-pulse
                   h-6
                   rounded-lg
@@ -47,7 +47,7 @@
                   flex-none
                   mt-2
                   bg-gray-200
-                  dark:bg-gray-600
+                  dark:bg-gray-800
                   animate-pulse
                   h-5
                   rounded-lg
@@ -60,7 +60,7 @@
 
         <!-- button bookmark -->
         <div
-          class="rounded-lg bg-gray-200 dark:bg-gray-600 h-8 w-8 animate-pulse"
+          class="rounded-lg bg-gray-200 dark:bg-gray-800 h-8 w-8 animate-pulse"
         ></div>
       </div>
 
@@ -71,7 +71,7 @@
             <div
               class="
                 bg-gray-200
-                dark:bg-gray-600
+                dark:bg-gray-800
                 animate-pulse
                 h-5
                 rounded-lg
@@ -82,7 +82,7 @@
               class="
                 mt-1
                 bg-gray-200
-                dark:bg-gray-600
+                dark:bg-gray-800
                 animate-pulse
                 h-5
                 rounded-lg
@@ -94,7 +94,7 @@
             class="
               w-20
               bg-gray-200
-              dark:bg-gray-600
+              dark:bg-gray-800
               animate-pulse
               h-8
               rounded-large
@@ -106,7 +106,7 @@
           class="
             mt-4
             bg-gray-200
-            dark:bg-gray-600
+            dark:bg-gray-800
             animate-pulse
             h-4
             rounded-large
@@ -116,7 +116,7 @@
           class="
             mt-1.5
             bg-gray-200
-            dark:bg-gray-600
+            dark:bg-gray-800
             animate-pulse
             h-4
             rounded-large
@@ -126,7 +126,7 @@
           class="
             mt-1.5
             bg-gray-200
-            dark:bg-gray-600
+            dark:bg-gray-800
             animate-pulse
             h-4
             rounded-large
@@ -136,7 +136,7 @@
           class="
             mt-1.5
             bg-gray-200
-            dark:bg-gray-600
+            dark:bg-gray-800
             animate-pulse
             h-4
             rounded-large
@@ -149,7 +149,7 @@
       <span
         class="
           bg-gray-200
-          dark:bg-gray-600
+          dark:bg-gray-800
           animate-pulse
           h-5
           w-20
@@ -162,7 +162,7 @@
       <span
         class="
           bg-gray-200
-          dark:bg-gray-600
+          dark:bg-gray-800
           animate-pulse
           h-5
           w-20

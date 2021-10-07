@@ -1,5 +1,12 @@
 <template>
-  <button class="tabActive" :type="type" :class="mode">
+  <button
+    class="
+      tabActive
+
+    "
+    :type="type"
+    :class="mode"
+  >
     <slot></slot>
   </button>
 </template>

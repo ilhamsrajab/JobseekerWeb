@@ -49,10 +49,19 @@
 
               <!-- nama -->
               <div class="leading-6 mt-4 mb-5 text-center">
-                <h4 class="font-bold dark:text-white text-2xl">
+                <h4
+                  class="
+                    font-bold
+                    dark:text-white dark:text-opacity-80
+                    text-2xl
+                  "
+                >
                   Nama Perusahaan
                 </h4>
-                <h5 id="email" class="font-medium text-gray-500 mt-2">
+                <h5
+                  id="email"
+                  class="font-medium text-gray-500 dark:text-gray-400 mt-2"
+                >
                   Posisi Kerja
                 </h5>
               </div>
@@ -74,6 +83,7 @@
                     mx-auto
                     mb-3
                     text-gray-500
+                    dark:text-gray-400
                   "
                 >
                   <Icon icon="fluent:clock-24-filled" :inline="true" />
@@ -91,6 +101,7 @@
                     gap-y-5 gap-x-10
                     sm:justify-items-center
                     bg-white
+                    dark:bg-gray-900
                     rounded-20
                     sm:px-10
                     xs:px-6
@@ -101,6 +112,7 @@
                     xs:w-full
                     mx-auto
                     text-gray-500
+                    dark:text-white dark:text-opacity-60
                   "
                 >
                   <span
@@ -156,6 +168,7 @@
               <div
                 class="
                   bg-white
+                  dark:bg-gray-900 dark:text-white dark:text-opacity-80
                   rounded-20
                   lg:p-14
                   md:p-10
@@ -241,6 +254,7 @@
                     py-8
                     justify-items-center
                     bg-white
+                    dark:bg-gray-900 dark:text-white dark:text-opacity-80
                     rounded-20
                     lg:px-10
                     md:px-6
@@ -270,14 +284,14 @@
                       <Icon
                         icon="fluent:checkmark-circle-24-filled"
                         :inline="true"
-                        class="text-hijauDark"
+                        class="text-hijauDark dark:text-hijau"
                       />
                       <p class="text-sm">Ijazah</p>
                     </span>
                     <span class="inline-flex items-center space-x-2 w-56">
                       <Icon
                         icon="fluent:checkmark-circle-24-filled"
-                        class="text-hijauDark"
+                        class="text-hijauDark dark:text-hijau"
                         :inline="true"
                       />
                       <p class="text-sm">Curriculum Vitae (CV)</p>
@@ -285,7 +299,7 @@
                     <span class="inline-flex items-center space-x-2 w-56">
                       <Icon
                         icon="fluent:checkmark-circle-24-filled"
-                        class="text-hijauDark"
+                        class="text-hijauDark dark:text-hijau"
                         :inline="true"
                       />
                       <p class="text-sm">Portofolio</p>
@@ -293,7 +307,7 @@
                     <span class="inline-flex items-center space-x-2 w-56">
                       <Icon
                         icon="fluent:checkmark-circle-24-filled"
-                        class="text-hijauDark"
+                        class="text-hijauDark dark:text-hijau"
                         :inline="true"
                       />
                       <p class="text-sm">Sertifikat</p>
@@ -301,7 +315,7 @@
                     <span class="inline-flex items-center space-x-2 w-56">
                       <Icon
                         icon="fluent:checkmark-circle-24-filled"
-                        class="text-hijauDark"
+                        class="text-hijauDark dark:text-hijau"
                         :inline="true"
                       />
                       <p class="text-sm">Transkrip Nilai</p>
@@ -309,7 +323,7 @@
                     <span class="inline-flex items-center space-x-2 w-56">
                       <Icon
                         icon="fluent:checkmark-circle-24-filled"
-                        class="text-hijauDark"
+                        class="text-hijauDark dark:text-hijau"
                         :inline="true"
                       />
                       <p class="text-sm">SIM C</p>
@@ -329,6 +343,7 @@
                   gap-x-2
                   justify-items-center
                   bg-white
+                  dark:bg-gray-900 dark:text-white dark:text-opacity-80
                   rounded-20
                   2xl:w-3/5
                   lg:w-4/5 lg:mx-auto

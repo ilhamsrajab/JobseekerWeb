@@ -81,7 +81,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* tab */
 .tabActive {
-  @apply bg-primary text-white rounded-large px-6 py-3 transition-all duration-200;
+  @apply bg-primary text-white dark:text-white dark:text-opacity-80 dark:hover:bg-gray-100 dark:hover:bg-opacity-20 dark:hover:text-white dark:hover:text-opacity-80 rounded-large px-6 py-3 transition-all duration-200;
 }
 
 .tabDisable {

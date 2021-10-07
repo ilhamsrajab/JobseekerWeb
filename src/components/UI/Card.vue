@@ -6,7 +6,7 @@
       place-content-between
       group
       bg-white
-      dark:bg-gray-700
+      dark:bg-gray-900
       rounded-large
       cursor-pointer
       hover:shadow-xl
