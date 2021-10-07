@@ -2,18 +2,16 @@
   <div class="mx-auto mt-4 z-10">
     <form class="form-control" action="#" method="POST">
       <!-- nama lengkap -->
-      <div class="mt-4 w-full">
+      <div class="mt-4">
         <label class="label" for="namaLengkap">
-          <span class="label-text text-neutral font-semibold"
-            >Nama Lengkap</span
-          >
+          <span class="label-text font-semibold">Nama Lengkap</span>
         </label>
         <input
           id="namaLengkap"
           title="Nama Lengkap"
           type="text"
           placeholder="Masukan nama lengkap"
-          class="input input-primary bg-gray-100 w-full"
+          class="input input-primary w-full"
           required
         />
       </div>
@@ -21,16 +19,14 @@
       <!-- nik -->
       <div class="mt-4">
         <label class="label" for="nik">
-          <span class="label-text text-neutral font-semibold"
-            >Nomor Induk Kependudukan</span
-          >
+          <span class="label-text font-semibold">Nomor Induk Kependudukan</span>
         </label>
         <input
           id="nik"
           title="Nomor Induk Kependudukan"
           type="number"
           placeholder="Masukan nomor induk kependudukan"
-          class="input input-primary bg-gray-100 w-full"
+          class="input input-primary w-full"
           maxlength="16"
           max="9999999999999999"
           required
@@ -40,9 +36,7 @@
       <!-- jenis kelamin -->
       <div class="mt-4">
         <label class="label" for="jenisKelamin">
-          <span class="label-text text-neutral font-semibold"
-            >Jenis Kelamin</span
-          >
+          <span class="label-text font-semibold">Jenis Kelamin</span>
         </label>
         <div class="flex flex-row">
           <div class="flex items-center mr-10">
@@ -50,21 +44,18 @@
               id="push-lakilaki"
               name="jenisKelamin"
               type="radio"
-              class="
-                focus:ring-primary-focus focus:bg-accent
-                bg-gray-100
-                h-5
-                w-5
-                text-primary
-                border-1 border-gray-300
-                hover:border-primary
-                transition-all
-                duration-200
-              "
+              class="radio"
             />
             <label
               for="push-lakilaki"
-              class="ml-3 block text-sm font-normal text-neutral"
+              class="
+                ml-3
+                block
+                text-sm
+                font-normal
+                text-neutral
+                dark:text-white dark:text-opacity-60
+              "
             >
               Laki-laki
             </label>
@@ -74,21 +65,18 @@
               id="push-perempuan"
               name="jenisKelamin"
               type="radio"
-              class="
-                focus:ring-primary-focus focus:bg-accent
-                bg-gray-100
-                h-5
-                w-5
-                text-primary
-                border-1 border-gray-300
-                hover:border-primary
-                transition-all
-                duration-200
-              "
+              class="radio"
             />
             <label
               for="push-perempuan"
-              class="ml-3 block text-sm font-normal text-neutral"
+              class="
+                ml-3
+                block
+                text-sm
+                font-normal
+                text-neutral
+                dark:text-white dark:text-opacity-60
+              "
             >
               Perempuan
             </label>
@@ -99,9 +87,7 @@
       <!-- Tempat tanggal lahir -->
       <div class="mt-4">
         <label class="label" for="tempatLahir">
-          <span class="label-text text-neutral font-semibold"
-            >Tempat Tanggal Lahir</span
-          >
+          <span class="label-text font-semibold">Tempat Tanggal Lahir</span>
         </label>
         <div class="flex flex-row gap-2">
           <input
@@ -109,14 +95,14 @@
             title="Tempat Lahir"
             type="text"
             placeholder="Masukan tempat lahir"
-            class="input input-primary bg-gray-100 w-3/5"
+            class="input input-primary w-3/5"
             required
           />
           <input
             id="tanggalLahir"
             title="Tanggal Lahir"
             type="date"
-            class="input input-primary bg-gray-100 w-2/5"
+            class="input input-primary w-2/5"
             required
           />
         </div>
@@ -125,12 +111,9 @@
       <!-- agama -->
       <div class="mt-4">
         <label class="label" for="agama">
-          <span class="label-text text-neutral font-semibold">Agama</span>
+          <span class="label-text font-semibold">Agama</span>
         </label>
-        <select
-          id="agama"
-          class="select select-primary bg-gray-100 w-full font-normal"
-        >
+        <select id="agama" class="select select-primary w-full">
           <option disabled="disabled" selected="selected">Pilih Agama</option>
           <option>1</option>
           <option>2</option>
@@ -141,14 +124,9 @@
       <!-- Status Perkawinan -->
       <div class="mt-4">
         <label class="label" for="statusPerkawinan">
-          <span class="label-text text-neutral font-semibold"
-            >Status Perkawinan</span
-          >
+          <span class="label-text font-semibold">Status Perkawinan</span>
         </label>
-        <select
-          id="statusPerkawinan"
-          class="select select-primary bg-gray-100 w-full font-normal"
-        >
+        <select id="statusPerkawinan" class="select select-primary w-full">
           <option disabled="disabled" selected="selected">
             Pilih Status Perkawinan
           </option>
@@ -161,17 +139,14 @@
       <!-- alamat -->
       <div class="mt-4">
         <label class="label" for="alamat">
-          <span class="label-text text-neutral font-semibold">Alamat</span>
+          <span class="label-text font-semibold">Alamat</span>
         </label>
         <!-- provinsi -->
         <div class="mb-1">
           <label class="label" for="alamatProvinsi">
-            <span class="label-text" text-neutral>Provinsi</span>
+            <span class="label-text">Provinsi</span>
           </label>
-          <select
-            id="alamatProvinsi"
-            class="select select-primary bg-gray-100 w-full font-normal"
-          >
+          <select id="alamatProvinsi" class="select select-primary w-full">
             <option disabled="disabled" selected="selected">
               Pilih Provinsi
             </option>
@@ -182,14 +157,11 @@
         </div>
 
         <!-- kota/kabupaten -->
-        <div class="mb-1">
+        <div class="mb-1 mt-2">
           <label class="label" for="alamatKota">
-            <span class="label-text" text-neutral>Kota/Kabupaten</span>
+            <span class="label-text">Kota/Kabupaten</span>
           </label>
-          <select
-            id="alamatKota"
-            class="select select-primary bg-gray-100 w-full font-normal"
-          >
+          <select id="alamatKota" class="select select-primary w-full">
             <option disabled="disabled" selected="selected">
               Pilih Kota/Kabupaten
             </option>
@@ -200,14 +172,11 @@
         </div>
 
         <!-- kecamatan -->
-        <div class="mb-1">
+        <div class="mb-1 mt-2">
           <label class="label" for="alamatKecamatan">
-            <span class="label-text" text-neutral>Kecamatan</span>
+            <span class="label-text">Kecamatan</span>
           </label>
-          <select
-            id="alamatKecamatan"
-            class="select select-primary bg-gray-100 w-full font-normal"
-          >
+          <select id="alamatKecamatan" class="select select-primary w-full">
             <option disabled="disabled" selected="selected">
               Pilih Kecamatan
             </option>
@@ -218,14 +187,11 @@
         </div>
 
         <!-- desa/kelurahan -->
-        <div class="mb-1">
+        <div class="mb-1 mt-2">
           <label class="label" for="alamatDesa">
-            <span class="label-text" text-neutral>Desa/Kelurahan</span>
+            <span class="label-text">Desa/Kelurahan</span>
           </label>
-          <select
-            id="alamatDesa"
-            class="select select-primary bg-gray-100 w-full font-normal"
-          >
+          <select id="alamatDesa" class="select select-primary w-full">
             <option disabled="disabled" selected="selected">
               Pilih Desa/Kelurahan
             </option>
@@ -236,9 +202,9 @@
         </div>
 
         <!-- rt/rw -->
-        <div class="mb-1">
+        <div class="mb-1 mt-2">
           <label class="label" for="alamatRT">
-            <span class="label-text" text-neutral>RT/RW</span>
+            <span class="label-text">RT/RW</span>
           </label>
           <div class="flex flex-row gap-2">
             <input
@@ -247,7 +213,7 @@
               type="number"
               maxlength="3"
               placeholder="Masukan no. RT"
-              class="input input-primary bg-gray-100 w-1/2"
+              class="input input-primary w-1/2"
               required
             />
             <input
@@ -256,23 +222,23 @@
               type="number"
               maxlength="3"
               placeholder="Masukan no. RW"
-              class="input input-primary bg-gray-100 w-1/2"
+              class="input input-primary w-1/2"
               required
             />
           </div>
         </div>
 
         <!-- alamat rumah -->
-        <div class="mb-1">
+        <div class="mb-1 mt-2">
           <label class="label" for="alamatRumah">
-            <span class="label-text" text-neutral>Desa/Kelurahan</span>
+            <span class="label-text">Desa/Kelurahan</span>
           </label>
           <div class="mt-1">
             <textarea
               id="alamatRumah"
               title="Alamat Rumah"
               rows="3"
-              class="textarea bg-gray-100"
+              class="textarea"
               placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
               required
             />
@@ -280,16 +246,16 @@
         </div>
 
         <!-- kodepos -->
-        <div class="mb-1">
+        <div class="mb-1 mt-2">
           <label class="label" for="alamatKodepos">
-            <span class="label-text" text-neutral>Kodepos</span>
+            <span class="label-text">Kodepos</span>
           </label>
           <input
             id="alamatKodepos"
             type="number"
             maxlength="5"
             placeholder="Masukan no. kodepos"
-            class="input input-primary bg-gray-100 w-full"
+            class="input input-primary w-full"
             disabled
           />
         </div>
@@ -298,14 +264,9 @@
       <!-- pendidikan terakhir -->
       <div class="mt-4">
         <label class="label" for="pendidikan">
-          <span class="label-text text-neutral font-semibold"
-            >Pendidikan Terakhir</span
-          >
+          <span class="label-text font-semibold">Pendidikan Terakhir</span>
         </label>
-        <select
-          id="pendidikan"
-          class="select select-primary bg-gray-100 w-full font-normal"
-        >
+        <select id="pendidikan" class="select select-primary w-full">
           <option disabled="disabled" selected="selected">
             Pilih Pendidikan Terakhir
           </option>
@@ -318,7 +279,7 @@
       <!-- no hp -->
       <div class="mt-4">
         <label class="label font-semibold" for="noHP">
-          <span class="label-text" text-neutral>Nomor Handphone</span>
+          <span class="label-text">Nomor Handphone</span>
         </label>
         <div class="mt-1 flex rounded-md shadow-sm">
           <span
@@ -339,11 +300,10 @@
             id="noHP"
             title="Nomor Handphone"
             type="tel"
-            placeholder="8XX-XXXX-XXXX"
+            placeholder="81234567890"
             minlength="11"
             maxlength="13"
-            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-            class="input input-primary bg-gray-100 w-full"
+            class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
             required
           />
@@ -353,14 +313,14 @@
       <!-- foto pribadi -->
       <div class="mt-4">
         <label class="label font-semibold" for="fotoPribadi">
-          <span class="label-text" text-neutral>Foto Pribadi</span>
+          <span class="label-text">Foto Pribadi</span>
         </label>
         <input
           id="fotoPribadi"
           type="file"
           accept="image/*"
           title="Pilih foto pribadi"
-          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
+          class="input input-primary w-full py-3.5 px-4"
           required
         />
         <label class="label">
@@ -373,14 +333,14 @@
       <!-- ktp -->
       <div class="mt-4">
         <label class="label font-semibold" for="ktp">
-          <span class="label-text" text-neutral>Foto E-KTP</span>
+          <span class="label-text">Foto E-KTP</span>
         </label>
         <input
           id="ktp"
           type="file"
           accept="image/*"
           title="Pilih foto E-KTP"
-          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
+          class="input input-primary w-full py-3.5 px-4"
           required
         />
         <label class="label">

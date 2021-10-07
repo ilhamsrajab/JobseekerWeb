@@ -4,9 +4,9 @@
       <!-- instagram -->
       <div class="mt-4">
         <label class="label font-semibold" for="instagram">
-          <span class="label-text text-neutral">Instagram</span>
+          <span class="label-text">Instagram</span>
         </label>
-        <div class="mt-1 flex rounded-md shadow-sm">
+        <div class="mt-1 flex">
           <span
             class="
               inline-flex
@@ -26,23 +26,23 @@
             title="Instagram"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-100 w-full"
+            class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
         <label class="label">
-          <p href="#" class="label-text-alt text-gray-500">
+          <p href="#" class="label-text-alt">
             * Jika tidak memiliki akun, tidak perlu diisi
           </p>
         </label>
       </div>
 
       <!-- Twitter -->
-      <div class="mt-1">
+      <div class="mt-4">
         <label class="label font-semibold" for="Twitter">
-          <span class="label-text text-neutral">Twitter</span>
+          <span class="label-text">Twitter</span>
         </label>
-        <div class="mt-1 flex rounded-md shadow-sm">
+        <div class="mt-1 flex">
           <span
             class="
               inline-flex
@@ -63,23 +63,23 @@
             title="Twitter"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-100 w-full"
+            class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
         <label class="label">
-          <p href="#" class="label-text-alt text-gray-500">
+          <p href="#" class="label-text-alt">
             * Jika tidak memiliki akun, tidak perlu diisi
           </p>
         </label>
       </div>
 
       <!-- facebook -->
-      <div class="mt-1">
+      <div class="mt-4">
         <label class="label font-semibold" for="facebook">
-          <span class="label-text text-neutral">Facebook</span>
+          <span class="label-text">Facebook</span>
         </label>
-        <div class="mt-1 flex rounded-md shadow-sm">
+        <div class="mt-1 flex">
           <span
             class="
               inline-flex
@@ -99,23 +99,23 @@
             title="Facebook"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-100 w-full"
+            class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
         <label class="label">
-          <p href="#" class="label-text-alt text-gray-500">
+          <p href="#" class="label-text-alt">
             * Jika tidak memiliki akun, tidak perlu diisi
           </p>
         </label>
       </div>
 
       <!-- LinkedIn -->
-      <div class="mt-1">
+      <div class="mt-4">
         <label class="label font-semibold" for="LinkedIn">
-          <span class="label-text text-neutral">LinkedIn</span>
+          <span class="label-text">LinkedIn</span>
         </label>
-        <div class="mt-1 flex rounded-md shadow-sm">
+        <div class="mt-1 flex">
           <span
             class="
               inline-flex
@@ -135,23 +135,23 @@
             title="LinkedIn"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-100 w-full"
+            class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
         <label class="label">
-          <p href="#" class="label-text-alt text-gray-500">
+          <p href="#" class="label-text-alt">
             * Jika tidak memiliki akun, tidak perlu diisi
           </p>
         </label>
       </div>
 
       <!-- youtube -->
-      <div class="mt-1">
+      <div class="mt-4">
         <label class="label font-semibold" for="YouTube">
-          <span class="label-text text-neutral">YouTube</span>
+          <span class="label-text">YouTube</span>
         </label>
-        <div class="mt-1 flex rounded-md shadow-sm">
+        <div class="mt-1 flex">
           <span
             class="
               inline-flex
@@ -171,12 +171,12 @@
             title="YouTube"
             type="text"
             placeholder="username"
-            class="input input-primary bg-gray-100 w-full"
+            class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
           />
         </div>
         <label class="label">
-          <p href="#" class="label-text-alt text-gray-500">
+          <p href="#" class="label-text-alt">
             * Jika tidak memiliki akun, tidak perlu diisi
           </p>
         </label>

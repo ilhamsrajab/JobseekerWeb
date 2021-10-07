@@ -4,14 +4,14 @@
       <!-- curriculumVitae -->
       <div class="mt-4">
         <label class="label font-semibold" for="curriculumVitae">
-          <span class="label-text text-neutral">Curriculum Vitae</span>
+          <span class="label-text">Curriculum Vitae</span>
         </label>
         <input
           id="curriculumVitae"
           type="file"
           accept=".pdf"
           title="Pilih file cv"
-          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
+          class="input input-primary w-full py-3.5 px-4"
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
@@ -24,14 +24,14 @@
       <!-- ijazah -->
       <div class="mt-4">
         <label class="label font-semibold" for="ijazah">
-          <span class="label-text text-neutral">Ijazah</span>
+          <span class="label-text">Ijazah</span>
         </label>
         <input
           id="ijazah"
           type="file"
           accept=".pdf"
           title="Pilih file ijazah"
-          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
+          class="input input-primary w-full py-3.5 px-4"
         />
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
@@ -44,14 +44,14 @@
       <!-- portofolio -->
       <div class="mt-4">
         <label class="label font-semibold" for="portofolio">
-          <span class="label-text text-neutral">Portofolio</span>
+          <span class="label-text">Portofolio</span>
         </label>
         <input
           id="portofolio"
           type="file"
           accept=".pdf"
           title="Pilih file portofolio"
-          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
+          class="input input-primary w-full py-3.5 px-4"
           multiple
         />
         <label class="label">
@@ -65,14 +65,14 @@
       <!-- sertifikat -->
       <div class="mt-4">
         <label class="label font-semibold" for="sertifikat">
-          <span class="label-text text-neutral">Sertifikat</span>
+          <span class="label-text">Sertifikat</span>
         </label>
         <input
           id="sertifikat"
           type="file"
           accept=".pdf"
           title="Pilih file sertifikat"
-          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
+          class="input input-primary w-full py-3.5 px-4"
           multiple
         />
         <label class="label">
@@ -86,14 +86,14 @@
       <!-- transkripNilai -->
       <div class="mt-4">
         <label class="label font-semibold" for="transkripNilai">
-          <span class="label-text text-neutral">Transkrip Nilai</span>
+          <span class="label-text">Transkrip Nilai</span>
         </label>
         <input
           id="transkripNilai"
           type="file"
           accept=".pdf"
           title="Pilih file transkrip nilai"
-          class="input input-primary bg-gray-100 w-full py-3.5 px-4"
+          class="input input-primary w-full py-3.5 px-4"
           multiple
         />
         <label class="label">
