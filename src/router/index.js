@@ -4,7 +4,11 @@ import HalamanCariKerja from '../views/HalamanCariKerja.vue'
 import HalamanFavorit from '../views/HalamanFavorit.vue'
 import HalamanLogin from '../views/HalamanLogin.vue'
 import HalamanDaftar from '../views/HalamanDaftar.vue'
-import HalamanRegister from '../views/HalamanRegister.vue'
+import Berkas from '../components/register/Berkas.vue'
+import DataDiri from '../components/register/DataDiri.vue'
+import MediaSosial from '../components/register/MediaSosial.vue'
+import RiwayatPekerjaan from '../components/register/RiwayatPekerjaan.vue'
+import Sukses from '../components/register/Sukses.vue'
 import HalamanProfil from '../views/HalamanProfil.vue'
 import HalamanJobDescription from '../views/HalamanJobDescription.vue'
 import HalamanNotFound from '../views/NotFound.vue'
@@ -55,15 +59,29 @@ const router = createRouter({
       component: HalamanProfil
     },
     {
-      path: '/login1',
-      name: 'FormLogin',
-      component: FormLogin
+      path: '/lengkapi-data-diri',
+      name: 'DataDiri',
+      component: DataDiri
     },
-
     {
-      path: '/data-diri',
-      name: 'HalamanRegister',
-      component: HalamanRegister
+      path: '/lengkapi-berkas',
+      name: 'Berkas',
+      component: Berkas
+    },
+    {
+      path: '/lengkapi-media-sosial',
+      name: 'MediaSosial',
+      component: MediaSosial
+    },
+    {
+      path: '/lengkapi-riwayat-pekerjaan',
+      name: 'RiwayatPekerjaan',
+      component: RiwayatPekerjaan
+    },
+    {
+      path: '/sukses',
+      name: 'Sukses',
+      component: Sukses
     },
     {
       path: '/loading',
