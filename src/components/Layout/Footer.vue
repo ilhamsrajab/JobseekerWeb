@@ -17,7 +17,25 @@
             Rancabang Estate, Jl. Rancabango, Perumahan, Kec. Tarogong Kaler,
             Kabupaten Garut, Jawa Barat 44151
           </p>
-          <p class="opacity-60">(0262) 431000</p>
+          <a
+            class="
+              opacity-60
+              flex flex-row
+              items-center
+              cursor-pointer
+              hover:opacity-80
+              transition-all
+              duration-200
+              w-36
+            "
+            href="tel:+0262431000"
+          >
+            <Icon
+              icon="fluent:call-24-filled"
+              :inline="true"
+              class="mr-1"
+            />(0262) 431000</a
+          >
         </div>
         <!-- perusahaan -->
         <div class="w-full sm:w-1/5 flex flex-col space-y-4 mx-6 md:mx-4">

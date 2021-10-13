@@ -81,25 +81,25 @@
                   md:text-base
                 "
               >
-                <button-tab
+                <ButtonTab
                   @click="setSelectedTab('data-diri')"
                   :mode="dataDiriButtonMode"
-                  >Data Diri</button-tab
+                  >Data Diri</ButtonTab
                 >
-                <button-tab
+                <ButtonTab
                   @click="setSelectedTab('media-sosial')"
                   :mode="mediaSosialButtonMode"
-                  >Media Sosial</button-tab
+                  >Media Sosial</ButtonTab
                 >
-                <button-tab
+                <ButtonTab
                   @click="setSelectedTab('berkas')"
                   :mode="berkasButtonMode"
-                  >Berkas</button-tab
+                  >Berkas</ButtonTab
                 >
-                <button-tab
+                <ButtonTab
                   @click="setSelectedTab('riwayat-pekerjaan')"
                   :mode="riwayatPekerjaanButtonMode"
-                  >Riwayat Pekerjaan</button-tab
+                  >Riwayat Pekerjaan</ButtonTab
                 >
               </div>
               <div
