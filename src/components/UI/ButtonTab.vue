@@ -1,14 +1,5 @@
 <template>
-  <button
-    class="
-      tabActive
-
-    "
-    :type="type"
-    :class="mode"
-  >
-    <slot></slot>
-  </button>
+  <button class="tabActive" :type="type" :class="mode"></button>
 </template>
 
 <script>

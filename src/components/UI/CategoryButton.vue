@@ -15,7 +15,15 @@
       transition-all
       duration-200
     "
+    :type="type"
+    :class="mode"
   >
-    Kategori
+    <slot></slot>
   </button>
 </template>
+
+<script>
+export default {
+  props: ["type", "mode"],
+};
+</script>

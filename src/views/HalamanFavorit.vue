@@ -41,11 +41,15 @@
               "
             >
               <div class="space-x-2 inline-flex">
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
+                <CategoryButton :mode="kategoriChef">Chef</CategoryButton>
+                <CategoryButton :mode="kategoriDriver">Driver</CategoryButton>
+                <CategoryButton :mode="kategoriJasa">Jasa</CategoryButton>
+                <CategoryButton :mode="kategoriPendidikan"
+                  >Pendidikan</CategoryButton
+                >
+                <CategoryButton :mode="kategoriTeknologi"
+                  >Teknologi</CategoryButton
+                >
               </div>
             </div>
 

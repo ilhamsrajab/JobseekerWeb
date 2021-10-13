@@ -39,7 +39,7 @@
           <img
             src="../../assets/images/logo/BursaKerjaLogomark_Black.svg"
             alt=""
-            class="xs:h-6 sm:h-8"
+            class="xs:h-4 sm:h-6"
           />
         </a>
       </div>
