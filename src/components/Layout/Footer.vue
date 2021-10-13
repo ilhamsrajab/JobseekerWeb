@@ -5,36 +5,113 @@
         class="w-full pt-12 flex flex-col sm:flex-row space-y-2 justify-start"
       >
         <div class="w-full sm:w-4/5 flex flex-col space-y-4">
-          <!-- logo footer -->
-          <a href="/">
+          <router-link :to="{ name: 'HalamanHome' }" class="w-40">
             <img
               src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
               alt=""
               class="h-8"
             />
-          </a>
+          </router-link>
+          <!-- logo footer -->
           <p class="opacity-60">
             Rancabang Estate, Jl. Rancabango, Perumahan, Kec. Tarogong Kaler,
             Kabupaten Garut, Jawa Barat 44151
           </p>
           <p class="opacity-60">(0262) 431000</p>
         </div>
-        <div class="w-full sm:w-1/5 flex flex-col space-y-4">
-          <a class="opacity-60 flex flex-row items-center"
-            ><Icon
-              icon="akar-icons:facebook-fill"
-              :inline="true"
-              class="mr-2"
-            />Facebook</a
+        <!-- media sosial -->
+        <div class="w-full sm:w-1/5 flex flex-col space-y-4 mx-2">
+          <span class="font-medium opacity-80 border-b"> Perusahaan </span>
+          <a
+            class="
+              opacity-60
+              flex flex-row
+              items-center
+              cursor-pointer
+              hover:opacity-80
+              transition-all
+              duration-200
+            "
+            >Facebook</a
           >
-          <a class="opacity-60 flex flex-row items-center"
+          <a
+            class="
+              opacity-60
+              flex flex-row
+              items-center
+              cursor-pointer
+              hover:opacity-80
+              transition-all
+              duration-200
+            "
             ><Icon
               icon="akar-icons:twitter-fill"
               :inline="true"
               class="mr-2"
             />Twitter</a
           >
-          <a class="opacity-60 flex flex-row items-center"
+          <a
+            class="
+              opacity-60
+              flex flex-row
+              items-center
+              cursor-pointer
+              hover:opacity-80
+              transition-all
+              duration-200
+            "
+            ><Icon
+              icon="akar-icons:instagram-fill"
+              :inline="true"
+              class="mr-2"
+            />Instagram</a
+          >
+        </div>
+        <!-- media sosial -->
+        <div class="w-full sm:w-1/5 flex flex-col space-y-4 mx-2">
+          <span class="font-medium opacity-80 border-b"> Media Sosial </span>
+          <a
+            class="
+              opacity-60
+              flex flex-row
+              items-center
+              cursor-pointer
+              hover:opacity-80
+              transition-all
+              duration-200
+            "
+            ><Icon
+              icon="akar-icons:facebook-fill"
+              :inline="true"
+              class="mr-2"
+            />Facebook</a
+          >
+          <a
+            class="
+              opacity-60
+              flex flex-row
+              items-center
+              cursor-pointer
+              hover:opacity-80
+              transition-all
+              duration-200
+            "
+            ><Icon
+              icon="akar-icons:twitter-fill"
+              :inline="true"
+              class="mr-2"
+            />Twitter</a
+          >
+          <a
+            class="
+              opacity-60
+              flex flex-row
+              items-center
+              cursor-pointer
+              hover:opacity-80
+              transition-all
+              duration-200
+            "
             ><Icon
               icon="akar-icons:instagram-fill"
               :inline="true"
