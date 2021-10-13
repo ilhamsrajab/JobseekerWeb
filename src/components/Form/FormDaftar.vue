@@ -1,5 +1,45 @@
 <template>
   <div id="login" class="flex flex-col">
+    <!-- logo and back btn -->
+    <div class="flex justify-between">
+      <!-- icon kembali -->
+      <div id="iconBack" class="flex self-start">
+        <!-- icon -->
+        <router-link :to="{ name: 'HalamanLogin' }">
+          <button>
+            <Icon
+              icon="fluent:arrow-left-12-filled"
+              class="
+                rounded-full
+                h-8
+                w-8
+                p-1.5
+                dark:text-white dark:hover:text-merahDark
+                hover:bg-accent
+                transition-all
+                duration-200
+              "
+            />
+          </button>
+        </router-link>
+      </div>
+      <div></div>
+      <!-- logo -->
+      <div>
+        <!-- logo dark mode -->
+        <img
+          src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
+          alt=""
+          class="w-40"
+        />
+        <!-- logo light mode -->
+        <!-- <img
+              src="../assets/images/logo/BursaKerjaLogo.svg"
+              alt=""
+              class="w-40"
+            /> -->
+      </div>
+    </div>
     <!-- daftar form -->
     <div class="formLogin">
       <p
@@ -62,11 +102,11 @@
             required
             v-model.trim="password"
           />
-          <label class="label" v-if="!formIsValid">
+          <!-- <label class="label" v-if="!formIsValid">
             <p href="#" class="label-text-alt text-red-500 dark:text-red-400">
               * Tolong isikan email yang valid dan password minimal 8 huruf
             </p>
-          </label>
+          </label> -->
         </div>
 
         <!-- konfirmasi password -->
@@ -98,6 +138,7 @@
         </div>
 
         <!-- btn daftar -->
+
         <div>
           <button class="btn btn-primary my-6">Daftar</button>
         </div>

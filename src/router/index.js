@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HalamanHome from '../views/HalamanHome.vue'
 import HalamanCariKerja from '../views/HalamanCariKerja.vue'
 import HalamanFavorit from '../views/HalamanFavorit.vue'
-import HalamanLogin from '../views/HalamanLogin.vue'
+import HalamanLogin from '../components/UI/HalamanLogin.vue'
+import HalamanDaftar from '../components/UI/HalamanDaftar.vue'
 import HalamanRegister from '../views/HalamanRegister.vue'
 import HalamanProfil from '../views/HalamanProfil.vue'
 import HalamanJobDescription from '../views/HalamanJobDescription.vue'
@@ -22,7 +23,7 @@ const router = createRouter({
       // meta: { requiredAuth: true }
     },
     {
-      path: '/carikerja',
+      path: '/loker',
       name: 'HalamanCariKerja',
       component: HalamanCariKerja,
       // meta: { requiredAuth: true }
@@ -44,22 +45,23 @@ const router = createRouter({
       component: HalamanLogin
     },
     {
+      path: '/daftar',
+      name: 'HalamanDaftar',
+      component: HalamanDaftar
+    },
+    {
       path: '/profil',
       name: 'HalamanProfil',
       component: HalamanProfil
     },
     {
-      path: '/login',
+      path: '/login1',
       name: 'FormLogin',
       component: FormLogin
     },
+
     {
-      path: '/login',
-      name: 'FormDaftar',
-      component: FormDaftar
-    },
-    {
-      path: '/daftar',
+      path: '/data-diri',
       name: 'HalamanRegister',
       component: HalamanRegister
     },

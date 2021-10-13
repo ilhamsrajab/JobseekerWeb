@@ -1,4 +1,23 @@
 <template>
+  <!-- logo and back btn -->
+  <div class="flex justify-end">
+    <!-- logo -->
+    <div>
+      <!-- logo dark mode -->
+      <img
+        src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
+        alt=""
+        class="w-40"
+      />
+      <!-- logo light mode -->
+      <!-- <img
+              src="../assets/images/logo/BursaKerjaLogo.svg"
+              alt=""
+              class="w-40"
+            /> -->
+    </div>
+  </div>
+  <!-- Login -->
   <div id="login" class="flex flex-col">
     <div
       class="bg-merah text-merahDark px-6 py-4 rounded-large mt-4 -mb-4 text-sm"
@@ -145,15 +164,37 @@
       <!-- </span> -->
     </div>
   </div>
+
+  <!-- Daftar -->
+  <!-- <signUp id="signUp" v-show="signUp" /> -->
+
+  <span
+    class="
+      font-bold
+      text-primary
+      dark:text-accent
+      flex
+      justify-center
+      my-6
+      text-sm
+    "
+  >
+    <router-link :to="{ name: 'HalamanDaftar' }">
+      <button class="font-bold">Daftar Sekarang ></button>
+    </router-link>
+  </span>
 </template>
 
 <script>
+import VueCarousel from "@chenfengyuan/vue-carousel";
 import { Icon } from "@iconify/vue";
 
 export default {
   name: "Login",
+
   components: {
     Icon,
+    VueCarousel,
   },
   data() {
     return {
@@ -161,6 +202,11 @@ export default {
       password: "",
       isLoading: false,
       error: null,
+      data: [
+        "<div class='text-center mb-10 font-medium'>Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.</div>",
+        "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.</div>",
+        "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>",
+      ],
     };
   },
   methods: {
@@ -185,3 +231,39 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.kotak {
+  height: 650px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.bagiankanan::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.bagiankanan {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@media only screen and (max-width: 339px) {
+  .kotak {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+  .kotak {
+    height: 550px;
+  }
+}
+</style>

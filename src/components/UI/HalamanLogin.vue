@@ -244,75 +244,19 @@
           xs:order-1
         "
       >
-        <!-- logo and back btn -->
-        <div class="flex justify-between">
-          <!-- icon kembali -->
-          <div id="iconBack" class="flex self-start" v-show="signUp">
-            <!-- icon -->
-            <button v-on:Click="loginSekarang">
-              <Icon
-                icon="fluent:arrow-left-12-filled"
-                class="
-                  rounded-full
-                  h-8
-                  w-8
-                  p-1.5
-                  dark:text-white dark:hover:text-merahDark
-                  hover:bg-accent
-                  transition-all
-                  duration-200
-                "
-              />
-            </button>
-          </div>
-          <div></div>
-          <!-- logo -->
-          <div>
-            <!-- logo dark mode -->
-            <img
-              src="../assets/images/logo/BursaKerjaLogo_Black.svg"
-              alt=""
-              class="w-40"
-            />
-            <!-- logo light mode -->
-            <!-- <img
-              src="../assets/images/logo/BursaKerjaLogo.svg"
-              alt=""
-              class="w-40"
-            /> -->
-          </div>
-        </div>
         <!-- Login -->
-        <signIn id="signIn" v-show="signIn" />
+        <signIn id="signIn" />
         <!-- daftar -->
 
         <!-- Daftar -->
-        <signUp id="signUp" v-show="signUp" />
-
-        <span
-          class="
-            font-bold
-            text-primary
-            dark:text-accent
-            flex
-            justify-center
-            my-6
-            text-sm
-          "
-          v-show="signIn"
-        >
-          <button class="font-bold" v-on:Click="daftarSekarang">
-            Daftar Sekarang >
-          </button>
-        </span>
+        <!-- <signUp id="signUp" v-show="signUp" /> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import signIn from "../components/Form/FormLogin.vue";
-import signUp from "../components/Form/FormDaftar.vue";
+import signIn from "../Form/FormLogin.vue";
 import VueCarousel from "@chenfengyuan/vue-carousel";
 import { Icon } from "@iconify/vue";
 
@@ -320,7 +264,6 @@ export default {
   components: {
     Icon,
     signIn,
-    signUp,
     VueCarousel,
   },
   data() {
@@ -330,20 +273,7 @@ export default {
         "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.</div>",
         "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>",
       ],
-      signIn: true,
-      signUp: false,
-      isActive: false,
     };
-  },
-  methods: {
-    daftarSekarang() {
-      this.signIn = false;
-      this.signUp = true;
-    },
-    loginSekarang() {
-      this.signIn = true;
-      this.signUp = false;
-    },
   },
 };
 </script>
