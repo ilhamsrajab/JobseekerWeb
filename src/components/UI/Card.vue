@@ -22,13 +22,11 @@
             src="https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"
             alt="Logo"
             class="
-              lg:w-20 lg:h-20
-              md:w-20 md:h-full
               sm:w-20 sm:h-20
               xs:w-12 xs:h-12
               object-cover
               lg:rounded-large
-              md:rounded-lg
+              md:rounded-large
               sm:rounded-large
               xs:rounded-lg
               shadow-xl
@@ -61,19 +59,21 @@
 
         <!-- button bookmark -->
         <div class="">
-          <button>
-            <Icon
-              icon="fluent:bookmark-add-24-filled"
-              :inline="true"
-              class="
-                text-3xl
-                hover:text-merah
-                dark:hover:text-merah dark:text-white dark:text-opacity-80
-                transition-all
-                duration-200
-              "
-            />
-          </button>
+          <router-link :to="{ name: 'HalamanFavorit' }">
+            <button>
+              <Icon
+                icon="fluent:bookmark-add-24-filled"
+                :inline="true"
+                class="
+                  text-3xl
+                  hover:text-merah
+                  dark:hover:text-merah dark:text-white dark:text-opacity-80
+                  transition-all
+                  duration-200
+                "
+              />
+            </button>
+          </router-link>
         </div>
       </div>
 
@@ -88,20 +88,7 @@
               Rp. 1.000.000 - Rp. 4.000.000
             </div>
           </div>
-          <div
-            class="
-              text-xs
-              bg-hijau
-              text-hijauDark
-              p-2
-              rounded-full
-              w-20
-              text-center
-              font-semibold
-            "
-          >
-            Full Time
-          </div>
+          <div class="badge-fulltime">Full Time</div>
         </div>
 
         <div

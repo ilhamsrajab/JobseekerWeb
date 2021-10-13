@@ -4,7 +4,7 @@
       <div
         class="w-full pt-12 flex flex-col sm:flex-row space-y-2 justify-start"
       >
-        <div class="w-full sm:w-4/5 flex flex-col space-y-4">
+        <div class="w-full sm:w-4/5 flex flex-col space-y-4 mr-6 md:mr-4">
           <router-link :to="{ name: 'HalamanHome' }" class="w-40">
             <img
               src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
@@ -19,9 +19,10 @@
           </p>
           <p class="opacity-60">(0262) 431000</p>
         </div>
-        <!-- media sosial -->
-        <div class="w-full sm:w-1/5 flex flex-col space-y-4 mx-2">
-          <span class="font-medium opacity-80 border-b"> Perusahaan </span>
+        <!-- perusahaan -->
+        <div class="w-full sm:w-1/5 flex flex-col space-y-4 mx-6 md:mx-4">
+          <span class="font-medium opacity-80"> Perusahaan </span>
+          <hr />
           <a
             class="
               opacity-60
@@ -32,44 +33,13 @@
               transition-all
               duration-200
             "
-            >Facebook</a
-          >
-          <a
-            class="
-              opacity-60
-              flex flex-row
-              items-center
-              cursor-pointer
-              hover:opacity-80
-              transition-all
-              duration-200
-            "
-            ><Icon
-              icon="akar-icons:twitter-fill"
-              :inline="true"
-              class="mr-2"
-            />Twitter</a
-          >
-          <a
-            class="
-              opacity-60
-              flex flex-row
-              items-center
-              cursor-pointer
-              hover:opacity-80
-              transition-all
-              duration-200
-            "
-            ><Icon
-              icon="akar-icons:instagram-fill"
-              :inline="true"
-              class="mr-2"
-            />Instagram</a
+            >Pasang iklan lowongan kerja</a
           >
         </div>
         <!-- media sosial -->
-        <div class="w-full sm:w-1/5 flex flex-col space-y-4 mx-2">
-          <span class="font-medium opacity-80 border-b"> Media Sosial </span>
+        <div class="w-full sm:w-1/5 flex flex-col space-y-4 ml-6 md:ml-4">
+          <span class="font-medium opacity-80"> Media Sosial </span>
+          <hr />
           <a
             class="
               opacity-60

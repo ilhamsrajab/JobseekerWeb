@@ -46,16 +46,6 @@
                 <CategoryButton />
                 <CategoryButton />
                 <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
-                <CategoryButton />
               </div>
             </div>
 

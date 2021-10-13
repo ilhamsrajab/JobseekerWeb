@@ -14,6 +14,22 @@
   @apply bg-neutral border border-neutral text-neutral-content rounded-badge h-6 hover:bg-gray-800 dark:text-neutral dark:bg-accent dark:hover:bg-accentDark transition-all duration-200;
 }
 
+.badge-fulltime {
+  @apply text-xs bg-hijau text-hijauDark p-2 rounded-full w-20 text-center font-semibold;
+}
+
+.badge-parttime {
+  @apply text-xs bg-merah text-merahDark p-2 rounded-full w-20 text-center font-semibold;
+}
+
+.badge-magang {
+  @apply text-xs bg-kuning text-kuningDark p-2 rounded-full w-20 text-center font-semibold;
+}
+
+.badge-kontrak {
+  @apply text-xs bg-orange text-orangeDark p-2 rounded-full w-20 text-center font-semibold;
+}
+
 /* label */
 .label-text {
   @apply text-sm mb-2 font-semibold dark:text-white dark:text-opacity-80;
@@ -96,6 +112,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .btnSidebarDisable {
   @apply flex items-center my-1 py-4 px-4 text-neutral rounded-large bg-opacity-0 dark:bg-opacity-0  dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20 hover:bg-gray-100 hover:text-opacity-80 transition-all duration-200;
 }
+
+
 
 /* steps */
 .step {
