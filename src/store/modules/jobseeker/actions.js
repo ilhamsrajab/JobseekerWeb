@@ -3,11 +3,13 @@ export default {
         const jobSeekerID = context.rootGetters.id;
         const token = context.rootGetters.token;
         const response = await fetch(
-          `http://127.0.0.1:8000/api/get_job_seeker_data_diri`,
+          `http://127.0.0.1:8000/api/get_job_seeker_data_diri`, 
           {
+            method: get('/sanctum/csrf-cookie'),
             headers: {
+                'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + token
-            }
+            },
           }
         );
         const responseData = await response.json();
