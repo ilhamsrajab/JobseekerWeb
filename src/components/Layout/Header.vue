@@ -39,7 +39,7 @@
           <img
             src="../../assets/images/logo/BursaKerjaLogomark_Black.svg"
             alt=""
-            class="xs:h-4 sm:h-6"
+            class="xs:h-5 sm:h-6"
           />
         </a>
       </div>
@@ -220,7 +220,8 @@
             dropdown-content
             bg-white
             rounded-box
-            w-96
+            sm:w-96
+            xs:w-80
             text-sm
             overflow-y-auto
             dark:bg-gray-800 dark:border-gray-900 dark:text-white

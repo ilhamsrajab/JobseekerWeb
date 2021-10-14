@@ -27,7 +27,7 @@
 
         <!-- main page -->
         <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
-          <div class="container flex-grow mx-auto sm:m-8 xs:m-4">
+          <div class="container flex-grow mx-auto sm:my-8 xs:w-full xs:my-4">
             <!-- kategori -->
             <div
               class="
@@ -35,7 +35,8 @@
                 sm:mb-10
                 xs:mb-6
                 sm:mx-8
-                xl:mx-0
+                xl:mx-8
+                2xl:mx-0
                 no-scrollbar
                 rounded-lg
               "
@@ -54,7 +55,9 @@
             </div>
 
             <!-- filter button -->
-            <div class="mb-5 sm:m-8 xs:m-1 xl:mx-0 flex justify-between">
+            <div
+              class="mb-5 sm:m-8 xs:m-1 xl:mx-10 2xl:mx-0 flex justify-between"
+            >
               <span class="font-semibold dark:text-white dark:text-opacity-80"
                 >Cari Kerja</span
               >
@@ -69,12 +72,13 @@
             <div
               class="
                 grid
-                xl:grid-cols-3
+                2xl:grid-cols-3
+                xl:grid-cols-2
                 md:grid-cols-2
                 xs:grid-cols-1 xs:gap-6
                 md:gap-6
                 lg:gap-8
-                xl:gap-10
+                xl:gap-8
                 2xl:m-0
                 sm:m-8
                 xs:mx-1 xs:mt-6

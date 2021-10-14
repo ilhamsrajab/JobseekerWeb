@@ -44,21 +44,17 @@
               >
                 Kategori pekerjaan
               </span>
-              <button
-                class="
-                  badge
-
-                "
-              >
-                Lihat lainnya
-              </button>
+              <router-link :to="{ name: 'HalamanCariKerja' }">
+                <button class="badge">Lihat lainnya</button>
+              </router-link>
             </div>
             <div
               class="
                 grid grid-cols-1
                 md:grid-cols-2
                 lg:grid-cols-3
-                xl:grid-cols-5 xl:gap-8
+                xl:grid-cols-3 xl:gap-6
+                2xl:grid-cols-5 2xl:gap-8
                 lg:gap-6
                 xs:gap-4
                 mt-5
@@ -71,7 +67,8 @@
                   bg-teknologi bg-cover
                   md:col-span-2
                   lg:col-span-2
-                  xl:col-span-1
+                  xl:col-span-2
+                  2xl:col-span-1
                 "
               >
                 <div
