@@ -209,6 +209,7 @@
         <ul
           tabindex="1"
           class="
+            h-96
             top-6
             right-0
             my-4
@@ -221,10 +222,11 @@
             rounded-box
             w-96
             text-sm
+            overflow-y-auto
             dark:bg-gray-800 dark:border-gray-900 dark:text-white
           "
         >
-          <Notifikasi>
+          <Notifikasi class="font-semibold">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
             possimus fugiat blanditiis facilis reiciendis esse, nesciunt commodi
             itaque exercitationem et, fuga temporibus, quos iusto magni.
@@ -239,10 +241,7 @@
             >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit,
             dicta!</Notifikasi
           >
-          <Notifikasi
-            >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
-            tempora recusandae dolore. Numquam, quidem?</Notifikasi
-          >
+
           <div class="my-2 bg-gray-100 dark:bg-gray-700 h-0.5" />
 
           <li

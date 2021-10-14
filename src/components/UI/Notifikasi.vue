@@ -37,9 +37,9 @@
       <span
         class="
           text-sm
-          font-semibold
           xs:text-xs
-          text-opacity-60 text-purple-400
+          text-gray-700 text-opacity-60
+          dark:text-purple-400
           mt-4
         "
         >Waktu</span
