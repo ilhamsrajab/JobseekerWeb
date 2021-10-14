@@ -14,7 +14,8 @@
                 h-8
                 w-8
                 p-1.5
-                dark:text-white dark:hover:text-merahDark
+                dark:text-white
+                dark:hover:text-merahDark
                 hover:bg-accent
                 transition-all
                 duration-200
@@ -130,7 +131,8 @@
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700 dark:text-white dark:text-opacity-60
+              dark:bg-gray-700
+              dark:text-white dark:text-opacity-60
             "
             required
             v-model.trim="password_confirmation"
@@ -217,22 +219,30 @@ export default {
   },
   data() {
     return {
-      username: "",
-      email: "",
-      password: "",
-      password_confirmation: "",
-      role: "jobseeker",
+      user: {
+        username: "",
+        email: "",
+        password: "",
+        password_confirmation: "",
+        role: "jobseeker",
+      },
     };
   },
   methods: {
-    submitForm() {
-      this.$store.dispatch("register", {
-        username: this.username,
-        email: this.email,
-        password: this.password,
-        password_confirmation: this.password_confirmation,
-        role: this.role,
-      });
+    async submitForm() {
+      this.isLoading = true;
+
+      try {
+        await this.$store.dispatch("auth/register", this.user);
+        // this.$router.replace("/");
+      } catch (err) {
+        this.error = err.message || "Failed tp authenticated, try later.";
+      }
+
+      this.isLoading = false;
+    },
+    handleError() {
+      this.error = null;
     },
   },
 };

@@ -1,5 +1,5 @@
 export default {
-    setJobSeeker(state, payload) {
-        state.jobSeeker = payload;
+    setJobSeeker(state, jobSeeker) {
+        state.jobSeeker = jobSeeker;
     },
 }

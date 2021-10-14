@@ -62,9 +62,10 @@
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700 dark:text-white dark:text-opacity-60
+              dark:bg-gray-700
+              dark:text-white dark:text-opacity-60
             "
-            v-model.trim="email"
+            v-model.trim="user.email"
             required
           />
         </div>
@@ -83,9 +84,10 @@
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700 dark:text-white dark:text-opacity-60
+              dark:bg-gray-700
+              dark:text-white dark:text-opacity-60
             "
-            v-model.trim="password"
+            v-model.trim="user.password"
             required
           />
         </div>
@@ -198,8 +200,10 @@ export default {
   },
   data() {
     return {
-      email: "",
-      password: "",
+      user: {
+        email: "",
+        password: "",
+      },
       isLoading: false,
       error: null,
       data: [
@@ -214,11 +218,8 @@ export default {
       this.isLoading = true;
 
       try {
-        await this.$store.dispatch("auth/login", {
-          email: this.email,
-          password: this.password,
-        });
-        this.$router.replace("/");
+        await this.$store.dispatch("auth/login", this.user);
+        // this.$router.replace("/");
       } catch (err) {
         this.error = err.message || "Failed tp authenticated, try later.";
       }

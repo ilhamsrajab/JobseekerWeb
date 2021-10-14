@@ -1,6 +1,16 @@
 export default {
-    setUser(state, payload) {
-      state.token = payload.token;
-      state.userId = payload.id;
+    SET_USER(state, data) {
+      state.user = data
     }
+    // SET_AUTHENTICATED(state, value) {
+    //     state.authStatus = value
+    // },
+
+    // SET_USER(state, value) {
+    //     state.user = value
+    // },
+
+    // SET_TOKEN(state, value) {
+    //     state.token = value
+    // }
   };
