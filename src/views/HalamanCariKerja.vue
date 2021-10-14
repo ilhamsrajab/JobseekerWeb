@@ -61,12 +61,104 @@
               <span class="font-semibold dark:text-white dark:text-opacity-80"
                 >Cari Kerja</span
               >
-              <button>
-                <Icon
-                  icon="fluent:filter-16-filled"
-                  class="text-2xl dark:text-white dark:text-opacity-80"
-                />
-              </button>
+              <div class="dropdown dropdown-end dropdown-open">
+                <button tabindex="0">
+                  <Icon
+                    icon="fluent:filter-16-filled"
+                    class="
+                      rounded-full
+                      h-8
+                      w-8
+                      p-1.5
+                      roude
+                      hover:bg-accent
+                      transition-all
+                      duration-200
+                      text-2xl
+                      dark:hover:text-merahDark
+                      dark:text-white
+                      dark:text-opacity-80
+                    "
+                  />
+                </button>
+
+                <!-- dropdown -->
+                <ul
+                  tabindex="1"
+                  class="
+                    top-6
+                    right-0
+                    my-4
+                    p-2
+                    shadow-xl
+                    menu
+                    border
+                    dropdown-content
+                    bg-white
+                    rounded-box
+                    sm:w-96
+                    xs:w-80
+                    text-sm
+                    overflow-y-auto
+                    dark:bg-gray-800 dark:border-gray-900 dark:text-white
+                  "
+                >
+                  <li
+                    id="notif"
+                    class="
+                      flex flex-row
+                      sm:px-5 sm:py-3
+                      xs:px-3 xs:py-3
+                      rounded-large
+                      cursor-pointer
+                      dark:text-white
+                      dark:text-opacity-80
+                      dark:hover:bg-opacity-20
+                      hover:bg-gray-100 hover:text-opacity-80
+                      transition-all
+                      duration-200
+                    "
+                  >
+                    <span class="font-semibold">Waktu Kerja</span>
+                  </li>
+                  <li
+                    id="notif"
+                    class="
+                      flex flex-row
+                      sm:px-5 sm:py-3
+                      xs:px-3 xs:py-3
+                      rounded-large
+                      cursor-pointer
+                      dark:text-white
+                      dark:text-opacity-80
+                      dark:hover:bg-opacity-20
+                      hover:bg-gray-100 hover:text-opacity-80
+                      transition-all
+                      duration-200
+                    "
+                  >
+                    <span class="font-semibold">Posisi Kerja</span>
+                  </li>
+                  <li
+                    id="notif"
+                    class="
+                      flex flex-row
+                      sm:px-5 sm:py-3
+                      xs:px-3 xs:py-3
+                      rounded-large
+                      cursor-pointer
+                      dark:text-white
+                      dark:text-opacity-80
+                      dark:hover:bg-opacity-20
+                      hover:bg-gray-100 hover:text-opacity-80
+                      transition-all
+                      duration-200
+                    "
+                  >
+                    <span class="font-semibold">Kisaran Gaji</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div
@@ -88,6 +180,7 @@
               <Card />
               <Card />
               <Card />
+              <Modal />
 
               <CardSkeleton />
               <CardSkeleton />
@@ -109,6 +202,7 @@
 import HalamanProfil from "../views/HalamanProfil.vue";
 import CategoryButton from "../components/UI/CategoryButton.vue";
 import Card from "../components/UI/Card.vue";
+import Modal from "../components/UI/Modal.vue";
 import CardSkeleton from "../components/UI/CardSkeleton.vue";
 import Sidebar from "../components/Layout/Sidebar.vue";
 import Header from "../components/Layout/Header.vue";
@@ -120,6 +214,7 @@ export default {
     HalamanProfil,
     CategoryButton,
     Card,
+    Modal,
     CardSkeleton,
     Sidebar,
     Header,
