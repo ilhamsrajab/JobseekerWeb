@@ -45,11 +45,15 @@
         "
       >
         <!-- gambar -->
+        <!-- gambar -->
         <div class="absolute z-0">
           <img src="../../assets/images/header.svg" alt="" srcset="" />
         </div>
         <div class="xs:text-xl sm:text-3xl font-bold m-5 text-center">
-          Selesai
+          Lengkapi Pernyataan
+        </div>
+        <div class="text-sm font-medium mb-3 text-center">
+          Nama Perusahaan - Posisi
         </div>
         <!-- step progress bar -->
         <ul class="w-full steps xs:my-0 sm:my-5">
@@ -57,17 +61,13 @@
             Data Diri
           </li>
           <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
-            Media Sosial
-          </li>
-          <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
             Berkas
           </li>
           <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
-            Riwayat Pekerjaan
+            Pernyataan
           </li>
-
-          <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
-            Selesai
+          <li data-content="" class="step sm:text-sm xs:text-2xs">
+            Kirim Lamaran
           </li>
         </ul>
       </div>
@@ -93,50 +93,48 @@
         "
       >
         <form class="form-control" action="" method="POST">
-          <h2
-            class="
-              text-center
-              font-bold
-              xs:text-lg
-              sm:text-2xl
-              mt-10
-              text-neutral
-              dark:text-white dark:text-opacity-80
-            "
-          >
-            Data Anda telah tersimpan dengan aman, kami akan memverifikasi akun
-            Anda.
-          </h2>
-          <div
-            class="
-              flex
-              mask mask-circle
-              bg-accent
-              m-6
-              w-1/2
-              justify-center
-              items-center
-              mx-auto
-              transition-all
-              duration-200
-            "
-          >
-            <img
-              src="../../assets/images/hand-s.svg"
-              class="animate-bounce5 w-full"
-              draggable="false"
-              alt="hand"
-              srcset=""
-            />
+          <!-- persetujuan -->
+          <div class="mt-4">
+            <label class="label font-semibold" for="instagram">
+              <span class="label-text"
+                >Pernyataan Kesanggupan dan Komitmen</span
+              >
+            </label>
+            <div class="flex items-start mt-8">
+              <div class="flex items-center h-5">
+                <input
+                  id="comments"
+                  name="comments"
+                  type="checkbox"
+                  class="checkbox"
+                />
+              </div>
+              <div class="ml-3 text-sm">
+                <label
+                  for="comments"
+                  class="
+                    font-normal
+                    text-neutral
+                    dark:text-white dark:text-opacity-60
+                  "
+                  >Saya menyatakan bahwa data di atas adalah
+                  <strong>benar data pribadi saya</strong>, jika ada kesalahan
+                  saya siap menanggung semua akibatnya.</label
+                >
+              </div>
+            </div>
           </div>
         </form>
 
         <div>
-          <!-- button selesai -->
-          <router-link :to="{ name: 'HalamanLogin' }">
-            <button class="btn btn-primary mt-6 sm:mb-3 xs:mb-5" type="submit">
-              Selesai
-            </button>
+          <!-- btn selanjutnya -->
+          <router-link :to="{ name: 'DaftarKirimLamaran' }">
+            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
+          </router-link>
+
+          <!-- btn kembali -->
+          <router-link :to="{ name: 'DaftarBerkas' }">
+            <button class="btn btn-outline w-full mb-3">Kembali</button>
           </router-link>
         </div>
       </div>
@@ -148,7 +146,7 @@
 import { Icon } from "@iconify/vue";
 
 export default {
-  name: "Sukses",
+  name: "DaftarPernyataan",
   components: {
     Icon,
   },
@@ -193,9 +191,6 @@ export default {
   }
 
   .steps .step.step-accent::after {
-    background: #ffbeb2;
-  }
-  .steps .step.step-accent::before {
     background: #ffbeb2;
   }
 }

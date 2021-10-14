@@ -51,22 +51,23 @@
         <div class="xs:text-xl sm:text-3xl font-bold m-5 text-center">
           Lengkapi Berkas
         </div>
+        <div class="text-sm font-medium mb-3 text-center">
+          Nama Perusahaan - Posisi
+        </div>
         <!-- step progress bar -->
         <ul class="w-full steps xs:my-0 sm:my-5">
           <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
             Data Diri
           </li>
           <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
-            Media Sosial
-          </li>
-          <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
             Berkas
           </li>
           <li data-content="" class="step sm:text-sm xs:text-2xs">
-            Riwayat Pekerjaan
+            Pernyataan
           </li>
-
-          <li data-content="" class="step sm:text-sm xs:text-2xs">Selesai</li>
+          <li data-content="" class="step sm:text-sm xs:text-2xs">
+            Kirim Lamaran
+          </li>
         </ul>
       </div>
       <div
@@ -233,31 +234,13 @@
 
         <div>
           <!-- btn selanjutnya -->
-          <router-link :to="{ name: 'RiwayatPekerjaan' }">
+          <router-link :to="{ name: 'DaftarPernyataan' }">
             <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
           </router-link>
 
           <!-- btn kembali -->
-          <router-link :to="{ name: 'MediaSosial' }">
+          <router-link :to="{ name: 'DaftarDataDiri' }">
             <button class="btn btn-outline w-full mb-3">Kembali</button>
-          </router-link>
-
-          <!-- btn skip -->
-          <router-link :to="{ name: 'RiwayatPekerjaan' }">
-            <button
-              class="
-                btn
-                w-full
-                mt-3
-                mb-6
-                dark:text-white dark:text-opacity-60
-                hover:text-opacity-80
-                transition-all
-                duration-200
-              "
-            >
-              Lewati >
-            </button>
           </router-link>
         </div>
       </div>

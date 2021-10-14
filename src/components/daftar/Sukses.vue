@@ -45,11 +45,15 @@
         "
       >
         <!-- gambar -->
+        <!-- gambar -->
         <div class="absolute z-0">
           <img src="../../assets/images/header.svg" alt="" srcset="" />
         </div>
         <div class="xs:text-xl sm:text-3xl font-bold m-5 text-center">
-          Selesai
+          Lengkapi Berkas
+        </div>
+        <div class="text-sm font-medium mb-3 text-center">
+          Nama Perusahaan - Posisi
         </div>
         <!-- step progress bar -->
         <ul class="w-full steps xs:my-0 sm:my-5">
@@ -57,17 +61,13 @@
             Data Diri
           </li>
           <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
-            Media Sosial
-          </li>
-          <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
             Berkas
           </li>
           <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
-            Riwayat Pekerjaan
+            Pernyataan
           </li>
-
           <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
-            Selesai
+            Kirim Lamaran
           </li>
         </ul>
       </div>
@@ -104,8 +104,7 @@
               dark:text-white dark:text-opacity-80
             "
           >
-            Data Anda telah tersimpan dengan aman, kami akan memverifikasi akun
-            Anda.
+            Selamat, lamaran Anda sudah dikirim. Tunggu notifikasi selanjutnya.
           </h2>
           <div
             class="
@@ -133,7 +132,7 @@
 
         <div>
           <!-- button selesai -->
-          <router-link :to="{ name: 'HalamanLogin' }">
+          <router-link :to="{ name: 'HalamanHome' }">
             <button class="btn btn-primary mt-6 sm:mb-3 xs:mb-5" type="submit">
               Selesai
             </button>
@@ -148,7 +147,7 @@
 import { Icon } from "@iconify/vue";
 
 export default {
-  name: "Sukses",
+  name: "DaftarKirimLamaran",
   components: {
     Icon,
   },

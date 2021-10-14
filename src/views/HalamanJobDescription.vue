@@ -3,6 +3,24 @@
     x-data="{ sidebarOpen: false, darkMode: false }"
     :class="{ dark: darkMode }"
   >
+    <!-- </router-link> -->
+    <!-- modal -->
+    <input type="checkbox" id="my-modal-2" class="modal-toggle" />
+    <!-- isi modal -->
+    <div class="modal overflow-y-auto">
+      <div class="modal-box my-auto">
+        <p>Apakah Anda yakin ingin mendaftar pekerjaan ini?</p>
+        <div class="modal-action justify-end">
+          <label for="my-modal-2" class="btn btn-outline w-40">Tidak</label>
+          <div class="w-40">
+            <router-link :to="{ name: 'DaftarDataDiri' }">
+              <label for="my-modal-2" class="btn btn-primary w-40">Yakin</label>
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of modal -->
     <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
       <div
         :class="sidebarOpen ? 'block' : 'hidden'"
@@ -352,7 +370,10 @@
                   xs:w-full
                 "
               >
-                <button class="btn btn-primary flex-auto">Daftar</button>
+                <label for="my-modal-2" class="btn btn-primary flex-auto"
+                  >Daftar</label
+                >
+
                 <button
                   class="btn btn-accent text-xl flex-1 text-neutral"
                   title="Buka di tab baru"

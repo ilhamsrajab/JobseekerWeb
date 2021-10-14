@@ -51,48 +51,20 @@
         <div class="xs:text-xl sm:text-3xl font-bold m-5 text-center">
           Lengkapi Data Diri
         </div>
+        <div class="text-sm font-medium mb-3 text-center">
+          Nama Perusahaan - Posisi
+        </div>
         <!-- step progress bar -->
         <ul class="w-full steps xs:my-0 sm:my-5">
-          <li
-            data-content=""
-            class="step step-accent sm:text-sm xs:text-2xs"
-            :class="step1Classes"
-            @click="stepSelected(currentStep)"
-          >
+          <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
             Data Diri
           </li>
-          <li
-            data-content=""
-            class="step sm:text-sm xs:text-2xs"
-            :class="step2Classes"
-            @click="stepSelected(currentStep)"
-          >
-            Media Sosial
+          <li data-content="" class="step sm:text-sm xs:text-2xs">Berkas</li>
+          <li data-content="" class="step sm:text-sm xs:text-2xs">
+            Pernyataan
           </li>
-          <li
-            data-content=""
-            class="step sm:text-sm xs:text-2xs"
-            :class="step3Classes"
-            @click="stepSelected(currentStep)"
-          >
-            Berkas
-          </li>
-          <li
-            data-content=""
-            class="step sm:text-sm xs:text-2xs"
-            :class="step4Classes"
-            @click="stepSelected(currentStep)"
-          >
-            Riwayat Pekerjaan
-          </li>
-
-          <li
-            data-content=""
-            class="step sm:text-sm xs:text-2xs"
-            :class="step5Classes"
-            @click="stepSelected(currentStep)"
-          >
-            Selesai
+          <li data-content="" class="step sm:text-sm xs:text-2xs">
+            Kirim Lamaran
           </li>
         </ul>
       </div>
@@ -500,7 +472,7 @@
 
         <div>
           <!-- btn selanjutnya -->
-          <router-link :to="{ name: 'MediaSosial' }">
+          <router-link :to="{ name: 'DaftarBerkas' }">
             <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
           </router-link>
         </div>

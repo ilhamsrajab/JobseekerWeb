@@ -28,17 +28,17 @@
       <!-- logo -->
       <div>
         <!-- logo dark mode -->
-        <img
+        <!-- <img
           src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
           alt=""
           class="w-40"
-        />
+        /> -->
         <!-- logo light mode -->
-        <!-- <img
-              src="../assets/images/logo/BursaKerjaLogo.svg"
-              alt=""
-              class="w-40"
-            /> -->
+        <img
+          src="../../assets/images/logo/BursaKerjaLogo.svg"
+          alt=""
+          class="w-40"
+        />
       </div>
     </div>
     <!-- daftar form -->
