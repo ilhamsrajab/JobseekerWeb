@@ -61,12 +61,30 @@
               <span class="font-semibold dark:text-white dark:text-opacity-80"
                 >Favorit</span
               >
-              <button>
-                <Icon
-                  icon="fluent:filter-16-filled"
-                  class="text-2xl dark:text-white dark:text-opacity-80"
-                />
-              </button>
+              <div class="dropdown dropdown-end">
+                <button tabindex="0">
+                  <Icon
+                    icon="fluent:filter-16-filled"
+                    class="
+                      rounded-full
+                      h-8
+                      w-8
+                      p-1.5
+                      roude
+                      hover:bg-accent
+                      transition-all
+                      duration-200
+                      text-2xl
+                      dark:hover:text-merahDark
+                      dark:text-white
+                      dark:text-opacity-80
+                    "
+                  />
+                </button>
+
+                <!-- dropdown -->
+                <Filter />
+              </div>
             </div>
 
             <div
@@ -103,6 +121,7 @@
 import HalamanProfil from "../views/HalamanProfil.vue";
 import CategoryButton from "../components/UI/CategoryButton.vue";
 import Card from "../components/UI/Card.vue";
+import Filter from "../components/UI/Filter.vue";
 import CardSkeleton from "../components/UI/CardSkeleton.vue";
 import Sidebar from "../components/Layout/Sidebar.vue";
 import Header from "../components/Layout/Header.vue";
@@ -114,6 +133,7 @@ export default {
     HalamanProfil,
     CategoryButton,
     Card,
+    Filter,
     CardSkeleton,
     Sidebar,
     Header,

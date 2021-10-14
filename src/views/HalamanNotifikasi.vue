@@ -69,7 +69,7 @@
                     dark:text-white
                   "
                 >
-                  <Notifikasi class="font-bold">
+                  <Notifikasi class="font-semibold">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Labore possimus fugiat blanditiis facilis reiciendis esse,
                     nesciunt commodi itaque exercitationem et, fuga temporibus,
