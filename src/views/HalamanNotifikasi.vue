@@ -30,25 +30,17 @@
           <div class="container flex-grow mx-auto m-8">
             <!-- Halaman Profil -->
             <div class="flex flex-col items-center min-h-screen">
-              <div class="w-full flex flex-row xl:mx-80 lg:mx-28 sm:mx-14">
-                <div
-                  class="
-                    font-semibold
-                    place-self-start
-                    dark:text-white dark:text-opacity-80
-                  "
-                >
-                  Notifikasi
-                </div>
-                <div
-                  class="
-                    font-semibold
-                    place-self-start
-                    dark:text-white dark:text-opacity-80
-                  "
-                >
-                  Notifikasi
-                </div>
+              <div
+                class="
+                  font-semibold
+                  place-self-start
+                  xl:ml-80
+                  lg:ml-28
+                  sm:ml-14
+                  dark:text-white dark:text-opacity-80
+                "
+              >
+                Notifikasi
               </div>
               <div
                 class="
@@ -77,7 +69,7 @@
                     dark:text-white
                   "
                 >
-                  <Notifikasi class="font-semibold">
+                  <Notifikasi class="font-bold">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Labore possimus fugiat blanditiis facilis reiciendis esse,
                     nesciunt commodi itaque exercitationem et, fuga temporibus,

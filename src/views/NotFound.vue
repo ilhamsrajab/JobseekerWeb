@@ -15,7 +15,7 @@
       class="
         flex-1
         min-h-full min-w-full
-        rounded-3xl
+        rounded-40
         bg-white
         shadow-soft
         p-10
@@ -29,35 +29,32 @@
       "
     >
       <div class="w-full md:w-1/2">
-        <div class="mb-10 lg:mb-10 font-bold text-3xl">BursaKerja</div>
-        <div class="mb-10 md:mb-20 text-gray-600 font-light">
-          <h1
-            class="font-black uppercase text-3xl lg:text-5xl text-primary mb-10"
-          >
+        <!-- logo -->
+        <div>
+          <!-- logo dark mode -->
+          <!-- <img
+            src="../assets/images/logo/BursaKerjaLogo_Black.svg"
+            alt=""
+            class="w-40"
+          /> -->
+          <!-- logo light mode -->
+          <img
+            src="../assets/images/logo/BursaKerjaLogo.svg"
+            alt=""
+            class="w-40"
+          />
+        </div>
+        <div class="my-10 md:mb-20 text-gray-600">
+          <h1 class="font-extrabold text-3xl lg:text-5xl text-primary mb-10">
             Halaman tidak ditemukan!
           </h1>
           <p>Halaman yang kamu cari saat ini tidak tersedia.</p>
           <p>Coba kembali lagi atau klik tombol di bawah.</p>
         </div>
-        <div class="mb-20 md:mb-0">
-          <button
-            class="
-              text-lg
-              rounded-large
-              bg-primary
-              px-8
-              py-2
-              font-medium
-              outline-none
-              focus:outline-none
-              transform
-              transition-all
-              text-white
-              hover:bg-secondary
-            "
-          >
-            Home
-          </button>
+        <div class="mb-20 md:mb-0 w-56">
+          <router-link :to="{ name: 'HalamanHome' }">
+            <button class="btn btn-primary">Home</button>
+          </router-link>
         </div>
       </div>
       <div class="w-full md:w-1/2 text-center">
@@ -364,54 +361,54 @@
   fill: #fff;
 }
 .st1 {
-  fill: #b5dfea;
+  fill: #9489f7;
 }
 .st2 {
   opacity: 0.55;
-  fill: #90cedd;
+  fill: #3a3379;
 }
 .st3 {
-  fill: #d7f0f9;
+  fill: #b2aafa;
 }
 .st4 {
-  fill: #0582c1;
+  fill: #3a3379;
 }
 .st5 {
-  fill: #79c9e8;
+  fill: #3a3379;
 }
 .st6 {
-  fill: #ffbf4d;
+  fill: #ffa999;
 }
 .st7 {
-  fill: #00668e;
+  fill: #312a74;
 }
 .st8 {
-  fill: #05556d;
+  fill: #3a3379;
 }
 .st9 {
-  fill: #f98d3d;
+  fill: #ffa999;
 }
 .st10 {
-  fill: #ed701b;
+  fill: #ffa999;
 }
 .st11 {
   fill: none;
 }
 .st12 {
-  fill: #efaa3a;
+  fill: #e08473;
 }
 .st13 {
   opacity: 0.29;
-  fill: #f98d2b;
+  fill: #ffa999;
 }
 .st14 {
-  fill: #49b4d6;
+  fill: #473f88;
 }
 .st15 {
-  fill: #ff9f50;
+  fill: #f59381;
 }
 .st16 {
-  fill: #f77e2d;
+  fill: #ffbcb0;
 }
 .st17 {
   opacity: 0.55;
