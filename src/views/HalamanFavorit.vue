@@ -103,10 +103,9 @@
               "
             >
               <!-- card -->
-
-              <Card />
-              <Card />
-              <Card />
+              <CardFavorit />
+              <CardFavorit />
+              <CardFavorit />
             </div>
           </div>
           <!-- footer -->
@@ -120,7 +119,7 @@
 <script>
 import HalamanProfil from "../views/HalamanProfil.vue";
 import CategoryButton from "../components/UI/CategoryButton.vue";
-import Card from "../components/UI/Card.vue";
+import CardFavorit from "../components/UI/CardFavorit.vue";
 import Filter from "../components/UI/Filter.vue";
 import CardSkeleton from "../components/UI/CardSkeleton.vue";
 import Sidebar from "../components/Layout/Sidebar.vue";
@@ -132,7 +131,7 @@ export default {
   components: {
     HalamanProfil,
     CategoryButton,
-    Card,
+    CardFavorit,
     Filter,
     CardSkeleton,
     Sidebar,

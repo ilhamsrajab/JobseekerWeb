@@ -4,7 +4,7 @@
     <input type="checkbox" id="my-modal-2" class="modal-toggle" />
     <!-- isi modal -->
     <div class="modal overflow-y-auto">
-      <div class="modal-box mt-auto">
+      <div class="modal-box  mt-auto">
         <!-- nama perusahaan -->
         <div class="mt-4">
           <label class="label" for="namaPerusahaan">
@@ -122,23 +122,52 @@
     <!-- end of isi modal -->
 
     <!-- list perusahaan -->
-    <div class="p-4 hover:bg-gray-50 rounded-large duration-200 transition-all">
+    <div
+      class="
+        p-4
+        hover:bg-gray-50
+        dark:hover:bg-gray-800
+        rounded-large
+        duration-200
+        transition-all
+      "
+    >
       <label for="my-modal-2" class="cursor-pointer">
-        <div class="text-sm font-semibold mb-2">Nama Perusahaan - Posisi</div>
+        <div class="label-text font-semibold mb-2">
+          Nama Perusahaan - Posisi
+        </div>
         <div class="flex justify-between">
-          <span class="text-sm">Google - UX Researcher</span>
-          <span class="text-sm">2018 - 2020</span>
+          <span class="text-sm dark:text-white dark:text-opacity-80"
+            >Google - UX Researcher</span
+          >
+          <span class="text-sm dark:text-white dark:text-opacity-80"
+            >2018 - 2020</span
+          >
         </div>
       </label>
     </div>
     <div class="my-2 bg-gray-100 dark:bg-gray-700 h-0.5" />
-
-    <div class="p-4 hover:bg-gray-50 rounded-large duration-200 transition-all">
+    <div
+      class="
+        p-4
+        hover:bg-gray-50
+        dark:hover:bg-gray-800
+        rounded-large
+        duration-200
+        transition-all
+      "
+    >
       <label for="my-modal-2" class="cursor-pointer">
-        <div class="text-sm font-semibold mb-2">Nama Perusahaan - Posisi</div>
+        <div class="label-text font-semibold mb-2">
+          Nama Perusahaan - Posisi
+        </div>
         <div class="flex justify-between">
-          <span class="text-sm">Microsoft - Junior UI/UX Designer</span>
-          <span class="text-sm">2012 - 2018</span>
+          <span class="text-sm dark:text-white dark:text-opacity-80"
+            >Microsoft - Junior UI/UX Designer</span
+          >
+          <span class="text-sm dark:text-white dark:text-opacity-80"
+            >2012 - 2028</span
+          >
         </div>
       </label>
     </div>
