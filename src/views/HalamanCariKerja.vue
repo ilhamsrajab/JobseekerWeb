@@ -81,15 +81,9 @@
               "
             >
               <!-- card -->
-              <router-link :to="{ name: 'HalamanJobDescription' }">
-                <Card />
-              </router-link>
-              <router-link :to="{ name: 'HalamanJobDescription' }">
-                <Card />
-              </router-link>
-              <router-link :to="{ name: 'HalamanJobDescription' }">
-                <Card />
-              </router-link>
+              <Card />
+              <Card />
+              <Card />
 
               <CardSkeleton />
               <CardSkeleton />
