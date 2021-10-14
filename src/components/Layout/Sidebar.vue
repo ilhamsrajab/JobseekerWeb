@@ -185,7 +185,6 @@
               :inline="true"
               class="text-xl mr-3"
             />
-            <li v-for="req in receivedData" :key="id" ,></li>
             <span @click="logout"> Log Out </span>
           </a>
         </li>
