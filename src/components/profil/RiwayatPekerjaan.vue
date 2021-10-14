@@ -3,8 +3,8 @@
     <!-- modal -->
     <input type="checkbox" id="my-modal-2" class="modal-toggle" />
     <!-- isi modal -->
-    <div class="modal">
-      <div class="modal-box">
+    <div class="modal overflow-y-auto">
+      <div class="modal-box mt-auto">
         <!-- nama perusahaan -->
         <div class="mt-4">
           <label class="label" for="namaPerusahaan">
