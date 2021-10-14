@@ -10,6 +10,10 @@ import DataDiri from '../components/register/DataDiri.vue'
 import MediaSosial from '../components/register/MediaSosial.vue'
 import RiwayatPekerjaan from '../components/register/RiwayatPekerjaan.vue'
 import Sukses from '../components/register/Sukses.vue'
+import DaftarDataDiri from '../components/daftar/DataDiri.vue'
+import DaftarBerkas from '../components/daftar/Berkas.vue'
+import DaftarPernyataan from '../components/daftar/Pernyataan.vue'
+import DaftarKirimLamaran from '../components/daftar/Sukses.vue'
 import HalamanProfil from '../views/HalamanProfil.vue'
 import HalamanJobDescription from '../views/HalamanJobDescription.vue'
 import HalamanNotFound from '../views/NotFound.vue'
@@ -86,6 +90,26 @@ const router = createRouter({
       path: '/sukses',
       name: 'Sukses',
       component: Sukses
+    },
+    {
+      path: '/daftar-lengkapi-data-diri',
+      name: 'DaftarDataDiri',
+      component: DaftarDataDiri
+    },
+    {
+      path: '/daftar-lengkapi-berkas',
+      name: 'DaftarBerkas',
+      component: DaftarBerkas
+    },
+    {
+      path: '/daftar-lengkapi-pernyataan',
+      name: 'DaftarPernyataan',
+      component: DaftarPernyataan
+    },
+    {
+      path: '/daftar-kirim-lamaran',
+      name: 'DaftarKirimLamaran',
+      component: DaftarKirimLamaran
     },
     {
       path: '/loading',

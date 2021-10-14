@@ -4,7 +4,7 @@
     <input type="checkbox" id="my-modal-2" class="modal-toggle" />
     <!-- isi modal -->
     <div class="modal overflow-y-auto">
-      <div class="modal-box  mt-auto">
+      <div class="modal-box my-auto">
         <!-- nama perusahaan -->
         <div class="mt-4">
           <label class="label" for="namaPerusahaan">
@@ -110,12 +110,12 @@
         </div>
         <hr class="my-5" />
         <div class="modal-action justify-end">
+          <label for="my-modal-2" class="btn btn-outline w-40">Batal</label>
           <div class="w-40">
             <label for="my-modal-2" class="btn btn-primary w-40"
               >Perbaharui</label
             >
           </div>
-          <label for="my-modal-2" class="btn btn-outline w-40">Batal</label>
         </div>
       </div>
     </div>
