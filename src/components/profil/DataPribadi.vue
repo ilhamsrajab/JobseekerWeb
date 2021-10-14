@@ -1,6 +1,21 @@
 <template>
   <div class="mx-auto mt-4 z-10">
     <form class="form-control" action="#" method="POST">
+      <!-- nama lengkap -->
+      <div class="mt-4">
+        <label class="label" for="namaLengkap">
+          <span class="label-text font-semibold">Nama Lengkap</span>
+        </label>
+        <input
+          id="namaLengkap"
+          title="Nama Lengkap"
+          type="text"
+          placeholder="Masukan nama lengkap"
+          class="input input-primary w-full"
+          required
+        />
+      </div>
+
       <!-- nik -->
       <div class="mt-4">
         <label class="label" for="nik">
@@ -293,6 +308,26 @@
             required
           />
         </div>
+      </div>
+
+      <!-- foto pribadi -->
+      <div class="mt-4">
+        <label class="label font-semibold" for="fotoPribadi">
+          <span class="label-text">Foto Pribadi</span>
+        </label>
+        <input
+          id="fotoPribadi"
+          type="file"
+          accept="image/*"
+          title="Pilih foto pribadi"
+          class="input input-primary w-full py-3.5 px-4"
+          required
+        />
+        <label class="label">
+          <p href="#" class="label-text-alt text-gray-500">
+            * upload foto maksimal 7 MB
+          </p>
+        </label>
       </div>
 
       <!-- ktp -->
