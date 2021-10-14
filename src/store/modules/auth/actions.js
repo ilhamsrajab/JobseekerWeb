@@ -22,7 +22,8 @@ export default {
 
       console.log(responseData);
       context.commit('setUser', {
-        token: responseData.idToken,
+        token: responseData.token,
+        userId: responseData.id
       });
     },
 
@@ -39,7 +40,6 @@ export default {
           password: payload.password,
           password_confirmation: payload.password_confirmation,
           role: payload.role,
-        //   returnSecureToken: true
         }),
       });
   

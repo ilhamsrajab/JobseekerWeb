@@ -15,7 +15,9 @@
       bg-white
       dark:bg-gray-900
       overflow-y-auto
-      xl:translate-x-0 xl:static xl:inset-0
+      xl:translate-x-0
+      xl:static
+      xl:inset-0
     "
   >
     <!-- logo -->
@@ -107,13 +109,13 @@
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
           <h4 class="font-semibold dark:text-white dark:text-opacity-80">
-            Jerome Bell
+            {{ receivedData.nama }}
           </h4>
           <h5
             id="email"
             class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
-            jeromebell24@gmail.com
+            Email
           </h5>
         </div>
       </div>
@@ -135,7 +137,9 @@
           text-sm
           space-y-1
           hover:dark:bg-white
-          dark:bg-gray-800 dark:border-gray-900 dark:text-white
+          dark:bg-gray-800
+          dark:border-gray-900
+          dark:text-white
           dropdown-content
         "
       >
@@ -144,8 +148,10 @@
             px-5
             py-3
             rounded-large
-            dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
-            hover:bg-gray-100 hover:text-opacity-80
+            dark:text-white dark:text-opacity-80
+            dark:hover:bg-opacity-20
+            hover:bg-gray-100
+            hover:text-opacity-80
             transition-all
             duration-200
           "
@@ -177,7 +183,6 @@
               :inline="true"
               class="text-xl mr-3"
             />
-
             <span @click="logout"> Log Out </span>
           </a>
         </li>
@@ -201,6 +206,7 @@ export default {
   data() {
     return {
       selectedTab: "home",
+      jobSeeker: null,
     };
   },
   methods: {
@@ -221,6 +227,26 @@ export default {
     },
     favoriteButtonMode() {
       return this.selectedTab === "favorite" ? null : "btnSidebarDisable";
+    },
+    receivedData() {
+      return this.$store.getters["jobSeeker/jobSeeker"];
+    },
+  },
+  created() {
+    this.loadJobSeeker();
+  },
+  methods: {
+    async loadJobSeeker() {
+      this.isLoading = true;
+      try {
+        await this.$store.dispatch("jobSeeker/fetchJobSeeker");
+      } catch (error) {
+        this.error = error.message || "Something failed!";
+      }
+      this.isLoading = false;
+    },
+    handleError() {
+      this.error = null;
     },
   },
 };
