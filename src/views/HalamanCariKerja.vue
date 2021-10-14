@@ -61,7 +61,7 @@
               <span class="font-semibold dark:text-white dark:text-opacity-80"
                 >Cari Kerja</span
               >
-              <div class="dropdown dropdown-end dropdown-open">
+              <div class="dropdown dropdown-end">
                 <button tabindex="0">
                   <Icon
                     icon="fluent:filter-16-filled"
@@ -107,56 +107,124 @@
                     id="notif"
                     class="
                       flex flex-row
-                      sm:px-5 sm:py-3
-                      xs:px-3 xs:py-3
+                      sm:px-5 sm:py-2
+                      xs:px-3 xs:py-2
                       rounded-large
-                      cursor-pointer
-                      dark:text-white
-                      dark:text-opacity-80
-                      dark:hover:bg-opacity-20
-                      hover:bg-gray-100 hover:text-opacity-80
+                      dark:text-white dark:text-opacity-80
                       transition-all
                       duration-200
                     "
                   >
-                    <span class="font-semibold">Waktu Kerja</span>
+                    <!-- Waktu Kerja -->
+                    <div class="mt-2">
+                      <label class="label" for="waktuKerja">
+                        <span class="label-text font-semibold"
+                          >Waktu Kerja</span
+                        >
+                      </label>
+                      <select
+                        id="waktuKerja"
+                        class="select select-primary w-full"
+                      >
+                        <option disabled="disabled" selected="selected">
+                          Pilih Waktu Kerja
+                        </option>
+                        <option>Full Time</option>
+                        <option>Part Time</option>
+                        <option>Kontrak</option>
+                        <option>Magang</option>
+                      </select>
+                    </div>
+                  </li>
+
+                  <li
+                    id="notif"
+                    class="
+                      flex flex-row
+                      sm:px-5 sm:py-2
+                      xs:px-3 xs:py-2
+                      rounded-large
+                      dark:text-white dark:text-opacity-80
+                      transition-all
+                      duration-200
+                    "
+                  >
+                    <!-- Lokasi Kerja -->
+                    <div class="">
+                      <label class="label" for="waktuKerja">
+                        <span class="label-text font-semibold"
+                          >Lokasi Kerja</span
+                        >
+                      </label>
+                      <select
+                        id="waktuKerja"
+                        class="select select-primary w-full"
+                      >
+                        <option disabled="disabled" selected="selected">
+                          Pilih Lokasi Kerja
+                        </option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
                   </li>
                   <li
                     id="notif"
                     class="
                       flex flex-row
-                      sm:px-5 sm:py-3
-                      xs:px-3 xs:py-3
+                      sm:px-5 sm:py-2
+                      xs:px-3 xs:py-2
                       rounded-large
-                      cursor-pointer
-                      dark:text-white
-                      dark:text-opacity-80
-                      dark:hover:bg-opacity-20
-                      hover:bg-gray-100 hover:text-opacity-80
+                      dark:text-white dark:text-opacity-80
                       transition-all
                       duration-200
                     "
                   >
-                    <span class="font-semibold">Posisi Kerja</span>
+                    <!-- Kisaran Gaji -->
+                    <div class="">
+                      <label class="label" for="waktuKerja">
+                        <span class="label-text font-semibold"
+                          >Kisaran Gaji</span
+                        >
+                      </label>
+                      <select
+                        id="waktuKerja"
+                        class="select select-primary w-full"
+                      >
+                        <option disabled="disabled" selected="selected">
+                          Pilih Kisaran Gaji
+                        </option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
                   </li>
-                  <li
-                    id="notif"
+                  <div
                     class="
+                      mt-2
                       flex flex-row
-                      sm:px-5 sm:py-3
-                      xs:px-3 xs:py-3
+                      justify-between
+                      sm:px-5 sm:py-2
+                      xs:px-3 xs:py-2
                       rounded-large
-                      cursor-pointer
-                      dark:text-white
-                      dark:text-opacity-80
-                      dark:hover:bg-opacity-20
-                      hover:bg-gray-100 hover:text-opacity-80
+                      dark:text-white dark:text-opacity-80
                       transition-all
                       duration-200
                     "
                   >
-                    <span class="font-semibold">Kisaran Gaji</span>
-                  </li>
+                    <div class="w-40">
+                      <button class="btn btn-primary">Filter</button>
+                    </div>
+                    <div class="w-40">
+                      <button class="btn btn-outline w-full" type="reset">
+                        Reset
+                      </button>
+                    </div>
+                  </div>
                 </ul>
               </div>
             </div>
