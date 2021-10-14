@@ -170,16 +170,14 @@
             rounded-large
             px-5
             py-3
-            dark:text-white dark:text-opacity-80
-            dark:hover:bg-opacity-20
-            hover:bg-red-100
-            hover:text-opacity-80
-            dark:hover:bg-red-400
+            dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
+            hover:bg-red-100 hover:text-opacity-80
+            dark:hover:bg-red-300
             transition-all
             duration-200
           "
         >
-          <a class="text-red-500 dark:text-red-400">
+          <a class="text-red-500 dark:text-red-300">
             <Icon
               icon="fluent:sign-out-24-filled"
               :inline="true"

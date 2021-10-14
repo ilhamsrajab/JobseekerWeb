@@ -39,7 +39,7 @@
           <img
             src="../../assets/images/logo/BursaKerjaLogomark_Black.svg"
             alt=""
-            class="xs:h-4 sm:h-6"
+            class="xs:h-5 sm:h-6"
           />
         </a>
       </div>
@@ -209,6 +209,7 @@
         <ul
           tabindex="1"
           class="
+            h-96
             top-6
             right-0
             my-4
@@ -219,42 +220,29 @@
             dropdown-content
             bg-white
             rounded-box
-            w-96
+            sm:w-96
+            xs:w-80
             text-sm
+            overflow-y-auto
             dark:bg-gray-800 dark:border-gray-900 dark:text-white
           "
         >
-          <li
-            id="notif"
-            class="
-              px-5
-              py-3
-              rounded-large
-              dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
-              hover:bg-gray-100 hover:text-opacity-80
-              transition-all
-              duration-200
-            "
+          <Notifikasi class="font-semibold">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+            possimus fugiat blanditiis facilis reiciendis esse, nesciunt commodi
+            itaque exercitationem et, fuga temporibus, quos iusto magni.
+            Assumenda aspernatur delectus distinctio dolorum.
+          </Notifikasi>
+          <Notifikasi
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+            recusandae? Omnis, deserunt earum! Dicta sint illo corporis!
+            Perferendis.</Notifikasi
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            necessitatibus nemo dolores.
-          </li>
-          <div class="my-2 bg-gray-100 dark:bg-gray-700 h-0.5" />
-          <li
-            id="notif"
-            class="
-              px-5
-              py-3
-              rounded-large
-              dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
-              hover:bg-gray-100 hover:text-opacity-80
-              transition-all
-              duration-200
-            "
+          <Notifikasi
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit,
+            dicta!</Notifikasi
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            necessitatibus nemo dolores.
-          </li>
+
           <div class="my-2 bg-gray-100 dark:bg-gray-700 h-0.5" />
 
           <li
@@ -268,13 +256,13 @@
               duration-200
             "
           >
-            <a>
+            <router-link :to="{ name: 'HalamanNotifikasi' }">
               <span
-                class="text-primary dark:text-purple-400 dark:text-opacity-80"
+                class="text-primary dark:text-purple-300 dark:text-opacity-80"
               >
                 Lihat lainnya..
               </span>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -284,10 +272,12 @@
 
 <script>
 import { Icon } from "@iconify/vue";
+import Notifikasi from "../../components/UI/Notifikasi.vue";
 
 export default {
   components: {
     Icon,
+    Notifikasi,
   },
   data() {
     return {

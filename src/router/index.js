@@ -4,6 +4,7 @@ import HalamanCariKerja from '../views/HalamanCariKerja.vue'
 import HalamanFavorit from '../views/HalamanFavorit.vue'
 import HalamanLogin from '../views/HalamanLogin.vue'
 import HalamanDaftar from '../views/HalamanDaftar.vue'
+import HalamanNotifikasi from '../views/HalamanNotifikasi.vue'
 import Berkas from '../components/register/Berkas.vue'
 import DataDiri from '../components/register/DataDiri.vue'
 import MediaSosial from '../components/register/MediaSosial.vue'
@@ -13,8 +14,6 @@ import HalamanProfil from '../views/HalamanProfil.vue'
 import HalamanJobDescription from '../views/HalamanJobDescription.vue'
 import HalamanNotFound from '../views/NotFound.vue'
 import Loading from '../views/Loading.vue'
-import FormLogin from '../components/Form/FormLogin.vue'
-import FormDaftar from '../components/Form/FormDaftar.vue'
 import store from '../store/index.js';
 
 const router = createRouter({
@@ -52,6 +51,11 @@ const router = createRouter({
       path: '/daftar',
       name: 'HalamanDaftar',
       component: HalamanDaftar
+    },
+    {
+      path: '/notifikasi',
+      name: 'HalamanNotifikasi',
+      component: HalamanNotifikasi
     },
     {
       path: '/profil',
