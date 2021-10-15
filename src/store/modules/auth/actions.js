@@ -7,7 +7,7 @@ export default {
         email: user.email,
         password: user.password
       }).then( response => {
-        console.log(response.data.data.access_token)
+        // console.log(response.data.data.access_token)
         if( response.data.data.access_token ) {
           
           localStorage.setItem(
@@ -29,7 +29,7 @@ export default {
         password_confirmation: user.password_confirmation,
         role: user.role
       }).then( response => {
-        console.log(response.data)
+        // console.log(response.data)
         window.location.replace('/lengkapi-data-diri')
     // })
   });

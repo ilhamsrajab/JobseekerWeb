@@ -4,7 +4,7 @@
       <!-- nama lengkap -->
       <div class="mt-4">
         <label class="label" for="namaLengkap">
-          <span class="label-text font-semibold">Nama Lengkap</span>
+          <span class="label-text font-semibold">Nama Lengkap {{ getusers }}</span>
         </label>
         <input
           id="namaLengkap"
@@ -361,7 +361,17 @@
 <script>
 export default {
   name: "DataDiri",
+  data() {
+    return {
+      jobSeeker: null,
+    }
+  },
   components: {},
+  computed: {
+    getusers() {
+      return this.$store.getters.users;
+    }
+  }
 };
 </script>
 

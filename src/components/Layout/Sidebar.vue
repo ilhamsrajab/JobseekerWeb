@@ -43,6 +43,7 @@
             :inline="true"
             class="text-xl mr-3"
           />Home
+          {{ getusers.data.id }}
         </button-sidebar>
       </router-link>
 
@@ -109,14 +110,15 @@
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
           <h4 class="font-semibold dark:text-white dark:text-opacity-80">
-            Bursa Kerja
+            <!-- {{ getusers.data.nama }} -->
+            nama
           </h4>
           <h5
             id="email"
             class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
-            bursakerja@gmail.com
-            <!-- {{ getusers.data.nama }} {{ users.data.nama }} -->
+            {{ getusers.data.users.email }}
+            <!-- {{ users }}  -->
           </h5>
         </div>
       </div>
@@ -232,15 +234,8 @@ export default {
     favoriteButtonMode() {
       return this.selectedTab === "favorite" ? null : "btnSidebarDisable";
     },
-    jobSeekerNama() {
-      return this.jobSeeker.nama;
-    },
     getusers() {
       return this.$store.getters['auth/data_user'];
-    },
-    users() {
-      user = this.$store.state['auth/getUser'];
-      console.log(user)
     },
   },
   created() {
@@ -249,6 +244,9 @@ export default {
     this.$store.dispatch("auth/getUser");
     this.jobSeeker = this.$store.getters["auth/user"];
   },
+  mounted() {
+    this.$store.dispatch("auth/getUser");
+  }
   // methods: {
   //   async loadJobSeeker() {
   //     this.isLoading = true;
