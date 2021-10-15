@@ -116,6 +116,7 @@
             class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
             bursakerja@gmail.com
+            <!-- {{ getusers.data.nama }} {{ users.data.nama }} -->
           </h5>
         </div>
       </div>
@@ -238,7 +239,8 @@ export default {
       return this.$store.getters['auth/data_user'];
     },
     users() {
-      return this.$store.state['auth/getUser'];
+      user = this.$store.state['auth/getUser'];
+      console.log(user)
     },
   },
   created() {

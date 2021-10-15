@@ -1,6 +1,6 @@
 export default {
-    SET_USER(state, data) {
-      state.user = data
+    SET_USER(state, user) {
+      state.user = user
     }
     // SET_AUTHENTICATED(state, value) {
     //     state.authStatus = value
