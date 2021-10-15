@@ -4,7 +4,7 @@
       <!-- nama lengkap -->
       <div class="mt-4">
         <label class="label" for="namaLengkap">
-          <span class="label-text font-semibold">Nama Lengkap {{ getusers }}</span>
+          <span class="label-text font-semibold">Nama Lengkap</span>
         </label>
         <input
           id="namaLengkap"

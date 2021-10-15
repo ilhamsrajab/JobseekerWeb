@@ -37,10 +37,10 @@ export default {
   logout() {
     localStorage.removeItem('token')
   },
-  getUser({ commit }) {
-    axios.get("api/get_job_seeker_data_diri")
+  async getUser({ commit }) {
+    await axios.get("api/get_job_seeker_data_diri")
     .then( response => {
-      commit('SET_USER', response.data)
+      commit('SET_USER', response.data.data)
       console.log(response.data);
     })
   }

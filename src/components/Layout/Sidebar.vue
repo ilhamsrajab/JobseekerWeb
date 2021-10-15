@@ -43,7 +43,7 @@
             :inline="true"
             class="text-xl mr-3"
           />Home
-          {{ getusers.data.id }}
+          <!-- {{ getusers.data.id }} -->
         </button-sidebar>
       </router-link>
 
@@ -110,15 +110,14 @@
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
           <h4 class="font-semibold dark:text-white dark:text-opacity-80">
-            <!-- {{ getusers.data.nama }} -->
+            <!-- {{ nama }} -->
             nama
           </h4>
           <h5
             id="email"
             class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
-            {{ getusers.data.users.email }}
-            <!-- {{ users }}  -->
+            {{ getusers.nama }}
           </h5>
         </div>
       </div>
@@ -166,7 +165,7 @@
               class="text-xl mr-3"
             />
             <span> Profil </span>
-        </router-link>
+          </router-link>
         </li>
         <li
           class="
@@ -215,6 +214,12 @@ export default {
       jobSeeker: null,
     };
   },
+  created() {
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+    this.jobSeeker = this.$store.dispatch("auth/getUser");
+    // this.loadUser();
+  },
   methods: {
     setSelectedTab(tab) {
       this.selectedTab = tab;
@@ -223,6 +228,9 @@ export default {
       this.$store.dispatch("auth/logout");
       this.$router.replace("/login");
     },
+    // loadUser() {
+    //   this.$store.dispatch("auth/getUser");
+    // },
   },
   computed: {
     homeButtonMode() {
@@ -235,18 +243,12 @@ export default {
       return this.selectedTab === "favorite" ? null : "btnSidebarDisable";
     },
     getusers() {
-      return this.$store.getters['auth/data_user'];
+      return this.$store.getters["auth/data_user"];
+    },
+    nama() {
+      return this.jobSeeker.getuser.data.nama;
     },
   },
-  created() {
-    axios.defaults.headers.common["Authorization"] =
-      "Bearer " + localStorage.getItem("token");
-    this.$store.dispatch("auth/getUser");
-    this.jobSeeker = this.$store.getters["auth/user"];
-  },
-  mounted() {
-    this.$store.dispatch("auth/getUser");
-  }
   // methods: {
   //   async loadJobSeeker() {
   //     this.isLoading = true;
