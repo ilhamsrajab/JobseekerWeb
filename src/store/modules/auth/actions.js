@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   login( _, user ) {
-      axios.get('sanctum/csrf-cookie').then(response => {
+      // axios.get('sanctum/csrf-cookie').then(response => {
         axios.post('api/login', {
         email: user.email,
         password: user.password
@@ -17,11 +17,11 @@ export default {
 
           window.location.replace('/')
         }
-      })
+      // })
     });
   },
   register( _, user ) {
-    axios.get('sanctum/csrf-cookie').then(response => {
+    // axios.get('sanctum/csrf-cookie').then(response => {
         axios.post('api/register', {
         username: user.username,
         email: user.email,
@@ -31,15 +31,15 @@ export default {
       }).then( response => {
         console.log(response.data)
         window.location.replace('/lengkapi-data-diri')
-    })
+    // })
   });
   },
   logout() {
     localStorage.removeItem('token')
   },
-  getUser( {commit} ) {
+  getUser( context ) {
     axios.get("api/get_job_seeker_data_diri").then( response => {
-      commit('SET_USER', response.data)
+      context.commit('SET_USER', response.data)
       console.log(response.data);
     })
   }

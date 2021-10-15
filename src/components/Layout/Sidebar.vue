@@ -163,7 +163,7 @@
               class="text-xl mr-3"
             />
             <span> Profil </span>
-          </router-link>
+        </router-link>
         </li>
         <li
           class="
@@ -233,6 +233,12 @@ export default {
     },
     jobSeekerNama() {
       return this.jobSeeker.nama;
+    },
+    getusers() {
+      return this.$store.getters['auth/data_user'];
+    },
+    users() {
+      return this.$store.state['auth/getUser'];
     },
   },
   created() {

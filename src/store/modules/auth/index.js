@@ -7,7 +7,7 @@ export default {
   state() {
     return {
       authStatus: false,
-      user: {},
+      user: [],
       token: null,
     };
   },

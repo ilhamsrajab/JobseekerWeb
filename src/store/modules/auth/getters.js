@@ -1,5 +1,5 @@
 export default {
-  user(state) {
+  data_user(state) {
     return state.user;
   }
   // userId(state) {
