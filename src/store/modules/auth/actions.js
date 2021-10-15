@@ -29,6 +29,8 @@ export default {
         password_confirmation: user.password_confirmation,
         role: user.role
       }).then( response => {
+        console.log(response.data)
+        window.location.replace('/lengkapi-data-diri')
     })
   });
   },

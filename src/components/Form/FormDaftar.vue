@@ -67,7 +67,7 @@
             placeholder="contoh@bursakerja.com"
             class="input input-primary w-full"
             required
-            v-model.trim="email"
+            v-model.trim="user.email"
           />
         </div>
 
@@ -83,7 +83,7 @@
             placeholder="Masukan username"
             class="input input-primary w-full"
             required
-            v-model.trim="username"
+            v-model.trim="user.username"
           />
         </div>
 
@@ -101,7 +101,7 @@
             placeholder="Masukan password"
             class="input input-primary w-full"
             required
-            v-model.trim="password"
+            v-model.trim="user.password"
           />
           <!-- <label class="label" v-if="!formIsValid">
             <p href="#" class="label-text-alt text-red-500 dark:text-red-400">
@@ -135,7 +135,7 @@
               dark:text-white dark:text-opacity-60
             "
             required
-            v-model.trim="password_confirmation"
+            v-model.trim="user.password_confirmation"
           />
         </div>
 
@@ -230,19 +230,7 @@ export default {
   },
   methods: {
     async submitForm() {
-      this.isLoading = true;
-
-      try {
-        await this.$store.dispatch("auth/register", this.user);
-        // this.$router.replace("/");
-      } catch (err) {
-        this.error = err.message || "Failed tp authenticated, try later.";
-      }
-
-      this.isLoading = false;
-    },
-    handleError() {
-      this.error = null;
+      this.$store.dispatch("auth/register", this.user);
     },
   },
 };
