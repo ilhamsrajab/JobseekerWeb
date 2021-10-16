@@ -359,17 +359,26 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "DataDiri",
   data() {
     return {
-      jobSeeker: null,
+      dataDiri: null,
     }
   },
-  components: {},
+  created() {
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+    this.dataDiri = this.$store.dispatch("auth/getDataDiri");
+  },
   computed: {
     getusers() {
       return this.$store.getters.users;
+    },
+    getDataDiri() {
+      return this.$store.getters['auth/data_diri']
     }
   }
 };

@@ -7,7 +7,9 @@ export default {
   state() {
     return {
       authStatus: false,
-      user: [],
+      data_user: [],
+      data_diri: [],
+      data_riwayat_pekerjaan: [],
       token: null,
     };
   },

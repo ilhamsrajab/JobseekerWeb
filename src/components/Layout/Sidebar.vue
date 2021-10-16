@@ -110,14 +110,13 @@
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
           <h4 class="font-semibold dark:text-white dark:text-opacity-80">
-            <!-- {{ nama }} -->
-            nama
+            {{ getDataDiri.nama }}
           </h4>
           <h5
             id="email"
             class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
-            {{ getusers.nama }}
+            {{ getDataUser.email }}
           </h5>
         </div>
       </div>
@@ -211,14 +210,15 @@ export default {
   data() {
     return {
       selectedTab: "home",
-      jobSeeker: null,
+      dataUser: null,
+      dataDiri: null,
     };
   },
   created() {
     axios.defaults.headers.common["Authorization"] =
       "Bearer " + localStorage.getItem("token");
-    this.jobSeeker = this.$store.dispatch("auth/getUser");
-    // this.loadUser();
+    this.dataUser = this.$store.dispatch("auth/getDataUser");
+    this.dataDiri = this.$store.dispatch("auth/getDataDiri");
   },
   methods: {
     setSelectedTab(tab) {
@@ -228,9 +228,6 @@ export default {
       this.$store.dispatch("auth/logout");
       this.$router.replace("/login");
     },
-    // loadUser() {
-    //   this.$store.dispatch("auth/getUser");
-    // },
   },
   computed: {
     homeButtonMode() {
@@ -242,11 +239,11 @@ export default {
     favoriteButtonMode() {
       return this.selectedTab === "favorite" ? null : "btnSidebarDisable";
     },
-    getusers() {
+    getDataUser() {
       return this.$store.getters["auth/data_user"];
     },
-    nama() {
-      return this.jobSeeker.getuser.data.nama;
+    getDataDiri() {
+      return this.$store.getters['auth/data_diri'];
     },
   },
   // methods: {

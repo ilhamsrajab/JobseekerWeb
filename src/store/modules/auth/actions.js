@@ -37,11 +37,25 @@ export default {
   logout() {
     localStorage.removeItem('token')
   },
-  async getUser({ commit }) {
+  
+  async getDataUser ({ commit }) {
     await axios.get("api/get_job_seeker_data_diri")
     .then( response => {
-      commit('SET_USER', response.data.data)
-      console.log(response.data);
+      commit('SET_DATA_USER', response.data.data.users)
+    })
+  },
+  
+  async getDataDiri({ commit }) {
+    await axios.get("api/get_job_seeker_data_diri")
+    .then( response => {
+      commit('SET_DATA_DIRI', response.data.data)
+    })
+  },
+
+  async getDataRiwayatPekerjaan ({ commit }) {
+    await axios.get('api/get_job_seeker_data_diri')
+    .then( response => {
+      commit('SET_DATA_RIWAYAT_PEKERJAAN', response.data.data.riwayat.pekerjaan)
     })
   }
 }
