@@ -1,305 +1,216 @@
 <template>
-  <div
-    x-data="{ sidebarOpen: false, darkMode: false }"
-    :class="{ dark: darkMode }"
-  >
-    <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
-      <div
-        :class="sidebarOpen ? 'block' : 'hidden'"
-        @click="sidebarOpen = false"
-        class="
-          fixed
-          z-20
-          inset-0
-          bg-black
-          opacity-50
-          transition-opacity
-          xl:hidden
-        "
-      ></div>
+  <div class="drawer drawer-mobile h-screen bg-gray-100 dark:bg-gray-800">
+    <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
 
-      <!-- sidebar -->
-      <Sidebar />
-
+    <div class="drawer-content flex-1 flex flex-col overflow-hidden">
       <!-- header -->
-      <div class="flex-1 flex flex-col overflow-hidden">
-        <Header />
+      <Header />
 
-        <!-- main page -->
-        <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
-          <!-- hero -->
-          <Hero />
-          <!-- end hero -->
+      <!-- main page -->
+      <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
+        <!-- hero -->
+        <Hero />
+        <!-- end hero -->
 
-          <!-- kategori pekerjaan -->
-          <div class="lg:-8 sm:m-6 xs:m-4">
-            <div class="flex justify-between">
-              <span
-                class="
-                  sm:text-xl
-                  xs:text-lg
-                  font-semibold
-                  dark:text-white dark:text-opacity-80
-                "
-              >
-                Kategori pekerjaan
-              </span>
-              <router-link :to="{ name: 'HalamanCariKerja' }">
-                <button class="badge">Lihat lainnya</button>
-              </router-link>
-            </div>
-            <!-- kategori 1 -->
-            <div
+        <!-- kategori pekerjaan -->
+        <div class="lg:m-8 sm:m-6 xs:m-4">
+          <div class="flex justify-between">
+            <span
               class="
-                grid grid-cols-1
-                md:grid-cols-2
-                lg:grid-cols-3
-                xl:grid-cols-3 xl:gap-6
-                2xl:grid-cols-5 2xl:gap-8
-                lg:gap-6
-                xs:gap-4
-                mt-5
+                sm:text-xl
+                xs:text-lg
+                font-semibold
+                dark:text-white dark:text-opacity-80
               "
             >
-              <!-- <CardCategory class="md:col-span-2 lg:col-span-2 xl:col-span-1" /> -->
-              <div
-                class="
-                  bg-teknologi bg-cover
-                  2xl:col-span-1
-                  xl:col-span-2
-                  lg:col-span-2
-                  md:col-span-2 md:rounded-40
-                  xs:rounded-20
-                  overflow-hidden
-                "
-              >
-                <div
-                  class="
-                    md:h-96
-                    xs:h-52
-                    bg-black bg-opacity-0
-                    hover:bg-opacity-40
-                    p-8
-                    flex
-                    items-end
-                    cursor-pointer
-                    hover:shadow-lg
-                    transition-all
-                    duration-200
-                  "
-                >
-                  <span class="font-semibold text-lg text-white">
-                    Teknologi
-                  </span>
-                </div>
-              </div>
-              <!-- end of kategori 1 -->
-
-              <!-- kategori 2 -->
-              <div
-                class="
-                  rounded-40
-                  bg-koki bg-cover
-                  md:rounded-40
-                  xs:rounded-20
-                  overflow-hidden
-                "
-              >
-                <div
-                  class="
-                    md:h-96
-                    xs:h-52
-                    bg-black bg-opacity-0
-                    hover:bg-opacity-40
-                    p-8
-                    flex
-                    items-end
-                    cursor-pointer
-                    hover:shadow-lg
-                    transition-all
-                    duration-200
-                  "
-                >
-                  <span class="font-semibold text-lg text-white"> Chef </span>
-                </div>
-              </div>
-              <!-- end of kategori 2 -->
-
-              <!-- kategori 3 -->
-              <div
-                class="
-                  rounded-40
-                  bg-pendidikan bg-cover
-                  md:rounded-40
-                  xs:rounded-20
-                  overflow-hidden
-                "
-              >
-                <div
-                  class="
-                    md:h-96
-                    xs:h-52
-                    bg-black bg-opacity-0
-                    hover:bg-opacity-40
-                    p-8
-                    flex
-                    items-end
-                    cursor-pointer
-                    hover:shadow-lg
-                    transition-all
-                    duration-200
-                  "
-                >
-                  <span class="font-semibold text-lg text-white">
-                    Pendidikan
-                  </span>
-                </div>
-              </div>
-              <!-- end of kategori 3 -->
-
-              <!-- kategori 4 -->
-              <div
-                class="
-                  rounded-40
-                  bg-supir bg-cover
-                  md:rounded-40
-                  xs:rounded-20
-                  overflow-hidden
-                "
-              >
-                <div
-                  class="
-                    md:h-96
-                    xs:h-52
-                    bg-black bg-opacity-0
-                    hover:bg-opacity-40
-                    p-8
-                    flex
-                    items-end
-                    cursor-pointer
-                    hover:shadow-lg
-                    transition-all
-                    duration-200
-                  "
-                >
-                  <span class="font-semibold text-lg text-white"> Driver </span>
-                </div>
-              </div>
-              <!-- end of kategori 4 -->
-
-              <!-- kategori 5 -->
-              <div
-                class="
-                  rounded-40
-                  bg-jasa bg-cover
-                  md:rounded-40
-                  xs:rounded-20
-                  overflow-hidden
-                "
-              >
-                <div
-                  class="
-                    md:h-96
-                    xs:h-52
-                    bg-black bg-opacity-0
-                    hover:bg-opacity-40
-                    p-8
-                    flex
-                    items-end
-                    cursor-pointer
-                    hover:shadow-lg
-                    transition-all
-                    duration-200
-                  "
-                >
-                  <span class="font-semibold text-lg text-white"> Jasa </span>
-                </div>
-              </div>
-              <!-- end of kategori 5 -->
-            </div>
+              Kategori pekerjaan
+            </span>
+            <router-link :to="{ name: 'HalamanCariKerja' }">
+              <button class="badge">Lihat lainnya</button>
+            </router-link>
           </div>
-          <!-- end kategori pekerjaan -->
-
-          <!-- iklan -->
-          <!-- <div class="mt-10 -mb-20 px-8 py-16 bg-gray-50 font-bold text-xl">
-            <div class="text-center">Perusahaan</div>
+          <!-- kategori 1 -->
+          <div
+            class="
+              grid grid-cols-1
+              md:grid-cols-2
+              lg:grid-cols-3
+              xl:grid-cols-3 xl:gap-6
+              2xl:grid-cols-5 2xl:gap-8
+              lg:gap-6
+              xs:gap-4
+              mt-5
+            "
+          >
+            <!-- <CardCategory class="md:col-span-2 lg:col-span-2 xl:col-span-1" /> -->
             <div
               class="
-                grid grid-cols-1
-                md:grid-cols-3
-                xl:grid-cols-5
-                mt-8
-                bg-pink-400
+                bg-teknologi bg-cover
+                2xl:col-span-1
+                xl:col-span-2
+                lg:col-span-2
+                md:col-span-2 md:rounded-40
+                xs:rounded-20
+                overflow-hidden
               "
             >
-              <img
-                src="../assets/images/default-avatar.svg"
+              <div
                 class="
-                  w-40
-                  rounded-40
+                  md:h-96
+                  xs:h-52
+                  bg-black bg-opacity-0
+                  hover:bg-opacity-40
+                  p-8
                   flex
                   items-end
+                  cursor-pointer
                   hover:shadow-lg
                   transition-all
                   duration-200
                 "
-              />
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
+              >
+                <span class="font-semibold text-lg text-white">
+                  Teknologi
+                </span>
+              </div>
             </div>
-          </div> -->
+            <!-- end of kategori 1 -->
 
-          <!-- footer -->
-          <Footer />
-        </main>
-      </div>
+            <!-- kategori 2 -->
+            <div
+              class="
+                rounded-40
+                bg-koki bg-cover
+                md:rounded-40
+                xs:rounded-20
+                overflow-hidden
+              "
+            >
+              <div
+                class="
+                  md:h-96
+                  xs:h-52
+                  bg-black bg-opacity-0
+                  hover:bg-opacity-40
+                  p-8
+                  flex
+                  items-end
+                  cursor-pointer
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white"> Chef </span>
+              </div>
+            </div>
+            <!-- end of kategori 2 -->
+
+            <!-- kategori 3 -->
+            <div
+              class="
+                rounded-40
+                bg-pendidikan bg-cover
+                md:rounded-40
+                xs:rounded-20
+                overflow-hidden
+              "
+            >
+              <div
+                class="
+                  md:h-96
+                  xs:h-52
+                  bg-black bg-opacity-0
+                  hover:bg-opacity-40
+                  p-8
+                  flex
+                  items-end
+                  cursor-pointer
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white">
+                  Pendidikan
+                </span>
+              </div>
+            </div>
+            <!-- end of kategori 3 -->
+
+            <!-- kategori 4 -->
+            <div
+              class="
+                rounded-40
+                bg-supir bg-cover
+                md:rounded-40
+                xs:rounded-20
+                overflow-hidden
+              "
+            >
+              <div
+                class="
+                  md:h-96
+                  xs:h-52
+                  bg-black bg-opacity-0
+                  hover:bg-opacity-40
+                  p-8
+                  flex
+                  items-end
+                  cursor-pointer
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white"> Driver </span>
+              </div>
+            </div>
+            <!-- end of kategori 4 -->
+
+            <!-- kategori 5 -->
+            <div
+              class="
+                rounded-40
+                bg-jasa bg-cover
+                md:rounded-40
+                xs:rounded-20
+                overflow-hidden
+              "
+            >
+              <div
+                class="
+                  md:h-96
+                  xs:h-52
+                  bg-black bg-opacity-0
+                  hover:bg-opacity-40
+                  p-8
+                  flex
+                  items-end
+                  cursor-pointer
+                  hover:shadow-lg
+                  transition-all
+                  duration-200
+                "
+              >
+                <span class="font-semibold text-lg text-white"> Jasa </span>
+              </div>
+            </div>
+            <!-- end of kategori 5 -->
+          </div>
+        </div>
+        <!-- end kategori pekerjaan -->
+
+        <!-- footer -->
+        <Footer />
+      </main>
     </div>
+    <!-- sidebar -->
+    <div class="drawer-side">
+      <label for="my-drawer-2" class="drawer-overlay"></label>
+      <Sidebar />
+    </div>
+    <!-- end of sidebar -->
   </div>
 </template>
 
