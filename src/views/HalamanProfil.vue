@@ -1,134 +1,116 @@
 <template>
-  <div
-    x-data="{ sidebarOpen: false, darkMode: false }"
-    :class="{ dark: darkMode }"
-  >
-    <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
-      <div
-        :class="sidebarOpen ? 'block' : 'hidden'"
-        @click="sidebarOpen = false"
-        class="
-          fixed
-          z-20
-          inset-0
-          bg-black
-          opacity-50
-          transition-opacity
-          lg:hidden
-        "
-      ></div>
+  <div class="drawer drawer-mobile h-screen bg-gray-100 dark:bg-gray-800">
+    <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
 
-      <!-- sidebar -->
-      <Sidebar />
-
+    <div class="drawer-content flex-1 flex flex-col overflow-hidden">
       <!-- header -->
-      <div class="flex-1 flex flex-col overflow-hidden">
-        <Header />
+      <Header />
 
-        <!-- main page -->
-        <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
-          <div class="container flex-grow mx-auto m-8">
-            <!-- Halaman Profil -->
-            <div class="flex flex-col items-center min-h-screen">
-              <!-- image -->
-              <div class="flex items-center">
-                <img
-                  alt="avatar"
-                  class="
-                    mt-2
-                    w-40
-                    rounded-full
-                    select-disabled
-                    group-hover:rotate-3
-                    transform
-                  "
-                  src="../assets/images/avatar.png"
-                />
-              </div>
-
-              <!-- nama -->
-              <div class="leading-6 mt-4 xs:mb-4 sm:mb-8 text-center">
-                <h4
-                  class="
-                    font-bold
-                    dark:text-white dark:text-opacity-80
-                    text-2xl
-                  "
-                >
-                  Jerome Bell
-                </h4>
-                <h5
-                  id="email"
-                  class="font-medium text-gray-500 dark:text-gray-300 mt-2"
-                >
-                  jeromebell24@gmail.com
-                </h5>
-              </div>
-
-              <!-- tab -->
-              <div
+      <!-- main page -->
+      <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
+        <div class="container flex-grow mx-auto m-8">
+          <!-- Halaman Profil -->
+          <div class="flex flex-col items-center min-h-screen">
+            <!-- image -->
+            <div class="flex items-center">
+              <img
+                alt="avatar"
                 class="
-                  flex flex-row
-                  bg-white
-                  dark:bg-gray-900
-                  p-2
-                  rounded-20
-                  xs:space-x-1
-                  sm:space-x-2
-                  xs:mx-10
-                  sm:mx-10
-                  xs:text-2xs
-                  md:text-base
+                  mt-2
+                  w-40
+                  rounded-full
+                  select-disabled
+                  group-hover:rotate-3
+                  transform
                 "
+                src="../assets/images/avatar.png"
+              />
+            </div>
+
+            <!-- nama -->
+            <div class="leading-6 mt-4 xs:mb-4 sm:mb-8 text-center">
+              <h4
+                class="font-bold dark:text-white dark:text-opacity-80 text-2xl"
               >
-                <ButtonTab
-                  @click="setSelectedTab('data-diri')"
-                  :mode="dataDiriButtonMode"
-                  >Data Diri</ButtonTab
-                >
-                <ButtonTab
-                  @click="setSelectedTab('media-sosial')"
-                  :mode="mediaSosialButtonMode"
-                  >Media Sosial</ButtonTab
-                >
-                <ButtonTab
-                  @click="setSelectedTab('berkas')"
-                  :mode="berkasButtonMode"
-                  >Berkas</ButtonTab
-                >
-                <ButtonTab
-                  @click="setSelectedTab('riwayat-pekerjaan')"
-                  :mode="riwayatPekerjaanButtonMode"
-                  >Riwayat Pekerjaan</ButtonTab
-                >
-              </div>
-              <div
-                class="
-                  bg-white
-                  dark:bg-gray-900
-                  rounded-20
-                  xl:py-8 xl:px-16
-                  lg:py-4 lg:px-12
-                  md:py-2 md:px-10
-                  sm:py-0 sm:px-8
-                  xs:py-0 xs:px-4
-                  text-gray-500
-                  sm:mt-8
-                  xs:mt-4 xs:w-full
-                  sm:w-10/12
-                  md:w-4/5
-                  xl:w-3/5
-                "
+                Jerome Bell
+              </h4>
+              <h5
+                id="email"
+                class="font-medium text-gray-500 dark:text-gray-300 mt-2"
               >
-                <component :is="selectedTab"></component>
-              </div>
+                jeromebell24@gmail.com
+              </h5>
+            </div>
+
+            <!-- tab -->
+            <div
+              class="
+                flex flex-row
+                bg-white
+                dark:bg-gray-900
+                p-2
+                rounded-20
+                xs:space-x-1
+                sm:space-x-2
+                xs:mx-10
+                sm:mx-10
+                xs:text-2xs
+                md:text-base
+              "
+            >
+              <ButtonTab
+                @click="setSelectedTab('data-diri')"
+                :mode="dataDiriButtonMode"
+                >Data Diri</ButtonTab
+              >
+              <ButtonTab
+                @click="setSelectedTab('media-sosial')"
+                :mode="mediaSosialButtonMode"
+                >Media Sosial</ButtonTab
+              >
+              <ButtonTab
+                @click="setSelectedTab('berkas')"
+                :mode="berkasButtonMode"
+                >Berkas</ButtonTab
+              >
+              <ButtonTab
+                @click="setSelectedTab('riwayat-pekerjaan')"
+                :mode="riwayatPekerjaanButtonMode"
+                >Riwayat Pekerjaan</ButtonTab
+              >
+            </div>
+            <div
+              class="
+                bg-white
+                dark:bg-gray-900
+                rounded-20
+                xl:py-8 xl:px-16
+                lg:py-4 lg:px-12
+                md:py-2 md:px-10
+                sm:py-0 sm:px-8
+                xs:py-0 xs:px-4
+                text-gray-500
+                sm:mt-8
+                xs:mt-4 xs:w-full
+                sm:w-10/12
+                md:w-4/5
+                xl:w-3/5
+              "
+            >
+              <component :is="selectedTab"></component>
             </div>
           </div>
-          <!-- footer -->
-          <Footer />
-        </main>
-      </div>
+        </div>
+        <!-- footer -->
+        <Footer />
+      </main>
     </div>
+    <!-- sidebar -->
+    <div class="drawer-side">
+      <label for="my-drawer-2" class="drawer-overlay"></label>
+      <Sidebar />
+    </div>
+    <!-- end of sidebar -->
   </div>
 </template>
 

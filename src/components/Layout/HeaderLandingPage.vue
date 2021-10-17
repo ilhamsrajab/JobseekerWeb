@@ -1,27 +1,6 @@
 <template>
   <header class="flex justify-between items-center px-6 py-4 bg-primary">
     <div class="flex items-center space-x-4 xl:space-x-0">
-      <!-- hamburger menu -->
-      <button
-        @click="sidebarOpen = true"
-        class="text-gray-500 dark:text-gray-300 focus:outline-none xl:hidden"
-      >
-        <svg
-          class="h-6 w-6 text-white"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 6H20M4 12H20M4 18H11"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-
       <!-- logo -->
       <!-- logotype -->
       <div class="flex items-center xs:hidden lg:inline-flex">

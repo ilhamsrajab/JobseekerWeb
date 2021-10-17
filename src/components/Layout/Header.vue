@@ -2,10 +2,25 @@
   <header class="flex justify-between items-center px-6 py-4 bg-primary">
     <div class="flex items-center space-x-4 xl:space-x-0">
       <!-- hamburger menu -->
-      <button
-        class="text-gray-500 dark:text-gray-300 focus:outline-none xl:hidden"
-      >
-        <svg
+      <label for="my-drawer-2">
+        <div
+          class="
+            px-1
+            py-1
+            cursor-pointer
+            hover:bg-accent hover:shadow-glow
+            rounded-full
+            transition-all
+            duration-200
+            xl:hidden
+          "
+        >
+          <Icon
+            icon="fluent:line-horizontal-3-20-filled"
+            class="text-xl text-white hover:text-neutral"
+          />
+        </div>
+        <!-- <svg
           class="h-6 w-6 text-white"
           viewBox="0 0 24 24"
           fill="none"
@@ -18,8 +33,8 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           />
-        </svg>
-      </button>
+        </svg> -->
+      </label>
 
       <!-- logo -->
       <!-- logotype -->

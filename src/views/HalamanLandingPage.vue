@@ -35,7 +35,9 @@
           "
         >
           <!-- hero -->
-          <Hero />
+          <div class="2xl:m-4 xl:m-2">
+            <Hero />
+          </div>
           <!-- end hero -->
 
           <!-- kategori pekerjaan -->

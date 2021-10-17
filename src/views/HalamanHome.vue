@@ -8,17 +8,12 @@
 
       <!-- main page -->
       <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
-        <label
-          for="my-drawer-2"
-          class="mb-4 btn btn-primary drawer-button lg:hidden"
-          >open menu</label
-        >
         <!-- hero -->
         <Hero />
         <!-- end hero -->
 
         <!-- kategori pekerjaan -->
-        <div class="lg:-8 sm:m-6 xs:m-4">
+        <div class="lg:m-8 sm:m-6 xs:m-4">
           <div class="flex justify-between">
             <span
               class="
@@ -206,91 +201,13 @@
         </div>
         <!-- end kategori pekerjaan -->
 
-        <!-- iklan -->
-        <!-- <div class="mt-10 -mb-20 px-8 py-16 bg-gray-50 font-bold text-xl">
-            <div class="text-center">Perusahaan</div>
-            <div
-              class="
-                grid grid-cols-1
-                md:grid-cols-3
-                xl:grid-cols-5
-                mt-8
-                bg-pink-400
-              "
-            >
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
-              <img
-                src="../assets/images/default-avatar.svg"
-                class="
-                  w-40
-                  rounded-40
-                  flex
-                  items-end
-                  hover:shadow-lg
-                  transition-all
-                  duration-200
-                "
-              />
-            </div>
-          </div> -->
-
         <!-- footer -->
         <Footer />
       </main>
     </div>
     <!-- sidebar -->
     <div class="drawer-side">
-      <label
-        for="my-drawer-2"
-        class="drawer-overlay bg-black bg-opacity-50 z-20"
-      ></label>
+      <label for="my-drawer-2" class="drawer-overlay"></label>
       <Sidebar />
     </div>
     <!-- end of sidebar -->
