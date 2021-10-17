@@ -31,70 +31,40 @@
         class="
           text-white
           p-5
-          bg-primary
+          bg-primary bg-header
           mx-auto
           w-full
+          xl:h-56
           sm:rounded-40
           xs:rounded-20
           shadow-btn
-          xl:h-56
           md:h-60
           flex flex-col
           justify-between
           z-0
         "
       >
-        <!-- gambar -->
-        <div class="absolute z-0">
-          <img src="../../assets/images/header.svg" alt="" srcset="" />
-        </div>
+        <!-- title -->
         <div class="xs:text-xl sm:text-3xl font-bold m-5 text-center">
           Lengkapi Data Diri
         </div>
+        <!-- end of title -->
         <!-- step progress bar -->
         <ul class="w-full steps xs:my-0 sm:my-5">
-          <li
-            data-content=""
-            class="step step-accent sm:text-sm xs:text-2xs"
-            :class="step1Classes"
-            @click="stepSelected(currentStep)"
-          >
+          <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
             Data Diri
           </li>
-          <li
-            data-content=""
-            class="step sm:text-sm xs:text-2xs"
-            :class="step2Classes"
-            @click="stepSelected(currentStep)"
-          >
+          <li data-content="" class="step sm:text-sm xs:text-2xs">
             Media Sosial
           </li>
-          <li
-            data-content=""
-            class="step sm:text-sm xs:text-2xs"
-            :class="step3Classes"
-            @click="stepSelected(currentStep)"
-          >
-            Berkas
-          </li>
-          <li
-            data-content=""
-            class="step sm:text-sm xs:text-2xs"
-            :class="step4Classes"
-            @click="stepSelected(currentStep)"
-          >
+          <li data-content="" class="step sm:text-sm xs:text-2xs">Berkas</li>
+          <li data-content="" class="step sm:text-sm xs:text-2xs">
             Riwayat Pekerjaan
           </li>
 
-          <li
-            data-content=""
-            class="step sm:text-sm xs:text-2xs"
-            :class="step5Classes"
-            @click="stepSelected(currentStep)"
-          >
-            Selesai
-          </li>
+          <li data-content="" class="step sm:text-sm xs:text-2xs">Selesai</li>
         </ul>
+        <!-- end of step progress bar -->
       </div>
       <div
         class="

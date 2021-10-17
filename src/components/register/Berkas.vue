@@ -31,13 +31,13 @@
         class="
           text-white
           p-5
-          bg-primary
+          bg-primary bg-header
           mx-auto
           w-full
+          xl:h-56
           sm:rounded-40
           xs:rounded-20
           shadow-btn
-          xl:h-56
           md:h-60
           flex flex-col
           justify-between
@@ -69,6 +69,7 @@
         <!-- end of step progress bar -->
       </div>
       <!-- end of kotak header -->
+      <!-- form -->
       <div
         class="
           mx-auto
@@ -261,6 +262,7 @@
           </router-link>
         </div>
       </div>
+      <!-- end of form -->
     </div>
   </div>
 </template>
