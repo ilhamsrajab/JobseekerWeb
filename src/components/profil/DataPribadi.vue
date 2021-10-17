@@ -12,6 +12,7 @@
           type="text"
           placeholder="Masukan nama lengkap"
           class="input input-primary w-full"
+          :value="getNama" 
           required
         />
       </div>
@@ -333,7 +334,11 @@
       <!-- ktp -->
       <div class="mt-4">
         <label class="label font-semibold" for="ktp">
-          <span class="label-text">Foto E-KTP</span>
+          <span class="label-text">Foto E-KTP
+
+              {{ getNama }}
+          {{ getDataDiri }}
+          </span>
         </label>
         <input
           id="ktp"
@@ -362,6 +367,7 @@
 import axios from "axios";
 
 export default {
+  props: ['id'],
   name: "DataDiri",
   data() {
     return {
@@ -371,14 +377,20 @@ export default {
   created() {
     axios.defaults.headers.common["Authorization"] =
       "Bearer " + localStorage.getItem("token");
-    this.dataDiri = this.$store.dispatch("auth/getDataDiri");
+    this.dataDiri = this.$store.dispatch("auth/getDataDiri").
+    this.dataDiri = this.$store.getters['auth/data_diri'].find(
+        (user) => user.id === this.id
+      );
   },
   computed: {
     getusers() {
       return this.$store.getters.users;
     },
     getDataDiri() {
-      return this.$store.getters['auth/data_diri']
+      return this.$store.getters['auth/data_diri'];
+    },
+    getNama() {
+      return this.dataDiri.nama;
     }
   }
 };
