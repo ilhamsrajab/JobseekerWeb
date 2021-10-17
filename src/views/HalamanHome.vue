@@ -32,7 +32,7 @@
           <!-- end hero -->
 
           <!-- kategori pekerjaan -->
-          <div class="sm:mx-8 xs:mx-4 sm:my-10 xs:my-5">
+          <div class="lg:-8 sm:m-6 xs:m-4">
             <div class="flex justify-between">
               <span
                 class="
@@ -48,6 +48,7 @@
                 <button class="badge">Lihat lainnya</button>
               </router-link>
             </div>
+            <!-- kategori 1 -->
             <div
               class="
                 grid grid-cols-1
@@ -63,20 +64,21 @@
               <!-- <CardCategory class="md:col-span-2 lg:col-span-2 xl:col-span-1" /> -->
               <div
                 class="
-                  rounded-40
                   bg-teknologi bg-cover
-                  md:col-span-2
-                  lg:col-span-2
-                  xl:col-span-2
                   2xl:col-span-1
+                  xl:col-span-2
+                  lg:col-span-2
+                  md:col-span-2 md:rounded-40
+                  xs:rounded-20
+                  overflow-hidden
                 "
               >
                 <div
                   class="
-                    h-96
+                    md:h-96
+                    xs:h-52
                     bg-black bg-opacity-0
                     hover:bg-opacity-40
-                    rounded-40
                     p-8
                     flex
                     items-end
@@ -91,15 +93,24 @@
                   </span>
                 </div>
               </div>
+              <!-- end of kategori 1 -->
 
-              <!-- <CardCategory /> -->
-              <div class="rounded-40 bg-koki bg-cover">
+              <!-- kategori 2 -->
+              <div
+                class="
+                  rounded-40
+                  bg-koki bg-cover
+                  md:rounded-40
+                  xs:rounded-20
+                  overflow-hidden
+                "
+              >
                 <div
                   class="
-                    h-96
+                    md:h-96
+                    xs:h-52
                     bg-black bg-opacity-0
                     hover:bg-opacity-40
-                    rounded-40
                     p-8
                     flex
                     items-end
@@ -112,15 +123,24 @@
                   <span class="font-semibold text-lg text-white"> Chef </span>
                 </div>
               </div>
+              <!-- end of kategori 2 -->
 
-              <!-- <CardCategory /> -->
-              <div class="rounded-40 bg-pendidikan bg-cover">
+              <!-- kategori 3 -->
+              <div
+                class="
+                  rounded-40
+                  bg-pendidikan bg-cover
+                  md:rounded-40
+                  xs:rounded-20
+                  overflow-hidden
+                "
+              >
                 <div
                   class="
-                    h-96
+                    md:h-96
+                    xs:h-52
                     bg-black bg-opacity-0
                     hover:bg-opacity-40
-                    rounded-40
                     p-8
                     flex
                     items-end
@@ -135,15 +155,24 @@
                   </span>
                 </div>
               </div>
+              <!-- end of kategori 3 -->
 
-              <!-- <CardCategory /> -->
-              <div class="rounded-40 bg-supir bg-cover">
+              <!-- kategori 4 -->
+              <div
+                class="
+                  rounded-40
+                  bg-supir bg-cover
+                  md:rounded-40
+                  xs:rounded-20
+                  overflow-hidden
+                "
+              >
                 <div
                   class="
-                    h-96
+                    md:h-96
+                    xs:h-52
                     bg-black bg-opacity-0
                     hover:bg-opacity-40
-                    rounded-40
                     p-8
                     flex
                     items-end
@@ -156,15 +185,24 @@
                   <span class="font-semibold text-lg text-white"> Driver </span>
                 </div>
               </div>
+              <!-- end of kategori 4 -->
 
-              <!-- <CardCategory /> -->
-              <div class="rounded-40 bg-jasa bg-cover">
+              <!-- kategori 5 -->
+              <div
+                class="
+                  rounded-40
+                  bg-jasa bg-cover
+                  md:rounded-40
+                  xs:rounded-20
+                  overflow-hidden
+                "
+              >
                 <div
                   class="
-                    h-96
+                    md:h-96
+                    xs:h-52
                     bg-black bg-opacity-0
                     hover:bg-opacity-40
-                    rounded-40
                     p-8
                     flex
                     items-end
@@ -177,6 +215,7 @@
                   <span class="font-semibold text-lg text-white"> Jasa </span>
                 </div>
               </div>
+              <!-- end of kategori 5 -->
             </div>
           </div>
           <!-- end kategori pekerjaan -->

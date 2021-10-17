@@ -7,8 +7,8 @@
     <!-- modal -->
     <input type="checkbox" id="my-modal-2" class="modal-toggle" />
     <!-- isi modal -->
-    <div class="modal overflow-y-auto">
-      <div class="modal-box my-auto">
+    <div class="modal overflow-y-auto lg:p-8 sm:p-6 xs:p-4">
+      <div class="modal-box my-auto md:rounded-20 xs:rounded-large">
         <p>Apakah Anda yakin ingin mendaftar pekerjaan ini?</p>
         <div class="modal-action justify-end">
           <label for="my-modal-2" class="btn btn-outline w-40">Tidak</label>
@@ -21,6 +21,7 @@
       </div>
     </div>
     <!-- end of modal -->
+
     <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
       <div
         :class="sidebarOpen ? 'block' : 'hidden'"
@@ -45,7 +46,7 @@
 
         <!-- main page -->
         <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
-          <div class="container flex-grow mx-auto m-8">
+          <div class="flex-grow mx-auto m-8">
             <!-- Halaman Profil -->
             <div class="flex flex-col items-center min-h-screen">
               <!-- image -->
@@ -113,22 +114,20 @@
                     py-8
                     grid grid-flow-row
                     auto-cols-max
-                    xl:grid-cols-3
-                    sm:grid-cols-2
-                    xs:grid-cols-1
                     gap-y-5 gap-x-10
-                    sm:justify-items-center
                     bg-white
                     dark:bg-gray-900
                     rounded-20
-                    sm:px-10
-                    xs:px-6
                     2xl:w-3/5
-                    lg:w-4/5
-                    md:w-11/12
+                    xl:grid-cols-3
+                    lg:m-8 lg:w-4/5 lg:mx-auto
+                    sm:m-6
+                    sm:px-10
                     sm:w-11/12
-                    xs:w-full
-                    mx-auto
+                    sm:grid-cols-2
+                    sm:justify-items-center
+                    md:w-11/12
+                    xs:m-4 xs:px-6 xs:w-full xs:grid-cols-1 xs:mx-auto
                     text-gray-500
                     dark:text-white dark:text-opacity-60
                   "
@@ -188,23 +187,26 @@
                   bg-white
                   dark:bg-gray-900 dark:text-white dark:text-opacity-80
                   rounded-20
-                  lg:p-14
-                  md:p-10
-                  sm:p-8
-                  xs:p-6
                   text-neutral
                   mt-8
                   2xl:w-3/5
-                  lg:w-4/5
-                  md:w-11/12
-                  sm:w-11/12
-                  xs:w-full
+                  lg:p-14 lg:w-4/5
+                  md:p-10 md:w-11/12
+                  sm:p-8 sm:w-11/12
+                  xs:p-6 xs:w-full
                 "
               >
                 <!-- isi Deskripsi -->
                 <div class="leading-7 space-y-4">
                   <h2 class="font-bold text-xl mb-3">Deskripsi Pekerjaan</h2>
-                  <span>
+                  <span
+                    class="
+                      text-neutral text-opacity-80
+                      xs:text-sm
+                      md:text-base
+                      dark:text-white dark:text-opacity-60
+                    "
+                  >
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Sunt quae omnis illum. Asperiores magni libero, veritatis
                     quia in dolorum error cum nam excepturi eos delectus sed
@@ -216,7 +218,15 @@
                   </span>
 
                   <h2 class="font-bold text-lg mb-3">Responsibilities :</h2>
-                  <ul class="list-disc list-inside">
+                  <ul
+                    class="
+                      list-disc list-inside
+                      text-neutral text-opacity-80
+                      dark:text-white dark:text-opacity-60
+                      xs:text-sm
+                      md:text-base
+                    "
+                  >
                     <li>Designing and implementing Java-based applications.</li>
                     <li>
                       Analyzing user requirements to inform application design.
@@ -236,7 +246,15 @@
                   </ul>
 
                   <h2 class="font-bold text-lg mb-3">Requirements :</h2>
-                  <ul class="list-disc list-inside">
+                  <ul
+                    class="
+                      list-disc list-inside
+                      text-neutral text-opacity-80
+                      xs:text-sm
+                      md:text-base
+                      dark:text-white dark:text-opacity-60
+                    "
+                  >
                     <li>
                       Bachelor’s Degree or more 3 ~ 5 years web programming
                       experience.

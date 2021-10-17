@@ -67,19 +67,6 @@
           <!-- button bookmark -->
           <div class="">
             <button>
-              <!-- <Icon
-                icon="fluent:bookmark-24-filled"
-                :inline="true"
-                class="
-                  text-3xl text-merah
-                  dark:text-white dark:text-opacity-80
-                  hover:text-neutral
-                  dark:hover:text-white
-                  transition-all
-                  duration-200
-                "
-                id="iconBookmark"
-              /> -->
               <div
                 id="iconBookmark"
                 class="
@@ -164,13 +151,13 @@ export default {
   transition-duration: 200ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  content: url("../../assets/images/icons/bookmark-remove-24-filled.svg");
+  content: url("../../assets/icons/bookmark-remove-24-filled.svg");
 }
 .dark #iconBookmark:hover {
   height: 1.875rem;
   transition-duration: 200ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  content: url("../../assets/images/icons/bookmark-remove-24-filled-putih.svg");
+  content: url("../../assets/icons/bookmark-remove-24-filled-putih.svg");
 }
 </style>
