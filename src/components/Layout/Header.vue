@@ -3,7 +3,6 @@
     <div class="flex items-center space-x-4 xl:space-x-0">
       <!-- hamburger menu -->
       <button
-        @click="sidebarOpen = true"
         class="text-gray-500 dark:text-gray-300 focus:outline-none xl:hidden"
       >
         <svg

@@ -1,8 +1,5 @@
 <template>
   <div
-    :class="
-      sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'
-    "
     class="
       fixed
       z-30
@@ -15,9 +12,7 @@
       bg-white
       dark:bg-gray-900
       overflow-y-auto
-      xl:translate-x-0
-      xl:static
-      xl:inset-0
+      xl:translate-x-0 xl:static xl:inset-0
     "
   >
     <!-- logo -->
@@ -138,9 +133,7 @@
           text-sm
           space-y-1
           hover:dark:bg-white
-          dark:bg-gray-800
-          dark:border-gray-900
-          dark:text-white
+          dark:bg-gray-800 dark:border-gray-900 dark:text-white
           dropdown-content
         "
       >
@@ -149,10 +142,8 @@
             px-5
             py-3
             rounded-large
-            dark:text-white dark:text-opacity-80
-            dark:hover:bg-opacity-20
-            hover:bg-gray-100
-            hover:text-opacity-80
+            dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
+            hover:bg-gray-100 hover:text-opacity-80
             transition-all
             duration-200
           "
@@ -171,10 +162,8 @@
             rounded-large
             px-5
             py-3
-            dark:text-white dark:text-opacity-80
-            dark:hover:bg-opacity-20
-            hover:bg-red-100
-            hover:text-opacity-80
+            dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
+            hover:bg-red-100 hover:text-opacity-80
             dark:hover:bg-red-300
             transition-all
             duration-200
@@ -243,7 +232,7 @@ export default {
       return this.$store.getters["auth/data_user"];
     },
     getDataDiri() {
-      return this.$store.getters['auth/data_diri'];
+      return this.$store.getters["auth/data_diri"];
     },
   },
   // methods: {
