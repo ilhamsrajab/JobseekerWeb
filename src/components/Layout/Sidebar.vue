@@ -43,6 +43,7 @@
             :inline="true"
             class="text-xl mr-3"
           />Home
+          <!-- {{ getusers.data.id }} -->
         </button-sidebar>
       </router-link>
 
@@ -109,13 +110,13 @@
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
           <h4 class="font-semibold dark:text-white dark:text-opacity-80">
-            {{ receivedData.nama }}
+            {{ getDataDiri.nama }}
           </h4>
           <h5
             id="email"
             class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
-            Email
+            {{ getDataUser.email }}
           </h5>
         </div>
       </div>
@@ -170,8 +171,10 @@
             rounded-large
             px-5
             py-3
-            dark:text-white dark:text-opacity-80 dark:hover:bg-opacity-20
-            hover:bg-red-100 hover:text-opacity-80
+            dark:text-white dark:text-opacity-80
+            dark:hover:bg-opacity-20
+            hover:bg-red-100
+            hover:text-opacity-80
             dark:hover:bg-red-300
             transition-all
             duration-200
@@ -194,6 +197,7 @@
 <script>
 import { Icon } from "@iconify/vue";
 import ButtonSidebar from "../UI/ButtonSidebar.vue";
+import axios from "axios";
 
 export default {
   components: {
@@ -206,15 +210,22 @@ export default {
   data() {
     return {
       selectedTab: "home",
-      jobSeeker: null,
+      dataUser: null,
+      dataDiri: null,
     };
+  },
+  created() {
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+    this.dataUser = this.$store.dispatch("auth/getDataUser");
+    this.dataDiri = this.$store.dispatch("auth/getDataDiri");
   },
   methods: {
     setSelectedTab(tab) {
       this.selectedTab = tab;
     },
     logout() {
-      this.$store.dispatch("logout");
+      this.$store.dispatch("auth/logout");
       this.$router.replace("/login");
     },
   },
@@ -228,27 +239,33 @@ export default {
     favoriteButtonMode() {
       return this.selectedTab === "favorite" ? null : "btnSidebarDisable";
     },
-    receivedData() {
-      return this.$store.getters["jobSeeker/jobSeeker"];
+    getDataUser() {
+      return this.$store.getters["auth/data_user"];
+    },
+    getDataDiri() {
+      return this.$store.getters['auth/data_diri'];
     },
   },
-  created() {
-    this.loadJobSeeker();
-  },
-  methods: {
-    async loadJobSeeker() {
-      this.isLoading = true;
-      try {
-        await this.$store.dispatch("jobSeeker/fetchJobSeeker");
-      } catch (error) {
-        this.error = error.message || "Something failed!";
-      }
-      this.isLoading = false;
-    },
-    handleError() {
-      this.error = null;
-    },
-  },
+  // methods: {
+  //   async loadJobSeeker() {
+  //     this.isLoading = true;
+  //     try {
+  //       await this.$store.dispatch("jobSeeker/fetchJobSeeker");
+  //     } catch (error) {
+  //       this.error = error.message || "Something failed!";
+  //     }
+  //     this.isLoading = false;
+  //   },
+  //   handleError() {
+  //     this.error = null;
+  //   },
+  // },
+  // mounted() {
+  //   this.$store.dispatch("jobSeeker/fetchJobSeeker");
+  // },
+  // created() {
+
+  // },
 };
 </script>
 

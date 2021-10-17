@@ -1,68 +1,99 @@
+import axios from "axios";
+
 export default {
-    async login(context, payload) {
-      const response = await fetch('http://127.0.0.1:8000/api/login',  {
-        // method: 'POST', credentials,
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+  login( _, user ) {
+      // axios.get('sanctum/csrf-cookie').then(response => {
+        axios.post('api/login', {
+        email: user.email,
+        password: user.password
+      }).then( response => {
+        // console.log(response.data.data.access_token)
+        if( response.data.data.access_token ) {
           
-        },
-        body: JSON.stringify({
-          email: payload.email,
-          password: payload.password,
-        })
-      });
-      const responseData = await response.json();
+          localStorage.setItem(
+            "token",
+            response.data.data.access_token
+          )
 
-      if (!response.ok) {
-        console.log(responseData);
-        const error = new Error(responseData.message || 'Failed to authenticate. Check your login data. Check your login data.');
-        throw error;
-      }
-
-      console.log(responseData);
-      context.commit('setUser', {
-        token: responseData.accessToken,
-        userId: responseData.id
-      });
-    },
-
-    async register(context, payload) {
-      const response = await fetch('http://127.0.0.1:8000/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          username: payload.username,
-          email: payload.email,
-          password: payload.password,
-          password_confirmation: payload.password_confirmation,
-          role: payload.role,
-        }),
-      });
+          window.location.replace('/')
+        }
+      // })
+    });
+  },
+  register( _, user ) {
+    // axios.get('sanctum/csrf-cookie').then(response => {
+        axios.post('api/register', {
+        username: user.username,
+        email: user.email,
+        password: user.password,
+        password_confirmation: user.password_confirmation,
+        role: user.role
+      }).then( response => {
+        // console.log(response.data)
+        window.location.replace('/lengkapi-data-diri')
+    // })
+  });
+  },
+  logout() {
+    localStorage.removeItem('token')
+  },
   
-      const responseData = await response.json();
+  async getDataUser ({ commit }) {
+    await axios.get("api/get_job_seeker_data_diri")
+    .then( response => {
+      commit('SET_DATA_USER', response.data.data.users)
+    })
+  },
   
-      if (!response.ok) {
-        console.log(responseData);
-        const error = new Error(responseData.message || 'Failed to authenticate.');
-        throw error;
-      }
-  
-      console.log(responseData);
-      context.commit('setUser', {
-        token: responseData.token,
-        // userId: responseData.localId,
-        // tokenExpiration: responseData.expiresIn
-      });
-    },
+  async getDataDiri({ commit }) {
+    await axios.get("api/get_job_seeker_data_diri")
+    .then( response => {
+      commit('SET_DATA_DIRI', response.data.data)
+    })
+  },
 
-    logout(context) {
-      context.commit('setUser', {
-        token: null
-      });
-    }
-  };
+  async getDataRiwayatPekerjaan ({ commit }) {
+    await axios.get('api/get_job_seeker_data_diri')
+    .then( response => {
+      commit('SET_DATA_RIWAYAT_PEKERJAAN', response.data.data.riwayat.pekerjaan)
+    })
+  }
+}
+
+    // async register(context, payload) {
+    //   const response = await fetch('http://127.0.0.1:8000/api/register', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'Accept': 'application/json'
+    //     },
+    //     body: JSON.stringify({
+    //       username: payload.username,
+    //       email: payload.email,
+    //       password: payload.password,
+    //       password_confirmation: payload.password_confirmation,
+    //       role: payload.role,
+    //     }),
+    //   });
+  
+    //   const responseData = await response.json();
+  
+    //   if (!response.ok) {
+    //     console.log(responseData);
+    //     const error = new Error(responseData.message || 'Failed to authenticate.');
+    //     throw error;
+    //   }
+  
+    //   console.log(responseData);
+    //   context.commit('setUser', {
+    //     token: responseData.token,
+    //     // userId: responseData.localId,
+    //     // tokenExpiration: responseData.expiresIn
+    //   });
+    // },
+
+    // logout(context) {
+    //   context.commit('setUser', {
+    //     token: null
+    //   });
+    // }

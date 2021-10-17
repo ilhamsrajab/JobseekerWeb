@@ -14,7 +14,8 @@
                 h-8
                 w-8
                 p-1.5
-                dark:text-white dark:hover:text-merahDark
+                dark:text-white
+                dark:hover:text-merahDark
                 hover:bg-accent
                 transition-all
                 duration-200
@@ -66,7 +67,7 @@
             placeholder="contoh@bursakerja.com"
             class="input input-primary w-full"
             required
-            v-model.trim="email"
+            v-model.trim="user.email"
           />
         </div>
 
@@ -82,7 +83,7 @@
             placeholder="Masukan username"
             class="input input-primary w-full"
             required
-            v-model.trim="username"
+            v-model.trim="user.username"
           />
         </div>
 
@@ -100,7 +101,7 @@
             placeholder="Masukan password"
             class="input input-primary w-full"
             required
-            v-model.trim="password"
+            v-model.trim="user.password"
           />
           <!-- <label class="label" v-if="!formIsValid">
             <p href="#" class="label-text-alt text-red-500 dark:text-red-400">
@@ -130,10 +131,11 @@
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700 dark:text-white dark:text-opacity-60
+              dark:bg-gray-700
+              dark:text-white dark:text-opacity-60
             "
             required
-            v-model.trim="password_confirmation"
+            v-model.trim="user.password_confirmation"
           />
         </div>
 
@@ -217,22 +219,18 @@ export default {
   },
   data() {
     return {
-      username: "",
-      email: "",
-      password: "",
-      password_confirmation: "",
-      role: "jobseeker",
+      user: {
+        username: "",
+        email: "",
+        password: "",
+        password_confirmation: "",
+        role: "jobseeker",
+      },
     };
   },
   methods: {
-    submitForm() {
-      this.$store.dispatch("register", {
-        username: this.username,
-        email: this.email,
-        password: this.password,
-        password_confirmation: this.password_confirmation,
-        role: this.role,
-      });
+    async submitForm() {
+      this.$store.dispatch("auth/register", this.user);
     },
   },
 };

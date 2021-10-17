@@ -1,6 +1,7 @@
 export default {
     jobSeeker(state, rootGetters) {
-        const jobSeekerId = rootGetters.id;
-        return state.jobSeeker.filter(req => req.jobSeekerId === jobSeekerId);
+        const jobSeekerId = rootGetters.userId;
+        // const token = rootGetters.token;
+        return state.jobSeekers.filter(req => req.jobSeekerId === jobSeekerId);
     },
 }

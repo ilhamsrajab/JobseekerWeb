@@ -1,11 +1,22 @@
 export default {
-  userId(state) {
-    return state.id;
+  data_user(state) {
+    return state.data_user;
   },
-  token(state) {
-    return state.token;
+
+  data_diri(state) {
+    return state.data_diri;
   },
-  isAuthenticated(state) {
-    return !!state.token;
+
+  data_riwayat_pekerjaan(state) {
+    return state.data_riwayat_pekerjaan;
   }
+  // userId(state) {
+  //   return state.id;
+  // },
+  // token(state) {
+  //   return state.token;
+  // },
+  // isAuthenticated(state) {
+  //   return !!state.token;
+  // }
 };

@@ -52,7 +52,7 @@ const router = createRouter({
       component: HalamanLogin
     },
     {
-      path: '/daftar',
+      path: '/register',
       name: 'HalamanDaftar',
       component: HalamanDaftar
     },

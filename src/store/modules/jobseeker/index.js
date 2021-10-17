@@ -6,7 +6,7 @@ export default {
     namespaced: true,
     state() {
       return {
-        jobSeeker: []
+        jobSeekers: []
       };
     },
     mutations,

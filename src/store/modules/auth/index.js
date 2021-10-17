@@ -6,7 +6,10 @@ export default {
   namespaced: true,
   state() {
     return {
-      userId: null,
+      authStatus: false,
+      data_user: [],
+      data_diri: [],
+      data_riwayat_pekerjaan: [],
       token: null,
     };
   },
@@ -14,3 +17,4 @@ export default {
   actions,
   getters
 };
+
