@@ -27,16 +27,14 @@
 
         <!-- main page -->
         <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
-          <div class="container flex-grow mx-auto sm:my-8 xs:w-full xs:my-4">
+          <div class="flex-grow mx-auto w-full">
             <!-- kategori -->
             <div
               class="
                 overflow-x-auto
-                sm:mb-10
-                xs:mb-6
-                sm:mx-8
-                xl:mx-8
-                2xl:mx-0
+                lg:m-8
+                sm:m-6
+                xs:m-4
                 no-scrollbar
                 rounded-lg
               "
@@ -53,11 +51,10 @@
                 >
               </div>
             </div>
+            <!-- end of kategori -->
 
-            <!-- filter button -->
-            <div
-              class="mb-5 sm:m-8 xs:m-1 xl:mx-10 2xl:mx-0 flex justify-between"
-            >
+            <!-- title and filter button -->
+            <div class="lg:m-8 sm:m-6 xs:m-4 flex justify-between">
               <span class="font-semibold dark:text-white dark:text-opacity-80"
                 >Favorit</span
               >
@@ -86,27 +83,33 @@
                 <Filter />
               </div>
             </div>
+            <!-- end of title and filter button -->
 
+            <!-- card -->
             <div
               class="
                 grid
                 2xl:grid-cols-3
-                xl:grid-cols-2
-                md:grid-cols-2
-                xs:grid-cols-1 xs:gap-6
-                md:gap-6
-                lg:gap-8
-                xl:gap-8
-                2xl:m-0
-                sm:m-8
-                xs:mx-1 xs:mt-6
+                xl:grid-cols-2 xl:gap-8
+                lg:m-8 lg:gap-8
+                md:grid-cols-2 md:gap-6
+                sm:m-6
+                xs:grid-cols-1 xs:gap-6 xs:m-4
               "
             >
-              <!-- card -->
               <CardFavorit />
               <CardFavorit />
               <CardFavorit />
+              <!-- <Modal /> -->
+
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
             </div>
+            <!-- end of card -->
           </div>
           <!-- footer -->
           <Footer />

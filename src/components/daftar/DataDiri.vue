@@ -475,6 +475,11 @@
           <router-link :to="{ name: 'DaftarBerkas' }">
             <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
           </router-link>
+
+          <!-- btn kembali -->
+          <router-link :to="{ name: 'HalamanCariKerja' }">
+            <button class="btn btn-outline w-full mb-3">Kembali</button>
+          </router-link>
         </div>
       </div>
     </div>

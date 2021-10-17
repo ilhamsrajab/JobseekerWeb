@@ -109,6 +109,7 @@
         mt-2
         flex flex-row
         justify-between
+        gap-4
         sm:px-5 sm:py-2
         xs:px-3 xs:py-2
         rounded-large
@@ -118,10 +119,10 @@
       "
     >
       <div class="w-40">
-        <button class="btn btn-primary">Filter</button>
+        <button class="btn btn-outline w-full" type="reset">Reset</button>
       </div>
       <div class="w-40">
-        <button class="btn btn-outline w-full" type="reset">Reset</button>
+        <button class="btn btn-primary">Filter</button>
       </div>
     </div>
   </ul>
