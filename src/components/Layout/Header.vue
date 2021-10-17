@@ -20,20 +20,7 @@
             class="text-xl text-white hover:text-neutral"
           />
         </div>
-        <!-- <svg
-          class="h-6 w-6 text-white"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 6H20M4 12H20M4 18H11"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg> -->
+        <!-- end of hamburger menu -->
       </label>
 
       <!-- logo -->
@@ -103,75 +90,9 @@
 
     <!-- button notifikasi dan dark mode -->
     <div class="flex items-center space-x-4">
-      <!-- light mode -->
-      <div
-        class="group flex items-center"
-        v-show="modeCerah"
-        v-on:Click="lightMode"
-      >
-        <span
-          class="
-            text-xs text-white
-            mr-2
-            opacity-0
-            md:group-hover:opacity-100
-            cursor-pointer
-            transition-all
-            duration-200
-          "
-          >Light Mode</span
-        >
-        <button
-          class="
-            px-1
-            py-1
-            group-hover:bg-accent group-hover:shadow-glow
-            rounded-full
-            transition-all
-            duration-200
-          "
-        >
-          <Icon
-            icon="fluent:weather-sunny-24-filled"
-            class="text-xl text-white group-hover:text-neutral"
-          />
-        </button>
-      </div>
-
-      <!-- dark mode -->
-      <div
-        class="group flex items-center"
-        v-show="modeGelap"
-        v-on:Click="darkMode"
-      >
-        <span
-          class="
-            text-xs text-white
-            mr-2
-            opacity-0
-            md:group-hover:opacity-100
-            cursor-pointer
-            transition-all
-            duration-200
-          "
-          >Dark Mode</span
-        >
-        <button
-          class="
-            px-1
-            py-1
-            group-hover:bg-accent group-hover:shadow-glow
-            rounded-full
-            transition-all
-            duration-200
-          "
-        >
-          <Icon
-            icon="fluent:weather-moon-24-filled"
-            class="text-xl text-white group-hover:text-neutral"
-          />
-        </button>
-      </div>
+      <!-- Theme switcher small screen start -->
+      <theme-switcher :theme="theme" @themeChanged="updateTheme" />
+      <!-- Theme switcher small screen end -->
 
       <!-- notifikasi -->
       <div class="group flex items-center dropdown">
@@ -229,26 +150,28 @@
 <script>
 import { Icon } from "@iconify/vue";
 import NotifikasiDropdown from "../../components/UI/NotifikasiDropdown.vue";
+import ThemeSwitcher from "../../components/UI/ThemeSwitcher.vue";
 
 export default {
   components: {
     Icon,
     NotifikasiDropdown,
+    ThemeSwitcher,
   },
   data() {
     return {
-      modeCerah: false,
-      modeGelap: true,
+      theme: "",
     };
   },
+  created() {
+    this.theme = localStorage.getItem("theme") || "light";
+  },
+  mounted() {
+    this.theme = localStorage.getItem("theme") || "light";
+  },
   methods: {
-    lightMode() {
-      this.modeCerah = false;
-      this.modeGelap = true;
-    },
-    darkMode() {
-      this.modeCerah = true;
-      this.modeGelap = false;
+    updateTheme(theme) {
+      this.theme = theme;
     },
   },
 };
