@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HalamanLandingPage from '../views/HalamanLandingPage.vue'
 import HalamanHome from '../views/HalamanHome.vue'
 import HalamanCariKerja from '../views/HalamanCariKerja.vue'
 import HalamanFavorit from '../views/HalamanFavorit.vue'
@@ -27,6 +28,12 @@ const router = createRouter({
       path: '/',
       name: 'HalamanHome',
       component: HalamanHome,
+      // meta: { requiredAuth: true }
+    },
+    {
+      path: '/landing-page',
+      name: 'HalamanLandingPage',
+      component: HalamanLandingPage,
       // meta: { requiredAuth: true }
     },
     {

@@ -1,6 +1,6 @@
 <template>
   <!-- container -->
-  <div class="lg-8 sm:m-6 xs:m-4">
+  <div class="2xl:m-12 xl:m-10 lg:m-8 sm:m-6 xs:m-4">
     <!-- hero wrapper -->
     <div
       class="

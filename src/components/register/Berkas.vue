@@ -44,13 +44,11 @@
           z-0
         "
       >
-        <!-- gambar -->
-        <div class="absolute z-0">
-          <img src="../../assets/images/header.svg" alt="" srcset="" />
-        </div>
+        <!-- title -->
         <div class="xs:text-xl sm:text-3xl font-bold m-5 text-center">
           Lengkapi Berkas
         </div>
+        <!-- end of title -->
         <!-- step progress bar -->
         <ul class="w-full steps xs:my-0 sm:my-5">
           <li data-content="" class="step step-accent sm:text-sm xs:text-2xs">
@@ -68,7 +66,9 @@
 
           <li data-content="" class="step sm:text-sm xs:text-2xs">Selesai</li>
         </ul>
+        <!-- end of step progress bar -->
       </div>
+      <!-- end of kotak header -->
       <div
         class="
           mx-auto
