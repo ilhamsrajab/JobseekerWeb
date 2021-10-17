@@ -7,7 +7,7 @@
   <!-- <router-link :to="{ name: 'HalamanLogin' }">Halaman Login</router-link>
   |
   <router-link :to="{ name: 'HalamanRegister' }">Halaman Daftar</router-link> | -->
-  <router-view />
+  <router-view :theme="appTheme" />
 </template>
 
 <style>

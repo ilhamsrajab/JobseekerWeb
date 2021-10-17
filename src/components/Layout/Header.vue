@@ -161,8 +161,6 @@ export default {
   data() {
     return {
       theme: "",
-      modeCerah: false,
-      modeGelap: true,
     };
   },
   created() {
@@ -172,14 +170,6 @@ export default {
     this.theme = localStorage.getItem("theme") || "light";
   },
   methods: {
-    lightMode() {
-      this.modeCerah = false;
-      this.modeGelap = true;
-    },
-    darkMode() {
-      this.modeCerah = true;
-      this.modeGelap = false;
-    },
     updateTheme(theme) {
       this.theme = theme;
     },

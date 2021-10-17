@@ -1,11 +1,7 @@
 <template>
   <a href="#" @click.prevent="toggleTheme">
     <!-- light mode -->
-    <div
-      v-if="theme === 'light'"
-      data-feather="moon"
-      class="group flex items-center"
-    >
+    <div v-if="theme === 'light'" class="group flex items-center">
       <span
         class="
           text-xs text-white
@@ -36,7 +32,7 @@
     </div>
 
     <!-- dark mode -->
-    <div v-else data-feather="sun" class="group flex items-center">
+    <div v-else class="group flex items-center">
       <span
         class="
           text-xs text-white
