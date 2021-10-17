@@ -24,3 +24,13 @@
   box-sizing: border-box;
 }
 </style>
+
+<script>
+export default {
+  data: () => {
+    return {
+      appTheme: localStorage.getItem("theme"),
+    };
+  },
+};
+</script>
