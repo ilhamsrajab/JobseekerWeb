@@ -1,25 +1,13 @@
 <template>
-  <div class="drawer drawer-mobile flex h-screen bg-gray-100 dark:bg-gray-800">
+  <div class="drawer drawer-mobile h-screen bg-gray-100 dark:bg-gray-800">
     <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-    <!-- sidebar -->
-    <div class="drawer-side">
-      <label for="my-drawer-2" class="drawer-overlay"></label>
-      <Sidebar />
-    </div>
 
-    <!-- header -->
-    <div class="flex-1 flex flex-col overflow-hidden">
+    <div class="drawer-content flex-1 flex flex-col overflow-hidden">
+      <!-- header -->
       <Header />
 
       <!-- main page -->
-      <main
-        class="
-          drawer-contentflex
-          flex-col
-          h-screen
-          overflow-x-hidden overflow-y-auto
-        "
-      >
+      <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
         <label
           for="my-drawer-2"
           class="mb-4 btn btn-primary drawer-button lg:hidden"
@@ -297,6 +285,15 @@
         <Footer />
       </main>
     </div>
+    <!-- sidebar -->
+    <div class="drawer-side">
+      <label
+        for="my-drawer-2"
+        class="drawer-overlay bg-black bg-opacity-50 z-20"
+      ></label>
+      <Sidebar />
+    </div>
+    <!-- end of sidebar -->
   </div>
 </template>
 
