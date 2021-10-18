@@ -14,8 +14,7 @@
                 h-8
                 w-8
                 p-1.5
-                dark:text-white
-                dark:hover:text-merahDark
+                dark:text-white dark:hover:text-merahDark
                 hover:bg-accent
                 transition-all
                 duration-200
@@ -28,18 +27,21 @@
       <!-- logo -->
       <div>
         <!-- logo dark mode -->
-        <!-- <img
-          src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
-          alt=""
-          class="w-40"
-        /> -->
-        <!-- logo light mode -->
         <img
+          v-if="theme === 'light'"
           src="../../assets/images/logo/BursaKerjaLogo.svg"
           alt=""
           class="w-40"
         />
+        <!-- logo light mode -->
+        <img
+          v-else
+          src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
+          alt=""
+          class="w-40"
+        />
       </div>
+      <!-- end of logo -->
     </div>
     <!-- daftar form -->
     <div class="formLogin">
@@ -131,8 +133,7 @@
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700
-              dark:text-white dark:text-opacity-60
+              dark:bg-gray-700 dark:text-white dark:text-opacity-60
             "
             required
             v-model.trim="user.password_confirmation"
