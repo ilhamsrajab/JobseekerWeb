@@ -13,25 +13,28 @@
     <!-- logo -->
     <div class="flex justify-end xs:mb-5 sm:mb-0">
       <!-- logo dark mode -->
-      <!-- <img
-        src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
-        alt=""
-        class="w-40"
-      /> -->
-      <!-- logo light mode -->
       <img
+        v-if="theme === 'light'"
         src="../../assets/images/logo/BursaKerjaLogo.svg"
         alt=""
         class="w-40"
       />
+      <!-- logo light mode -->
+      <img
+        v-else
+        src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
+        alt=""
+        class="w-40"
+      />
     </div>
+    <!-- end of logo -->
     <div class="flex flex-col self-center md:m-8 sm:m-4">
       <!-- kotak header -->
       <div
         class="
           text-white
           p-5
-          bg-primary
+          bg-primary bg-header
           mx-auto
           w-full
           sm:rounded-40
@@ -44,10 +47,6 @@
           z-0
         "
       >
-        <!-- gambar -->
-        <div class="absolute z-0">
-          <img src="../../assets/images/header.svg" alt="" srcset="" />
-        </div>
         <div class="xs:text-xl sm:text-3xl font-bold m-5 text-center">
           Lengkapi Data Diri
         </div>

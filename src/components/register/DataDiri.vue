@@ -69,6 +69,7 @@
         </ul>
         <!-- end of step progress bar -->
       </div>
+      <!-- end of kotak header -->
       <div
         class="
           mx-auto

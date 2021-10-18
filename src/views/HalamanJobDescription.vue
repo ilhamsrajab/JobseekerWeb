@@ -2,7 +2,16 @@
   <!-- modal -->
   <input type="checkbox" id="my-modal-2" class="modal-toggle" />
   <!-- isi modal -->
-  <div class="modal overflow-y-auto lg:p-8 sm:p-6 xs:p-4">
+  <div
+    class="
+      modal
+      dark:text-white dark:text-opacity-80
+      overflow-y-auto
+      lg:p-8
+      sm:p-6
+      xs:p-4
+    "
+  >
     <div class="modal-box my-auto md:rounded-20 xs:rounded-large">
       <p>Apakah Anda yakin ingin mendaftar pekerjaan ini?</p>
       <div class="modal-action justify-end">
