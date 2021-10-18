@@ -11,7 +11,7 @@
     "
   >
     <!-- logo -->
-    <div>
+    <div class="flex justify-end xs:mb-5 sm:mb-0">
       <!-- logo dark mode -->
       <img
         v-if="theme === 'light'"
