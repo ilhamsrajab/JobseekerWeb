@@ -286,14 +286,14 @@
               <label class="label" for="alamatDesa">
                 <span class="label-text">Desa/Kelurahan</span>
               </label>
-              <select id="alamatDesa" class="select select-primary w-full">
-                <option disabled="disabled" selected="selected">
-                  Pilih Desa/Kelurahan
-                </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
+              <input
+                id="alamatDesa"
+                title="Alamat Desa"
+                type="text"
+                placeholder="Masukan alamat desa"
+                class="input input-primary w-full"
+                required
+              />
             </div>
 
             <!-- rt/rw -->
