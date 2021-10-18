@@ -4,18 +4,21 @@
     <!-- logo -->
     <div>
       <!-- logo dark mode -->
-      <!-- <img
-        src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
-        alt=""
-        class="w-40"
-      /> -->
-      <!-- logo light mode -->
       <img
+        v-if="theme === 'light'"
         src="../../assets/images/logo/BursaKerjaLogo.svg"
         alt=""
         class="w-40"
       />
+      <!-- logo light mode -->
+      <img
+        v-else
+        src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
+        alt=""
+        class="w-40"
+      />
     </div>
+    <!-- end of logo -->
   </div>
   <!-- Login -->
   <div id="login" class="flex flex-col">
@@ -62,8 +65,7 @@
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700
-              dark:text-white dark:text-opacity-60
+              dark:bg-gray-700 dark:text-white dark:text-opacity-60
             "
             v-model.trim="user.email"
             required
@@ -84,8 +86,7 @@
               input input-primary
               w-full
               bg-gray-100
-              dark:bg-gray-700
-              dark:text-white dark:text-opacity-60
+              dark:bg-gray-700 dark:text-white dark:text-opacity-60
             "
             v-model.trim="user.password"
             required

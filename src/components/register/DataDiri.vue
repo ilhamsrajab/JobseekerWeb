@@ -11,20 +11,23 @@
     "
   >
     <!-- logo -->
-    <div class="flex justify-end xs:mb-5 sm:mb-0">
+    <div>
       <!-- logo dark mode -->
-      <!-- <img
-        src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
-        alt=""
-        class="w-40"
-      /> -->
-      <!-- logo light mode -->
       <img
+        v-if="theme === 'light'"
         src="../../assets/images/logo/BursaKerjaLogo.svg"
         alt=""
         class="w-40"
       />
+      <!-- logo light mode -->
+      <img
+        v-else
+        src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
+        alt=""
+        class="w-40"
+      />
     </div>
+    <!-- end of logo -->
     <div class="flex flex-col self-center md:m-8 sm:m-4">
       <!-- kotak header -->
       <div
@@ -283,14 +286,14 @@
               <label class="label" for="alamatDesa">
                 <span class="label-text">Desa/Kelurahan</span>
               </label>
-              <select id="alamatDesa" class="select select-primary w-full">
-                <option disabled="disabled" selected="selected">
-                  Pilih Desa/Kelurahan
-                </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
+              <input
+                id="alamatDesa"
+                title="Alamat Desa"
+                type="text"
+                placeholder="Masukan alamat desa"
+                class="input input-primary w-full"
+                required
+              />
             </div>
 
             <!-- rt/rw -->
