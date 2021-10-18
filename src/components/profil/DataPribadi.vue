@@ -405,6 +405,7 @@ export default {
     return {
       dataDiri: null,
       getDataDiri: null,
+      getDataProvince: null,
     };
   },
   created() {
@@ -412,6 +413,7 @@ export default {
       "Bearer " + localStorage.getItem("token");
     this.dataDiri = this.$store.dispatch("auth/getDataDiri");
     this.getDataDiri = this.$store.getters["auth/data_diri"];
+    this.getDataProvince = this.$store.getters["address/data_province"]
   },
   computed: {
     getDataDiri() {
@@ -459,6 +461,9 @@ export default {
     getDataDiriNoHP() {
       return this.getDataDiri.no_hp;
     },
+    getDataProvince() {
+      return this.getDataProvince;
+    }
   },
 };
 </script>
