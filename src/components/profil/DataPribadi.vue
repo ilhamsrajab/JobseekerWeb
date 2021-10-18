@@ -1,10 +1,11 @@
 <template>
   <div class="mx-auto mt-4 z-10">
-    <form class="form-control" action="#" method="POST">
+    <form class="form-control" action="" method="POST">
+      <!-- form data diri -->
       <!-- nama lengkap -->
       <div class="mt-4">
         <label class="label" for="namaLengkap">
-          <span class="label-text font-semibold">Nama Lengkap </span>
+          <span class="label-text font-semibold">Nama Lengkap</span>
         </label>
         <input
           id="namaLengkap"
@@ -13,7 +14,6 @@
           placeholder="Masukan nama lengkap"
           class="input input-primary w-full"
           required
-          :value="getDataDiriNama"
         />
       </div>
 
@@ -31,7 +31,6 @@
           maxlength="16"
           max="9999999999999999"
           required
-          :value="getDataDiriNik"
         />
       </div>
 
@@ -43,15 +42,13 @@
         <div class="flex flex-row">
           <div class="flex items-center mr-10">
             <input
-              id="Laki-laki"
+              id="push-lakilaki"
               name="jenisKelamin"
               type="radio"
               class="radio"
-              value="Laki-laki"
-              v-model="getDataDiriJenisKelamin"
             />
             <label
-              for="Laki-laki"
+              for="push-lakilaki"
               class="
                 ml-3
                 block
@@ -66,18 +63,16 @@
           </div>
           <div class="flex items-center">
             <input
-              id="Perempuan"
+              id="push-perempuan"
               name="jenisKelamin"
               type="radio"
               class="radio"
-              value="Perempuan"
-              v-model="getDataDiriJenisKelamin"
             />
             <label
-              for="Perempuan"
+              for="push-perempuan"
               class="
-                block
                 ml-3
+                block
                 text-sm
                 font-normal
                 text-neutral
@@ -103,7 +98,6 @@
             placeholder="Masukan tempat lahir"
             class="input input-primary w-3/5"
             required
-            :value="getDataDiriTempatLahir"
           />
           <input
             id="tanggalLahir"
@@ -120,18 +114,11 @@
         <label class="label" for="agama">
           <span class="label-text font-semibold">Agama</span>
         </label>
-        <select
-          id="agama"
-          class="select select-primary w-full"
-          v-model="getDataDiriAgama"
-        >
+        <select id="agama" class="select select-primary w-full">
           <option disabled="disabled" selected="selected">Pilih Agama</option>
-          <option>Islam</option>
-          <option>Hindu</option>
-          <option>Budha</option>
-          <option>Katolik</option>
-          <option>Protestan</option>
-          <option>Khonhucu</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
         </select>
       </div>
 
@@ -140,16 +127,13 @@
         <label class="label" for="statusPerkawinan">
           <span class="label-text font-semibold">Status Perkawinan</span>
         </label>
-        <select
-          id="statusPerkawinan"
-          class="select select-primary w-full"
-          v-model="getDataDiriStatusPerkawinan"
-        >
+        <select id="statusPerkawinan" class="select select-primary w-full">
           <option disabled="disabled" selected="selected">
             Pilih Status Perkawinan
           </option>
-          <option>Kawin</option>
-          <option>Belum Kawin</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
         </select>
       </div>
 
@@ -208,18 +192,14 @@
           <label class="label" for="alamatDesa">
             <span class="label-text">Desa/Kelurahan</span>
           </label>
-          <select
+          <input
             id="alamatDesa"
-            class="select select-primary w-full"
-            v-model="getDataDiriDesa"
-          >
-            <option disabled="disabled" selected="selected">
-              Pilih Desa/Kelurahan
-            </option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
+            title="Alamat Desa"
+            type="text"
+            placeholder="Masukan alamat desa"
+            class="input input-primary w-full"
+            required
+          />
         </div>
 
         <!-- rt/rw -->
@@ -236,7 +216,6 @@
               placeholder="Masukan no. RT"
               class="input input-primary w-1/2"
               required
-              :value="getDataDiriRT"
             />
             <input
               id="alamatRW"
@@ -246,7 +225,6 @@
               placeholder="Masukan no. RW"
               class="input input-primary w-1/2"
               required
-              :value="getDataDiriRW"
             />
           </div>
         </div>
@@ -254,7 +232,7 @@
         <!-- alamat rumah -->
         <div class="mb-1 mt-2">
           <label class="label" for="alamatRumah">
-            <span class="label-text">Desa/Kelurahan</span>
+            <span class="label-text">Alamat Lengkap</span>
           </label>
           <div class="mt-1">
             <textarea
@@ -264,7 +242,6 @@
               class="textarea"
               placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
               required
-              :value="getDataDiriAlamatRumah"
             />
           </div>
         </div>
@@ -280,8 +257,7 @@
             maxlength="5"
             placeholder="Masukan no. kodepos"
             class="input input-primary w-full"
-            required
-            :value="getDataDiriKodePos"
+            disabled
           />
         </div>
       </div>
@@ -291,24 +267,13 @@
         <label class="label" for="pendidikan">
           <span class="label-text font-semibold">Pendidikan Terakhir</span>
         </label>
-        <select
-          id="pendidikan"
-          class="select select-primary w-full"
-          v-model="getDataDiriPendidikanTerakhir"
-        >
+        <select id="pendidikan" class="select select-primary w-full">
           <option disabled="disabled" selected="selected">
             Pilih Pendidikan Terakhir
           </option>
-          <option>Tidak atau Belum Sekolah</option>
-          <option>Tidak Tamat SD atau Sederajat</option>
-          <option>Tamat SD atau Sederajat</option>
-          <option>SLTP atau Sederajat</option>
-          <option>SLTA atau Sederajat</option>
-          <option>Diploma I atau II</option>
-          <option>Akademi atau Diploma III atau Sarjana Muda</option>
-          <option>Diploma IV atau Strata I</option>
-          <option>Strata II</option>
-          <option>Strata III</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
         </select>
       </div>
 
@@ -342,7 +307,6 @@
             class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
             required
-            :value="getDataDiriNoHP"
           />
         </div>
       </div>
@@ -370,7 +334,7 @@
       <!-- ktp -->
       <div class="mt-4">
         <label class="label font-semibold" for="ktp">
-          <span class="label-text">Foto E-KTP </span>
+          <span class="label-text">Foto E-KTP</span>
         </label>
         <input
           id="ktp"
@@ -385,11 +349,6 @@
             * upload foto maksimal 7 MB
           </p>
         </label>
-      </div>
-
-      <!-- btn selanjutnya -->
-      <div>
-        <button class="btn btn-primary my-6">Perbaharui</button>
       </div>
     </form>
   </div>
@@ -413,7 +372,7 @@ export default {
       "Bearer " + localStorage.getItem("token");
     this.dataDiri = this.$store.dispatch("auth/getDataDiri");
     this.getDataDiri = this.$store.getters["auth/data_diri"];
-    this.getDataProvince = this.$store.getters["address/data_province"]
+    this.getDataProvince = this.$store.getters["address/data_province"];
   },
   computed: {
     getDataDiri() {
@@ -463,7 +422,7 @@ export default {
     },
     getDataProvince() {
       return this.getDataProvince;
-    }
+    },
   },
 };
 </script>

@@ -327,7 +327,7 @@
             <!-- alamat rumah -->
             <div class="mb-1 mt-2">
               <label class="label" for="alamatRumah">
-                <span class="label-text">Desa/Kelurahan</span>
+                <span class="label-text">Alamat Lengkap</span>
               </label>
               <div class="mt-1">
                 <textarea
