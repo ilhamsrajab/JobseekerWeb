@@ -6,7 +6,9 @@ export default {
     namespaced: true,
     state() {
         return {
-            
+            data_province: null,
+            data_district: null,
+            data_sub_district: null,
         }
     },
     actions,
