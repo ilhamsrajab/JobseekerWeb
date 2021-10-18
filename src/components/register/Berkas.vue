@@ -11,7 +11,7 @@
     "
   >
     <!-- logo -->
-    <div>
+    <div class="flex justify-end xs:mb-5 sm:mb-0">
       <!-- logo dark mode -->
       <img
         v-if="theme === 'light'"
@@ -27,7 +27,6 @@
         class="w-40"
       />
     </div>
-    <!-- end of logo -->
     <div class="flex flex-col self-center md:m-8 sm:m-4">
       <!-- kotak header -->
       <div
