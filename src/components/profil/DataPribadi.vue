@@ -14,6 +14,7 @@
           placeholder="Masukan nama lengkap"
           class="input input-primary w-full"
           required
+          :value="getDataDiriNama"
         />
       </div>
 
@@ -31,6 +32,7 @@
           maxlength="16"
           max="9999999999999999"
           required
+          :value="getDataDiriNik"
         />
       </div>
 
@@ -46,6 +48,8 @@
               name="jenisKelamin"
               type="radio"
               class="radio"
+              value="Laki-laki"
+              v-model="getDataDiriJenisKelamin"
             />
             <label
               for="push-lakilaki"
@@ -67,6 +71,8 @@
               name="jenisKelamin"
               type="radio"
               class="radio"
+              value="Perempuan"
+              v-model="getDataDiriJenisKelamin"
             />
             <label
               for="push-perempuan"
@@ -98,6 +104,7 @@
             placeholder="Masukan tempat lahir"
             class="input input-primary w-3/5"
             required
+            :value="getDataDiriTempatLahir"
           />
           <input
             id="tanggalLahir"
@@ -114,11 +121,18 @@
         <label class="label" for="agama">
           <span class="label-text font-semibold">Agama</span>
         </label>
-        <select id="agama" class="select select-primary w-full">
+        <select
+          id="agama"
+          class="select select-primary w-full"
+          v-model="getDataDiriAgama"
+        >
           <option disabled="disabled" selected="selected">Pilih Agama</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+          <option>Islam</option>
+          <option>Hindu</option>
+          <option>Budha</option>
+          <option>Katolik</option>
+          <option>Protestan</option>
+          <option>Khonhucu</option>
         </select>
       </div>
 
@@ -127,13 +141,16 @@
         <label class="label" for="statusPerkawinan">
           <span class="label-text font-semibold">Status Perkawinan</span>
         </label>
-        <select id="statusPerkawinan" class="select select-primary w-full">
+        <select
+          id="statusPerkawinan"
+          class="select select-primary w-full"
+          v-model="getDataDiriStatusPerkawinan"
+        >
           <option disabled="disabled" selected="selected">
             Pilih Status Perkawinan
           </option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+          <option>Kawin</option>
+          <option>Belum Kawin</option>
         </select>
       </div>
 
@@ -199,6 +216,7 @@
             placeholder="Masukan alamat desa"
             class="input input-primary w-full"
             required
+            v-model="getDataDiriDesa"
           />
         </div>
 
@@ -216,6 +234,7 @@
               placeholder="Masukan no. RT"
               class="input input-primary w-1/2"
               required
+              :value="getDataDiriRT"
             />
             <input
               id="alamatRW"
@@ -225,6 +244,7 @@
               placeholder="Masukan no. RW"
               class="input input-primary w-1/2"
               required
+              :value="getDataDiriRW"
             />
           </div>
         </div>
@@ -242,6 +262,7 @@
               class="textarea"
               placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
               required
+              :value="getDataDiriAlamatRumah"
             />
           </div>
         </div>
@@ -257,7 +278,8 @@
             maxlength="5"
             placeholder="Masukan no. kodepos"
             class="input input-primary w-full"
-            disabled
+            required
+            :value="getDataDiriKodePos"
           />
         </div>
       </div>
@@ -267,13 +289,24 @@
         <label class="label" for="pendidikan">
           <span class="label-text font-semibold">Pendidikan Terakhir</span>
         </label>
-        <select id="pendidikan" class="select select-primary w-full">
+        <select
+          id="pendidikan"
+          class="select select-primary w-full"
+          v-model="getDataDiriPendidikanTerakhir"
+        >
           <option disabled="disabled" selected="selected">
             Pilih Pendidikan Terakhir
           </option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+          <option>Tidak atau Belum Sekolah</option>
+          <option>Tidak Tamat SD atau Sederajat</option>
+          <option>Tamat SD atau Sederajat</option>
+          <option>SLTP atau Sederajat</option>
+          <option>SLTA atau Sederajat</option>
+          <option>Diploma I atau II</option>
+          <option>Akademi atau Diploma III atau Sarjana Muda</option>
+          <option>Diploma IV atau Strata I</option>
+          <option>Strata II</option>
+          <option>Strata III</option>
         </select>
       </div>
 
