@@ -162,15 +162,21 @@
         <!-- provinsi -->
         <div class="mb-1">
           <label class="label" for="alamatProvinsi">
-            <span class="label-text">Provinsi</span>
+            <span class="label-text">Provinsi {{ getDataProvince }}</span>
           </label>
-          <select id="alamatProvinsi" class="select select-primary w-full">
-            <option disabled="disabled" selected="selected">
-              Pilih Provinsi
+          <select
+            id="alamatProvinsi"
+            class="select select-primary w-full"
+            v-model="getDataProvinceNama"
+          >
+            <option
+              v-for="option in getDataProvince"
+              :value="option.value"
+              :key="option"
+              selected="selected"
+            >
+              {{ option.name }}
             </option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
           </select>
         </div>
 
@@ -395,7 +401,6 @@ export default {
   name: "DataDiri",
   data() {
     return {
-      dataDiri: null,
       getDataDiri: null,
       getDataProvince: null,
     };
@@ -403,11 +408,18 @@ export default {
   created() {
     axios.defaults.headers.common["Authorization"] =
       "Bearer " + localStorage.getItem("token");
-    this.dataDiri = this.$store.dispatch("auth/getDataDiri");
+    this.getDataDiri = this.$store.dispatch("auth/getDataDiri");
     this.getDataDiri = this.$store.getters["auth/data_diri"];
+    this.getDataProvince = this.$store.dispatch("address/getDataProvince");
     this.getDataProvince = this.$store.getters["address/data_province"];
   },
   computed: {
+    getDataProvince() {
+      return this.getDataProvince;
+    },
+    // getDataProvinceNama() {
+    //   return this.getDataProvince.name;
+    // },
     getDataDiri() {
       return this.$store.getters["auth/data_diri"];
     },
@@ -452,9 +464,6 @@ export default {
     },
     getDataDiriNoHP() {
       return this.getDataDiri.no_hp;
-    },
-    getDataProvince() {
-      return this.getDataProvince;
     },
   },
 };

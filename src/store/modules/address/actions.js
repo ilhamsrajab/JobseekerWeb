@@ -1,8 +1,10 @@
+import axios from "axios";
+
 export default {
     async getDataProvince ({ commit }) {
         await axios.get("api/province")
         .then( response => {
-          commit('SET_DATA_PROVINCE', response.data)
+          commit('SET_DATA_PROVINCE', response.data.data)
         })
       },
 
