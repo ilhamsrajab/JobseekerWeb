@@ -12,7 +12,7 @@
       />
       <!-- logo light mode -->
       <img
-        v-else
+        v-else-if="theme === 'dark'"
         src="../../assets/images/logo/BursaKerjaLogo_Black.svg"
         alt=""
         class="w-40"
@@ -199,8 +199,16 @@ export default {
     Icon,
     VueCarousel,
   },
+  created() {
+    this.theme = localStorage.getItem("theme") || "light";
+  },
+  mounted() {
+    this.theme = localStorage.getItem("theme") || "light";
+  },
+
   data() {
     return {
+      theme: "",
       user: {
         email: "",
         password: "",
