@@ -57,7 +57,21 @@ export default {
     .then( response => {
       commit('SET_DATA_RIWAYAT_PEKERJAAN', response.data.data.riwayat_pekerjaan)
     })
-  }
+  },
+
+  async getDataHalamanLowonganKerja ({ commit }) {
+    await axios.get('api/lowongan_kerja')
+    .then( response =>  {
+      commit('SET_DATA_HALAMAN_LOWONGAN_KERJA', response.data.data)
+    })
+  },
+
+  async getDataLowonganKerja ({ commit }) {
+    await axios.get('api/lowongan_kerja')
+    .then( response =>  {
+      commit('SET_DATA_LOWONGAN_KERJA', response.data.data.data)
+    })
+  },
 }
 
     // async register(context, payload) {

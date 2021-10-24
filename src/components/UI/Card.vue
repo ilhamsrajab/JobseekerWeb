@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{ name: 'HalamanJobDescription' }">
+  <router-link :to="deskripsiLink">
     <!-- card -->
     <div
       class="
@@ -46,7 +46,7 @@
                     dark:text-white dark:text-opacity-80
                   "
                 >
-                  Nama Perusahaan
+                  {{ namaPerusahaan }}
                 </h2>
 
                 <div
@@ -58,7 +58,7 @@
                     mt-1
                   "
                 >
-                  Kategori Pekerjaan
+                  {{ kategoriPekerjaan }}
                 </div>
               </div>
             </div>
@@ -89,13 +89,13 @@
           <div class="flex flex-row items-center">
             <div class="flex-auto">
               <div class="font-semibold dark:text-white dark:text-opacity-80">
-                Posisi Kerja
+                {{ posisi }}
               </div>
               <div class="text-gray-400 mt-1 text-sm">
-                Rp. 1.000.000 - Rp. 4.000.000
+                Rp. {{ kisaranGaji }}
               </div>
             </div>
-            <div class="badge-fulltime">Full Time</div>
+            <div class="badge-fulltime">{{ jenisPekerjaan }}</div>
           </div>
 
           <div
@@ -106,9 +106,7 @@
               dark:text-white dark:text-opacity-80
             "
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non nemo
-            suscipit nostrum optio in temporibus officiis libero culpa esse,
-            excepturi?
+            {{ deskripsiPekerjaan }}
           </div>
         </div>
       </div>
@@ -118,11 +116,11 @@
       >
         <span class="inline-flex items-center align-top space-x-1">
           <Icon icon="fluent:location-24-filled" :inline="true" />
-          <p class="text-sm">Lokasi</p>
+          <p class="text-sm">{{ lokasiPenempatan }}</p>
         </span>
         <span class="inline-flex items-center align-top space-x-1">
           <Icon icon="fluent:clock-24-filled" :inline="true" />
-          <p class="text-sm">Waktu</p>
+          <p class="text-sm">{{ deadlinePendaftaran }}</p>
         </span>
       </div>
     </div>
@@ -135,6 +133,48 @@ import { Icon } from "@iconify/vue";
 export default {
   components: {
     Icon,
+  },
+  props: [
+    "id",
+    "namaPerusahaan",
+    "kisaranGaji",
+    "posisi",
+    "lokasiPenempatan",
+    "deskripsiPekerjaan",
+    "kategoriPekerjaan",
+    "deadlinePendaftaran",
+    "jenisPekerjaan",
+  ],
+  computed: {
+    // deskripsi
+    deskripsiLink() {
+      return this.$route.path + "/" + this.id + "/deskripsi";
+    },
+    // loker
+    namaPerusahaan() {
+      return this.namaPerusahaan;
+    },
+    kisaranGaji() {
+      return this.kisaranGaji;
+    },
+    lokasiPenempatan() {
+      return this.lokasiPenempatan;
+    },
+    posisi() {
+      return this.posisi;
+    },
+    deskripsiPekerjaan() {
+      return this.deskripsiPekerjaan;
+    },
+    kategoriPekerjaan() {
+      return this.kategoriPekerjaan;
+    },
+    deadlinePendaftaran() {
+      return this.deadlinePendaftaran;
+    },
+    jenisPekerjaan() {
+      return this.jenisPekerjaan;
+    },
   },
 };
 </script>

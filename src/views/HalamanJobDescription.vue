@@ -59,13 +59,13 @@
               <h4
                 class="font-bold dark:text-white dark:text-opacity-80 text-2xl"
               >
-                Nama Perusahaan
+                {{ namaPerusahaan }}
               </h4>
               <h5
                 id="email"
                 class="font-medium text-gray-500 dark:text-gray-400 mt-2"
               >
-                Posisi Kerja
+                <!-- {{ posisi }} -->
               </h5>
             </div>
 
@@ -424,6 +424,7 @@ import Berkas from "../components/profil/Berkas.vue";
 import RiwayatPekerjaan from "../components/profil/RiwayatPekerjaan.vue";
 import ButtonTab from "../components/UI/ButtonTab.vue";
 import { Icon } from "@iconify/vue";
+import axios from "axios";
 
 export default {
   components: {
@@ -437,31 +438,27 @@ export default {
     Header,
     Footer,
   },
+  props: ["id"],
   data() {
     return {
-      selectedTab: "data-diri",
+      selectedLoker: null,
     };
   },
-  methods: {
-    setSelectedTab(tab) {
-      this.selectedTab = tab;
+  computed: {
+    namaPerusahaan() {
+      return this.selectedLoker;
+    },
+    posisi() {
+      return this.selectedLoker.posisi;
     },
   },
-  computed: {
-    dataDiriButtonMode() {
-      return this.selectedTab === "data-diri" ? null : "tabDisable";
-    },
-    mediaSosialButtonMode() {
-      return this.selectedTab === "media-sosial" ? null : "tabDisable";
-    },
-    berkasButtonMode() {
-      return this.selectedTab === "berkas" ? null : "tabDisable";
-    },
-    riwayatPekerjaanButtonMode() {
-      return this.selectedTab === "riwayat-pekerjaan" ? null : "tabDisable";
-    },
+  created() {
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+    this.selectedLoker = this.$store.dispatch("auth/getDataLowonganKerja");
+    this.selectedLoker = this.$store.getters["auth/data_lowongan_kerja"].find(
+      (id) => id.id === this.id
+    );
   },
 };
 </script>
-
-<style scoped></style>

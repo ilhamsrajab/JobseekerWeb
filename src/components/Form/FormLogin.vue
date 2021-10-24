@@ -21,6 +21,9 @@
     <!-- end of logo -->
   </div>
   <!-- Login -->
+  <!-- <div :show="isLoading">
+    <loading></loading>
+  </div> -->
   <div id="login" class="flex flex-col">
     <div
       class="bg-merah text-merahDark px-6 py-4 rounded-large mt-4 -mb-4 text-sm"
@@ -190,6 +193,7 @@
 
 <script>
 import VueCarousel from "@chenfengyuan/vue-carousel";
+import loading from "../UI/Loading.vue";
 import { Icon } from "@iconify/vue";
 
 export default {
@@ -198,6 +202,7 @@ export default {
   components: {
     Icon,
     VueCarousel,
+    loading,
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";

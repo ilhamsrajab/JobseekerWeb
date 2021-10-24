@@ -10,6 +10,8 @@ export default {
       data_user: [],
       data_diri: [],
       data_riwayat_pekerjaan: [],
+      data_halaman_lowongan_kerja: [],
+      data_lowongan_kerja: [],
       token: null,
     };
   },

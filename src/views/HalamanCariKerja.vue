@@ -71,16 +71,20 @@
               xs:grid-cols-1 xs:gap-6 xs:m-4
             "
           >
-            <Card />
-            <Card />
-            <Card />
-            <!-- <Modal /> -->
+            <card
+              v-for="loker in getDataLowonganKerja"
+              :key="loker.id"
+              :id="loker.id"
+              :nama-perusahaan="loker.company.nama_perusahaan"
+              :kategori-pekerjaan="loker.kategori_pekerjaan"
+              :posisi="loker.posisi"
+              :kisaran-gaji="loker.kisaran_gaji"
+              :lokasi-penempatan="loker.lokasi_penempatan"
+              :deskripsi-pekerjaan="loker.deskripsi_pekerjaan"
+              :deadline-pendaftaran="loker.deadline_pendaftaran"
+              :jenis-pekerjaan="loker.jenis_pekerjaan"
+            ></card>
 
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
             <CardSkeleton />
           </div>
           <!-- end of card -->
@@ -109,6 +113,7 @@ import Sidebar from "../components/Layout/Sidebar.vue";
 import Header from "../components/Layout/Header.vue";
 import Footer from "../components/Layout/Footer.vue";
 import { Icon } from "@iconify/vue";
+import axios from "axios";
 
 export default {
   components: {
@@ -122,6 +127,24 @@ export default {
     Header,
     Footer,
     Icon,
+  },
+  data() {
+    return {
+      getDataLowonganKerja: null,
+    };
+  },
+  created() {
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+    this.getDataLowonganKerja = this.$store.dispatch(
+      "auth/getDataLowonganKerja"
+    );
+    this.getDataLowonganKerja = this.$store.getters["auth/data_lowongan_kerja"];
+  },
+  computed: {
+    getDataLowonganKerja() {
+      return this.$store.getters["auth/data_lowongan_kerja"];
+    },
   },
 };
 </script>

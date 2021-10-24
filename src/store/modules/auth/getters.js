@@ -9,6 +9,14 @@ export default {
 
   data_riwayat_pekerjaan(state) {
     return state.data_riwayat_pekerjaan;
+  },
+
+  data_lowongan_kerja(state) {
+    return state.data_lowongan_kerja;
+  },
+
+  data_halaman_lowongan_kerja(state) {
+    return state.data_halaman_lowongan_kerja;
   }
   // userId(state) {
   //   return state.id;

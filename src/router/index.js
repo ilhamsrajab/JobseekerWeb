@@ -18,7 +18,7 @@ import DaftarKirimLamaran from '../components/daftar/Sukses.vue'
 import HalamanProfil from '../views/HalamanProfil.vue'
 import HalamanJobDescription from '../views/HalamanJobDescription.vue'
 import HalamanNotFound from '../views/NotFound.vue'
-import Loading from '../views/Loading.vue'
+// import Loading from '../views/Loading.vue'
 import store from '../store/index.js';
 
 const router = createRouter({
@@ -39,14 +39,23 @@ const router = createRouter({
     {
       path: '/loker',
       name: 'HalamanCariKerja',
-      component: HalamanCariKerja,
-      // meta: { requiredAuth: true }
+      component: HalamanCariKerja
     },
     {
-      path: '/deskripsi',
+      path: '/loker/:id',
       name: 'HalamanJobDescription',
-      component: HalamanJobDescription
+      component: HalamanJobDescription,
+      props: true,
+      children: [
+        { path: 'deskripsi', component: HalamanJobDescription }
+      ]
+      // meta: { requiredAuth: true }
     },
+    // {
+    //   path: '/deskripsi',
+    //   name: 'HalamanJobDescription',
+    //   component: HalamanJobDescription
+    // },
     {
       path: '/favorit',
       name: 'HalamanFavorit',
@@ -118,11 +127,11 @@ const router = createRouter({
       name: 'DaftarKirimLamaran',
       component: DaftarKirimLamaran
     },
-    {
-      path: '/loading',
-      name: 'Loading',
-      component: Loading
-    },
+    // {
+    //   path: '/loading',
+    //   name: 'Loading',
+    //   component: Loading
+    // },
     {
       path: '/:catchAll(.*)',
       name: 'NotFound',
