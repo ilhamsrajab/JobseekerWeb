@@ -65,7 +65,7 @@
                 id="email"
                 class="font-medium text-gray-500 dark:text-gray-400 mt-2"
               >
-                <!-- {{ posisi }} -->
+                {{ posisi }}
               </h5>
             </div>
 
@@ -455,9 +455,11 @@ export default {
   created() {
     axios.defaults.headers.common["Authorization"] =
       "Bearer " + localStorage.getItem("token");
+
     this.selectedLoker = this.$store.dispatch("auth/getDataLowonganKerja");
+
     this.selectedLoker = this.$store.getters["auth/data_lowongan_kerja"].find(
-      (id) => id.id === this.id
+      (loker) => loker.id === this.id
     );
   },
 };
