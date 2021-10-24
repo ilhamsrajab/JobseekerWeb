@@ -28,6 +28,7 @@
             placeholder="username"
             class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
+            :value="getDataMediaSosialInstagram"
           />
         </div>
         <label class="label">
@@ -65,6 +66,7 @@
             placeholder="username"
             class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
+            :value="getDataMediaSosialTwitter"
           />
         </div>
         <label class="label">
@@ -101,6 +103,7 @@
             placeholder="username"
             class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
+            :value="getDataMediaSosialFacebook"
           />
         </div>
         <label class="label">
@@ -137,6 +140,7 @@
             placeholder="username"
             class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
+            :value="getDataMediaSosialLinkedin"
           />
         </div>
         <label class="label">
@@ -173,6 +177,7 @@
             placeholder="username"
             class="input input-primary w-full"
             style="border-radius: 0px 20px 20px 0px !important"
+            :value="getDataMediaSosialYoutube"
           />
         </div>
         <label class="label">
@@ -192,11 +197,61 @@
 
 <script>
 import { Icon } from "@iconify/vue";
+import axios from "axios";
 
 export default {
   name: "MediaSosial",
   components: {
     Icon,
+  },
+  data() {
+    return {
+      getDataMediaSosial: null,
+    };
+  },
+  created() {
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+    this.getDataMediaSosial = this.$store.dispatch("auth/getDataDiri");
+    this.getDataMediaSosial = this.$store.getters["auth/data_diri"];
+  },
+  computed: {
+    // Media Sosial
+    getDataMediaSosialInstagram() {
+      return this.getDataMediaSosial.instagram
+        .split("@")
+        .join("")
+        .split(",")
+        .join("");
+    },
+    getDataMediaSosialTwitter() {
+      return this.getDataMediaSosial.twitter
+        .split("@")
+        .join("")
+        .split(",")
+        .join("");
+    },
+    getDataMediaSosialFacebook() {
+      return this.getDataMediaSosial.facebook
+        .split("facebook.com/")
+        .join("")
+        .split(",")
+        .join("");
+    },
+    getDataMediaSosialLinkedin() {
+      return this.getDataMediaSosial.linkedIn
+        .split("linkedin.com/")
+        .join("")
+        .split(",")
+        .join("");
+    },
+    getDataMediaSosialYoutube() {
+      return this.getDataMediaSosial.youtube
+        .split("youtube.com/")
+        .join("")
+        .split(",")
+        .join("");
+    },
   },
 };
 </script>

@@ -55,7 +55,7 @@ export default {
   async getDataRiwayatPekerjaan ({ commit }) {
     await axios.get('api/get_job_seeker_data_diri')
     .then( response => {
-      commit('SET_DATA_RIWAYAT_PEKERJAAN', response.data.data.riwayat.pekerjaan)
+      commit('SET_DATA_RIWAYAT_PEKERJAAN', response.data.data.riwayat_pekerjaan)
     })
   }
 }

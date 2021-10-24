@@ -162,13 +162,9 @@
         <!-- provinsi -->
         <div class="mb-1">
           <label class="label" for="alamatProvinsi">
-            <span class="label-text">Provinsi {{ getDataProvince }}</span>
+            <span class="label-text">Provinsi</span>
           </label>
-          <select
-            id="alamatProvinsi"
-            class="select select-primary w-full"
-            v-model="getDataProvinceNama"
-          >
+          <select id="alamatProvinsi" class="select select-primary w-full">
             <option
               v-for="option in getDataProvince"
               :value="option.value"
@@ -186,12 +182,14 @@
             <span class="label-text">Kota/Kabupaten</span>
           </label>
           <select id="alamatKota" class="select select-primary w-full">
-            <option disabled="disabled" selected="selected">
-              Pilih Kota/Kabupaten
+            <option
+              v-for="option in getDataDistrict"
+              :value="option.value"
+              :key="option"
+              selected="selected"
+            >
+              {{ option.name }}
             </option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
           </select>
         </div>
 
@@ -201,12 +199,14 @@
             <span class="label-text">Kecamatan</span>
           </label>
           <select id="alamatKecamatan" class="select select-primary w-full">
-            <option disabled="disabled" selected="selected">
-              Pilih Kecamatan
+            <option
+              v-for="option in getDataSubDistrict"
+              :value="option.value"
+              :key="option"
+              selected="selected"
+            >
+              {{ option.name }}
             </option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
           </select>
         </div>
 
@@ -403,6 +403,8 @@ export default {
     return {
       getDataDiri: null,
       getDataProvince: null,
+      getDataDistrict: null,
+      getDataSubDistrict: null,
     };
   },
   created() {
@@ -412,14 +414,25 @@ export default {
     this.getDataDiri = this.$store.getters["auth/data_diri"];
     this.getDataProvince = this.$store.dispatch("address/getDataProvince");
     this.getDataProvince = this.$store.getters["address/data_province"];
+    this.getDataDistrict = this.$store.dispatch("address/getDataDistrict");
+    this.getDataDistrict = this.$store.getters["address/data_district"];
+    this.getDataSubDistrict = this.$store.dispatch(
+      "address/getDataSubDistrict"
+    );
+    this.getDataSubDistrict = this.$store.getters["address/data_sub_district"];
   },
   computed: {
+    // Address
     getDataProvince() {
       return this.getDataProvince;
     },
-    // getDataProvinceNama() {
-    //   return this.getDataProvince.name;
-    // },
+    getDataDistrict() {
+      return this.getDataDistrict;
+    },
+    getDataSubDistrict() {
+      return this.getDataSubDistrict;
+    },
+    // Data Diri
     getDataDiri() {
       return this.$store.getters["auth/data_diri"];
     },

@@ -11,14 +11,14 @@ export default {
     async getDataDistrict ({ commit }) {
         await axios.get("api/district")
         .then( response => {
-            commit('SET_DATA_DISTRICT', response.data)
+            commit('SET_DATA_DISTRICT', response.data.data)
         })
     },
 
     async getDataSubDistrict ({ commit }) {
-        await axios.get("api/subdistrict", response.data)
+        await axios.get("api/subdistrict")
         .then( response => {
-            commit('SET_DATA_SUB_DISTRICT',)
+            commit('SET_DATA_SUB_DISTRICT', response.data.data)
         })
     },
 }
