@@ -105,22 +105,6 @@ export default {
   },
 }
 
-    // async register(context, payload) {
-    //   const response = await fetch('http://127.0.0.1:8000/api/register', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //       'Accept': 'application/json'
-    //     },
-    //     body: JSON.stringify({
-    //       username: payload.username,
-    //       email: payload.email,
-    //       password: payload.password,
-    //       password_confirmation: payload.password_confirmation,
-    //       role: payload.role,
-    //     }),
-    //   });
-  
     //   const responseData = await response.json();
   
     //   if (!response.ok) {
