@@ -37,6 +37,37 @@ export default {
   logout() {
     localStorage.removeItem('token')
   },
+
+  register_data_diri(_, post_data_diri) {
+    axios.post('api/job_seeker_data_diri', {
+      nama: post_data_diri.nama,
+      nik: post_data_diri.nik,
+      jenis_kelamin: post_data_diri.jenis_kelamin,
+      tempat_lahir: post_data_diri.tempat_lahir,
+      tanggal_lahir: post_data_diri.tanggal_lahir,
+      status_perkawinan: post_data_diri.status_perkawinan,
+      agama: post_data_diri.agama,
+      desa: post_data_diri.desa,
+      rt: post_data_diri.rt,
+      rw: post_data_diri.rw,
+      alamat_rumah: post_data_diri.alamat_rumah,
+      kode_pos: post_data_diri.kode_pos,
+      pendidikan_terakhir: post_data_diri.pendidikan_terakhir,
+      no_hp: post_data_diri.no_hp
+    }).then( response => {
+
+    })
+  },
+
+  register_media_sosial(_, post_data_media_sosial) {
+    axios.post('api/job_seeker_data_media_sosial', {
+      instagram: post_data_media_sosial.instagram,
+      twitter: post_data_media_sosial.twitter,
+      facebook: post_data_media_sosial.facebook,
+      linkedin: post_data_media_sosial.linkedin,
+      youtube: post_data_media_sosial.youtube
+    })
+  },
   
   async getDataUser ({ commit }) {
     await axios.get("api/get_job_seeker_data_diri")

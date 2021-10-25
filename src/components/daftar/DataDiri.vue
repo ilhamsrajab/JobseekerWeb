@@ -349,7 +349,6 @@
                 maxlength="5"
                 placeholder="Masukan no. kodepos"
                 class="input input-primary w-full"
-                disabled
               />
             </div>
           </div>
@@ -487,7 +486,6 @@
 
 <script>
 import { Icon } from "@iconify/vue";
-import { reactive } from "@vue/reactivity";
 
 export default {
   name: "DataDiri",
@@ -497,6 +495,22 @@ export default {
   data: () => {
     return {
       theme: "",
+      post_data_diri: {
+        nama: "",
+        nik: "",
+        jenis_kelamin: "",
+        tempat_lahir: "",
+        tanggal_lahir: "",
+        status_perkawinan: "",
+        agama: "",
+        desa: "",
+        rt: "",
+        rw: "",
+        alamat_rumah: "",
+        kode_pos: "",
+        pendidikan_terakhir: "",
+        no_hp: "",
+      }
     };
   },
   created() {
@@ -505,28 +519,10 @@ export default {
   mounted() {
     this.theme = localStorage.getItem("theme") || "light";
   },
-  methods: {},
-  setup() {
-    const dataDiri = reactive({
-      nama_lengkap: "",
-      nik: "",
-      jenis_kelamin: "",
-      tempat_lahir: "",
-      tanggal_lahir: "",
-      agama: "",
-      status_perkawinan: "",
-      provinsi: "",
-      kota_kabupaten: "",
-      kecamatan: "",
-      desa: "",
-      rt: "",
-      rw: "",
-      alamat_rumah: "",
-      kode_pos: "",
-      pendidikan: "",
-      no_hp: "",
-      confirmCheckbox: "",
-    });
+  methods: {
+    async submitForm() {
+      this.$store.dispatch("auth/register_data_diri", this.post_data_diri);
+    }
   },
 };
 </script>

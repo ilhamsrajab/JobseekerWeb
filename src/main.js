@@ -9,7 +9,8 @@ import './assets/tailwind.css'
 
 const app = createApp(App)
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000/';
+// axios.defaults.baseURL = 'http://127.0.0.1:8000/';
+axios.defaults.baseURL = 'http://192.168.183.53:8000/';
 
 app.use(router);
 app.use(store);

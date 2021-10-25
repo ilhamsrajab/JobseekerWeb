@@ -32,13 +32,13 @@
               <h4
                 class="font-bold dark:text-white dark:text-opacity-80 text-2xl"
               >
-                Jerome Bell
+                {{ getDataDiri.nama }}
               </h4>
               <h5
                 id="email"
                 class="font-medium text-gray-500 dark:text-gray-300 mt-2"
               >
-                jeromebell24@gmail.com
+                {{ getDataUser.email }}
               </h5>
             </div>
 
@@ -124,6 +124,7 @@ import Berkas from "../components/profil/Berkas.vue";
 import RiwayatPekerjaan from "../components/profil/RiwayatPekerjaan.vue";
 import ButtonTab from "../components/UI/ButtonTab.vue";
 import { Icon } from "@iconify/vue";
+import axios from "axios";
 
 export default {
   components: {
@@ -147,6 +148,12 @@ export default {
       this.selectedTab = tab;
     },
   },
+  created() {
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+    this.dataUser = this.$store.dispatch("auth/getDataUser");
+    this.dataDiri = this.$store.dispatch("auth/getDataDiri");
+  },
   computed: {
     dataDiriButtonMode() {
       return this.selectedTab === "data-diri" ? null : "tabDisable";
@@ -160,6 +167,12 @@ export default {
     riwayatPekerjaanButtonMode() {
       return this.selectedTab === "riwayat-pekerjaan" ? null : "tabDisable";
     },
+    getDataUser() {
+      return this.$store.getters["auth/data_user"];
+    },
+    getDataDiri() {
+      return this.$store.getters['auth/data_diri'];
+    }
   },
 };
 </script>

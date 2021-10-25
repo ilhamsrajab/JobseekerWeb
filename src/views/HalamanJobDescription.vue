@@ -65,7 +65,7 @@
                 id="email"
                 class="font-medium text-gray-500 dark:text-gray-400 mt-2"
               >
-                {{ posisi }}
+                Posisi
               </h5>
             </div>
 
