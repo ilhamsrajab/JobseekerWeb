@@ -12,7 +12,47 @@
           <!-- Halaman Profil -->
           <div class="flex flex-col items-center min-h-screen">
             <!-- image -->
-            <div class="flex items-center">
+            <div class="flex indicator items-center">
+              <!-- indikator edit gambar -->
+              <input
+                id="fotoPribadi"
+                type="file"
+                accept="image/*"
+                title="Pilih foto pribadi"
+                class="input input-primary w-full py-3.5 px-4"
+                hidden
+              />
+              <label
+                title="Edit foto pribadi"
+                class="
+                  label
+                  font-semibold
+                  indicator-item indicator-bottom
+                  group
+                  rounded-full
+                  bg-accent
+                  hover:bg-accentDark
+                  h-8
+                  w-8
+                  flex
+                  justify-center
+                  items-center
+                  mb-3
+                  mr-3
+                  shadow-large
+                  p-1.5
+                  transition-all
+                  duration-200
+                "
+                for="fotoPribadi"
+              >
+                <Icon
+                  icon="fluent:edit-24-filled"
+                  :inline="true"
+                  class="dark:text-neutral transition-all duration-200"
+                />
+              </label>
+              <!-- end of indikator edit gambar -->
               <img
                 alt="avatar"
                 class="
@@ -26,6 +66,7 @@
                 src="../assets/images/avatar.png"
               />
             </div>
+            <!-- end of image -->
 
             <!-- nama -->
             <div class="leading-6 mt-4 xs:mb-4 sm:mb-8 text-center">
@@ -171,8 +212,8 @@ export default {
       return this.$store.getters["auth/data_user"];
     },
     getDataDiri() {
-      return this.$store.getters['auth/data_diri'];
-    }
+      return this.$store.getters["auth/data_diri"];
+    },
   },
 };
 </script>
