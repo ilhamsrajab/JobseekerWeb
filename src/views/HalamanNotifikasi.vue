@@ -50,13 +50,14 @@
                   dark:text-white
                 "
               >
-                <Notifikasi class="font-semibold">
+                <Notifikasi class="new-notification">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Labore possimus fugiat blanditiis facilis reiciendis esse,
                   nesciunt commodi itaque exercitationem et, fuga temporibus,
                   quos iusto magni. Assumenda aspernatur delectus distinctio
                   dolorum.
                 </Notifikasi>
+
                 <Notifikasi
                   >Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Numquam, recusandae? Omnis, deserunt earum! Dicta sint illo

@@ -7,6 +7,7 @@
       right-0
       my-4
       p-2
+      space-y-2
       shadow-xl
       menu
       border
@@ -21,7 +22,7 @@
       dark:bg-gray-800 dark:border-gray-900 dark:text-white
     "
   >
-    <Notifikasi class="font-semibold">
+    <Notifikasi class="new-notification">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore possimus
       fugiat blanditiis facilis reiciendis esse, nesciunt commodi itaque
       exercitationem et, fuga temporibus, quos iusto magni. Assumenda aspernatur

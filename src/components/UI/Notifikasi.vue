@@ -31,19 +31,32 @@
         mb-3
       "
     />
-    <div class="">
+    <div class="w-full">
       <slot></slot>
       <br />
-      <span
-        class="
-          text-sm
-          xs:text-xs
-          text-gray-700 text-opacity-60
-          dark:text-purple-400
-          mt-4
-        "
-        >Waktu</span
+      <div
+        class="flex flex-row justify-between items-center mt-6 text-gray-400"
       >
+        <span class="inline-flex items-center align-top space-x-1">
+          <Icon icon="fluent:clock-24-filled" :inline="true" />
+          <p class="text-xs">Waktu</p>
+        </span>
+        <span class="inline-flex items-center align-top space-x-1">
+          <div class="badge-magang">Diproses</div>
+          <div class="badge-parttime">Ditolak</div>
+          <div class="badge-fulltime">Diterima</div>
+        </span>
+      </div>
     </div>
   </li>
 </template>
+
+<script>
+import { Icon } from "@iconify/vue";
+
+export default {
+  components: {
+    Icon,
+  },
+};
+</script>
