@@ -130,20 +130,65 @@
             <label class="label font-semibold" for="dokumenPendukung">
               <span class="label-text">Dokumen Pendukung</span>
             </label>
-            <input
-              id="dokumenPendukung"
-              type="file"
-              accept=".pdf"
-              title="Pilih file dokumen pendukung"
-              class="input input-primary w-full py-3.5 px-4"
-            />
+            <div class="flex sm:flex-row xs:flex-col gap-2">
+              <input
+                id="dokumenPendukung"
+                type="file"
+                accept=".pdf"
+                title="Pilih file dokumen pendukung"
+                class="input input-primary w-full py-3.5 px-4"
+              />
+              <label
+                for="my-modal-3"
+                class="
+                  cursor-pointer
+                  btn btn-primary-0
+                  xs:w-full xs:text-2xs
+                  sm:w-32 sm:text-xs
+                  md:text-sm
+                  text-base
+                "
+              >
+                <Icon
+                  icon="fluent:eye-show-24-filled"
+                  :inline="true"
+                  class="mr-1"
+                />
+                Lihat file
+              </label>
+            </div>
             <label class="label">
               <p href="#" class="label-text-alt">
                 * Upload dengan format PDF maksimal 7 MB. Jika tidak memiliki
                 berkas, tidak perlu diisi.
               </p>
             </label>
+
+            <!-- modal dokumen pendukung -->
+            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+            <!-- isi modal -->
+            <div class="modal overflow-y-auto shadow-xl">
+              <div class="modal-box my-auto">
+                <p>
+                  <img
+                    src="../../assets/images/ktp.jpg"
+                    alt="ktp"
+                    srcset=""
+                    class="w-full rounded-20"
+                  />
+                </p>
+                <div class="modal-action justify-end">
+                  <label for="my-modal-3" class="btn btn-outline w-40"
+                    >Tutup</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- end of isi modal -->
+            <!-- end of modal -->
           </div>
+
+          <!-- batas -->
           <hr class="my-5" />
           <div class="modal-action justify-end">
             <label for="my-modal-2" class="btn btn-outline w-40">Batal</label>
@@ -214,11 +259,14 @@
 </template>
 
 <script>
+import { Icon } from "@iconify/vue";
 import axios from "axios";
 
 export default {
   name: "RiwayatPekerjaan",
-  components: {},
+  components: {
+    Icon,
+  },
   data() {
     return {
       getDataRiwayatPekerjaan: null,
