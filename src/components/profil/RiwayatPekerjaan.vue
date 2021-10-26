@@ -242,20 +242,6 @@ export default {
 </script>
 
 <style scoped>
-input[type="month"]::-webkit-calendar-picker-indicator {
-  background: none;
-  content: url("https://api.iconify.design/fluent/calendar-ltr-24-filled.svg?color=%23444");
-}
-
-input[type="file"]::file-selector-button {
-  content: url("https://api.iconify.design/fluent/cloud-add-16-filled.svg") !important;
-}
-
-/* Chrome, Edge & Safari
-input[type="file"]::-webkit-file-upload-button {
-  background-image: url("https://api.iconify.design/fluent/cloud-add-16-filled.svg");
-} */
-
 .divider {
   display: flex;
   align-items: center;

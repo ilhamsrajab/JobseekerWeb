@@ -88,7 +88,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   /* display: none; */
   /* -webkit-appearance: none; */
   background: none;
-  content: url("https://api.iconify.design/fluent/calendar-ltr-24-filled.svg");
+  content: url("https://api.iconify.design/fluent/calendar-ltr-24-filled.svg?color=%23444444");
+}
+
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  /* display: none; */
+  /* -webkit-appearance: none; */
+  background: none;
+  content: url("https://api.iconify.design/fluent/calendar-ltr-24-filled.svg?color=%23DADADA");
+}
+input[type="month"]::-webkit-calendar-picker-indicator {
+  /* display: none; */
+  /* -webkit-appearance: none; */
+  background: none;
+  content: url("https://api.iconify.design/fluent/calendar-ltr-24-filled.svg?color=%23444444");
+}
+
+.dark input[type="month"]::-webkit-calendar-picker-indicator {
+  /* display: none; */
+  /* -webkit-appearance: none; */
+  background: none;
+  content: url("https://api.iconify.design/fluent/calendar-ltr-24-filled.svg?color=%23DADADA");
 }
 
 [type="radio"]:checked {
@@ -119,7 +139,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .modal-box {
-  @apply dark:bg-gray-900 transform translate-y-10 sm:translate-y-0 sm:scale-90 transition duration-200 ease-in-out  bg-base-100 sm:max-w-lg p-6 w-full;
+  @apply dark:bg-gray-900 transform translate-y-10 sm:translate-y-0 sm:scale-90 transition duration-200 ease-in-out rounded-20 bg-base-100 sm:max-w-lg p-6 w-full;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
 }
 

@@ -25,11 +25,9 @@
               <label
                 title="Edit foto pribadi"
                 class="
-                  label
-                  font-semibold
                   indicator-item indicator-bottom
-                  group
                   rounded-full
+                  cursor-pointer
                   bg-accent
                   hover:bg-accentDark
                   h-8
@@ -37,8 +35,8 @@
                   flex
                   justify-center
                   items-center
-                  mb-3
-                  mr-3
+                  mb-4
+                  mr-4
                   shadow-large
                   p-1.5
                   transition-all

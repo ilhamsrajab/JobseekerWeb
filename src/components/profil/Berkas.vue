@@ -119,9 +119,4 @@ export default {
 };
 </script>
 
-<style scoped>
-input[type="file"]::file-selector-button::after {
-  background: none;
-  content: url("https://api.iconify.design/fluent/cloud-add-16-filled.svg");
-}
-</style>
+<style scoped></style>
