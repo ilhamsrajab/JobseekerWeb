@@ -411,6 +411,12 @@
       </div>
       <!-- end of isi modal -->
       <!-- end of modal -->
+
+      <!-- btn perbaharui -->
+      <div>
+        <button class="btn btn-primary my-6">Perbaharui</button>
+      </div>
+      <!-- end of btn perbaharui -->
     </form>
   </div>
 </template>

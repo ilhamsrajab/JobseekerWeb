@@ -9,6 +9,8 @@
       transition
       duration-300
       transform
+      lg:shadow-none
+      xs:shadow-btnhover
       bg-white
       dark:bg-gray-900
       overflow-y-auto
@@ -27,6 +29,7 @@
         </a>
       </div>
     </div>
+    <!-- end of logo -->
 
     <!-- navigasi sidebar -->
     <nav class="flex flex-col mt-4 px-4 text-center">
@@ -41,6 +44,7 @@
           <!-- {{ getusers.data.id }} -->
         </button-sidebar>
       </router-link>
+      <!-- end of home -->
 
       <!-- cari kerja -->
       <router-link :to="{ name: 'HalamanCariKerja' }">
@@ -55,6 +59,7 @@
           />Cari Kerja
         </button-sidebar>
       </router-link>
+      <!-- end of cari kerja -->
 
       <!-- favorite -->
       <router-link :to="{ name: 'HalamanFavorit' }">
@@ -70,6 +75,7 @@
         >
       </router-link>
     </nav>
+    <!-- end of favorite -->
 
     <!-- profil icon -->
     <nav
@@ -180,6 +186,7 @@
         </li>
       </ul>
     </nav>
+    <!-- end of profil icon -->
   </div>
 </template>
 
@@ -192,13 +199,10 @@ export default {
   components: {
     Icon,
     ButtonSidebar,
-    // Home,
-    // CariKerja,
-    // Favorite,
   },
   data() {
     return {
-      selectedTab: "home",
+      selectedTab: "",
       dataUser: null,
       dataDiri: null,
     };
