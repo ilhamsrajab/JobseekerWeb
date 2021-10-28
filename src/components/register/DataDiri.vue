@@ -91,7 +91,12 @@
           xl:w-4/5
         "
       >
-        <form class="form-control" action="" method="POST">
+        <form
+          class="form-control"
+          action=""
+          method="POST"
+          @submit.prevent="submitForm"
+        >
           <!-- form data diri -->
           <!-- nama lengkap -->
           <div class="mt-4">
@@ -104,7 +109,7 @@
               type="text"
               placeholder="Masukan nama lengkap"
               class="input input-primary w-full"
-              required
+              v-model.trim="user.nama"
             />
           </div>
 
@@ -123,7 +128,7 @@
               class="input input-primary w-full"
               maxlength="16"
               max="9999999999999999"
-              required
+              v-model.trim="user.nik"
             />
           </div>
 
@@ -139,6 +144,8 @@
                   name="jenisKelamin"
                   type="radio"
                   class="radio"
+                  value="Laki-laki"
+                  v-model="user.jenis_kelamin"
                 />
                 <label
                   for="push-lakilaki"
@@ -160,6 +167,8 @@
                   name="jenisKelamin"
                   type="radio"
                   class="radio"
+                  value="Perempuan"
+                  v-model="user.jenis_kelamin"
                 />
                 <label
                   for="push-perempuan"
@@ -190,14 +199,14 @@
                 type="text"
                 placeholder="Masukan tempat lahir"
                 class="input input-primary w-3/5"
-                required
+                v-model.trim="user.tempat_lahir"
               />
               <input
                 id="tanggalLahir"
                 title="Tanggal Lahir"
                 type="date"
                 class="input input-primary w-2/5"
-                required
+                v-model="user.tanggal_lahir"
               />
             </div>
           </div>
@@ -207,13 +216,18 @@
             <label class="label" for="agama">
               <span class="label-text font-semibold">Agama</span>
             </label>
-            <select id="agama" class="select select-primary w-full">
-              <option disabled="disabled" selected="selected">
-                Pilih Agama
-              </option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
+            <select
+              id="agama"
+              class="select select-primary w-full"
+              v-model="user.agama"
+            >
+              <option disabled="disabled" selected hidden>Pilih Agama</option>
+              <option>Islam</option>
+              <option>Hindu</option>
+              <option>Budha</option>
+              <option>Katolik</option>
+              <option>Protestan</option>
+              <option>Khonhucu</option>
             </select>
           </div>
 
@@ -222,13 +236,16 @@
             <label class="label" for="statusPerkawinan">
               <span class="label-text font-semibold">Status Perkawinan</span>
             </label>
-            <select id="statusPerkawinan" class="select select-primary w-full">
-              <option disabled="disabled" selected="selected">
+            <select
+              id="statusPerkawinan"
+              class="select select-primary w-full"
+              v-model="user.status_perkawinan"
+            >
+              <option disabled="disabled" selected hidden>
                 Pilih Status Perkawinan
               </option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
+              <option>Kawin</option>
+              <option>Belum Kawin</option>
             </select>
           </div>
 
@@ -242,20 +259,30 @@
               <label class="label" for="alamatProvinsi">
                 <span class="label-text">Provinsi</span>
               </label>
-              <select id="alamatProvinsi" class="select select-primary w-full">
-                <option disabled="disabled" selected="selected">
+              <select
+                id="alamatProvinsi"
+                class="select select-primary w-full"
+                v-model="user.provinsi"
+              >
+                <option value="" selected disabled hidden>
                   Pilih Provinsi
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+                <option
+                  v-for="province in getDataProvince"
+                  :key="province"
+                  :value="province.value"
+                >
+                  {{ province.name }}
+                </option>
               </select>
             </div>
 
             <!-- kota/kabupaten -->
             <div class="mb-1 mt-2">
               <label class="label" for="alamatKota">
-                <span class="label-text">Kota/Kabupaten</span>
+                <span class="label-text"
+                  >Kota/Kabupaten {{ getDataProvince }}</span
+                >
               </label>
               <select id="alamatKota" class="select select-primary w-full">
                 <option disabled="disabled" selected="selected">
@@ -293,7 +320,6 @@
                 type="text"
                 placeholder="Masukan alamat desa"
                 class="input input-primary w-full"
-                required
               />
             </div>
 
@@ -310,7 +336,7 @@
                   maxlength="3"
                   placeholder="Masukan no. RT"
                   class="input input-primary w-1/2"
-                  required
+                  v-model.trim="user.rt"
                 />
                 <input
                   id="alamatRW"
@@ -319,7 +345,7 @@
                   maxlength="3"
                   placeholder="Masukan no. RW"
                   class="input input-primary w-1/2"
-                  required
+                  v-model.trim="user.rw"
                 />
               </div>
             </div>
@@ -336,7 +362,7 @@
                   rows="3"
                   class="textarea"
                   placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
-                  required
+                  v-model.trim="user.alamat_rumah"
                 />
               </div>
             </div>
@@ -352,7 +378,7 @@
                 maxlength="5"
                 placeholder="Masukan no. kodepos"
                 class="input input-primary w-full"
-                disabled
+                v-model.trim="user.kode_pos"
               />
             </div>
           </div>
@@ -366,9 +392,16 @@
               <option disabled="disabled" selected="selected">
                 Pilih Pendidikan Terakhir
               </option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
+              <option>Tidak atau Belum Sekolah</option>
+              <option>Tidak Tamat SD atau Sederajat</option>
+              <option>Tamat SD atau Sederajat</option>
+              <option>SLTP atau Sederajat</option>
+              <option>SLTA atau Sederajat</option>
+              <option>Diploma I atau II</option>
+              <option>Akademi atau Diploma III atau Sarjana Muda</option>
+              <option>Diploma IV atau Strata I</option>
+              <option>Strata II</option>
+              <option>Strata III</option>
             </select>
           </div>
 
@@ -401,7 +434,6 @@
                 maxlength="13"
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
-                required
               />
             </div>
           </div>
@@ -417,7 +449,6 @@
               accept="image/*"
               title="Pilih foto pribadi"
               class="input input-primary w-full py-3.5 px-4"
-              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -437,7 +468,6 @@
               accept="image/*"
               title="Pilih foto E-KTP"
               class="input input-primary w-full py-3.5 px-4"
-              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -468,16 +498,19 @@
                 <strong>benar data pribadi saya</strong>, jika ada kesalahan
                 saya siap menanggung semua akibatnya.</label
               >
+              <!-- {{ getDataProvince }} -->
+              <!-- {{ getProvince }} -->
             </div>
           </div>
+          <div>
+            <!-- btn selanjutnya -->
+            <!-- <router-link :to="{ name: 'MediaSosial' }"> -->
+            <button type="submit" class="btn btn-primary mt-6 mb-3">
+              Selanjutnya
+            </button>
+            <!-- </router-link> -->
+          </div>
         </form>
-
-        <div>
-          <!-- btn selanjutnya -->
-          <router-link :to="{ name: 'MediaSosial' }">
-            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
-          </router-link>
-        </div>
       </div>
     </div>
   </div>
@@ -485,47 +518,61 @@
 
 <script>
 import { Icon } from "@iconify/vue";
-import { reactive } from "@vue/reactivity";
+import moment from "moment/min/moment-with-locales";
 
 export default {
   name: "DataDiri",
   components: {
     Icon,
   },
-  setup() {
-    const dataDiri = reactive({
-      nama_lengkap: "",
-      nik: "",
-      jenis_kelamin: "",
-      tempat_lahir: "",
-      tanggal_lahir: "",
-      agama: "",
-      status_perkawinan: "",
-      provinsi: "",
-      kota_kabupaten: "",
-      kecamatan: "",
-      desa: "",
-      rt: "",
-      rw: "",
-      alamat_rumah: "",
-      kode_pos: "",
-      pendidikan: "",
-      no_hp: "",
-      confirmCheckbox: "",
-    });
-  },
   data: () => {
     return {
       theme: "",
+      user: {
+        nama: "",
+        nik: "",
+        jenis_kelamin: "",
+        tempat_lahir: "",
+        tanggal_lahir: "",
+        status_perkawinan: "Pilih Status Perkawinan",
+        agama: "Pilih Agama",
+        provinsi: "Pilih Provinsi",
+        desa: "",
+        rt: "",
+        rw: "",
+        alamat_rumah: "",
+        kode_pos: "",
+        pendidikan_terakhir: "Pilih Pendidikan Terakhir",
+        no_hp: "",
+      },
+      getDataProvince: "",
     };
   },
-  created() {
+  methods: {
+    // async submitForm() {
+    //   this.user.tanggal_lahir = moment().format("DD MMMM YYYY");
+    //   this.$store.dispatch("auth/register_data_diri", this.user);
+
+    // },
+    submitForm() {
+      moment.locale("id");
+      this.user.tanggal_lahir = moment(this.user.tanggal_lahir).format(
+        "DD MMMM YYYY"
+      );
+
+      console.log(this.user);
+    },
+  },
+  async created() {
     this.theme = localStorage.getItem("theme") || "light";
+    this.getDataProvince = await this.$store.dispatch(
+      "address/getDataProvince",
+      "Bearer" + localStorage.getItem("token")
+    );
   },
   mounted() {
     this.theme = localStorage.getItem("theme") || "light";
   },
-  methods: {},
 };
 </script>
 

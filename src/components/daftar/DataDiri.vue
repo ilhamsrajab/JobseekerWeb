@@ -495,7 +495,7 @@ export default {
   data: () => {
     return {
       theme: "",
-      post_data_diri: {
+      user: {
         nama: "",
         nik: "",
         jenis_kelamin: "",

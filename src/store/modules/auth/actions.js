@@ -21,7 +21,7 @@ export default {
     });
   },
   register( _, user ) {
-    // axios.get('sanctum/csrf-cookie').then(response => {
+      // axios.get('sanctum/csrf-cookie').then(response => {
         axios.post('api/register', {
         username: user.username,
         email: user.email,
@@ -29,33 +29,41 @@ export default {
         password_confirmation: user.password_confirmation,
         role: user.role
       }).then( response => {
-        // console.log(response.data)
-        window.location.replace('/lengkapi-data-diri')
-    // })
-  });
-  },
-  logout() {
-    localStorage.removeItem('token')
-  },
+      console.log(response.data)
+        if( response.data.data.access_token ) {
+          
+          localStorage.setItem(
+            "token",
+            response.data.data.access_token
+          )
 
-  register_data_diri(_, post_data_diri) {
+          window.location.replace('/lengkapi-data-diri')
+        }
+        // })
+    });
+  },
+    logout() {
+      localStorage.removeItem('token')
+    },
+
+  register_data_diri(_, user) {
     axios.post('api/job_seeker_data_diri', {
-      nama: post_data_diri.nama,
-      nik: post_data_diri.nik,
-      jenis_kelamin: post_data_diri.jenis_kelamin,
-      tempat_lahir: post_data_diri.tempat_lahir,
-      tanggal_lahir: post_data_diri.tanggal_lahir,
-      status_perkawinan: post_data_diri.status_perkawinan,
-      agama: post_data_diri.agama,
-      desa: post_data_diri.desa,
-      rt: post_data_diri.rt,
-      rw: post_data_diri.rw,
-      alamat_rumah: post_data_diri.alamat_rumah,
-      kode_pos: post_data_diri.kode_pos,
-      pendidikan_terakhir: post_data_diri.pendidikan_terakhir,
-      no_hp: post_data_diri.no_hp
+      nama: user.nama,
+      nik: user.nik,
+      jenis_kelamin: user.jenis_kelamin,
+      tempat_lahir: user.tempat_lahir,
+      tanggal_lahir: user.tanggal_lahir,
+      status_perkawinan: user.status_perkawinan,
+      agama: user.agama,
+      desa: user.desa,
+      rt: user.rt,
+      rw: user.rw,
+      alamat_rumah: user.alamat_rumah,
+      kode_pos: user.kode_pos,
+      pendidikan_terakhir: user.pendidikan_terakhir,
+      no_hp: user.no_hp
     }).then( response => {
-
+      console.log(response)
     })
   },
 
