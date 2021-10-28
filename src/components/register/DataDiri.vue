@@ -264,7 +264,7 @@
                 class="select select-primary w-full"
                 v-model="user.provinsi"
               >
-                <option value="" selected disabled hidden>
+                <option value="" disabled="disabled" selected hidden>
                   Pilih Provinsi
                 </option>
                 <option
@@ -281,7 +281,7 @@
             <div class="mb-1 mt-2">
               <label class="label" for="alamatKota">
                 <span class="label-text"
-                  >Kota/Kabupaten {{ getDataProvince }}</span
+                  >Kota/Kabupaten</span
                 >
               </label>
               <select id="alamatKota" class="select select-primary w-full">
