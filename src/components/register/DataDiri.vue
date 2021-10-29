@@ -264,36 +264,41 @@
                 class="select select-primary w-full"
                 v-model="user.provinsi"
               >
-                <option value="" disabled="disabled" selected hidden>
+                <option value="" selected disabled hidden>
                   Pilih Provinsi
                 </option>
                 <option
                   v-for="province in getDataProvince"
-                  :key="province"
-                  :value="province.value"
+                  :key="province.id"
+                  :value="province.id"
                 >
                   {{ province.name }}
                 </option>
               </select>
             </div>
-
             <!-- kota/kabupaten -->
             <div class="mb-1 mt-2">
               <label class="label" for="alamatKota">
-                <span class="label-text"
-                  >Kota/Kabupaten</span
-                >
+                <span class="label-text">Kota/Kabupaten </span>
               </label>
-              <select id="alamatKota" class="select select-primary w-full">
-                <option disabled="disabled" selected="selected">
-                  Pilih Kota/Kabupaten
+              <select
+                id="alamatKota"
+                class="select select-primary w-full"
+                v-model="user.kabupaten"
+              >
+                <option value="" selected disabled hidden>
+                  Pilih Kabupaten
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+                <option
+                  v-for="kabupaten in getDataDistrictsOnProvince"
+                  :key="kabupaten.id"
+                  :value="kabupaten.id"
+                >
+                  {{ kabupaten.name }}
+                </option>
               </select>
             </div>
-
+            {{ user.kabupaten }}
             <!-- kecamatan -->
             <div class="mb-1 mt-2">
               <label class="label" for="alamatKecamatan">
@@ -320,6 +325,7 @@
                 type="text"
                 placeholder="Masukan alamat desa"
                 class="input input-primary w-full"
+                v-model="user.desa"
               />
             </div>
 
@@ -388,7 +394,11 @@
             <label class="label" for="pendidikan">
               <span class="label-text font-semibold">Pendidikan Terakhir</span>
             </label>
-            <select id="pendidikan" class="select select-primary w-full">
+            <select
+              id="pendidikan"
+              class="select select-primary w-full"
+              v-model="user.pendidikan_terakhir"
+            >
               <option disabled="disabled" selected="selected">
                 Pilih Pendidikan Terakhir
               </option>
@@ -434,6 +444,7 @@
                 maxlength="13"
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
+                v-model="user.no_hp"
               />
             </div>
           </div>
@@ -449,6 +460,7 @@
               accept="image/*"
               title="Pilih foto pribadi"
               class="input input-primary w-full py-3.5 px-4"
+              @change="submitForm"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -468,6 +480,7 @@
               accept="image/*"
               title="Pilih foto E-KTP"
               class="input input-primary w-full py-3.5 px-4"
+              @change="submitForm"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -536,7 +549,8 @@ export default {
         tanggal_lahir: "",
         status_perkawinan: "Pilih Status Perkawinan",
         agama: "Pilih Agama",
-        provinsi: "Pilih Provinsi",
+        provinsi: "9",
+        kabupaten: "22",
         desa: "",
         rt: "",
         rw: "",
@@ -544,9 +558,17 @@ export default {
         kode_pos: "",
         pendidikan_terakhir: "Pilih Pendidikan Terakhir",
         no_hp: "",
+        foto_profil: "",
+        foto_ktp: "",
       },
       getDataProvince: "",
+      getDataDistrictsOnProvince: "",
     };
+  },
+  created() {
+    this.theme = localStorage.getItem("theme") || "light";
+    this.loadDataProvince();
+    this.loadDataDistrictOnProvince();
   },
   methods: {
     // async submitForm() {
@@ -554,21 +576,36 @@ export default {
     //   this.$store.dispatch("auth/register_data_diri", this.user);
 
     // },
-    submitForm() {
+    async loadDataProvince() {
+      this.getDataProvince = await this.$store.dispatch(
+        "address/getDataProvince",
+        "Bearer" + localStorage.getItem("token")
+      );
+    },
+    async loadDataDistrictOnProvince() {
+      if (this.user.provinsi !== null) {
+        this.getDataDistrictsOnProvince = await this.$store.dispatch(
+          "address/getDataDistrictsOnProvince",
+          { Bearer: localStorage.getItem("token"), id: this.user.provinsi }
+        );
+        console.log(this.getDataDistrictsOnProvince);
+      }
+    },
+    submitForm(event) {
       moment.locale("id");
       this.user.tanggal_lahir = moment(this.user.tanggal_lahir).format(
         "DD MMMM YYYY"
       );
+      this.user.no_hp = 0 + this.user.no_hp;
 
+      this.foto_profil = event.target.files[0];
+      this.foto_ktp = event.target.files[0];
+
+      this.user.provinsi = this.user.provinsi;
+
+      console.log(event);
       console.log(this.user);
     },
-  },
-  async created() {
-    this.theme = localStorage.getItem("theme") || "light";
-    this.getDataProvince = await this.$store.dispatch(
-      "address/getDataProvince",
-      "Bearer" + localStorage.getItem("token")
-    );
   },
   mounted() {
     this.theme = localStorage.getItem("theme") || "light";

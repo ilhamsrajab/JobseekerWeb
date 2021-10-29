@@ -7,7 +7,7 @@ export default {
     state() {
         return {
             data_province: null,
-            data_district: null,
+            data_districts_on_province: null,
             data_sub_district: null,
         }
     },

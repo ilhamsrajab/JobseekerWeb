@@ -3,8 +3,8 @@ export default {
         return state.data_province
     },
 
-    data_district(state) {
-        return state.data_district
+    data_districts_on_province(state) {
+        return state.data_districts_on_province
     },
 
     data_sub_district(state) {
