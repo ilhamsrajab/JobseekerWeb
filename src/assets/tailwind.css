@@ -53,6 +53,10 @@
   @apply bg-primary text-white border-0 h-14 rounded-20 shadow-lg hover:shadow-xl hover:bg-secondary transition-all duration-200 normal-case;
 }
 
+.btn-disable {
+  @apply cursor-not-allowed bg-gray-500 dark:bg-gray-600 text-white font-bold border-0 h-14 w-full rounded-20 shadow-lg hover:shadow-xl transition-all duration-200 normal-case;
+}
+
 .btn-accent {
   @apply bg-accent text-neutral font-bold border-0 h-14 w-full rounded-20 shadow-lg hover:shadow-xl hover:bg-accentDark transition-all duration-200 normal-case;
 }

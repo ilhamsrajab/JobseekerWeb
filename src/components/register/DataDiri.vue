@@ -527,7 +527,7 @@
           <div>
             <!-- btn selanjutnya -->
             <!-- <router-link :to="{ name: 'MediaSosial' }"> -->
-            <button type="submit" class="btn btn-primary mt-6 mb-3">
+            <button type="submit" class="btn btn-disable mt-6 mb-3">
               Selanjutnya
             </button>
             <!-- </router-link> -->
