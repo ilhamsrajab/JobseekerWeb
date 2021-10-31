@@ -600,12 +600,22 @@ export default {
       );
       this.user.no_hp = 0 + this.user.no_hp;
 
-      // this.foto_profil = event.target.files[0];
-      // this.foto_ktp = event.target.files[0];
+      this.user.foto_profil = event.target.files;
+      this.user.foto_ktp = event.target.files;
 
-      console.log(event);
-      console.log(this.user);
-      console.log(this.user.provinsi);
+      const upload_foto_profil = new FormData();
+      upload_foto_profil.append(
+        'image',
+        this.user.foto_profil,
+        this.user.foto_profil.name
+      );
+
+      const upload_foto_ktp = new FormData();
+      upload_foto_ktp.append(
+        'image',
+        this.user.foto_ktp,
+        this.user.foto_ktp.name
+      );
     },
   },
   watch: {
