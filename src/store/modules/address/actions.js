@@ -21,11 +21,14 @@ export default {
         return response.data.data.districts;
     },
 
-    async getDataSubDistrict ({ commit }) {
-        await axios.get("api/subdistrict")
-        .then( response => {
-            commit('SET_DATA_SUB_DISTRICT', response.data.data)
-        })
+    async getDataSubDistrictOnDistrict ({ commit }, {bearer, id}) {
+        const response = await axios.get(`api/district/${id}/subdistricts`, {
+            header: {
+                authorization: bearer
+            }
+        });
+        commit('SET_DATA_SUB_DISTRICT_ON_DISTRICT', response.data.data.sub_district);
+        return response.data.data.sub_district;
     },
     
 }

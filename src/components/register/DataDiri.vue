@@ -276,6 +276,7 @@
                 </option>
               </select>
             </div>
+
             <!-- kota/kabupaten -->
             <div class="mb-1 mt-2">
               <label class="label" for="alamatKota">
@@ -298,19 +299,27 @@
                 </option>
               </select>
             </div>
-            {{ user.kabupaten }}
+
             <!-- kecamatan -->
             <div class="mb-1 mt-2">
               <label class="label" for="alamatKecamatan">
                 <span class="label-text">Kecamatan</span>
               </label>
-              <select id="alamatKecamatan" class="select select-primary w-full">
-                <option disabled="disabled" selected="selected">
-                  Pilih Kecamatan
+              <select
+                id="alamatKecamatan"
+                class="select select-primary w-full"
+                v-model="user.kecamatan"
+              >
+                <option value="" selected disabled hidden>
+                  Pilih kecamatan
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+                <option
+                  v-for="kecamatan in getDataSubDistrictOnDistrict"
+                  :key="kecamatan.id"
+                  :value="kecamatan.id"
+                >
+                  {{ kecamatan.name }}
+                </option>
               </select>
             </div>
 
@@ -549,8 +558,9 @@ export default {
         tanggal_lahir: "",
         status_perkawinan: "Pilih Status Perkawinan",
         agama: "Pilih Agama",
-        provinsi: "9",
-        kabupaten: "22",
+        provinsi: "",
+        kabupaten: "",
+        kecamatan: "",
         desa: "",
         rt: "",
         rw: "",
@@ -563,12 +573,13 @@ export default {
       },
       getDataProvince: "",
       getDataDistrictsOnProvince: "",
+      getDataSubDistrictOnDistrict: "",
     };
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";
     this.loadDataProvince();
-    this.loadDataDistrictOnProvince();
+    // this.loadDataDistrictOnProvince();
   },
   methods: {
     // async submitForm() {
@@ -582,15 +593,6 @@ export default {
         "Bearer" + localStorage.getItem("token")
       );
     },
-    async loadDataDistrictOnProvince() {
-      if (this.user.provinsi !== null) {
-        this.getDataDistrictsOnProvince = await this.$store.dispatch(
-          "address/getDataDistrictsOnProvince",
-          { Bearer: localStorage.getItem("token"), id: this.user.provinsi }
-        );
-        console.log(this.getDataDistrictsOnProvince);
-      }
-    },
     submitForm(event) {
       moment.locale("id");
       this.user.tanggal_lahir = moment(this.user.tanggal_lahir).format(
@@ -598,13 +600,30 @@ export default {
       );
       this.user.no_hp = 0 + this.user.no_hp;
 
-      this.foto_profil = event.target.files[0];
-      this.foto_ktp = event.target.files[0];
-
-      this.user.provinsi = this.user.provinsi;
+      // this.foto_profil = event.target.files[0];
+      // this.foto_ktp = event.target.files[0];
 
       console.log(event);
       console.log(this.user);
+      console.log(this.user.provinsi);
+    },
+  },
+  watch: {
+    async "user.provinsi"(value) {
+      if (this.getDataDistrictsOnProvince !== null) {
+        this.getDataDistrictsOnProvince = await this.$store.dispatch(
+          "address/getDataDistrictsOnProvince",
+          { Bearer: localStorage.getItem("token"), id: value }
+        );
+      }
+    },
+    async "user.kabupaten"(value) {
+      if (this.getDataSubDistrictOnDistrict !== null) {
+        this.getDataSubDistrictOnDistrict = await this.$store.dispatch(
+          "address/getDataSubDistrictOnDistrict",
+          { Bearer: localStorage.getItem("token"), id: value }
+        );
+      }
     },
   },
   mounted() {

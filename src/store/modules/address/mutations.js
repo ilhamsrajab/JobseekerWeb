@@ -7,7 +7,7 @@ export default {
         state.data_districts_on_province = data_districts_on_province
     },
 
-    SET_DATA_SUB_DISTRICT(state, data_sub_district) {
-        state.data_sub_district = data_sub_district
+    SET_DATA_SUB_DISTRICT_ON_DISTRICT(state, data_sub_district_on_district) {
+        state.data_sub_district_on_district = data_sub_district_on_district
     }
 }
