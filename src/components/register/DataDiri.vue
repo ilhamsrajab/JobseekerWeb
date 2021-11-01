@@ -264,7 +264,7 @@
               <select
                 id="alamatProvinsi"
                 class="select select-primary w-full"
-                v-model="user.provinsi"
+                v-model="provinsi"
               >
                 <option value="" selected disabled hidden>
                   Pilih Provinsi
@@ -287,7 +287,7 @@
               <select
                 id="alamatKota"
                 class="select select-primary w-full"
-                v-model="user.kabupaten"
+                v-model="kabupaten"
               >
                 <option value="" selected disabled hidden>
                   Pilih Kabupaten
@@ -310,7 +310,7 @@
               <select
                 id="alamatKecamatan"
                 class="select select-primary w-full"
-                v-model="user.kecamatan"
+                v-model="user.sub_district_id"
               >
                 <option value="" selected disabled hidden>
                   Pilih kecamatan
@@ -562,9 +562,7 @@ export default {
         tanggal_lahir: "",
         status_perkawinan: "Pilih Status Perkawinan",
         agama: "Pilih Agama",
-        provinsi: "",
-        kabupaten: "",
-        kecamatan: "",
+        sub_district_id: "",
         desa: "",
         rt: "",
         rw: "",
@@ -573,6 +571,9 @@ export default {
         pendidikan_terakhir: "Pilih Pendidikan Terakhir",
         no_hp: "",
       },
+      provinsi: "",
+      kabupaten: "",
+      kecamatan: "",
       getDataProvince: "",
       getDataDistrictsOnProvince: "",
       getDataSubDistrictOnDistrict: "",
@@ -607,7 +608,7 @@ export default {
       console.log(event);
     },
 
-    async submitForm() {
+    submitForm() {
       moment.locale("id");
       this.user.tanggal_lahir = moment(this.user.tanggal_lahir).format(
         "DD MMMM YYYY"
@@ -627,13 +628,18 @@ export default {
 
         this.$store.dispatch("auth/register_foto_ktp", formData);
       }
-
+      console.log(this.user);
       this.$store.dispatch("auth/register_data_diri", this.user);
+    },
+
+    submit() {
+      user = this.user;
+      this.$store.dispatch("auth/register_data_diri", user);
     },
   },
 
   watch: {
-    async "user.provinsi"(value) {
+    async provinsi(value) {
       if (this.getDataDistrictsOnProvince !== null) {
         this.getDataDistrictsOnProvince = await this.$store.dispatch(
           "address/getDataDistrictsOnProvince",
@@ -641,7 +647,7 @@ export default {
         );
       }
     },
-    async "user.kabupaten"(value) {
+    async kabupaten(value) {
       if (this.getDataSubDistrictOnDistrict !== null) {
         this.getDataSubDistrictOnDistrict = await this.$store.dispatch(
           "address/getDataSubDistrictOnDistrict",

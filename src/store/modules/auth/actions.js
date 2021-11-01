@@ -69,10 +69,10 @@ export default {
     })
   },
 
-  // async register_data_diri({ commit }, user ) {
-  //   const response = await axios.post('api/job_seeker_data_diri', user,{
-  //   }); 
-  // },
+  async register_data_diri({ commit }, user ) {
+    const response = await axios.post('api/job_seeker_data_diri', user, {
+    }); 
+  },
 
   async register_foto_profil({ commit }, formData ) {
     const response = await axios.post('api/job_seeker_foto_profil', formData, {
