@@ -37,14 +37,15 @@ export default {
             response.data.data.access_token
           )
 
-          window.location.replace('/lengkapi-data-diri')
+          // window.location.replace('/lengkapi-data-diri')
         }
         // })
     });
   },
-    logout() {
-      localStorage.removeItem('token')
-    },
+
+  logout() {
+    localStorage.removeItem('token')
+  },
 
   register_data_diri(_, user) {
     axios.post('api/job_seeker_data_diri', {
@@ -58,13 +59,31 @@ export default {
       desa: user.desa,
       rt: user.rt,
       rw: user.rw,
+      sub_district_id: user.kecamatan,
       alamat_rumah: user.alamat_rumah,
       kode_pos: user.kode_pos,
       pendidikan_terakhir: user.pendidikan_terakhir,
-      no_hp: user.no_hp
+      no_hp: user.no_hp,
     }).then( response => {
       console.log(response)
     })
+  },
+
+  // async register_data_diri({ commit }, user ) {
+  //   const response = await axios.post('api/job_seeker_data_diri', user,{
+  //   }); 
+  // },
+
+  async register_foto_profil({ commit }, formData ) {
+    const response = await axios.post('api/job_seeker_foto_profil', formData, {
+      'content-type': 'multipart/form-data'
+    });
+  },
+
+  async register_foto_ktp( { commit }, formData ) {
+    const response = await axios.post('api/job_seeker_foto_ktp', formData, {
+      'content-type': 'multipart/form-data'
+    });
   },
 
   register_media_sosial(_, post_data_media_sosial) {
@@ -76,6 +95,7 @@ export default {
       youtube: post_data_media_sosial.youtube
     })
   },
+  
   
   async getDataUser ({ commit }) {
     await axios.get("api/get_job_seeker_data_diri")

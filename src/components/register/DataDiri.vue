@@ -95,6 +95,8 @@
           class="form-control"
           action=""
           method="POST"
+          id="myForm"
+          enctype="multipart/form-data"
           @submit.prevent="submitForm"
         >
           <!-- form data diri -->
@@ -469,7 +471,7 @@
               accept="image/*"
               title="Pilih foto pribadi"
               class="input input-primary w-full py-3.5 px-4"
-              @change="submitForm"
+              @change="onFileSelectedFotoProfil"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -478,7 +480,7 @@
             </label>
           </div>
 
-          <!-- ktp -->
+          <!-- foto ktp -->
           <div class="mt-4">
             <label class="label font-semibold" for="ktp">
               <span class="label-text">Foto E-KTP</span>
@@ -489,7 +491,7 @@
               accept="image/*"
               title="Pilih foto E-KTP"
               class="input input-primary w-full py-3.5 px-4"
-              @change="submitForm"
+              @change="onFileSelectedFotoKTP"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -527,7 +529,7 @@
           <div>
             <!-- btn selanjutnya -->
             <!-- <router-link :to="{ name: 'MediaSosial' }"> -->
-            <button type="submit" class="btn btn-disable mt-6 mb-3">
+            <button type="submit" class="btn btn-primary mt-6 mb-3">
               Selanjutnya
             </button>
             <!-- </router-link> -->
@@ -541,12 +543,14 @@
 <script>
 import { Icon } from "@iconify/vue";
 import moment from "moment/min/moment-with-locales";
+import axios from "axios";
 
 export default {
   name: "DataDiri",
   components: {
     Icon,
   },
+
   data: () => {
     return {
       theme: "",
@@ -568,56 +572,66 @@ export default {
         kode_pos: "",
         pendidikan_terakhir: "Pilih Pendidikan Terakhir",
         no_hp: "",
-        foto_profil: "",
-        foto_ktp: "",
       },
       getDataProvince: "",
       getDataDistrictsOnProvince: "",
       getDataSubDistrictOnDistrict: "",
+      foto_profil: null,
+      foto_ktp: null,
     };
   },
+
   created() {
     this.theme = localStorage.getItem("theme") || "light";
     this.loadDataProvince();
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
     // this.loadDataDistrictOnProvince();
   },
-  methods: {
-    // async submitForm() {
-    //   this.user.tanggal_lahir = moment().format("DD MMMM YYYY");
-    //   this.$store.dispatch("auth/register_data_diri", this.user);
 
-    // },
+  methods: {
     async loadDataProvince() {
       this.getDataProvince = await this.$store.dispatch(
         "address/getDataProvince",
         "Bearer" + localStorage.getItem("token")
       );
     },
-    submitForm(event) {
+
+    onFileSelectedFotoProfil(event) {
+      this.foto_profil = event.target.files[0];
+      console.log(event);
+    },
+
+    onFileSelectedFotoKTP(event) {
+      this.foto_ktp = event.target.files[0];
+      console.log(event);
+    },
+
+    async submitForm() {
       moment.locale("id");
       this.user.tanggal_lahir = moment(this.user.tanggal_lahir).format(
         "DD MMMM YYYY"
       );
       this.user.no_hp = 0 + this.user.no_hp;
 
-      this.user.foto_profil = event.target.files;
-      this.user.foto_ktp = event.target.files;
+      if (this.foto_profil !== null) {
+        const formData = new FormData();
+        formData.append("foto_profil", this.foto_profil);
 
-      const upload_foto_profil = new FormData();
-      upload_foto_profil.append(
-        'image',
-        this.user.foto_profil,
-        this.user.foto_profil.name
-      );
+        this.$store.dispatch("auth/register_foto_profil", formData);
+      }
 
-      const upload_foto_ktp = new FormData();
-      upload_foto_ktp.append(
-        'image',
-        this.user.foto_ktp,
-        this.user.foto_ktp.name
-      );
+      if (this.foto_ktp !== null) {
+        const formData = new FormData();
+        formData.append("foto_ktp", this.foto_ktp);
+
+        this.$store.dispatch("auth/register_foto_ktp", formData);
+      }
+
+      this.$store.dispatch("auth/register_data_diri", this.user);
     },
   },
+
   watch: {
     async "user.provinsi"(value) {
       if (this.getDataDistrictsOnProvince !== null) {
