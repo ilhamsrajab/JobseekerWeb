@@ -1,4 +1,5 @@
 <template>
+  <Loading />
   <div class="drawer drawer-mobile h-screen bg-gray-100 dark:bg-gray-800">
     <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
 
@@ -10,6 +11,7 @@
       <main class="flex flex-col h-screen overflow-x-hidden overflow-y-auto">
         <!-- hero -->
         <Hero />
+
         <!-- end hero -->
 
         <!-- kategori pekerjaan -->
@@ -218,6 +220,7 @@
 import HalamanProfil from "../views/HalamanProfil.vue";
 import CategoryButton from "../components/UI/CategoryButton.vue";
 import CardCategory from "../components/UI/CardCategory.vue";
+import Loading from "../components/UI/Loading.vue";
 import Card from "../components/UI/Card.vue";
 import Hero from "../components/UI/Hero.vue";
 import CardSkeleton from "../components/UI/CardSkeleton.vue";
@@ -231,6 +234,7 @@ export default {
     HalamanProfil,
     CategoryButton,
     CardCategory,
+    Loading,
     Card,
     Hero,
     CardSkeleton,
