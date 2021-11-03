@@ -90,7 +90,12 @@
           xl:w-4/5
         "
       >
-        <form class="form-control" action="" method="POST">
+        <form
+          class="form-control"
+          action=""
+          method="POST"
+          @submit.prevent="submitForm"
+        >
           <!-- instagram -->
           <div class="mt-4">
             <label class="label font-semibold" for="instagram">
@@ -118,6 +123,7 @@
                 placeholder="username"
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
+                v-model.trim="user.instagram"
               />
             </div>
             <label class="label">
@@ -155,6 +161,7 @@
                 placeholder="username"
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
+                v-model.trim="user.twitter"
               />
             </div>
             <label class="label">
@@ -191,6 +198,7 @@
                 placeholder="username"
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
+                v-model.trim="user.facebook"
               />
             </div>
             <label class="label">
@@ -227,6 +235,7 @@
                 placeholder="username"
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
+                v-model.trim="user.linkedIn"
               />
             </div>
             <label class="label">
@@ -263,6 +272,7 @@
                 placeholder="username"
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
+                v-model.trim="user.youtube"
               />
             </div>
             <label class="label">
@@ -296,19 +306,17 @@
               >
             </div>
           </div>
-        </form>
 
-        <div>
           <!-- btn selanjutnya -->
-          <router-link :to="{ name: 'Berkas' }">
-            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
-          </router-link>
+          <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
 
           <!-- btn kembali -->
           <router-link :to="{ name: 'DataDiri' }">
             <button class="btn btn-outline w-full mb-3">Kembali</button>
           </router-link>
+        </form>
 
+        <div>
           <!-- btn skip -->
           <router-link :to="{ name: 'Berkas' }">
             <button
@@ -334,6 +342,7 @@
 
 <script>
 import { Icon } from "@iconify/vue";
+import axios from "axios";
 
 export default {
   name: "MediaSosial",
@@ -343,15 +352,49 @@ export default {
   data: () => {
     return {
       theme: "",
+      user: {
+        instagram: "",
+        twitter: "",
+        facebook: "",
+        linkedIn: "",
+        youtube: "",
+      },
     };
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+  },
+  methods: {
+    submitForm() {
+      if (this.user.instagram !== "") {
+        this.user.instagram = "@" + this.user.instagram;
+      }
+
+      if (this.user.twitter !== "") {
+        this.user.twitter = "@" + this.user.twitter;
+      }
+
+      if (this.user.facebook !== "") {
+        this.user.facebook = "facebook.com/" + this.user.facebook;
+      }
+
+      if (this.user.linkedIn !== "") {
+        this.user.linkedIn = "linkedin.com/" + this.user.linkedIn;
+      }
+
+      if (this.user.youtube !== "") {
+        this.user.youtube = "youtube.com/" + this.user.youtube;
+      }
+
+      console.log(this.user);
+      this.$store.dispatch("auth/register_data_media_sosial", this.user);
+    },
   },
   mounted() {
     this.theme = localStorage.getItem("theme") || "light";
   },
-  methods: {},
 };
 </script>
 

@@ -20,53 +20,43 @@ export default {
       // })
     });
   },
-  register( _, user ) {
-      // axios.get('sanctum/csrf-cookie').then(response => {
-        axios.post('api/register', {
-        username: user.username,
-        email: user.email,
-        password: user.password,
-        password_confirmation: user.password_confirmation,
-        role: user.role
-      }).then( response => {
-      console.log(response.data)
-        if( response.data.data.access_token ) {
+  // register( _, user ) {
+  //     // axios.get('sanctum/csrf-cookie').then(response => {
+  //       axios.post('api/register', {
+  //       username: user.username,
+  //       email: user.email,
+  //       password: user.password,
+  //       password_confirmation: user.password_confirmation,
+  //       role: user.role
+  //     }).then( response => {
+  //     console.log(response.data)
+  //       if( response.data.data.access_token ) {
           
-          localStorage.setItem(
-            "token",
-            response.data.data.access_token
-          )
+  //         localStorage.setItem(
+  //           "token",
+  //           response.data.data.access_token
+  //         )
 
-          // window.location.replace('/lengkapi-data-diri')
-        }
-        // })
-    });
-  },
+  //         // window.location.replace('/lengkapi-data-diri')
+  //       }
+  //       // })
+  //   });
+  // },
 
   logout() {
     localStorage.removeItem('token')
   },
 
-  register_data_diri(_, user) {
-    axios.post('api/job_seeker_data_diri', {
-      nama: user.nama,
-      nik: user.nik,
-      jenis_kelamin: user.jenis_kelamin,
-      tempat_lahir: user.tempat_lahir,
-      tanggal_lahir: user.tanggal_lahir,
-      status_perkawinan: user.status_perkawinan,
-      agama: user.agama,
-      desa: user.desa,
-      rt: user.rt,
-      rw: user.rw,
-      sub_district_id: user.kecamatan,
-      alamat_rumah: user.alamat_rumah,
-      kode_pos: user.kode_pos,
-      pendidikan_terakhir: user.pendidikan_terakhir,
-      no_hp: user.no_hp,
-    }).then( response => {
-      console.log(response)
-    })
+  async register({ commit }, user ) {
+    const response = await axios.post('api/register', user, {
+    }); 
+    if( response.data.data.access_token ) { 
+      localStorage.setItem(
+        "token",
+        response.data.data.access_token
+      )
+      window.location.replace('/lengkapi-data-diri')
+    }
   },
 
   async register_data_diri({ commit }, user ) {
@@ -85,18 +75,17 @@ export default {
       'content-type': 'multipart/form-data'
     });
   },
-
-  register_media_sosial(_, post_data_media_sosial) {
-    axios.post('api/job_seeker_data_media_sosial', {
-      instagram: post_data_media_sosial.instagram,
-      twitter: post_data_media_sosial.twitter,
-      facebook: post_data_media_sosial.facebook,
-      linkedin: post_data_media_sosial.linkedin,
-      youtube: post_data_media_sosial.youtube
-    })
+  
+  async register_data_media_sosial({ commit }, user ) {
+    const response = await axios.post('api/job_seeker_data_media_sosial', user, {
+    }); 
   },
-  
-  
+
+  async register_riwayat_pekerjaan({ commit }, user ) {
+    const response = await axios.post('api/job_seeker_riwayat_pekerjaan', user, {
+    }); 
+  },
+
   async getDataUser ({ commit }) {
     await axios.get("api/get_job_seeker_data_diri")
     .then( response => {

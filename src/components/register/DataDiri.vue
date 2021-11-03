@@ -587,7 +587,6 @@ export default {
     this.loadDataProvince();
     axios.defaults.headers.common["Authorization"] =
       "Bearer " + localStorage.getItem("token");
-    // this.loadDataDistrictOnProvince();
   },
 
   methods: {
@@ -613,6 +612,7 @@ export default {
       this.user.tanggal_lahir = moment(this.user.tanggal_lahir).format(
         "DD MMMM YYYY"
       );
+
       this.user.no_hp = 0 + this.user.no_hp;
 
       if (this.foto_profil !== null) {
@@ -629,12 +629,8 @@ export default {
         this.$store.dispatch("auth/register_foto_ktp", formData);
       }
       console.log(this.user);
-      this.$store.dispatch("auth/register_data_diri", this.user);
-    },
 
-    submit() {
-      user = this.user;
-      this.$store.dispatch("auth/register_data_diri", user);
+      this.$store.dispatch("auth/register_data_diri", this.user);
     },
   },
 

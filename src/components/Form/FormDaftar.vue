@@ -237,7 +237,7 @@ export default {
     };
   },
   methods: {
-    async submitForm() {
+    submitForm() {
       this.$store.dispatch("auth/register", this.user);
     },
   },

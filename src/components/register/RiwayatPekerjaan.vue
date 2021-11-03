@@ -94,7 +94,16 @@
       >
         <form class="form-control" action="" method="POST">
           <!-- tambah riwayat pekerjaan -->
-          <form-riwayat-pekerjaan v-for="item in items" :key="item.id">
+          <form-riwayat-pekerjaan
+            v-for="item in items"
+            :key="item.id"
+            :nama-perusahan="item.namaPerusahaan"
+            :tahun-masuk="item.tahunMasuk"
+            :tahun-keluar="item.tahunKeluar"
+            :posisi-kerja="item.posisiKerja"
+            :deskripsi-pekerjaan="item.deskripsiPekerjaan"
+            :alasan-resign="item.alasanResign"
+          >
           </form-riwayat-pekerjaan>
 
           <div
@@ -224,7 +233,14 @@ export default {
       theme: "",
       items: [
         {
-          id: 0,
+          id: 1,
+          nama_perusahaan: "",
+          tahun_masuk: "",
+          tahun_keluar: "",
+          posisi_kerja: "",
+          deskripsi_pekerjaan: "",
+          alasan_resign: "",
+          dokumen_pendukung: "",
         },
       ],
       nextItemsId: 1,
@@ -234,8 +250,18 @@ export default {
     addRiwayatPekerjaan() {
       this.items.push({
         id: this.items.nextItemsId++,
+        nama_perusahaan: "",
+        tahun_masuk: "",
+        tahun_keluar: "",
+        posisi_kerja: "",
+        deskripsi_pekerjaan: "",
+        alasan_resign: "",
+        dokumen_pendukung: "",
       }),
         console.log(this.items);
+    },
+    submitForm() {
+      this.$store.dispatch("auth/register_data_diri", this.items);
     },
   },
 };

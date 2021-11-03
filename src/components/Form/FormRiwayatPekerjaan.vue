@@ -10,6 +10,7 @@
       type="text"
       placeholder="Masukan nama perusahaan"
       class="input input-primary w-full"
+      v-model.trim="nama_perusahaan"
     />
   </div>
 
@@ -23,6 +24,7 @@
       title="Tahun masuk"
       type="month"
       class="input input-primary w-full"
+      v-model.trim="tahun_masuk"
     />
   </div>
 
@@ -36,6 +38,7 @@
       title="Tahun Keluar"
       type="month"
       class="input input-primary w-full"
+      v-model.trim="tahun_keluar"
     />
   </div>
 
@@ -50,6 +53,7 @@
       type="text"
       placeholder="Masukan Posisi Kerja"
       class="input input-primary w-full"
+      v-model.trim="posisi_kerja"
     />
   </div>
 
@@ -65,6 +69,7 @@
         rows="3"
         class="textarea"
         placeholder="Tuliskan deskripsi pekerjaan dengan singkat"
+        v-model.trim="deskripsi_pekerjaan"
       />
     </div>
   </div>
@@ -80,6 +85,7 @@
       type="text"
       placeholder="Masukan Alasan Resign"
       class="input input-primary w-full"
+      v-model.trim="alasan_resign"
     />
   </div>
 
@@ -94,6 +100,7 @@
       accept=".pdf"
       title="Pilih file dokumen pendukung"
       class="input input-primary w-full py-3.5 px-4"
+      @change="onFileSelectedDokumenPendukung"
     />
     <label class="label">
       <p href="#" class="label-text-alt">
@@ -104,3 +111,17 @@
   </div>
   <div class="my-5 h-0.5 bg-gray-200 dark:bg-white dark:bg-opacity-20" />
 </template>
+
+<script>
+export default {
+  props: [
+    "id",
+    "namaPerusahaan",
+    "tahunMasuk",
+    "tahunKeluar",
+    "posisiKerja",
+    "deskripsiPekerjaan",
+    "alasanResign",
+  ],
+};
+</script>
