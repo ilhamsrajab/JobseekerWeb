@@ -508,6 +508,7 @@
                 name="comments"
                 type="checkbox"
                 class="checkbox"
+                v-model="checkbox"
               />
             </div>
             <div class="ml-3 text-sm">
@@ -529,7 +530,12 @@
           <div>
             <!-- btn selanjutnya -->
             <!-- <router-link :to="{ name: 'MediaSosial' }"> -->
-            <button type="submit" class="btn btn-primary mt-6 mb-3">
+            <!-- :class="{ 'btn-primary': checkbox }" -->
+            <button
+              type="submit"
+              class="btn mt-6 mb-3"
+              :class="[checkbox ? 'btn-primary' : 'btn-disable']"
+            >
               Selanjutnya
             </button>
             <!-- </router-link> -->
@@ -579,6 +585,7 @@ export default {
       getDataSubDistrictOnDistrict: "",
       foto_profil: null,
       foto_ktp: null,
+      checkbox: "",
     };
   },
 
