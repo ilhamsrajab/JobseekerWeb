@@ -92,7 +92,12 @@
           xl:w-4/5
         "
       >
-        <form class="form-control" action="" method="POST">
+        <form
+          class="form-control"
+          action=""
+          method="POST"
+          @submit.prevent="submitForm"
+        >
           <!-- tambah riwayat pekerjaan -->
           <form-riwayat-pekerjaan
             v-for="item in items"
@@ -268,7 +273,7 @@ export default {
     submitForm() {
       this.$store.dispatch("auth/register_data_diri", this.items);
 
-      // this.$router.push("/sukses");
+      this.$router.push("/sukses");
     },
   },
 };

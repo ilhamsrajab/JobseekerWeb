@@ -135,7 +135,7 @@
 
         <div>
           <!-- button selesai -->
-          <router-link :to="{ name: 'HalamanLogin' }">
+          <router-link :to="{ name: 'HalamanHome' }">
             <button class="btn btn-primary mt-6 sm:mb-3 xs:mb-5" type="submit">
               Selesai
             </button>

@@ -20,44 +20,28 @@
         // })
       });
     },
-    // register( _, user ) {
-    //     // axios.get('sanctum/csrf-cookie').then(response => {
-    //       axios.post('api/register', {
-    //       username: user.username,
-    //       email: user.email,
-    //       password: user.password,
-    //       password_confirmation: user.password_confirmation,
-    //       role: user.role
-    //     }).then( response => {
-    //     console.log(response.data)
-    //       if( response.data.data.access_token ) {
-            
-    //         localStorage.setItem(
-    //           "token",
-    //           response.data.data.access_token
-    //         )
-
-    //         // window.location.replace('/lengkapi-data-diri')
-    //       }
-    //       // })
-    //   });
-    // },
-
-    logout() {
-      localStorage.removeItem('token')
-    },
-
-    async register({ commit }, user ) {
-      const response = await axios.post('api/register', user, {
-      }); 
-      if( response.data.data.access_token ) { 
+    
+    async login({ commit }, user ) {
+      const response = await axios.post('api/login', user, { 
+      });
+      localStorage.setItem(
+        "token",
+        response.data.data.access_token
+        )
+      },
+      
+      async register({ commit }, user ) {
+        const response = await axios.post('api/register', user, {
+        }); 
         localStorage.setItem(
           "token",
           response.data.data.access_token
-        )
-        // window.location.replace('/lengkapi-data-diri')
-      }
-    },
+          )
+        },
+        
+        logout() {
+          localStorage.removeItem('token')
+        },
 
     async register_data_diri({ commit }, user ) {
       const response = await axios.post('api/job_seeker_data_diri', user, {

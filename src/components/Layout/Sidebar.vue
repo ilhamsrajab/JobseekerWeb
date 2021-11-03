@@ -202,7 +202,7 @@ export default {
   },
   data() {
     return {
-      selectedTab: "",
+      selectedTab: "home",
       dataUser: null,
       dataDiri: null,
     };
@@ -233,7 +233,7 @@ export default {
       return this.selectedTab === "favorite" ? null : "btnSidebarDisable";
     },
     getDataUser() {
-      return this.$store.getters["auth/data_user"];
+      return this.$store.getters["auth/daqta_user"];
     },
     getDataDiri() {
       return this.$store.getters["auth/data_diri"];
