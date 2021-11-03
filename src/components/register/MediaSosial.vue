@@ -290,6 +290,7 @@
                 name="comments"
                 type="checkbox"
                 class="checkbox"
+                v-model="isChecked"
               />
             </div>
             <div class="ml-3 text-sm">
@@ -308,16 +309,18 @@
           </div>
 
           <!-- btn selanjutnya -->
-          <router-link :to="{ name: 'Berkas' }">
-            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
-          </router-link>
-
+          <button
+            class="btn btn-primary mt-6 mb-3"
+            :class="[isChecked ? 'btn-primary' : 'btn-disabled']"
+          >
+            Selanjutnya
+          </button>
         </form>
-          <!-- btn kembali -->
-          <router-link :to="{ name: 'DataDiri' }">
-            <button class="btn btn-outline w-full mb-3">Kembali</button>
-          </router-link>
 
+        <!-- btn kembali -->
+        <router-link :to="{ name: 'DataDiri' }">
+          <button class="btn btn-outline w-full mb-3">Kembali</button>
+        </router-link>
         <div>
           <!-- btn skip -->
           <router-link :to="{ name: 'Berkas' }">
@@ -361,6 +364,7 @@ export default {
         linkedIn: "",
         youtube: "",
       },
+      isChecked: "",
     };
   },
   created() {
@@ -392,6 +396,8 @@ export default {
 
       console.log(this.user);
       this.$store.dispatch("auth/register_data_media_sosial", this.user);
+
+      this.$router.push("/lengkapi-berkas");
     },
   },
   mounted() {

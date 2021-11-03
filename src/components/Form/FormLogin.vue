@@ -239,6 +239,8 @@ export default {
       }
 
       this.isLoading = false;
+
+      this.$router.push("/");
     },
     handleError() {
       this.error = null;

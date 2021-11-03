@@ -142,9 +142,7 @@
         </div>
 
         <!-- btn daftar -->
-        <router-link :to="{ name: 'DataDiri' }">
-          <button class="btn btn-primary my-6">Daftar</button>
-        </router-link>
+        <button class="btn btn-primary my-6">Daftar</button>
 
         <!-- daftar google -->
         <!-- <div class="flex flex-col justify-center items-center">
@@ -243,6 +241,8 @@ export default {
       this.isLoading = true;
 
       this.$store.dispatch("auth/register", this.user);
+
+      this.$router.push("/lengkapi-data-diri");
     },
   },
 };

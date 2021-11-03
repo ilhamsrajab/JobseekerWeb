@@ -508,7 +508,7 @@
                 name="comments"
                 type="checkbox"
                 class="checkbox"
-                v-model="checkbox"
+                v-model="isChecked"
               />
             </div>
             <div class="ml-3 text-sm">
@@ -534,7 +534,7 @@
             <button
               type="submit"
               class="btn mt-6 mb-3"
-              :class="[checkbox ? 'btn-primary' : 'btn-disable']"
+              :class="[isChecked ? 'btn-primary' : 'btn-disabled']"
             >
               Selanjutnya
             </button>
@@ -585,7 +585,7 @@ export default {
       getDataSubDistrictOnDistrict: "",
       foto_profil: null,
       foto_ktp: null,
-      checkbox: "",
+      isChecked: "",
     };
   },
 
@@ -638,6 +638,8 @@ export default {
       console.log(this.user);
 
       this.$store.dispatch("auth/register_data_diri", this.user);
+
+      this.$router.push("/lengkapi-media-sosial");
     },
   },
 

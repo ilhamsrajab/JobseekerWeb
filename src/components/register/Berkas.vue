@@ -93,7 +93,12 @@
           xl:w-4/5
         "
       >
-        <form class="form-control" action="" method="POST">
+        <form
+          class="form-control"
+          action=""
+          method="POST"
+          @submit.prevent="submitForm"
+        >
           <!-- curriculumVitae -->
           <div class="mt-4">
             <label class="label font-semibold" for="curriculumVitae">
@@ -221,6 +226,7 @@
                   transition-all
                   duration-200
                 "
+                v-model="isChecked"
               />
             </div>
             <div class="ml-3 text-sm">
@@ -239,9 +245,12 @@
           </div>
 
           <!-- btn selanjutnya -->
-          <router-link :to="{ name: 'RiwayatPekerjaan' }">
-            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
-          </router-link>
+          <button
+            class="btn btn-primary mt-6 mb-3"
+            :class="isChecked ? 'btn-primary' : 'btn-disabled'"
+          >
+            Selanjutnya
+          </button>
         </form>
 
         <div>
@@ -275,6 +284,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Berkas",
   components: {},
@@ -282,16 +293,19 @@ export default {
     return {
       theme: "",
       berkas: {
-        curriculum_vitae: "",
-        ijazah: "",
-        portofolio: "",
-        sertifikat: "",
-        transkipNilai: "",
+        curriculum_vitae: null,
+        ijazah: null,
+        portofolio: null,
+        sertifikat: null,
+        transkipNilai: null,
       },
+      isChecked: "",
     };
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
   },
   mounted() {
     this.theme = localStorage.getItem("theme") || "light";
@@ -323,41 +337,43 @@ export default {
     },
 
     submitForm() {
-      if (this.curriculum_vitae !== null) {
+      if (this.berkas.curriculum_vitae !== null) {
         const formData = new FormData();
-        formData.append("curriculum_vitae", this.curriculum_vitae);
+        formData.append("curriculum_vitae", this.berkas.curriculum_vitae);
 
         this.$store.dispatch("auth/register_curriculum_vitae", formData);
       }
 
-      if (this.portofolio !== null) {
+      if (this.berkas.portofolio !== null) {
         const formData = new FormData();
-        formData.append("portofolio", this.portofolio);
+        formData.append("portofolio", this.berkas.portofolio);
 
         this.$store.dispatch("auth/register_portofolio", formData);
       }
 
-      if (this.ijazah !== null) {
+      if (this.berkas.ijazah !== null) {
         const formData = new FormData();
-        formData.append("ijazah", this.ijazah);
+        formData.append("ijazah", this.berkas.ijazah);
 
         this.$store.dispatch("auth/register_ijazah", formData);
       }
 
-      if (this.sertifikat !== null) {
+      if (this.berkas.sertifikat !== null) {
         const formData = new FormData();
-        formData.append("sertifikat", this.sertifikat);
+        formData.append("sertifikat", this.berkas.sertifikat);
 
         this.$store.dispatch("auth/register_sertifikat", formData);
       }
 
-      if (this.transkipNilai !== null) {
+      if (this.berkas.transkipNilai !== null) {
         const formData = new FormData();
-        formData.append("transkipNilai", this.transkipNilai);
+        formData.append("transkipNilai", this.berkas.transkipNilai);
 
         this.$store.dispatch("auth/register_transkip_nilai", formData);
       }
       console.log(this.user);
+
+      this.$router.push("/lengkapi-riwayat-pekerjaan");
     },
   },
 };

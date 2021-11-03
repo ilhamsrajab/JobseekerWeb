@@ -63,12 +63,12 @@ const router = createRouter({
       // meta: { requiredAuth: true }
     },
     {
-      path: '/login',
+      path: '/masuk',
       name: 'HalamanLogin',
       component: HalamanLogin
     },
     {
-      path: '/register',
+      path: '/daftar',
       name: 'HalamanDaftar',
       component: HalamanDaftar
     },

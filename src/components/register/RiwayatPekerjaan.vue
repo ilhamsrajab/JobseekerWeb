@@ -159,6 +159,7 @@
                 name="comments"
                 type="checkbox"
                 class="checkbox"
+                v-model="isChecked"
               />
             </div>
             <div class="ml-3 text-sm">
@@ -175,16 +176,17 @@
               >
             </div>
           </div>
-          
-          <!-- btn selanjutnya -->
-          <router-link :to="{ name: 'Sukses' }">
-            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
-          </router-link>
 
+          <!-- btn selanjutnya -->
+          <button
+            class="btn btn-primary mt-6 mb-3"
+            :class="isChecked ? 'btn-primary' : 'btn-disabled'"
+          >
+            Selanjutnya
+          </button>
         </form>
 
         <div>
-
           <!-- btn kembali -->
           <router-link :to="{ name: 'Berkas' }">
             <button class="btn btn-outline w-full mb-3">Kembali</button>
@@ -246,6 +248,7 @@ export default {
         },
       ],
       nextItemsId: 1,
+      isChecked: "",
     };
   },
   methods: {
@@ -264,6 +267,8 @@ export default {
     },
     submitForm() {
       this.$store.dispatch("auth/register_data_diri", this.items);
+
+      // this.$router.push("/sukses");
     },
   },
 };
