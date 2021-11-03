@@ -175,13 +175,15 @@
               >
             </div>
           </div>
-        </form>
-
-        <div>
+          
           <!-- btn selanjutnya -->
           <router-link :to="{ name: 'Sukses' }">
             <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
           </router-link>
+
+        </form>
+
+        <div>
 
           <!-- btn kembali -->
           <router-link :to="{ name: 'Berkas' }">

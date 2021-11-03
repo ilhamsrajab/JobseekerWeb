@@ -105,6 +105,7 @@
               accept=".pdf"
               title="Pilih file cv"
               class="input input-primary w-full py-3.5 px-4"
+              @change="onFileSelectedCV"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -125,6 +126,7 @@
               accept=".pdf"
               title="Pilih file ijazah"
               class="input input-primary w-full py-3.5 px-4"
+              @change="onFileSelectedIjazah"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -146,6 +148,7 @@
               title="Pilih file portofolio"
               class="input input-primary w-full py-3.5 px-4"
               multiple
+              @change="onFileSelectedPortofolio"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -167,6 +170,7 @@
               title="Pilih file sertifikat"
               class="input input-primary w-full py-3.5 px-4"
               multiple
+              @change="onFileSelectedSertifikat"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -188,6 +192,7 @@
               title="Pilih file transkrip nilai"
               class="input input-primary w-full py-3.5 px-4"
               multiple
+              @change="onFileSelectedTranskripNilai"
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -232,14 +237,14 @@
               >
             </div>
           </div>
-        </form>
 
-        <div>
           <!-- btn selanjutnya -->
           <router-link :to="{ name: 'RiwayatPekerjaan' }">
             <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
           </router-link>
+        </form>
 
+        <div>
           <!-- btn kembali -->
           <router-link :to="{ name: 'MediaSosial' }">
             <button class="btn btn-outline w-full mb-3">Kembali</button>
@@ -276,6 +281,13 @@ export default {
   data: () => {
     return {
       theme: "",
+      berkas: {
+        curriculum_vitae: "",
+        ijazah: "",
+        portofolio: "",
+        sertifikat: "",
+        transkipNilai: "",
+      },
     };
   },
   created() {
@@ -284,7 +296,70 @@ export default {
   mounted() {
     this.theme = localStorage.getItem("theme") || "light";
   },
-  methods: {},
+  methods: {
+    onFileSelectedCV(event) {
+      this.berkas.curriculum_vitae = event.target.files[0];
+      console.log(event);
+    },
+
+    onFileSelectedIjazah(event) {
+      this.berkas.ijazah = event.target.files[0];
+      console.log(event);
+    },
+
+    onFileSelectedPortofolio(event) {
+      this.berkas.sertifikat = event.target.files[0];
+      console.log(event);
+    },
+
+    onFileSelectedSertifikat(event) {
+      this.berkas.sertifikat = event.target.files[0];
+      console.log(event);
+    },
+
+    onFileSelectedTranskipNilai(event) {
+      this.berkas.transkipNilai = event.target.files[0];
+      console.log(event);
+    },
+
+    submitForm() {
+      if (this.curriculum_vitae !== null) {
+        const formData = new FormData();
+        formData.append("curriculum_vitae", this.curriculum_vitae);
+
+        this.$store.dispatch("auth/register_curriculum_vitae", formData);
+      }
+
+      if (this.portofolio !== null) {
+        const formData = new FormData();
+        formData.append("portofolio", this.portofolio);
+
+        this.$store.dispatch("auth/register_portofolio", formData);
+      }
+
+      if (this.ijazah !== null) {
+        const formData = new FormData();
+        formData.append("ijazah", this.ijazah);
+
+        this.$store.dispatch("auth/register_ijazah", formData);
+      }
+
+      if (this.sertifikat !== null) {
+        const formData = new FormData();
+        formData.append("sertifikat", this.sertifikat);
+
+        this.$store.dispatch("auth/register_sertifikat", formData);
+      }
+
+      if (this.transkipNilai !== null) {
+        const formData = new FormData();
+        formData.append("transkipNilai", this.transkipNilai);
+
+        this.$store.dispatch("auth/register_transkip_nilai", formData);
+      }
+      console.log(this.user);
+    },
+  },
 };
 </script>
 

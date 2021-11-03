@@ -86,6 +86,31 @@ export default {
     }); 
   },
 
+  async register_curriculum_vitae({ commit }, formData ) {
+    const response = await axios.post('api/job_seeker_cv', formData, {
+    }); 
+  },
+
+  async register_ijazah({ commit }, formData ) {
+    const response = await axios.post('api/job_seeker_ijazah', formData, {
+    }); 
+  },
+
+  async register_portofolio({ commit }, formData ) {
+    const response = await axios.post('api/job_seeker_portofolio', formData, {
+    }); 
+  },
+
+  async register_sertifikat({ commit }, formData ) {
+    const response = await axios.post('api/job_seeker_sertifikat', formData, {
+    }); 
+  },
+
+  async register_transkip_nilai({ commit }, formData ) {
+    const response = await axios.post('api/job_seeker_transkip_nilai', formData, {
+    }); 
+  },
+
   async getDataUser ({ commit }) {
     await axios.get("api/get_job_seeker_data_diri")
     .then( response => {

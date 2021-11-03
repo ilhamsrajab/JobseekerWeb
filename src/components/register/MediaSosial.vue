@@ -312,11 +312,11 @@
             <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
           </router-link>
 
+        </form>
           <!-- btn kembali -->
           <router-link :to="{ name: 'DataDiri' }">
             <button class="btn btn-outline w-full mb-3">Kembali</button>
           </router-link>
-        </form>
 
         <div>
           <!-- btn skip -->
