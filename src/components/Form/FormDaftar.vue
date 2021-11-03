@@ -1,4 +1,5 @@
 <template>
+  <loading v-if="isLoading"></loading>
   <div id="login" class="flex flex-col">
     <!-- logo and back btn -->
     <div class="flex justify-between">
@@ -141,12 +142,12 @@
         </div>
 
         <!-- btn daftar -->
-
-        <div>
+        <router-link :to="{ name: 'DataDiri' }">
           <button class="btn btn-primary my-6">Daftar</button>
-        </div>
+        </router-link>
+
         <!-- daftar google -->
-        <div class="flex flex-col justify-center items-center">
+        <!-- <div class="flex flex-col justify-center items-center">
           <span class="mb-6 text-xs dark:text-white"> atau daftar dengan </span>
           <a href="http://google.com">
             <div
@@ -204,7 +205,7 @@
               </svg>
             </div>
           </a>
-        </div>
+        </div> -->
       </form>
     </div>
   </div>
@@ -234,10 +235,13 @@ export default {
         password_confirmation: "",
         role: "jobseeker",
       },
+      isLoading: false,
     };
   },
   methods: {
     submitForm() {
+      this.isLoading = true;
+
       this.$store.dispatch("auth/register", this.user);
     },
   },

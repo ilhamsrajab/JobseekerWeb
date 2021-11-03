@@ -308,7 +308,9 @@
           </div>
 
           <!-- btn selanjutnya -->
-          <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
+          <router-link :to="{ name: 'Berkas' }">
+            <button class="btn btn-primary mt-6 mb-3">Selanjutnya</button>
+          </router-link>
 
           <!-- btn kembali -->
           <router-link :to="{ name: 'DataDiri' }">

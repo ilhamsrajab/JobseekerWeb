@@ -1,5 +1,5 @@
 <template>
-  <Loading />
+  <!-- <Loading /> -->
   <div class="drawer drawer-mobile h-screen bg-gray-100 dark:bg-gray-800">
     <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
 

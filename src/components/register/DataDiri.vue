@@ -615,10 +615,10 @@ export default {
     },
 
     submitForm() {
-      moment.locale("id");
-      this.user.tanggal_lahir = moment(this.user.tanggal_lahir).format(
-        "DD MMMM YYYY"
-      );
+      // moment.locale("id");
+      // this.user.tanggal_lahir = moment(this.user.tanggal_lahir).format(
+      //   "DD MMMM YYYY"
+      // );
 
       this.user.no_hp = 0 + this.user.no_hp;
 

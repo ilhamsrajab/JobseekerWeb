@@ -101,7 +101,7 @@
           <button class="btn btn-primary my-6">Login</button>
         </div>
         <!-- daftar google -->
-        <div class="flex flex-col justify-center items-center">
+        <!-- <div class="flex flex-col justify-center items-center">
           <span class="mb-6 text-xs dark:text-white"> atau daftar dengan </span>
           <a href="http://google.com">
             <div
@@ -158,7 +158,7 @@
               </svg>
             </div>
           </a>
-        </div>
+        </div> -->
       </form>
 
       <!-- daftar -->

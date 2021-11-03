@@ -55,7 +55,7 @@ export default {
         "token",
         response.data.data.access_token
       )
-      window.location.replace('/lengkapi-data-diri')
+      // window.location.replace('/lengkapi-data-diri')
     }
   },
 
