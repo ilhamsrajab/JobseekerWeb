@@ -96,8 +96,9 @@
       }); 
     },
 
-    async register_lowongan_kerja({ commit }, user ) {
-      const response = await axios.post('api/aplications_jobseeker', user, {        
+    async register_lowongan_kerja({ commit }, id ) {
+      const response = await axios.post('api/aplications_jobseeker', id, { 
+        'content-type': 'multipart/form-data'       
       });
     },
 

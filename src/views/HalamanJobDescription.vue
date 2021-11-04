@@ -18,7 +18,7 @@
         <label for="my-modal-2" class="btn btn-outline w-40">Tidak</label>
         <div class="w-40">
           <!-- <router-link :to="{ name: 'DaftarDataDiri' }"> -->
-          <form
+          <!-- <form
             class="form-control"
             action=""
             method="POST"
@@ -33,12 +33,17 @@
               class="input input-primary w-full"
               :value="positionId"
               v-model="position_id"
-            />
-            <button type="submit" for="my-modal-2" class="btn btn-primary w-40">
-              Yakin
-            </button>
-            <!-- </router-link> -->
-          </form>
+            /> -->
+          <button
+            type="submit"
+            for="my-modal-2"
+            class="btn btn-primary w-40"
+            @click="submitForm(positionId)"
+          >
+            Yakin
+          </button>
+          <!-- </router-link> -->
+          <!-- </form> -->
         </div>
       </div>
     </div>
@@ -78,7 +83,7 @@
               <h4
                 class="font-bold dark:text-white dark:text-opacity-80 text-2xl"
               >
-                {{ positionId }}
+
                 {{ namaPerusahaan }}
               </h4>
               <h5
@@ -431,10 +436,13 @@ export default {
     };
   },
   methods: {
-    submitForm() {
-      this.$store.dispatch("auth/register_lowongan_kerja", this.position_id);
+    submitForm(positionId) {
+      const id = new FormData();
+      id.append("position_id", positionId);
 
-      console.log(this.position.id);
+      this.$store.dispatch("auth/register_lowongan_kerja", id);
+
+      console.log(positionId);
       // this.$router.push("/");
     },
   },
