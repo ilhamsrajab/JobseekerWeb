@@ -100,14 +100,9 @@
         >
           <!-- tambah riwayat pekerjaan -->
           <form-riwayat-pekerjaan
-            v-for="item in items"
-            :key="item.id"
-            :nama-perusahan="item.namaPerusahaan"
-            :tahun-masuk="item.tahunMasuk"
-            :tahun-keluar="item.tahunKeluar"
-            :posisi-kerja="item.posisiKerja"
-            :deskripsi-pekerjaan="item.deskripsiPekerjaan"
-            :alasan-resign="item.alasanResign"
+            v-for="item in form.riwayatPekerjaan"
+            :key="item"
+            :item="item"
           >
           </form-riwayat-pekerjaan>
 
@@ -143,9 +138,7 @@
                   duration-200
                 "
               >
-                <span @click="addRiwayatPekerjaan">
-                  + Tambah Riwayat Pekerjaan</span
-                >
+                <span @click="inputCounter"> + Tambah Riwayat Pekerjaan</span>
               </label>
             </div>
           </div>
@@ -223,6 +216,7 @@
 <script>
 import { Icon } from "@iconify/vue";
 import FormRiwayatPekerjaan from "../Form/FormRiwayatPekerjaan.vue";
+import axios from "axios";
 
 export default {
   name: "RiwayatPekerjaan",
@@ -232,49 +226,52 @@ export default {
   },
   created() {
     this.theme = localStorage.getItem("theme") || "light";
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
   },
   mounted() {
     this.theme = localStorage.getItem("theme") || "light";
   },
-  methods: {},
   data() {
     return {
       theme: "",
-      items: [
-        {
-          id: 1,
-          nama_perusahaan: "",
-          tahun_masuk: "",
-          tahun_keluar: "",
-          posisi_kerja: "",
-          deskripsi_pekerjaan: "",
-          alasan_resign: "",
-          dokumen_pendukung: "",
-        },
-      ],
-      nextItemsId: 1,
       isChecked: "",
+      form: {
+        riwayatPekerjaan: [
+          {
+            nama_perusahaan: "",
+            tahun_masuk: "",
+            tahun_keluar: "",
+            posisi_kerja: "",
+            deskripsi_pekerjaan: "",
+            alasan_resign: "",
+          },
+        ],
+      },
+      user: "",
     };
   },
   methods: {
-    addRiwayatPekerjaan() {
-      this.items.push({
-        id: this.items.nextItemsId++,
+    submitForm() {
+      console.log(this.form.riwayatPekerjaan);
+
+      this.$store.dispatch("auth/register_riwayat_pekerjaan", this.form);
+      
+      // this.$router.push("/sukses");
+    },
+
+    inputCounter() {
+      this.form.riwayatPekerjaan.push({
         nama_perusahaan: "",
         tahun_masuk: "",
         tahun_keluar: "",
         posisi_kerja: "",
         deskripsi_pekerjaan: "",
         alasan_resign: "",
-        dokumen_pendukung: "",
-      }),
-        console.log(this.items);
+      });
     },
-    submitForm() {
-      this.$store.dispatch("auth/register_data_diri", this.items);
 
-      this.$router.push("/sukses");
-    },
+    onFileSelectedDokumenPendukung() {},
   },
 };
 </script>

@@ -66,7 +66,7 @@
     },
 
     async register_riwayat_pekerjaan({ commit }, user ) {
-      const response = await axios.post('api/job_seeker_riwayat_pekerjaan', user, {
+      const response = await axios.post('api/job_seeker_riwayat_pekerjaan', user , {
       }); 
     },
 
@@ -92,6 +92,12 @@
 
     async register_transkip_nilai({ commit }, user ) {
       const response = await axios.post('api/job_seeker_transkip_nilai', user, {
+      }); 
+    },
+
+    async register_riwayat_pekerjaan({ commit }, user ) {
+      const response = await axios.post('api/job_seeker_riwayat_pekerjaan', user, {
+        nama_perusahaan: user.nama_perusahaan
       }); 
     },
 
