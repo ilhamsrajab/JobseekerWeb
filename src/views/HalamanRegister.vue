@@ -207,81 +207,11 @@ export default {
   },
   data() {
     return {
-      step1: false,
-      step2: false,
-      step3: false,
-      step4: false,
-      step5: false,
-      currentStep: 1,
     };
   },
   computed: {
-    step1Classes() {
-      return { "step-accent": this.step1 };
-    },
-    step2Classes() {
-      return { "step-accent": this.step2 };
-    },
-    step3Classes() {
-      return { "step-accent": this.step3 };
-    },
-    step4Classes() {
-      return { "step-accent": this.step4 };
-    },
-    step5Classes() {
-      return { "step-accent": this.step5 };
-    },
   },
   methods: {
-    stepSelected(currentStep) {
-      if (currentStep === 1) {
-        this.step1 = !this.step1;
-      } else if (currentStep === 2) {
-        this.step2 = !this.step2;
-      } else if (currentStep === 3) {
-        this.step3 = !this.step3;
-      } else if (currentStep === 4) {
-        this.step4 = !this.step4;
-      } else if (currentStep === 5) {
-        this.step5 = !this.step5;
-      }
-    },
-    stepNext() {
-      this.currentStep++;
-      if (this.currentStep === 1) {
-        this.step1 = !this.step1;
-      } else if (this.currentStep === 2) {
-        this.step2 = !this.step2;
-      } else if (this.currentStep === 3) {
-        this.step3 = !this.step3;
-      } else if (this.currentStep === 4) {
-        this.step4 = !this.step4;
-      } else if (this.currentStep === 5) {
-        this.step5 = !this.step5;
-      }
-      console.log(this.currentStep);
-    },
-    stepBack() {
-      this.currentStep--;
-      if (this.currentStep === 1) {
-        this.step2 = false;
-        this.step3 = false;
-        this.step4 = false;
-        this.step5 = false;
-      } else if (this.currentStep === 2) {
-        this.step3 = false;
-        this.step4 = false;
-        this.step5 = false;
-      } else if (this.currentStep === 3) {
-        this.step4 = false;
-        this.step5 = false;
-      } else if (this.currentStep === 4) {
-        this.step5 = false;
-      } else if (this.currentStep === 5) {
-        this.step5 = !this.step5;
-      }
-      console.log(this.currentStep);
-    },
   },
 };
 </script>
