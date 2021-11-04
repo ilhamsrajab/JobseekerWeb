@@ -18,7 +18,7 @@ export default {
             }
         });
         commit('SET_DATA_DISTRICTS_ON_PROVINCE', response.data.data.districts);
-        return response.data.data.districts;
+        
     },
 
     async getDataSubDistrictOnDistrict ({ commit }, {bearer, id}) {
@@ -28,7 +28,7 @@ export default {
             }
         });
         commit('SET_DATA_SUB_DISTRICT_ON_DISTRICT', response.data.data.sub_district);
-        return response.data.data.sub_district;
+      
     },
     
 }

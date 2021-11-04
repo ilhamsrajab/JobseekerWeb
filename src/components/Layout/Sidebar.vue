@@ -111,13 +111,13 @@
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
           <h4 class="font-semibold dark:text-white dark:text-opacity-80">
-            {{ getDataDiri.nama }}
+            <!-- {{ getDataDiri.nama }} -->
           </h4>
           <h5
             id="email"
             class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
-            {{ getDataUser.email }}
+            <!-- {{ getDataUser.email }} -->
           </h5>
         </div>
       </div>

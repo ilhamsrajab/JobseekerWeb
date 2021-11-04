@@ -242,7 +242,7 @@ export default {
             nama_perusahaan: "",
             tahun_masuk: "",
             tahun_keluar: "",
-            posisi_kerja: "",
+            posisi: "",
             deskripsi_pekerjaan: "",
             alasan_resign: "",
           },
@@ -253,10 +253,18 @@ export default {
   },
   methods: {
     submitForm() {
-      console.log(this.form.riwayatPekerjaan);
+      this.form.riwayatPekerjaan.forEach((user) => {
+        const formData = new FormData();
+        formData.append("nama_perusahaan", user.nama_perusahaan);
+        formData.append("tahun_masuk", user.tahun_masuk);
+        formData.append("tahun_keluar", user.tahun_keluar);
+        formData.append("posisi", user.posisi);
+        formData.append("deskripsi_pekerjaan", user.deskripsi_pekerjaan);
+        formData.append("alasan_resign", user.alasan_resign);
 
-      this.$store.dispatch("auth/register_riwayat_pekerjaan", this.form);
-      
+        this.$store.dispatch("auth/register_riwayat_pekerjaan", formData);
+        console.log(user);
+      });
       // this.$router.push("/sukses");
     },
 

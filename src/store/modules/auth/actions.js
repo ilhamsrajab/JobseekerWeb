@@ -30,18 +30,18 @@
         )
       },
       
-      async register({ commit }, user ) {
-        const response = await axios.post('api/register', user, {
-        }); 
-        localStorage.setItem(
-          "token",
-          response.data.data.access_token
-          )
-        },
-        
-        logout() {
-          localStorage.removeItem('token')
-        },
+    async register({ commit }, user ) {
+      const response = await axios.post('api/register', user, {
+      }); 
+      localStorage.setItem(
+        "token",
+        response.data.data.access_token
+        )
+      },
+      
+    logout() {
+      localStorage.removeItem('token')
+    },
 
     async register_data_diri({ commit }, user ) {
       const response = await axios.post('api/job_seeker_data_diri', user, {
@@ -65,8 +65,9 @@
       }); 
     },
 
-    async register_riwayat_pekerjaan({ commit }, user ) {
-      const response = await axios.post('api/job_seeker_riwayat_pekerjaan', user , {
+    async register_riwayat_pekerjaan({ commit }, formData ) {
+      const response = await axios.post('api/job_seeker_riwayat_pekerjaan', formData, {
+        'content-type': 'multipart/form-data'
       }); 
     },
 
@@ -95,12 +96,12 @@
       }); 
     },
 
-    async register_riwayat_pekerjaan({ commit }, user ) {
-      const response = await axios.post('api/job_seeker_riwayat_pekerjaan', user, {
-        nama_perusahaan: user.nama_perusahaan
-      }); 
+    async register_lowongan_kerja({ commit }, user ) {
+      const response = await axios.post('api/aplications_jobseeker', user, {        
+      });
     },
 
+    // get data
     async getDataUser ({ commit }) {
       await axios.get("api/get_job_seeker_data_diri")
       .then( response => {

@@ -53,7 +53,7 @@
       type="text"
       placeholder="Masukan Posisi Kerja"
       class="input input-primary w-full"
-      v-model="item.posisi_kerja"
+      v-model="item.posisi"
     />
   </div>
 

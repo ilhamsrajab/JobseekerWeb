@@ -16,11 +16,21 @@
       <p>Apakah Anda yakin ingin mendaftar pekerjaan ini?</p>
       <div class="modal-action justify-end">
         <label for="my-modal-2" class="btn btn-outline w-40">Tidak</label>
-        <div class="w-40">
-          <router-link :to="{ name: 'DaftarDataDiri' }">
-            <label for="my-modal-2" class="btn btn-primary w-40">Yakin</label>
-          </router-link>
-        </div>
+        <form
+          action=""
+          method="POST"
+          id="myForm"
+          enctype="multipart/form-data"
+          @submit.prevent="submitForm"
+        >
+          <div class="w-40">
+            <!-- <router-link :to="{ name: 'DaftarDataDiri' }"> -->
+            <button type="submit" for="my-modal-2" class="btn btn-primary w-40">
+              Yakin
+            </button>
+            <!-- </router-link> -->
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -65,7 +75,7 @@
                 id="email"
                 class="font-medium text-gray-500 dark:text-gray-400 mt-2"
               >
-                Posisi
+                {{ posisi }}
               </h5>
             </div>
 
@@ -89,8 +99,8 @@
                   dark:text-gray-400
                 "
               >
-                <Icon icon="fluent:clock-24-filled" :inline="true" />
-                <p class="text-sm">Waktu</p>
+                <!-- <Icon icon="fluent:clock-24-filled" :inline="true" />
+                <p class="text-sm">Waktu</p> -->
               </span>
               <!-- informasi singkat -->
               <div
@@ -123,14 +133,14 @@
                   title="Lokasi penempatan kerja"
                 >
                   <Icon icon="fluent:location-24-filled" :inline="true" />
-                  <p class="text-sm">Lokasi</p>
+                  <p class="text-sm">{{ lokasiPenempatan }}</p>
                 </span>
                 <span
                   class="inline-flex items-center space-x-2 w-56"
                   title="Kisaran gaji"
                 >
                   <Icon icon="fluent:money-24-filled" :inline="true" />
-                  <p class="text-sm">Rp. 1.000.000 - Rp. 4.000.000</p>
+                  <p class="text-sm">Rp. {{ kisaranGaji }}</p>
                 </span>
                 <span
                   class="inline-flex items-center space-x-2 w-56"
@@ -147,21 +157,21 @@
                   title="Batas pendaftaran lamaran"
                 >
                   <Icon icon="fluent:clock-24-filled" :inline="true" />
-                  <p class="text-sm">Batas Pendaftaran</p>
+                  <p class="text-sm">{{ deadlinePendaftaran }}</p>
                 </span>
                 <span
                   class="inline-flex items-center space-x-2 w-56"
                   title="Jenis pekerjaan"
                 >
                   <Icon icon="fluent:clock-24-filled" :inline="true" />
-                  <p class="text-sm">Full-Time</p>
+                  <p class="text-sm">{{ jenisPekerjaan }}</p>
                 </span>
                 <span
                   class="inline-flex items-center space-x-2 w-56"
                   title="Kuota yang dibutuhkan"
                 >
                   <Icon icon="fluent:people-team-24-filled" :inline="true" />
-                  <p class="text-sm">Kuota</p>
+                  <p class="text-sm">{{ kuotaPelamar }}</p>
                 </span>
               </div>
             </div>
@@ -193,17 +203,11 @@
                     dark:text-white dark:text-opacity-60
                   "
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                  quae omnis illum. Asperiores magni libero, veritatis quia in
-                  dolorum error cum nam excepturi eos delectus sed deserunt
-                  provident adipisci magnam. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Nulla excepturi, eveniet eum
-                  aliquid exercitationem officiis aliquam veniam quibusdam
-                  corrupti explicabo at nostrum repudiandae vel eaque culpa ab
-                  nobis rerum ipsa.
+                  {{ deskripsiPekerjaan }}
                 </span>
 
-                <h2 class="font-bold text-lg mb-3">Responsibilities :</h2>
+                <!-- <h2 class="font-bold text-lg mb-3">Responsibilities :</h2> -->
+                <h2 class="font-bold text-lg mb-3">Tanggung Jawab :</h2>
                 <ul
                   class="
                     list-disc list-inside
@@ -213,23 +217,13 @@
                     md:text-base
                   "
                 >
-                  <li>Designing and implementing Java-based applications.</li>
-                  <li>
-                    Analyzing user requirements to inform application design.
-                  </li>
-                  <li>Defining application objectives and functionality.</li>
-                  <li>Aligning application design with business goals.</li>
-                  <li>Developing and testing software.</li>
-                  <li>
-                    Debugging and resolving technical problems that arise.
-                  </li>
-                  <li>Producing detailed design documentation.</li>
-                  <li>Recommending changes to existing Java infrastructure.</li>
-                  <li>Developing documentation to assist users</li>
-                  <li>Ensuring continuous professional self-development.</li>
+                  {{
+                    tanggungJawab
+                  }}
                 </ul>
 
-                <h2 class="font-bold text-lg mb-3">Requirements :</h2>
+                <!-- <h2 class="font-bold text-lg mb-3">Requirements :</h2> -->
+                <h2 class="font-bold text-lg mb-3">Persyaratan :</h2>
                 <ul
                   class="
                     list-disc list-inside
@@ -239,28 +233,9 @@
                     dark:text-white dark:text-opacity-60
                   "
                 >
-                  <li>
-                    Bachelor’s Degree or more 3 ~ 5 years web programming
-                    experience.
-                  </li>
-                  <li>Degree in Computer Science or related field.</li>
-                  <li>
-                    Experience with user interface design, database structures
-                    and statistical analyses.
-                  </li>
-                  <li>Analytical mindset and good problem-solving skills.</li>
-                  <li>Excellent written and verbal communication.</li>
-                  <li>
-                    Good organizational skills Ability to work as part of a team
-                    Effective written and verbal communication in English
-                  </li>
-                  <li>
-                    Ability to understand transportation business and system.
-                  </li>
-                  <li>
-                    Strong working knowledge of Microsoft Office applications
-                    such as Excel, Word and PowerPoint
-                  </li>
+                  <li>Usia Pekerja : {{ usiaPekerja }}</li>
+                  <li>Jenis Kelamin : {{ jenisKelamin }}</li>
+                  <li>Minimal Pendidikan : {{ minimalPendidikan }}</li>
                 </ul>
               </div>
               <!-- end of isi description -->
@@ -444,22 +419,82 @@ export default {
       selectedLoker: null,
     };
   },
+  method: {
+    submitForm() {
+      this.$store.dispatch(
+        "auth/register_lowongan_kerja",
+        this.selectedLoker.id
+      );
+
+      this.$router.push("/");
+
+      console.log(this.selectedLoker.id);
+    },
+  },
   computed: {
     namaPerusahaan() {
-      return this.selectedLoker;
+      return this.selectedLoker.company.nama_perusahaan;
     },
     posisi() {
       return this.selectedLoker.posisi;
+    },
+    deadlinePendaftaran() {
+      return this.selectedLoker.deadline_pendaftaran;
+    },
+    lokasiPenempatan() {
+      return this.selectedLoker.lokasi_penempatan;
+    },
+    kisaranGaji() {
+      return this.selectedLoker.kisaran_gaji;
+    },
+    kuotaPelamar() {
+      return this.selectedLoker.kuota_pelamar;
+    },
+    jenisPekerjaan() {
+      return this.selectedLoker.jenis_pekerjaan;
+    },
+    deskripsiPekerjaan() {
+      return this.selectedLoker.deskripsi_pekerjaan;
+    },
+    tanggungJawab() {
+      return this.selectedLoker.tanggung_jawab;
+    },
+    usiaPekerja() {
+      return this.selectedLoker.usia_pekerja;
+    },
+    jenisKelamin() {
+      return this.selectedLoker.jenis_kelamin;
+    },
+    minimalPendidikan() {
+      return this.selectedLoker.minimal_pendidikan;
+    },
+    curriculumVitae() {
+      return this.selectedLoker.kelengkapan_berkas_cv;
+    },
+    portofolio() {
+      return this.selectedLoker.kelengkapan_berkas_portofolio;
+    },
+    ijazah() {
+      return this.selectedLoker.kelengkapan_berkas_ijazah;
+    },
+    sertifikat() {
+      return this.selectedLoker.kelengkapan_berkas_sertifikat;
+    },
+    transkipNilai() {
+      return this.selectedLoker.kelengkapan_berkas_transkip_nilai;
+    },
+    sim() {
+      return this.selectedLoker.kelengkapan_sim;
     },
   },
   created() {
     axios.defaults.headers.common["Authorization"] =
       "Bearer " + localStorage.getItem("token");
 
-    this.selectedLoker = this.$store.dispatch("auth/getDataLowonganKerja");
+    // this.selectedLoker = this.$store.dispatch("auth/getDataLowonganKerja");
 
     this.selectedLoker = this.$store.getters["auth/data_lowongan_kerja"].find(
-      (loker) => loker.id === this.id
+      (loker) => loker.id == this.id
     );
   },
 };
