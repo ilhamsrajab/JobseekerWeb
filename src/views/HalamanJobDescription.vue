@@ -16,21 +16,30 @@
       <p>Apakah Anda yakin ingin mendaftar pekerjaan ini?</p>
       <div class="modal-action justify-end">
         <label for="my-modal-2" class="btn btn-outline w-40">Tidak</label>
-        <form
-          action=""
-          method="POST"
-          id="myForm"
-          enctype="multipart/form-data"
-          @submit.prevent="submitForm"
-        >
-          <div class="w-40">
-            <!-- <router-link :to="{ name: 'DaftarDataDiri' }"> -->
+        <div class="w-40">
+          <!-- <router-link :to="{ name: 'DaftarDataDiri' }"> -->
+          <form
+            class="form-control"
+            action=""
+            method="POST"
+            id="myForm"
+            enctype="multipart/form-data"
+            @submit.prevent="submitForm"
+          >
+            <input
+              id="id"
+              title="id"
+              type="hidden"
+              class="input input-primary w-full"
+              :value="positionId"
+              v-model="position_id"
+            />
             <button type="submit" for="my-modal-2" class="btn btn-primary w-40">
               Yakin
             </button>
             <!-- </router-link> -->
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -69,6 +78,7 @@
               <h4
                 class="font-bold dark:text-white dark:text-opacity-80 text-2xl"
               >
+                {{ positionId }}
                 {{ namaPerusahaan }}
               </h4>
               <h5
@@ -417,21 +427,22 @@ export default {
   data() {
     return {
       selectedLoker: null,
+      position_id: "",
     };
   },
-  method: {
+  methods: {
     submitForm() {
-      this.$store.dispatch(
-        "auth/register_lowongan_kerja",
-        this.selectedLoker.id
-      );
+      this.$store.dispatch("auth/register_lowongan_kerja", this.position_id);
 
-      this.$router.push("/");
-
-      console.log(this.selectedLoker.id);
+      console.log(this.position.id);
+      // this.$router.push("/");
     },
   },
   computed: {
+    positionId() {
+      this.position_id = this.selectedLoker.id;
+      return this.position_id;
+    },
     namaPerusahaan() {
       return this.selectedLoker.company.nama_perusahaan;
     },
