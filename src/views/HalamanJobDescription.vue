@@ -83,7 +83,6 @@
               <h4
                 class="font-bold dark:text-white dark:text-opacity-80 text-2xl"
               >
-
                 {{ namaPerusahaan }}
               </h4>
               <h5
@@ -120,24 +119,23 @@
               <!-- informasi singkat -->
               <div
                 class="
-                  py-8
+                  py-10
                   grid grid-flow-row
                   auto-cols-max
                   gap-y-5 gap-x-10
                   bg-white
                   dark:bg-gray-900
                   rounded-20
-                  2xl:w-3/5
-                  xl:grid-cols-3
+                  2xl:w-full 2xl:m-0
+                  xl:grid-cols-3 xl:px-20
                   lg:m-8 lg:w-4/5 lg:mx-auto
-                  md:mx-auto
+                  md:mx-auto md:w-11/12
                   sm:mx-auto
                   sm:m-6
                   sm:px-10
                   sm:w-11/12
                   sm:grid-cols-2
                   sm:justify-items-center
-                  md:w-11/12
                   xs:m-4 xs:px-6 xs:w-full xs:grid-cols-1 xs:mx-auto
                   text-gray-500
                   dark:text-white dark:text-opacity-60
@@ -200,7 +198,7 @@
                 rounded-20
                 text-neutral
                 mt-8
-                2xl:w-3/5
+                2xl:w-full
                 lg:p-14 lg:w-4/5
                 md:p-10 md:w-11/12
                 sm:p-8 sm:w-11/12
@@ -269,7 +267,7 @@
                   lg:px-10
                   md:px-6
                   xs:px-2
-                  2xl:w-3/5
+                  2xl:w-full
                   lg:w-4/5 lg:mx-auto
                   md:mx-8
                   sm:mx-6
@@ -355,7 +353,7 @@
                 bg-white
                 dark:bg-gray-900 dark:text-white dark:text-opacity-80
                 rounded-20
-                2xl:w-3/5
+                2xl:w-full
                 lg:w-4/5 lg:mx-auto
                 md:w-11/12
                 sm:w-11/12

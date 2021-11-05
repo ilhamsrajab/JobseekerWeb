@@ -10,7 +10,7 @@
       duration-300
       transform
       lg:shadow-none
-      xs:shadow-btnhover
+      md:shadow-btnhover
       bg-white
       dark:bg-gray-900
       overflow-y-auto
