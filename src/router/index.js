@@ -39,7 +39,6 @@ const router = createRouter({
     {
       path: '/loker',
       name: 'HalamanCariKerja',
-      props: true,
       component: HalamanCariKerja
     },
     {
