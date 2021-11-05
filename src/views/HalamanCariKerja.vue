@@ -84,7 +84,7 @@
               :deadline-pendaftaran="loker.deadline_pendaftaran"
               :jenis-pekerjaan="loker.jenis_pekerjaan"
             ></card>
-
+          {{ getDataLowonganKerja }}
             <CardSkeleton />
           </div>
           <!-- end of card -->
