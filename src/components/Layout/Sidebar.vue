@@ -111,7 +111,7 @@
         />
         <div class="leading-6 ml-4 select-disabled bg-opacity-0">
           <h4 class="font-semibold dark:text-white dark:text-opacity-80">
-            <!-- {{ getDataDiri.nama }} -->
+            {{ getDataDiri.nama }}
           </h4>
           <h5
             id="email"
@@ -219,7 +219,7 @@ export default {
     },
     logout() {
       this.$store.dispatch("auth/logout");
-      this.$router.replace("/login");
+      this.$router.replace("/masuk");
     },
   },
   computed: {

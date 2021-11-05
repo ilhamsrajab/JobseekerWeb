@@ -112,6 +112,7 @@
               placeholder="Masukan nama lengkap"
               class="input input-primary w-full"
               v-model.trim="user.nama"
+              required
             />
           </div>
 
@@ -131,6 +132,7 @@
               maxlength="16"
               max="9999999999999999"
               v-model.trim="user.nik"
+              required
             />
           </div>
 
@@ -148,6 +150,7 @@
                   class="radio"
                   value="Laki-laki"
                   v-model="user.jenis_kelamin"
+                  required
                 />
                 <label
                   for="push-lakilaki"
@@ -171,6 +174,7 @@
                   class="radio"
                   value="Perempuan"
                   v-model="user.jenis_kelamin"
+                  required
                 />
                 <label
                   for="push-perempuan"
@@ -202,6 +206,7 @@
                 placeholder="Masukan tempat lahir"
                 class="input input-primary w-3/5"
                 v-model.trim="user.tempat_lahir"
+                required
               />
               <input
                 id="tanggalLahir"
@@ -222,6 +227,7 @@
               id="agama"
               class="select select-primary w-full"
               v-model="user.agama"
+              required
             >
               <option disabled="disabled" selected hidden>Pilih Agama</option>
               <option>Islam</option>
@@ -242,6 +248,7 @@
               id="statusPerkawinan"
               class="select select-primary w-full"
               v-model="user.status_perkawinan"
+              required
             >
               <option disabled="disabled" selected hidden>
                 Pilih Status Perkawinan
@@ -265,6 +272,7 @@
                 id="alamatProvinsi"
                 class="select select-primary w-full"
                 v-model="provinsi"
+                required
               >
                 <option value="" selected disabled hidden>
                   Pilih Provinsi
@@ -288,6 +296,7 @@
                 id="alamatKota"
                 class="select select-primary w-full"
                 v-model="kabupaten"
+                required
               >
                 <option value="" selected disabled hidden>
                   Pilih Kabupaten
@@ -311,6 +320,7 @@
                 id="alamatKecamatan"
                 class="select select-primary w-full"
                 v-model="user.sub_district_id"
+                required
               >
                 <option value="" selected disabled hidden>
                   Pilih kecamatan
@@ -337,6 +347,7 @@
                 placeholder="Masukan alamat desa"
                 class="input input-primary w-full"
                 v-model="user.desa"
+                required
               />
             </div>
 
@@ -354,6 +365,7 @@
                   placeholder="Masukan no. RT"
                   class="input input-primary w-1/2"
                   v-model.trim="user.rt"
+                  required
                 />
                 <input
                   id="alamatRW"
@@ -380,6 +392,7 @@
                   class="textarea"
                   placeholder="Tuliskan Alamat Rumah/Jalan/Gang/Perumahan"
                   v-model.trim="user.alamat_rumah"
+                  required
                 />
               </div>
             </div>
@@ -396,6 +409,7 @@
                 placeholder="Masukan no. kodepos"
                 class="input input-primary w-full"
                 v-model.trim="user.kode_pos"
+                required
               />
             </div>
           </div>
@@ -409,6 +423,7 @@
               id="pendidikan"
               class="select select-primary w-full"
               v-model="user.pendidikan_terakhir"
+              required
             >
               <option disabled="disabled" selected="selected">
                 Pilih Pendidikan Terakhir
@@ -456,6 +471,7 @@
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
                 v-model="user.no_hp"
+                required
               />
             </div>
           </div>
@@ -472,6 +488,7 @@
               title="Pilih foto pribadi"
               class="input input-primary w-full py-3.5 px-4"
               @change="onFileSelectedFotoProfil"
+              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -492,6 +509,7 @@
               title="Pilih foto E-KTP"
               class="input input-primary w-full py-3.5 px-4"
               @change="onFileSelectedFotoKTP"
+              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">

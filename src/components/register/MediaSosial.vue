@@ -124,6 +124,7 @@
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
                 v-model.trim="user.instagram"
+                required
               />
             </div>
             <label class="label">
@@ -162,6 +163,7 @@
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
                 v-model.trim="user.twitter"
+                required
               />
             </div>
             <label class="label">
@@ -199,6 +201,7 @@
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
                 v-model.trim="user.facebook"
+                required
               />
             </div>
             <label class="label">
@@ -236,6 +239,7 @@
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
                 v-model.trim="user.linkedIn"
+                required
               />
             </div>
             <label class="label">
@@ -273,6 +277,7 @@
                 class="input input-primary w-full"
                 style="border-radius: 0px 20px 20px 0px !important"
                 v-model.trim="user.youtube"
+                required
               />
             </div>
             <label class="label">

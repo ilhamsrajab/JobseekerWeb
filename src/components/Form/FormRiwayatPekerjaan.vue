@@ -11,6 +11,7 @@
       placeholder="Masukan nama perusahaan"
       class="input input-primary w-full"
       v-model="item.nama_perusahaan"
+      required
     />
   </div>
 
@@ -25,6 +26,7 @@
       type="month"
       class="input input-primary w-full"
       v-model="item.tahun_masuk"
+      required
     />
   </div>
 
@@ -39,6 +41,7 @@
       type="month"
       class="input input-primary w-full"
       v-model="item.tahun_keluar"
+      required
     />
   </div>
 
@@ -54,6 +57,7 @@
       placeholder="Masukan Posisi Kerja"
       class="input input-primary w-full"
       v-model="item.posisi"
+      required
     />
   </div>
 
@@ -70,6 +74,7 @@
         class="textarea"
         placeholder="Tuliskan deskripsi pekerjaan dengan singkat"
         v-model="item.deskripsi_pekerjaan"
+        required
       />
     </div>
   </div>
@@ -86,6 +91,7 @@
       placeholder="Masukan Alasan Resign"
       class="input input-primary w-full"
       v-model="item.alasan_resign"
+      required
     />
   </div>
 
@@ -118,7 +124,7 @@ export default {
     item: {
       type: Object,
       required: true,
-    }
+    },
   },
   data() {
     return {};
