@@ -523,8 +523,6 @@
                 <strong>benar data pribadi saya</strong>, jika ada kesalahan
                 saya siap menanggung semua akibatnya.</label
               >
-              <!-- {{ getDataProvince }} -->
-              <!-- {{ getProvince }} -->
             </div>
           </div>
           <div>
