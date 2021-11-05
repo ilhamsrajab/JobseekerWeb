@@ -111,6 +111,7 @@
               title="Pilih file cv"
               class="input input-primary w-full py-3.5 px-4"
               @change="onFileSelectedCV"
+              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -132,6 +133,7 @@
               title="Pilih file ijazah"
               class="input input-primary w-full py-3.5 px-4"
               @change="onFileSelectedIjazah"
+              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -154,6 +156,7 @@
               class="input input-primary w-full py-3.5 px-4"
               multiple
               @change="onFileSelectedPortofolio"
+              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -176,6 +179,7 @@
               class="input input-primary w-full py-3.5 px-4"
               multiple
               @change="onFileSelectedSertifikat"
+              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
@@ -198,6 +202,7 @@
               class="input input-primary w-full py-3.5 px-4"
               multiple
               @change="onFileSelectedTranskripNilai"
+              required
             />
             <label class="label">
               <p href="#" class="label-text-alt text-gray-500">
