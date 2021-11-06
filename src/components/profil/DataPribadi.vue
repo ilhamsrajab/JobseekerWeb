@@ -383,7 +383,19 @@
             Lihat file
           </label>
         </div>
-
+        <img
+          src="http://127.0.0.1:8000/storage/jobseeker/2/foto_ktp/6eMQu9uLGZdePRUqaLx5VHABT4kmB1ZqTCbsyNyx.png"
+          class="w-full rounded-20"
+        />
+        <img
+          :src="'http://127.0.0.1:8000' + getDataDiriFotoKTP"
+          class="w-full rounded-20"
+        />
+        <img
+          :src="axios.defaults.baseURL + getDataDiriFotoKTP"
+          class="w-full rounded-20"
+        />
+        {{ getDataDiri }}
         <label class="label">
           <p href="#" class="label-text-alt text-gray-500">
             * upload foto maksimal 7 MB
@@ -509,6 +521,9 @@ export default {
     },
     getDataDiriNoHP() {
       return this.getDataDiri.no_hp;
+    },
+    getDataDiriFotoKTP() {
+      return this.getDataDiri.foto_ktp;
     },
   },
 };
