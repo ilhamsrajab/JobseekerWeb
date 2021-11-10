@@ -18,6 +18,7 @@
         class="w-40"
       />
     </div>
+    ''
     <!-- end of logo -->
   </div>
   <!-- Login -->
@@ -37,9 +38,7 @@
         }}
       </p>
     </div>
-    <!-- <div :show="isLoading" fixed>
-      <p>Authenticating...</p>
-    </div> -->
+
     <!-- login form -->
     <div class="formLogin">
       <p
@@ -218,32 +217,16 @@ export default {
         email: "",
         password: "",
       },
-      isLoading: false,
-      error: null,
-      data: [
-        "<div class='text-center mb-10 font-medium'>Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.</div>",
-        "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.</div>",
-        "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>",
-      ],
     };
   },
   methods: {
-    async submitForm() {
-      this.isLoading = true;
-
-      try {
-        await this.$store.dispatch("auth/login", this.user);
-        // this.$router.replace("/");
-      } catch (err) {
-        this.error = err.message || "Failed tp authenticated, try later.";
-      }
-
-      this.isLoading = false;
-
-      this.$router.push("/");
-    },
-    handleError() {
-      this.error = null;
+    submitForm() {
+      this.$store.dispatch("auth/login", this.user);
+      this.$store.commit("isLoading", true);
+      setTimeout(() => {
+        this.$router.push("/");
+        this.$store.commit("isLoading", false);
+      }, 2000);
     },
   },
 };

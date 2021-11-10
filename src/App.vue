@@ -7,6 +7,7 @@
   <!-- <router-link :to="{ name: 'HalamanLogin' }">Halaman Login</router-link>
   |
   <router-link :to="{ name: 'HalamanRegister' }">Halaman Daftar</router-link> | -->
+  <loading v-if="isLoading"></loading>
   <router-view :theme="appTheme" />
 </template>
 
@@ -26,11 +27,23 @@
 </style>
 
 <script>
+import loading from "../src/components/UI/Loading.vue";
+
 export default {
+  components: {
+    loading,
+  },
+
   data: () => {
     return {
       appTheme: localStorage.getItem("theme"),
     };
+  },
+
+  computed: {
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
   },
 };
 </script>

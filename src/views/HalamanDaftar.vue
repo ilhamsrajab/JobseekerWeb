@@ -92,8 +92,8 @@ export default {
     return {
       data: [
         "<div class='text-center mb-10 font-medium'>Cari kerja dengan mudah disini, karena terhubung dengan ratusan perusahaan yang tergabung.</div>",
-        "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quidem dolorem.</div>",
-        "<div class='text-center mb-10 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim illum quasi eaque, repudiandae quidem doloremque. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>",
+        "<div class='text-center mb-10 font-medium'>Bursa Kerja telah bergabung dengan ratusan perusahaan yang tergabung.</div>",
+        "<div class='text-center mb-10 font-medium'>Ayo segera daftar bursa kerja.</div>",
       ],
     };
   },
