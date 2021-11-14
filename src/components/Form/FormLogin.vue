@@ -217,16 +217,21 @@ export default {
         email: "",
         password: "",
       },
+      error: null,
     };
   },
   methods: {
-    submitForm() {
-      this.$store.dispatch("auth/login", this.user);
+    async submitForm() {
+      const response = await this.$store.dispatch("auth/login", this.user);
+      console.log(response);
       this.$store.commit("isLoading", true);
       setTimeout(() => {
-        this.$router.push("/");
+        if (response.status == 200) {
+          this.$router.push("/");
+        }
         this.$store.commit("isLoading", false);
-      }, 2000);
+        this.error = response;
+      }, 1000);
     },
   },
 };

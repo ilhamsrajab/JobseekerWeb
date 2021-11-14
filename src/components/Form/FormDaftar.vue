@@ -45,7 +45,46 @@
       <!-- end of logo -->
     </div>
     <!-- daftar form -->
-    <div class="formLogin">
+    <div class="formDaftar">
+      <div
+        class="
+          bg-merah
+          text-merahDark
+          px-6
+          py-4
+          rounded-large
+          mt-4
+          -mb-4
+          text-sm
+        "
+        v-if="!formIsValid"
+      >
+        <p class="flex items-center">
+          <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
+            error
+          }}
+          Email sudah terdaftar
+        </p>
+        <p class="flex items-center">
+          <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
+            error
+          }}
+          Username sudah digunakan
+        </p>
+        <p class="flex items-center">
+          <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
+            error
+          }}
+          Password harus lebih dari 8 karakter
+        </p>
+        <p class="flex items-center">
+          <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
+            error
+          }}
+          Konfirmasi password tidak sama
+        </p>
+      </div>
+
       <p
         class="text-4xl font-bold text-neutral self-start mt-8 dark:text-white"
       >
@@ -95,7 +134,6 @@
           <label class="label mt-4" for="password">
             <span class="label-text">Password</span>
           </label>
-
           <input
             id="password"
             title="Masukan password"
@@ -114,7 +152,27 @@
         </div>
 
         <!-- konfirmasi password -->
-        <div>
+        <div class="formDaftar">
+          <div
+            class="
+              bg-merah
+              text-merahDark
+              px-6
+              py-4
+              rounded-large
+              mt-4
+              -mb-4
+              text-sm
+            "
+            v-if="konfirmasiPassword"
+          >
+            <p class="flex items-center">
+              <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
+                error
+              }}
+              Konfirmasi password tidak sama
+            </p>
+          </div>
           <label class="label mt-4" for="konfirmasi">
             <span
               class="
@@ -233,16 +291,31 @@ export default {
         password_confirmation: "",
         role: "jobseeker",
       },
+      formIsValid: true,
       isLoading: false,
+      konfirmasiPassword: false,
     };
   },
   methods: {
     submitForm() {
+      // this.formIsValid = true;
+      // if (
+      //   this.user.email === "" ||
+      //   !this.user.email.includes("@") ||
+      //   this.user.password.length < 8 ||
+      //   this.user.password === this.user.password_confirmation
+      // ) {
+      //   this.formIsValid = false;
+      //   return;
+      // }
+      if(this.user.password_confirmation !== this.user.password) {
+        this.konfirmasiPassword = true
+      }
       this.isLoading = true;
 
       this.$store.dispatch("auth/register", this.user);
 
-      this.$router.push("/lengkapi-data-diri");
+      // this.$router.push("/lengkapi-data-diri");
     },
   },
 };

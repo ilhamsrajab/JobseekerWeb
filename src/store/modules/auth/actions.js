@@ -1,44 +1,43 @@
   import axios from "axios";
 
   export default {
-    login( _, user ) {
-        // axios.get('sanctum/csrf-cookie').then(response => {
-          axios.post('api/login', {
-          email: user.email,
-          password: user.password
-        }).then( response => {
-          // console.log(response.data.data.access_token)
-          if( response.data.data.access_token ) {
-            
-            localStorage.setItem(
-              "token",
-              response.data.data.access_token
-            )
-
-            window.location.replace('/')
-          }
-        // })
-      });
-    },
-    
     async login({ commit }, user ) {
       const response = await axios.post('api/login', user, { 
+      }).catch(error => {
+        if(error.response.status == 400) {
+          return error.response.data.data.message.toString();
+        }
       });
-      localStorage.setItem(
-        "token",
-        response.data.data.access_token
-        )
-      },
+        if(response.status == 200) {
+          localStorage.setItem(
+            "token",
+            response.data.data.access_token
+            )
+        }
+      return response;
+    },
       
     async register({ commit }, user ) {
-      const response = await axios.post('api/register', user, {
-      }); 
-      localStorage.setItem(
-        "token",
-        response.data.data.access_token
-        )
-      },
-      
+      const response = await axios.post('api/register', user, { 
+      }).catch(error => {
+        if(error.response.status == 400) {
+          return error.response.data.errors;
+          console.log(error.response);
+        }
+        if(error.response.status == 422) {
+          console.log(error.response);
+        }
+      });
+        if(response.status == 200) {
+          localStorage.setItem(
+            "token",
+            response.data.data.access_token
+            )
+        }
+      return response;
+      console.log(response);
+    },
+
     logout() {
       localStorage.removeItem('token')
     },
