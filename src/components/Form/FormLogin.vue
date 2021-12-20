@@ -30,12 +30,22 @@
       class="bg-merah text-merahDark px-6 py-4 rounded-large mt-4 -mb-4 text-sm"
       :show="!!error"
       :hidden="!error"
-      @close="handleError"
     >
       <p class="flex items-center">
         <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
           error
         }}
+      </p>
+    </div>
+
+    <!-- Role Validation -->
+    <div
+      class="bg-merah text-merahDark px-6 py-4 rounded-large mt-4 -mb-4 text-sm"
+      v-if="isJobSeekerValid"
+    >
+      <p class="flex items-center">
+        <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />
+        Email tidak terdaftar sebagai akun pencari kerja
       </p>
     </div>
 
@@ -218,19 +228,27 @@ export default {
         password: "",
       },
       error: null,
+      isJobSeekerValid: false,
     };
   },
   methods: {
     async submitForm() {
       const response = await this.$store.dispatch("auth/login", this.user);
-      console.log(response);
       this.$store.commit("isLoading", true);
       setTimeout(() => {
-        if (response.status == 200) {
-          this.$router.push("/");
-        }
         this.$store.commit("isLoading", false);
         this.error = response;
+        if (
+          response.status == 200 &&
+          response.data.data.user.role == "jobseeker"
+        ) {
+          this.$router.push("/");
+        } else if (response.data.data.user.role !== "jobseeker") {
+          this.error = null;
+          this.isJobSeekerValid = true;
+        } else {
+          this.isJobSeekerValid = false;
+        }
       }, 1000);
     },
   },

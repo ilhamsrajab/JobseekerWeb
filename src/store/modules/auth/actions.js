@@ -6,6 +6,8 @@
       }).catch(error => {
         if(error.response.status == 400) {
           return error.response.data.data.message.toString();
+        } else {
+          return error.response.data.data.message;
         }
       });
         if(response.status == 200) {
@@ -20,13 +22,14 @@
     async register({ commit }, user ) {
       const response = await axios.post('api/register', user, { 
       }).catch(error => {
-        if(error.response.status == 400) {
+        if (error.response.status == 422 && error.response.data.errors.email) {
+          return error.response.data.errors.email.toString();
+        } else if (error.response.status == 422 && error.response.data.errors.username) {
+          return error.response.data.errors.username.toString();
+        } else {
           return error.response.data.errors;
-          console.log(error.response);
         }
-        if(error.response.status == 422) {
-          console.log(error.response);
-        }
+        
       });
         if(response.status == 200) {
           localStorage.setItem(
@@ -35,7 +38,6 @@
             )
         }
       return response;
-      console.log(response);
     },
 
     logout() {

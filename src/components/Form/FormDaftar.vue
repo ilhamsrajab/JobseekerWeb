@@ -1,6 +1,5 @@
 <template>
-  <loading v-if="isLoading"></loading>
-  <div id="login" class="flex flex-col">
+  <div id="daftar" class="flex flex-col">
     <!-- logo and back btn -->
     <div class="flex justify-between">
       <!-- icon kembali -->
@@ -46,45 +45,6 @@
     </div>
     <!-- daftar form -->
     <div class="formDaftar">
-      <div
-        class="
-          bg-merah
-          text-merahDark
-          px-6
-          py-4
-          rounded-large
-          mt-4
-          -mb-4
-          text-sm
-        "
-        v-if="!formIsValid"
-      >
-        <p class="flex items-center">
-          <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
-            error
-          }}
-          Email sudah terdaftar
-        </p>
-        <p class="flex items-center">
-          <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
-            error
-          }}
-          Username sudah digunakan
-        </p>
-        <p class="flex items-center">
-          <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
-            error
-          }}
-          Password harus lebih dari 8 karakter
-        </p>
-        <p class="flex items-center">
-          <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
-            error
-          }}
-          Konfirmasi password tidak sama
-        </p>
-      </div>
-
       <p
         class="text-4xl font-bold text-neutral self-start mt-8 dark:text-white"
       >
@@ -97,6 +57,25 @@
         @submit.prevent="submitForm"
       >
         <!-- email -->
+        <div
+          class="
+            bg-merah
+            text-merahDark
+            px-6
+            py-4
+            rounded-large
+            mt-4
+            -mb-4
+            text-sm
+          "
+          v-if="isEmailValid"
+        >
+          <p class="flex items-center">
+            <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />
+            Email sudah terdaftar
+          </p>
+        </div>
+
         <div>
           <label class="label mt-6" for="email">
             <span class="label-text">Email</span>
@@ -114,6 +93,25 @@
         </div>
 
         <!-- username -->
+        <div
+          class="
+            bg-merah
+            text-merahDark
+            px-6
+            py-4
+            rounded-large
+            mt-4
+            -mb-4
+            text-sm
+          "
+          v-if="isUsernameValid"
+        >
+          <p class="flex items-center">
+            <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />
+            Username sudah terdaftar
+          </p>
+        </div>
+
         <div>
           <label class="label mt-4" for="username">
             <span class="label-text">Username</span>
@@ -130,6 +128,24 @@
         </div>
 
         <!-- password -->
+        <div
+          class="
+            bg-merah
+            text-merahDark
+            px-6
+            py-4
+            rounded-large
+            mt-4
+            -mb-4
+            text-sm
+          "
+          v-if="isPasswordValid"
+        >
+          <p class="flex items-center">
+            <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />
+            Password tidak boleh kurang dari 8 huruf atau angka
+          </p>
+        </div>
         <div>
           <label class="label mt-4" for="password">
             <span class="label-text">Password</span>
@@ -164,12 +180,14 @@
               -mb-4
               text-sm
             "
-            v-if="konfirmasiPassword"
+            v-if="isConfirmationPasswordValid"
           >
             <p class="flex items-center">
-              <Icon icon="fluent:warning-24-filled" :inline="true" class="mr-2" />{{
-                error
-              }}
+              <Icon
+                icon="fluent:warning-24-filled"
+                :inline="true"
+                class="mr-2"
+              />
               Konfirmasi password tidak sama
             </p>
           </div>
@@ -291,31 +309,54 @@ export default {
         password_confirmation: "",
         role: "jobseeker",
       },
-      formIsValid: true,
+      error: null,
       isLoading: false,
-      konfirmasiPassword: false,
+      isEmailNotValid: "Email sudah terdaftar.",
+      isEmailValid: false,
+      isUsernameNotValid: "Username sudah terdaftar.",
+      isUsernameValid: false,
+      isPasswordValid: false,
+      isConfirmationPasswordValid: false,
     };
   },
   methods: {
-    submitForm() {
-      // this.formIsValid = true;
-      // if (
-      //   this.user.email === "" ||
-      //   !this.user.email.includes("@") ||
-      //   this.user.password.length < 8 ||
-      //   this.user.password === this.user.password_confirmation
-      // ) {
-      //   this.formIsValid = false;
-      //   return;
-      // }
-      if(this.user.password_confirmation !== this.user.password) {
-        this.konfirmasiPassword = true
-      }
-      this.isLoading = true;
+    async submitForm() {
+      const response = await this.$store.dispatch("auth/register", this.user);
 
-      this.$store.dispatch("auth/register", this.user);
+      this.$store.commit("isLoading", true);
 
-      // this.$router.push("/lengkapi-data-diri");
+      setTimeout(() => {
+        this.$store.commit("isLoading", false);
+        this.error = response;
+
+        if (this.isEmailNotValid == this.error) {
+          this.isEmailValid = true;
+        } else if (this.isEmailNotValid !== this.error) {
+          this.isEmailValid = false;
+        }
+
+        if (this.isUsernameNotValid === this.error) {
+          this.isUsernameValid = true;
+        } else if (this.isUsernameNotValid !== this.error) {
+          this.isUsernameValid = false;
+        }
+
+        if (this.user.password.length < 8) {
+          this.isPasswordValid = true;
+        } else if (this.user.password.length >= 8) {
+          this.isPasswordValid = false;
+        }
+
+        if (this.user.password_confirmation !== this.user.password) {
+          this.isConfirmationPasswordValid = true;
+        } else if (this.user.password_confirmation == this.user.password) {
+          this.isConfirmationPasswordValid = false;
+        }
+
+        if (response.status == 200) {
+          this.$router.push("/lengkapi-data-diri");
+        }
+      }, 1000);
     },
   },
 };

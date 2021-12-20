@@ -181,7 +181,7 @@
               :inline="true"
               class="text-xl mr-3"
             />
-            <span @click="logout"> Log Out </span>
+            <span @click="logout"> Keluar </span>
           </a>
         </li>
       </ul>
@@ -233,7 +233,7 @@ export default {
       return this.selectedTab === "favorite" ? null : "btnSidebarDisable";
     },
     getDataUser() {
-      return this.$store.getters["auth/daqta_user"];
+      return this.$store.getters["auth/data_user"];
     },
     getDataDiri() {
       return this.$store.getters["auth/data_diri"];
