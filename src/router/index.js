@@ -28,18 +28,19 @@ const router = createRouter({
       path: '/',
       name: 'HalamanHome',
       component: HalamanHome,
-      // meta: { requiredAuth: true }
+      meta: { requiredAuth: true }
     },
     {
       path: '/landing-page',
       name: 'HalamanLandingPage',
       component: HalamanLandingPage,
-      // meta: { requiredAuth: true }
+      meta: { requiredUnauth: true }
     },
     {
       path: '/loker',
       name: 'HalamanCariKerja',
-      component: HalamanCariKerja
+      component: HalamanCariKerja,
+      meta: { requiredAuth: true }
     },
     {
       path: '/loker/:id',
@@ -48,7 +49,8 @@ const router = createRouter({
       props: true,
       children: [
         { path: 'deskripsi', component: HalamanJobDescription }
-      ]
+      ],
+      meta: { requiredAuth: true }
       // meta: { requiredAuth: true }
     },
     // {
@@ -60,94 +62,111 @@ const router = createRouter({
       path: '/favorit',
       name: 'HalamanFavorit',
       component: HalamanFavorit,
-      // meta: { requiredAuth: true }
+      meta: { requiredAuth: true }
     },
     {
       path: '/masuk',
       name: 'HalamanLogin',
-      component: HalamanLogin
+      component: HalamanLogin,
+      meta: { requiredUnauth: true }
     },
     {
       path: '/daftar',
       name: 'HalamanDaftar',
-      component: HalamanDaftar
+      component: HalamanDaftar,
+      meta: { requiredUnauth: true }
     },
     {
       path: '/notifikasi',
       name: 'HalamanNotifikasi',
-      component: HalamanNotifikasi
+      component: HalamanNotifikasi,
+      meta: { requiredAuth: true }
     },
     {
       path: '/profil',
       name: 'HalamanProfil',
-      component: HalamanProfil
+      component: HalamanProfil,
+      meta: { requiredAuth: true }
     },
     {
       path: '/lengkapi-data-diri',
       name: 'DataDiri',
-      component: DataDiri
+      component: DataDiri,
+      meta: { requiredUnauth: true }
     },
     {
       path: '/lengkapi-berkas',
       name: 'Berkas',
-      component: Berkas
+      component: Berkas,
+      meta: { requiredUnauth: true }
     },
     {
       path: '/lengkapi-media-sosial',
       name: 'MediaSosial',
-      component: MediaSosial
+      component: MediaSosial,
+      meta: { requiredUnauth: true }
     },
     {
       path: '/lengkapi-riwayat-pekerjaan',
       name: 'RiwayatPekerjaan',
-      component: RiwayatPekerjaan
+      component: RiwayatPekerjaan,
+      meta: { requiredUnauth: true }
     },
     {
       path: '/sukses',
       name: 'Sukses',
-      component: Sukses
+      component: Sukses,
+      meta: { requiredAuth: true }
     },
     {
       path: '/daftar-lengkapi-data-diri',
       name: 'DaftarDataDiri',
-      component: DaftarDataDiri
+      component: DaftarDataDiri,
+      meta: { requiredAuth: true }
     },
     {
       path: '/daftar-lengkapi-berkas',
       name: 'DaftarBerkas',
-      component: DaftarBerkas
+      component: DaftarBerkas,
+      meta: { requiredAuth: true }
     },
     {
       path: '/daftar-lengkapi-pernyataan',
       name: 'DaftarPernyataan',
-      component: DaftarPernyataan
+      component: DaftarPernyataan,
+      meta: { requiredAuth: true }
     },
     {
       path: '/daftar-kirim-lamaran',
       name: 'DaftarKirimLamaran',
-      component: DaftarKirimLamaran
+      component: DaftarKirimLamaran,
+      meta: { requiredAuth: true }
     },
     {
       path: '/loading',
       name: 'Loading',
-      component: Loading
+      component: Loading,
+      meta: { requiredUnauth: true }
     },
     {
       path: '/:catchAll(.*)',
       name: 'NotFound',
-      component: HalamanNotFound
+      component: HalamanNotFound,
+      meta: { requiredAuth: true }
     }
   ]
 });
 
-// router.beforeEach(function(to, _, next) {
-//   if (to.meta.requiredAuth && !store.getters.isAuthenticated) {
-//     next('/login');
-//   } else if (to.meta.requiredUnauth && store.getters.isAuthenticated) {
-//     next('/');
-//   } else {
-//     next();
-//   }
-// }); 
+router.beforeEach(function(to, _, next) {
+  const isAuthenticated = localStorage.getItem("token");
+
+  if (to.meta.requiredAuth && !isAuthenticated) {
+    next('/masuk');
+  } else if (to.meta.requiredUnauth && isAuthenticated) {
+    next('/');
+  } else {
+    next();
+  }
+}); 
 
 export default router
