@@ -92,19 +92,19 @@ const router = createRouter({
       path: '/lengkapi-data-diri',
       name: 'DataDiri',
       component: DataDiri,
-      meta: { requiredUnauth: true }
+      meta: { requiredAuth: true }
     },
     {
       path: '/lengkapi-berkas',
       name: 'Berkas',
       component: Berkas,
-      meta: { requiredUnauth: true }
+      meta: { requiredAuth: true }
     },
     {
       path: '/lengkapi-media-sosial',
       name: 'MediaSosial',
       component: MediaSosial,
-      meta: { requiredUnauth: true }
+      meta: { requiredAuth: true }
     },
     {
       path: '/lengkapi-riwayat-pekerjaan',
