@@ -36,20 +36,7 @@
               <button tabindex="0">
                 <Icon
                   icon="fluent:filter-16-filled"
-                  class="
-                    rounded-full
-                    h-8
-                    w-8
-                    p-1.5
-                    roude
-                    hover:bg-accent
-                    transition-all
-                    duration-200
-                    text-2xl
-                    dark:hover:text-merahDark
-                    dark:text-white
-                    dark:text-opacity-80
-                  "
+                  class="rounded-full h-8 w-8 p-1.5 roude hover:bg-accent transition-all duration-200 text-2xl dark:hover:text-merahDark dark:text-white dark:text-opacity-80"
                 />
               </button>
 
@@ -61,27 +48,23 @@
 
           <!-- card -->
           <div
-            class="
-              grid
-              2xl:grid-cols-3
-              xl:grid-cols-2 xl:gap-8
-              lg:m-8 lg:gap-8
-              md:grid-cols-2 md:gap-6
-              sm:m-6
-              xs:grid-cols-1 xs:gap-6 xs:m-4
-            "
+            class="grid 2xl:grid-cols-3 xl:grid-cols-2 xl:gap-8 lg:m-8 lg:gap-8 md:grid-cols-2 md:gap-6 sm:m-6 xs:grid-cols-1 xs:gap-6 xs:m-4"
           >
-            <CardFavorit />
-            <CardFavorit />
-            <CardFavorit />
-            <!-- <Modal /> -->
-
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
+            <card
+              v-for="loker in getDataLowonganKerja"
+              :key="loker.id"
+              :id="loker.id"
+              :nama-perusahaan="loker.company.nama_perusahaan"
+              :kategori-pekerjaan="loker.kategori_pekerjaan"
+              :posisi="loker.posisi"
+              :kisaran-gaji="loker.kisaran_gaji"
+              :lokasi-penempatan="loker.lokasi_penempatan"
+              :deskripsi-pekerjaan="loker.deskripsi_pekerjaan"
+              :deadline-pendaftaran="loker.deadline_pendaftaran"
+              :jenis-pekerjaan="loker.jenis_pekerjaan"
+            ></card>
+            <!-- {{ getDataLowonganKerja }} -->
+            <!-- <CardSkeleton /> -->
           </div>
           <!-- end of card -->
         </div>
@@ -101,25 +84,46 @@
 <script>
 import HalamanProfil from "../views/HalamanProfil.vue";
 import CategoryButton from "../components/UI/CategoryButton.vue";
-import CardFavorit from "../components/UI/CardFavorit.vue";
+import Card from "../components/UI/Card.vue";
 import Filter from "../components/UI/Filter.vue";
+import Modal from "../components/UI/Modal.vue";
 import CardSkeleton from "../components/UI/CardSkeleton.vue";
 import Sidebar from "../components/Layout/Sidebar.vue";
 import Header from "../components/Layout/Header.vue";
 import Footer from "../components/Layout/Footer.vue";
 import { Icon } from "@iconify/vue";
+import axios from "axios";
 
 export default {
   components: {
     HalamanProfil,
     CategoryButton,
-    CardFavorit,
+    Card,
+    Modal,
     Filter,
     CardSkeleton,
     Sidebar,
     Header,
     Footer,
     Icon,
+  },
+  data() {
+    return {
+      getDataLowonganKerja: null,
+    };
+  },
+  created() {
+    axios.defaults.headers.common["Authorization"] =
+      "Bearer " + localStorage.getItem("token");
+    this.getDataLowonganKerja = this.$store.dispatch(
+      "auth/getDataLowonganKerja"
+    );
+    this.getDataLowonganKerja = this.$store.getters["auth/data_lowongan_kerja"];
+  },
+  computed: {
+    getDataLowonganKerja() {
+      return this.$store.getters["auth/data_lowongan_kerja"];
+    },
   },
 };
 </script>

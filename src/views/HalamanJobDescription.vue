@@ -3,14 +3,7 @@
   <input type="checkbox" id="my-modal-2" class="modal-toggle" />
   <!-- isi modal -->
   <div
-    class="
-      modal
-      dark:text-white dark:text-opacity-80
-      overflow-y-auto
-      lg:p-8
-      sm:p-6
-      xs:p-4
-    "
+    class="modal dark:text-white dark:text-opacity-80 overflow-y-auto lg:p-8 sm:p-6 xs:p-4"
   >
     <div class="modal-box my-auto md:rounded-20 xs:rounded-large">
       <p>Apakah Anda yakin ingin mendaftar pekerjaan ini?</p>
@@ -34,15 +27,16 @@
               :value="positionId"
               v-model="position_id"
             /> -->
-          <button
-            type="submit"
-            for="my-modal-2"
-            class="btn btn-primary w-40"
-            @click="submitForm(positionId)"
-          >
-            Yakin
-          </button>
-          <!-- </router-link> -->
+          <router-link :to="{ name: 'HalamanHome' }">
+            <button
+              type="submit"
+              for="my-modal-2"
+              class="btn btn-primary w-40"
+              @click="submitForm(positionId)"
+            >
+              Yakin
+            </button>
+          </router-link>
           <!-- </form> -->
         </div>
       </div>
@@ -65,15 +59,7 @@
             <div class="flex items-center">
               <img
                 alt="logo perusahaan"
-                class="
-                  mt-2
-                  w-40
-                  h-40
-                  rounded-full
-                  select-disabled
-                  group-hover:rotate-3
-                  transform
-                "
+                class="mt-2 w-40 h-40 rounded-full select-disabled group-hover:rotate-3 transform"
                 src="https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"
               />
             </div>
@@ -97,49 +83,14 @@
             <div class="w-full flex flex-col">
               <!-- waktu -->
               <span
-                class="
-                  inline-flex
-                  items-center
-                  align-top
-                  space-x-2
-                  justify-end
-                  2xl:w-3/5
-                  lg:w-4/5
-                  md:w-11/12
-                  sm:w-11/12
-                  mx-auto
-                  mb-3
-                  text-gray-500
-                  dark:text-gray-400
-                "
+                class="inline-flex items-center align-top space-x-2 justify-end 2xl:w-3/5 lg:w-4/5 md:w-11/12 sm:w-11/12 mx-auto mb-3 text-gray-500 dark:text-gray-400"
               >
                 <!-- <Icon icon="fluent:clock-24-filled" :inline="true" />
                 <p class="text-sm">Waktu</p> -->
               </span>
               <!-- informasi singkat -->
               <div
-                class="
-                  py-10
-                  grid grid-flow-row
-                  auto-cols-max
-                  gap-y-5 gap-x-10
-                  bg-white
-                  dark:bg-gray-900
-                  rounded-20
-                  2xl:w-full 2xl:m-0
-                  xl:grid-cols-3 xl:px-20
-                  lg:m-8 lg:w-4/5 lg:mx-auto
-                  md:mx-auto md:w-11/12
-                  sm:mx-auto
-                  sm:m-6
-                  sm:px-10
-                  sm:w-11/12
-                  sm:grid-cols-2
-                  sm:justify-items-center
-                  xs:m-4 xs:px-6 xs:w-full xs:grid-cols-1 xs:mx-auto
-                  text-gray-500
-                  dark:text-white dark:text-opacity-60
-                "
+                class="py-10 grid grid-flow-row auto-cols-max gap-y-5 gap-x-10 bg-white dark:bg-gray-900 rounded-20 2xl:w-full 2xl:m-0 xl:grid-cols-3 xl:px-20 lg:m-8 lg:w-4/5 lg:mx-auto md:mx-auto md:w-11/12 sm:mx-auto sm:m-6 sm:px-10 sm:w-11/12 sm:grid-cols-2 sm:justify-items-center xs:m-4 xs:px-6 xs:w-full xs:grid-cols-1 xs:mx-auto text-gray-500 dark:text-white dark:text-opacity-60"
               >
                 <span
                   class="inline-flex items-center space-x-2 w-56"
@@ -192,29 +143,13 @@
 
             <!-- descrition -->
             <div
-              class="
-                bg-white
-                dark:bg-gray-900 dark:text-white dark:text-opacity-80
-                rounded-20
-                text-neutral
-                mt-8
-                2xl:w-full
-                lg:p-14 lg:w-4/5
-                md:p-10 md:w-11/12
-                sm:p-8 sm:w-11/12
-                xs:p-6 xs:w-full
-              "
+              class="bg-white dark:bg-gray-900 dark:text-white dark:text-opacity-80 rounded-20 text-neutral mt-8 2xl:w-full lg:p-14 lg:w-4/5 md:p-10 md:w-11/12 sm:p-8 sm:w-11/12 xs:p-6 xs:w-full"
             >
               <!-- isi Deskripsi -->
               <div class="leading-7 space-y-4">
                 <h2 class="font-bold text-xl mb-3">Deskripsi Pekerjaan</h2>
                 <span
-                  class="
-                    text-neutral text-opacity-80
-                    xs:text-sm
-                    md:text-base
-                    dark:text-white dark:text-opacity-60
-                  "
+                  class="text-neutral text-opacity-80 xs:text-sm md:text-base dark:text-white dark:text-opacity-60"
                 >
                   {{ deskripsiPekerjaan }}
                 </span>
@@ -222,13 +157,7 @@
                 <!-- <h2 class="font-bold text-lg mb-3">Responsibilities :</h2> -->
                 <h2 class="font-bold text-lg mb-3">Tanggung Jawab :</h2>
                 <ul
-                  class="
-                    list-disc list-inside
-                    text-neutral text-opacity-80
-                    dark:text-white dark:text-opacity-60
-                    xs:text-sm
-                    md:text-base
-                  "
+                  class="list-disc list-inside text-neutral text-opacity-80 dark:text-white dark:text-opacity-60 xs:text-sm md:text-base"
                 >
                   {{
                     tanggungJawab
@@ -238,13 +167,7 @@
                 <!-- <h2 class="font-bold text-lg mb-3">Requirements :</h2> -->
                 <h2 class="font-bold text-lg mb-3">Persyaratan :</h2>
                 <ul
-                  class="
-                    list-disc list-inside
-                    text-neutral text-opacity-80
-                    xs:text-sm
-                    md:text-base
-                    dark:text-white dark:text-opacity-60
-                  "
+                  class="list-disc list-inside text-neutral text-opacity-80 xs:text-sm md:text-base dark:text-white dark:text-opacity-60"
                 >
                   <li>Usia Pekerja : {{ usiaPekerja }}</li>
                   <li>Jenis Kelamin : {{ jenisKelamin }}</li>
@@ -258,35 +181,13 @@
             <!-- berkas -->
             <div class="w-full flex flex-col mt-8">
               <div
-                class="
-                  py-8
-                  justify-items-center
-                  bg-white
-                  dark:bg-gray-900 dark:text-white dark:text-opacity-80
-                  rounded-20
-                  lg:px-10
-                  md:px-6
-                  xs:px-2
-                  2xl:w-full
-                  lg:w-4/5 lg:mx-auto
-                  md:mx-8
-                  sm:mx-6
-                "
+                class="py-8 justify-items-center bg-white dark:bg-gray-900 dark:text-white dark:text-opacity-80 rounded-20 lg:px-10 md:px-6 xs:px-2 2xl:w-full lg:w-4/5 lg:mx-auto md:mx-8 sm:mx-6"
               >
                 <span class="font-bold text-lg px-4"
                   >Berkas yang dibutuhkan :</span
                 >
                 <div
-                  class="
-                    mx-4
-                    mt-6
-                    grid grid-flow-row
-                    auto-cols-max
-                    xl:grid-cols-3
-                    sm:grid-cols-2
-                    xs:grid-cols-1
-                    gap-y-5 gap-x-10
-                  "
+                  class="mx-4 mt-6 grid grid-flow-row auto-cols-max xl:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-y-5 gap-x-10"
                 >
                   <span class="inline-flex items-center space-x-2 w-56">
                     <Icon
@@ -343,22 +244,7 @@
 
             <!-- button -->
             <div
-              class="
-                mt-8
-                sm:py-8 sm:px-10
-                xs:py-4 xs:px-5
-                flex flex-row
-                gap-x-2
-                justify-items-center
-                bg-white
-                dark:bg-gray-900 dark:text-white dark:text-opacity-80
-                rounded-20
-                2xl:w-full
-                lg:w-4/5 lg:mx-auto
-                md:w-11/12
-                sm:w-11/12
-                xs:w-full
-              "
+              class="mt-8 sm:py-8 sm:px-10 xs:py-4 xs:px-5 flex flex-row gap-x-2 justify-items-center bg-white dark:bg-gray-900 dark:text-white dark:text-opacity-80 rounded-20 2xl:w-full lg:w-4/5 lg:mx-auto md:w-11/12 sm:w-11/12 xs:w-full"
             >
               <label for="my-modal-2" class="btn btn-primary flex-auto"
                 >Daftar</label

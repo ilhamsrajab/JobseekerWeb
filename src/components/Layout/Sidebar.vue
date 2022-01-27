@@ -117,7 +117,7 @@
             id="email"
             class="text-gray-500 text-xs dark:text-white dark:text-opacity-60"
           >
-            <!-- {{ getDataUser.email }} -->
+            {{ getDataUser.email }}
           </h5>
         </div>
       </div>

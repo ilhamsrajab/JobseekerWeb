@@ -36,20 +36,7 @@
               <button tabindex="0">
                 <Icon
                   icon="fluent:filter-16-filled"
-                  class="
-                    rounded-full
-                    h-8
-                    w-8
-                    p-1.5
-                    roude
-                    hover:bg-accent
-                    transition-all
-                    duration-200
-                    text-2xl
-                    dark:hover:text-merahDark
-                    dark:text-white
-                    dark:text-opacity-80
-                  "
+                  class="rounded-full h-8 w-8 p-1.5 roude hover:bg-accent transition-all duration-200 text-2xl dark:hover:text-merahDark dark:text-white dark:text-opacity-80"
                 />
               </button>
 
@@ -61,15 +48,7 @@
 
           <!-- card -->
           <div
-            class="
-              grid
-              2xl:grid-cols-3
-              xl:grid-cols-2 xl:gap-8
-              lg:m-8 lg:gap-8
-              md:grid-cols-2 md:gap-6
-              sm:m-6
-              xs:grid-cols-1 xs:gap-6 xs:m-4
-            "
+            class="grid 2xl:grid-cols-3 xl:grid-cols-2 xl:gap-8 lg:m-8 lg:gap-8 md:grid-cols-2 md:gap-6 sm:m-6 xs:grid-cols-1 xs:gap-6 xs:m-4"
           >
             <card
               v-for="loker in getDataLowonganKerja"
@@ -85,7 +64,7 @@
               :jenis-pekerjaan="loker.jenis_pekerjaan"
             ></card>
             <!-- {{ getDataLowonganKerja }} -->
-            <CardSkeleton />
+            <!-- <CardSkeleton /> -->
           </div>
           <!-- end of card -->
         </div>

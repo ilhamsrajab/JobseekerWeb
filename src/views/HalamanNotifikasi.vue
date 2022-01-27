@@ -12,45 +12,18 @@
           <!-- Halaman Profil -->
           <div class="flex flex-col items-center min-h-screen">
             <div
-              class="
-                font-semibold
-                place-self-start
-                xl:ml-80
-                lg:ml-28
-                sm:ml-14
-                dark:text-white dark:text-opacity-80
-              "
+              class="font-semibold place-self-start xl:ml-80 lg:ml-28 sm:ml-14 dark:text-white dark:text-opacity-80"
             >
               Notifikasi
             </div>
             <div
-              class="
-                bg-white
-                dark:bg-gray-900
-                rounded-20
-                xl:py-5 xl:px-4
-                lg:py-5 lg:px-4
-                md:py-5 md:px-6
-                sm:py-3 sm:px-2
-                xs:py-3 xs:px-2
-                text-gray-500
-                sm:mt-4
-                xs:mt-4 xs:w-full
-                sm:w-10/12
-                md:w-4/5
-                xl:w-3/5
-              "
+              class="bg-white dark:bg-gray-900 rounded-20 xl:py-5 xl:px-4 lg:py-5 lg:px-4 md:py-5 md:px-6 sm:py-3 sm:px-2 xs:py-3 xs:px-2 text-gray-500 sm:mt-4 xs:mt-4 xs:w-full sm:w-10/12 md:w-4/5 xl:w-3/5"
             >
               <ul
-                class="
-                  space-y-2
-                  rounded-box
-                  sm:text-base
-                  xs:text-sm
-                  dark:text-white
-                "
+                class="space-y-2 rounded-box sm:text-base xs:text-sm dark:text-white"
               >
-                <Notifikasi class="new-notification">
+                Belum ada notifikasi.
+                <!-- <Notifikasi class="new-notification">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Labore possimus fugiat blanditiis facilis reiciendis esse,
                   nesciunt commodi itaque exercitationem et, fuga temporibus,
@@ -70,7 +43,7 @@
                 <Notifikasi
                   >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
                   tempora recusandae dolore. Numquam, quidem?</Notifikasi
-                >
+                > -->
               </ul>
             </div>
           </div>

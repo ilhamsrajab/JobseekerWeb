@@ -53,14 +53,7 @@
             />
             <label
               for="push-lakilaki"
-              class="
-                ml-3
-                block
-                text-sm
-                font-normal
-                text-neutral
-                dark:text-white dark:text-opacity-60
-              "
+              class="ml-3 block text-sm font-normal text-neutral dark:text-white dark:text-opacity-60"
             >
               Laki-laki
             </label>
@@ -76,14 +69,7 @@
             />
             <label
               for="push-perempuan"
-              class="
-                ml-3
-                block
-                text-sm
-                font-normal
-                text-neutral
-                dark:text-white dark:text-opacity-60
-              "
+              class="ml-3 block text-sm font-normal text-neutral dark:text-white dark:text-opacity-60"
             >
               Perempuan
             </label>
@@ -323,16 +309,7 @@
         </label>
         <div class="mt-1 flex rounded-md shadow-sm">
           <span
-            class="
-              inline-flex
-              text-neutral
-              font-bold
-              items-center
-              px-5
-              rounded-l-20
-              bg-accent
-              text-sm
-            "
+            class="inline-flex text-neutral font-bold items-center px-5 rounded-l-20 bg-accent text-sm"
           >
             +62
           </span>
@@ -351,7 +328,7 @@
       </div>
 
       <!-- ktp -->
-      <div class="mt-4">
+      <!-- <div class="mt-4">
         <label class="label font-semibold" for="ktp">
           <span class="label-text">Foto E-KTP</span>
         </label>
@@ -382,8 +359,8 @@
             />
             Lihat file
           </label>
-        </div>
-        <img
+        </div> -->
+      <!-- <img
           src="http://127.0.0.1:8000/storage/jobseeker/2/foto_ktp/6eMQu9uLGZdePRUqaLx5VHABT4kmB1ZqTCbsyNyx.png"
           class="w-full rounded-20"
         />
@@ -400,13 +377,13 @@
           <p href="#" class="label-text-alt text-gray-500">
             * upload foto maksimal 7 MB
           </p>
-        </label>
-      </div>
+        </label> -->
+      <!-- </div> -->
 
       <!-- modal ktp -->
-      <input type="checkbox" id="my-modal-2" class="modal-toggle" />
+      <!-- <input type="checkbox" id="my-modal-2" class="modal-toggle" /> -->
       <!-- isi modal -->
-      <div class="modal overflow-y-auto shadow-xl">
+      <!-- <div class="modal overflow-y-auto shadow-xl">
         <div class="modal-box my-auto">
           <p>
             <img
@@ -420,7 +397,7 @@
             <label for="my-modal-2" class="btn btn-outline w-40">Tutup</label>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- end of isi modal -->
       <!-- end of modal -->
 
@@ -521,9 +498,6 @@ export default {
     },
     getDataDiriNoHP() {
       return this.getDataDiri.no_hp;
-    },
-    getDataDiriFotoKTP() {
-      return this.getDataDiri.foto_ktp;
     },
   },
 };
